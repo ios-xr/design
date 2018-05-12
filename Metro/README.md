@@ -2,4 +2,4 @@
 
 
 
-## Design available @ [xrdocs](https://xrdocs.github.io/design/blogs/2018-04-30-compass-metro-fabric-hld/)
+## Design available @ [xrdocs](https://xrdocs.github.io/design/blogs/2018-04-30-metro-fabric-hld/)
