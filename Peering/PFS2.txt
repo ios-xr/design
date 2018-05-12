@@ -1,6 +1,6 @@
 !! IOS XR Configuration version = 6.3.2
 
-hostname Compass-PEF-PFS2
+hostname PEF-PFS2
 clock timezone PST America/Los_Angeles
 logging monitor debugging
 telnet vrf default ipv4 server max-servers 10

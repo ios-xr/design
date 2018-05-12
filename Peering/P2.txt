@@ -1,7 +1,7 @@
 !! IOS XR Configuration version = 6.3.2
 !! Last configuration change at Mon Apr  2 11:05:51 2018 by admin
 !
-hostname Compass-PEF-P2
+hostname PEF-P2
 clock timezone PST America/Los_Angeles
 telnet vrf default ipv4 server max-servers 10
 username admin

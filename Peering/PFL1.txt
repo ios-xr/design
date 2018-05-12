@@ -1,6 +1,6 @@
 !! IOS XR Configuration version = 6.3.2
 !
-hostname Compass-PEF-PFL1
+hostname PEF-PFL1
 clock timezone PST America/Los_Angeles
 telnet vrf default ipv4 server max-servers 10
 username admin
