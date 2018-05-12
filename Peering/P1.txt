@@ -1,0 +1,192 @@
+!! IOS XR Configuration version = 6.3.2
+!
+hostname Compass-PEF-P1
+clock timezone PST America/Los_Angeles
+logging monitor debugging
+telnet vrf default ipv4 server max-servers 10
+username admin
+ group root-lr
+ group cisco-support
+ secret 5 changeme 
+!
+line default
+ exec-timeout 0 0
+ session-timeout 0
+!
+vty-pool default 0 99
+
+interface Bundle-Ether1
+ ipv4 address 21.2.1.1 255.255.255.252
+ ipv6 address 2001:21:2:1::1/64
+!
+interface Bundle-Ether2
+ ipv4 address 21.4.1.1 255.255.255.252
+ ipv6 address 2001:21:4:1::1/64
+!
+interface Loopback0
+ ipv4 address 192.168.12.1 255.255.255.255
+ ipv6 address 2001:192:168:12::1/128
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 172.20.33.37 255.255.255.0
+!
+interface HundredGigE0/0/0/0
+ ipv4 address 11.0.1.2 255.255.255.252
+ ipv6 address 2001:11:0:1::2/64
+!
+interface HundredGigE0/0/0/1
+ ipv4 address 11.1.1.2 255.255.255.252
+ ipv6 address 2001:11:1:1::2/64
+!
+interface HundredGigE0/0/0/2
+ bundle id 1 mode active
+!
+interface HundredGigE0/0/0/3
+ bundle id 1 mode active
+!
+interface HundredGigE0/0/0/4
+ bundle id 2 mode active
+!
+interface HundredGigE0/0/0/5
+ bundle id 2 mode active
+!
+!
+route-policy PASS
+  pass
+end-policy
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 MgmtEth0/RP0/CPU0/0 172.20.33.1
+ !
+!
+router isis core
+ set-overload-bit on-startup wait-for-bgp
+ is-type level-2-only
+ net 49.0001.1921.6801.2001.00
+ distribute link-state
+ log adjacency changes
+ log pdu drops
+ lsp-refresh-interval 65000
+ max-lsp-lifetime 65535
+ lsp-password hmac-md5 encrypted 06253C02631F5B4A3B
+ address-family ipv4 unicast
+  metric-style wide
+  mpls traffic-eng level-2-only
+  mpls traffic-eng router-id Loopback0
+  maximum-paths 32
+  segment-routing mpls
+ !
+ address-family ipv6 unicast
+  metric-style wide
+  maximum-paths 32
+ !
+ interface Bundle-Ether1
+  circuit-type level-2-only
+  point-to-point
+  hello-password hmac-md5 encrypted 06253C02631F5B4A3B
+  address-family ipv4 unicast
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1021
+  !
+  address-family ipv6 unicast
+   metric 10
+  !
+ !
+ interface Bundle-Ether2
+  circuit-type level-2-only
+  point-to-point
+  hello-password hmac-md5 encrypted 08027F6D264857442C
+  address-family ipv4 unicast
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1022
+  !
+  address-family ipv6 unicast
+   metric 10
+  !
+ !
+ interface Loopback0
+  passive
+  address-family ipv4 unicast
+   metric 10
+   prefix-sid index 211
+  !
+  address-family ipv6 unicast
+   metric 10
+   prefix-sid index 612
+  !
+ !
+ interface HundredGigE0/0/0/0
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0225377824575D7272
+  address-family ipv4 unicast
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1011
+  !
+  address-family ipv6 unicast
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/1
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0528352C0E1D1C5A27
+  address-family ipv4 unicast
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1012
+  !
+  address-family ipv6 unicast
+   metric 10
+  !
+ !
+
+mpls oam
+!
+rsvp
+ interface Bundle-Ether1
+  bandwidth percentage 50
+ !
+ interface Bundle-Ether2
+  bandwidth percentage 50
+ !
+ interface HundredGigE0/0/0/0
+  bandwidth percentage 50
+ !
+ interface HundredGigE0/0/0/1
+  bandwidth percentage 50
+ !
+!
+
+segment-routing
+ global-block 16000 16999
+ local-block 17000 17999
+!
+xml agent tty
+!
+snmp-server traps ipsla
+snmp-server traps sensor
+snmp-server traps fru-ctrl
+netconf-yang agent
+ ssh
+!
+
+lldp
+!
+
+ssh server logging
+ssh server v2
+ssh server netconf vrf default
+end
