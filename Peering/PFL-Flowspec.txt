@@ -1,0 +1,31 @@
+!!! This configuration is to enable the PFL as a BGP FS client 
+
+! hw-module commands to enable device for IPv6 BGP FS 
+hw-module profile qos ipv6 short
+hw-module profile flowspec v6-enable location 0/0/CPU0
+
+! Enable BGP Flowspec 
+flowspec
+  local-install interface-all
+
+! New BGP configuration added to PFL nodes to receive BGP FS NLRI 
+router bgp 100
+ address-family ipv4 flowspec 
+ address-family ipv6 flowspec 
+!
+! Enable BGP FS on PFS peer nodes 
+af-group v4-flowspec-af-pfs address-family ipv4 flowspec 
+   multipath 
+
+af-group v6-flowspec-af-pfs address-family ipv4 flowspec 
+   multipath 
+
+neighbor-group v4-pfs 
+   address-family ipv4 flowspec 
+      use af-group v4-flowspec-af-pfl 
+
+neighbor-group v6-pfs 
+   address-family ipv6 flowspec 
+      use af-group v6-flowspec-af-pfl
+
+

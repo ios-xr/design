@@ -1,0 +1,55 @@
+!!! This is a sample configuration to implement QPPB on a PFl node 
+!!! Seee High Level Design for more QPPB examples 
+
+! Required command to support IPv6 QPPB, reboot required after enabling
+hw-module profile qos ipv6 short
+
+! Apply input policy and enable QPPB 
+interface HundredGigE0/0/0/35
+  service-policy input remark-peer-traffic
+  ipv4 bgp policy propagation input qos-group destination
+  ipv4 address 113.2.1.1 255.255.255.0
+  ipv6 bgp policy propagation input qos-group destination
+  ipv6 address 2000:113:2:1::1/64
+
+! Define class maps and policy map to be used in QPPB policy
+class-map match-any qos-group-1
+match qos-group 1
+ end-class-map
+!
+class-map match-any qos-group-2
+match qos-group 2
+ end-class-map
+!
+ 
+policy-map remark-peer-traffic
+class qos-group-1
+  set precedence 5
+  set mpls experimental imposition 5
+!
+ class qos-group-2
+  set precedence 3
+  set mpls experimental imposition 3
+!
+ class class-default
+!
+ end-policy-map
+
+! Define QPPB routing policy 
+route-policy qppb
+  if community matches-every (64000:1) then
+    set qos-group 1
+  elseif community matches-every (64000:2) then
+    set qos-group 2
+  else
+    done
+  endif
+end-policy
+
+! Implement QPPB on specific BGP AF at Global BGP AF Level 
+router bgp 100 
+  address-family ipv4 unicast
+    table-policy qppb
+!
+  address-family ipv6 unicast
+    table-policy qppb

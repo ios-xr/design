@@ -1,0 +1,49 @@
+!!! This configuration is to enable the PFS as a BGP FS server and distribute 
+!!! FS NLRI to PFL nodes  
+!!! See additional examples in the High Level Design document, this specific 
+!!! example defines a policy to block a Memcached DDoS attack 
+
+! Define class and policy map to be used for BGP Flowspec rules 
+class-map type traffic match-all memcached
+ match destination-port 11211
+ match protocol udp tcp
+ match destination-address ipv4 10.0.0.0 255.255.255.0
+ end-class-map
+!
+policy-map type pbr drop-memcached
+ class type traffic memcached
+  drop
+ !
+ class type traffic class-default
+ !
+ end-policy-map
+
+!
+router bgp 100  
+address-family ipv4 flowspec 
+address-family ipv6 flowspec 
+
+af-group v4-flowspec-af-pfl address-family ipv4 flowspec 
+   multipath 
+   route-reflector-client 
+   next-hop-self 
+!
+af-group v6-flowspec-af-pfl address-family ipv4 flowspec 
+   multipath 
+   route-reflector-client 
+   next-hop-self 
+!
+neighbor-group v4-pfl 
+   address-family ipv4 flowspec 
+      use af-group v4-flowspec-af-pfl 
+!
+neighbor-group v6-pfl 
+   address-family ipv6 flowspec 
+      use af-group v6-flowspec-af-pfl 
+
+! Add defined policy to Flowspec for advertisement to PFL nodes 
+flowspec
+ address-family ipv4
+  service-policy type pbr drop-memcached
+
+
