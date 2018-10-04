@@ -1,7 +1,6 @@
 !!! This configuration is to enable the PFL as a BGP FS client 
 
 ! hw-module commands to enable device for IPv6 BGP FS 
-hw-module profile qos ipv6 short
 hw-module profile flowspec v6-enable location 0/0/CPU0
 
 ! Enable BGP Flowspec 
