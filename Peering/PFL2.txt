@@ -580,7 +580,6 @@ router bgp 100
  !
  session-group peer-session
   egress-engineering
-  ttl-security
   bmp-activate server 1
   ignore-connected-check
  !
