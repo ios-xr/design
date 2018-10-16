@@ -293,7 +293,6 @@ router bgp 100
  !
  session-group peer-session
   egress-engineering
-  ttl-security
   ignore-connected-check
  !
  neighbor-group v4-pfs
