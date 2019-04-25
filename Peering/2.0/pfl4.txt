@@ -1,0 +1,1375 @@
+hostname Compass-PEF-PFL4
+clock timezone PST America/Los_Angeles
+logging console disable
+telnet vrf default ipv4 server max-servers 10
+username admin
+ group root-lr
+ group cisco-support
+ secret 5 $1$Tq8O$VL6AeoOk2Ifo1pI.1NjSq0
+!
+cdp
+vrf dns
+ address-family ipv4 unicast
+  import route-target
+   1000:145
+  !
+  export route-target
+   1000:145
+  !
+ !
+ address-family ipv6 unicast
+  import route-target
+   1000:145
+  !
+  export route-target
+   1000:145
+  !
+ !
+!
+vrf peer1
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:101
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:101
+  !
+ !
+!
+vrf peer2
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:102
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:102
+  !
+ !
+!
+vrf peer100
+ description .. VRF Peer100->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:999
+  !
+  export route-target
+   65000:999
+  !
+ !
+!
+vrf internet
+ address-family ipv4 unicast
+  import from vrf advertise-as-vpn
+  import route-target
+   65000:100
+   65000:101
+   65000:102
+   65000:103
+   65000:104
+   65000:105
+   65000:106
+   65000:107
+   65000:108
+   65000:109
+   65000:110
+   65000:111
+   65000:112
+   65000:113
+   65000:114
+   65000:115
+   65000:116
+   65000:117
+   65000:118
+   65000:119
+   65000:120
+   65000:121
+   65000:122
+   65000:123
+   65000:124
+   65000:125
+   65000:126
+   65000:127
+   65000:128
+   65000:129
+   65000:130
+   65000:131
+   65000:132
+   65000:133
+   65000:134
+   65000:135
+   65000:136
+   65000:137
+   65000:138
+   65000:139
+   65000:140
+   65000:141
+   65000:142
+   65000:143
+   65000:144
+   65000:145
+   65000:146
+   65000:147
+   65000:148
+   65000:149
+   65000:999
+  !
+  export to vrf allow-imported-vpn
+  export route-target
+   65000:100
+   65000:101
+   65000:102
+   65000:103
+   65000:104
+   65000:105
+   65000:106
+   65000:107
+   65000:108
+   65000:109
+   65000:110
+   65000:111
+   65000:112
+   65000:113
+   65000:114
+   65000:115
+   65000:116
+   65000:117
+   65000:118
+   65000:119
+   65000:120
+   65000:121
+   65000:122
+   65000:123
+   65000:124
+   65000:125
+   65000:126
+   65000:127
+   65000:128
+   65000:129
+   65000:130
+   65000:131
+   65000:132
+   65000:133
+   65000:134
+   65000:135
+   65000:136
+   65000:137
+   65000:138
+   65000:139
+   65000:140
+   65000:141
+   65000:142
+   65000:143
+   65000:144
+   65000:145
+   65000:146
+   65000:147
+   65000:148
+   65000:149
+   65000:999
+  !
+ !
+!
+line console
+ exec-timeout 0 0
+!
+line default
+ exec-timeout 0 0
+ session-timeout 0
+!
+vty-pool default 0 99
+snmp-server community cisco RW
+alias exec sco sh context
+alias exec slt sh log | i Trace
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method http
+ !
+!
+hw-module profile qos ipv6 short
+hw-module profile flowspec v6-enable
+!
+class-map match-any eft-v4
+ match access-group ipv4 eft-v4
+ end-class-map
+!
+!
+class-map match-any v6-qos-21
+ match qos-group 21
+ end-class-map
+!
+class-map match-any qos-group-1
+ match qos-group 1
+ end-class-map
+!
+class-map match-any qos-group-2
+ match qos-group 2
+ end-class-map
+!
+class-map match-any qos-group-3
+ match qos-group 3
+ end-class-map
+!
+class-map match-any qos-group-4
+ match qos-group 4
+ end-class-map
+!
+class-map match-any acl-2016-128
+ match access-group ipv6 eftv6
+ end-class-map
+!
+policy-map v6-im
+ class acl-2016-128
+  set precedence internet
+  set traffic-class 6
+ !
+ class eft-v4
+  set precedence network
+ !
+ class v6-qos-21
+  set precedence 7
+ !
+ class class-default
+ !
+ end-policy-map
+!
+policy-map remark-peer-traffic
+ class qos-group-1
+  set precedence 5
+  set mpls experimental imposition 5
+  police rate 25 mbps
+  !
+ !
+ class qos-group-2
+  set precedence 3
+  set mpls experimental imposition 3
+  police rate 25 mbps
+  !
+ !
+ class class-default
+ !
+ end-policy-map
+!
+flow exporter-map nf-export
+ version v9
+  options interface-table timeout 60
+  options sampler-table timeout 60
+  template timeout 30
+ !
+ transport udp 5679
+ source Loopback0
+ destination 172.20.33.54
+!
+flow monitor-map flow-monitor-ipv4
+ record ipv4
+ option bgpattr
+ exporter nf-export
+ cache entries 50000
+ cache timeout active 60
+ cache timeout inactive 10
+!
+flow monitor-map flow-monitor-ipv6
+ record ipv6
+ option bgpattr
+ exporter nf-export
+ cache timeout active 60
+ cache timeout inactive 10
+!
+flow monitor-map nf-flow-monitor-mpls
+ record mpls ipv4-ipv6-fields
+ option bgpattr
+ exporter nf-export
+ cache timeout active 60
+ cache timeout inactive 10
+!
+sampler-map nf-sample-8192
+ random 1 out-of 8192
+!
+interface Loopback0
+ ipv4 address 192.168.14.4 255.255.255.255
+ ipv6 address 2001:192:168:14::4/128
+!
+interface Loopback1000
+ description .." For Peering in VRF"
+ vrf peer1
+ ipv4 address 192.168.141.1 255.255.255.255
+!
+interface Loopback1001
+ description ..For Peering in VRF -> Def VRF
+ vrf peer2
+ ipv4 address 192.168.142.1 255.255.255.255
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 172.20.33.44 255.255.255.0
+!
+interface HundredGigE0/0/0/0
+ cdp
+ ipv4 address 31.31.1.2 255.255.255.252
+ ipv6 address 2001:31:31:1::2/64
+!
+interface HundredGigE0/0/0/0.1
+ description .. " vrf sub intf for bgpfs-dns
+ vrf bgpfs-dns
+ ipv4 address 1.1.1.1 255.255.255.252
+ encapsulation dot1q 1
+!
+interface HundredGigE0/0/0/0.145
+ description .. " Sub int vrf dns for BGP-FS traffic"
+ vrf dns
+ ipv4 address 131.131.1.2 255.255.255.252
+ ipv6 address 2001:131:131:1::2/64
+ encapsulation dot1q 145
+!
+interface HundredGigE0/0/0/1
+ cdp
+ ipv4 address 31.32.1.2 255.255.255.252
+ ipv6 address 2001:31:32:1::2/64
+!
+interface HundredGigE0/0/0/2
+ cdp
+ ipv4 address 32.26.1.2 255.255.255.252
+ ipv6 address 2001:32:26:1::2/64
+!
+interface HundredGigE0/0/0/3
+ cdp
+ ipv4 address 32.27.1.2 255.255.255.252
+ ipv6 address 2001:32:27:1::2/64
+!
+interface HundredGigE0/0/0/4
+ shutdown
+!
+interface HundredGigE0/0/0/5
+ shutdown
+!
+interface HundredGigE0/0/0/6
+ shutdown
+!
+interface HundredGigE0/0/0/7
+ shutdown
+!
+interface HundredGigE0/0/0/8
+ shutdown
+!
+interface HundredGigE0/0/0/9
+ shutdown
+!
+interface HundredGigE0/0/0/10
+ shutdown
+!
+interface HundredGigE0/0/0/11
+ shutdown
+!
+interface HundredGigE0/0/0/12
+ shutdown
+!
+interface HundredGigE0/0/0/13
+ shutdown
+!
+interface HundredGigE0/0/0/14
+ shutdown
+!
+interface HundredGigE0/0/0/15
+ shutdown
+!
+interface HundredGigE0/0/0/16
+ description .. Connected to IXIA 1/2 for v4 and v6 QPPB,BGP-FS & SR-ODN
+!
+interface HundredGigE0/0/0/16.100
+ description .. QPPB interface
+ service-policy input remark-peer-traffic
+ ipv4 bgp policy propagation input qos-group destination
+ ipv4 address 144.100.1.1 255.255.255.252
+ ipv6 bgp policy propagation input qos-group destination
+ ipv6 address 2001:144:100:1::1/64
+ encapsulation dot1q 1000
+!
+interface HundredGigE0/0/0/16.101
+ description .. " BGP FS traffic incoming for memcached traffic"
+ ipv4 address 144.101.1.1 255.255.255.252
+ ipv6 address 2001:144:101:1::1/64
+ encapsulation dot1q 1001
+!
+interface HundredGigE0/0/0/16.102
+ description "BGP-FS Redirect VRF"
+ ipv4 address 144.102.1.1 255.255.255.252
+ ipv6 address 2001:144:102:1::1/64
+ load-interval 30
+ encapsulation dot1q 1002
+!
+interface HundredGigE0/0/0/16.103
+ description "BGP-FS Redirect FS traffic-NH"
+ ipv4 address 144.103.1.1 255.255.255.252
+ ipv6 address 2001:144:103:1::1/64
+ load-interval 30
+ encapsulation dot1q 1003
+!
+interface HundredGigE0/0/0/16.104
+ description " Neighbor for BGP-FS Scale Interface "
+ ipv4 address 144.104.1.1 255.255.255.252
+ ipv6 address 2001:144:104:1::1/64
+ load-interval 30
+ encapsulation dot1q 1004
+!
+interface HundredGigE0/0/0/16.501
+ ipv4 address 218.2.0.1 255.255.255.0
+ encapsulation dot1q 501
+!
+interface HundredGigE0/0/0/17
+ shutdown
+!
+interface HundredGigE0/0/0/18
+ shutdown
+!
+interface HundredGigE0/0/0/19
+ shutdown
+!
+interface HundredGigE0/0/0/20
+ shutdown
+!
+interface FortyGigE0/0/0/21
+ shutdown
+!
+interface HundredGigE0/0/0/22
+ shutdown
+!
+interface HundredGigE0/0/0/23
+ description "Connected to IXIA port 1/8"
+!
+interface HundredGigE0/0/0/23.0
+ ipv4 address 44.100.1.1 255.255.255.252
+ ipv6 address 2001:44:100:1::1/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ flow mpls monitor nf-flow-monitor-mpls sampler nf-sample-8192 ingress
+ encapsulation dot1q 400
+!
+interface HundredGigE0/0/0/23.1
+ ipv4 address 44.101.1.1 255.255.255.252
+ ipv6 address 2001:44:101:1::1/64
+ encapsulation dot1q 401
+!
+interface HundredGigE0/0/0/23.2
+ ipv4 address 44.102.1.1 255.255.255.252
+ ipv6 address 2001:44:102:1::1/64
+ encapsulation dot1q 402
+!
+interface HundredGigE0/0/0/23.1603
+ description .. SR-ODN
+ ipv4 address 10.41.7.2 255.255.255.252
+ ipv6 address 2001:10:41:7::2/64
+ encapsulation dot1q 1603
+!
+interface HundredGigE0/0/0/23.1604
+ description .. SR-ODN
+ ipv4 address 10.42.7.2 255.255.255.252
+ ipv6 address 2001:10:42:7::2/64
+ encapsulation dot1q 1604
+!
+interface HundredGigE0/0/0/23.1605
+ description .. SR-ODN
+ ipv4 address 10.43.7.2 255.255.255.252
+ ipv6 address 2001:10:43:7::2/64
+ encapsulation dot1q 1605
+!
+interface HundredGigE0/0/0/23.1606
+ description .. SR-ODN
+ ipv4 address 10.44.7.2 255.255.255.252
+ ipv6 address 2001:10:44:7::2/64
+ encapsulation dot1q 1606
+!
+interface HundredGigE0/0/0/23.1607
+ description .. SR-ODN
+ ipv4 address 10.45.7.2 255.255.255.252
+ ipv6 address 2001:10:45:7::2/64
+ encapsulation dot1q 1607
+!
+interface HundredGigE0/0/0/24
+ shutdown
+!
+interface HundredGigE0/0/0/25
+ shutdown
+!
+interface HundredGigE0/0/0/26
+ shutdown
+!
+interface HundredGigE0/0/0/27
+ shutdown
+!
+interface HundredGigE0/0/0/28
+ shutdown
+!
+interface HundredGigE0/0/0/29
+ shutdown
+!
+interface HundredGigE0/0/0/30
+ shutdown
+!
+interface HundredGigE0/0/0/31
+ shutdown
+!
+interface HundredGigE0/0/0/32
+ shutdown
+!
+interface HundredGigE0/0/0/33
+ shutdown
+!
+interface HundredGigE0/0/0/34
+ shutdown
+!
+interface HundredGigE0/0/0/35
+ shutdown
+!
+interface preconfigure HundredGigE0/0/0/21
+ shutdown
+!
+interface preconfigure FortyGigE0/0/0/34
+ shutdown
+!
+interface preconfigure FortyGigE0/0/0/35
+ shutdown
+!
+!
+extcommunity-set opaque BLUE
+  100
+end-set
+!
+extcommunity-set opaque GREEN
+  200
+end-set
+!
+community-set sti-lowcost
+  2222:200
+end-set
+!
+community-set sti-fretta-14
+  1111:14
+end-set
+!
+community-set sti-fretta-15
+  1111:15
+end-set
+!
+community-set qppb-community
+  1000:2
+end-set
+!
+community-set sti-besteffort
+  12356:124
+end-set
+!
+route-policy dns
+  if destination in (91.101.1.2) then
+    pass
+  endif
+end-policy
+!
+route-policy DROP
+  drop
+end-policy
+!
+route-policy PASS
+  pass
+end-policy
+!
+route-policy rpki
+  if validation-state is invalid then
+    set local-preference 50
+  endif
+  if validation-state is not-found then
+    set local-preference 75
+  endif
+  if validation-state is valid then
+    set local-preference 100
+  endif
+  pass
+end-policy
+!
+route-policy PEER1-IN
+  set community (65000:100)
+  set local-preference 100
+  set extcommunity color BLUE
+  pass
+end-policy
+!
+route-policy PEER2-IN
+  set community (65000:200)
+  set local-preference 100
+  set extcommunity color GREEN
+  pass
+end-policy
+!
+route-policy qppb-test
+  if community matches-every (1000:1) then
+    set qos-group 1
+  endif
+  if community matches-every (1000:2) then
+    set qos-group 2
+  else
+    pass
+  endif
+end-policy
+!
+route-policy qppb-test-1
+  if destination in (211.1.0.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.1.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.2.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.3.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.4.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.5.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.6.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.7.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.8.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.9.0/24) then
+    set qos-group 4
+  else
+    pass
+  endif
+end-policy
+!
+route-policy advertise-all
+  set path-selection all advertise
+end-policy
+!
+route-policy provider-only
+  if community matches-any (100:1) then
+    pass
+  elseif community matches-any (100:2) then
+    pass
+  elseif community matches-any (100:3) then
+    pass
+  elseif community matches-any (100:4) then
+    pass
+  elseif community matches-any (100:5) then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy QPPB-community
+  if community matches-any sti-lowcost then
+    set qos-group 1
+  elseif community matches-any sti-besteffort then
+    set qos-group 2
+  elseif community matches-any sti-fretta-15 then
+    set qos-group 15
+  elseif community matches-any sti-fretta-14 then
+    set qos-group 14
+  elseif destination in (50.1.1.0/24) then
+    set qos-group 2
+  elseif destination in (60.1.3.0/24) then
+    set qos-group 6
+  elseif destination in (2013::/90) then
+    set qos-group 21
+  elseif destination in (2061::/90) then
+    set qos-group 3
+  elseif destination in (2062::/90) then
+    set qos-group 4
+  endif
+end-policy
+!
+route-policy AF-QPPB-community
+  apply QPPB-community
+  apply PASS
+end-policy
+!
+route-policy bgpls_drop_from_ncs
+  drop
+end-policy
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 MgmtEth0/RP0/CPU0/0 172.20.33.1
+  100.2.1.0/24 Null0
+  100.2.2.0/24 Null0
+  100.2.3.0/24 Null0
+ !
+ vrf dns
+  address-family ipv4 unicast
+   104.3.0.0/16 131.131.1.1
+  !
+ !
+!
+router isis pf-internal
+ set-overload-bit on-startup wait-for-bgp
+ is-type level-1
+ net 49.0002.1921.6801.4004.00
+ distribute link-state
+ log adjacency changes
+ log pdu drops
+ lsp-refresh-interval 65000
+ max-lsp-lifetime 65535
+ lsp-password hmac-md5 encrypted 106D3A3A2A46405832
+ address-family ipv4 unicast
+  metric-style wide
+  mpls traffic-eng level-1-2
+  mpls traffic-eng router-id Loopback0
+  maximum-paths 32
+  segment-routing mpls
+ !
+ address-family ipv6 unicast
+  metric-style wide
+  maximum-paths 32
+ !
+ interface Loopback0
+  passive
+  address-family ipv4 unicast
+   metric 10
+   prefix-sid index 441
+  !
+  address-family ipv6 unicast
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/0
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 002720252B0A595531
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1046
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/1
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0528352C0E1D1C5A27
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1047
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/2
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 072C126F61584B5629
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1071
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/3
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 06253C02631F5B4A3B
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1071
+   adjacency-sid index 1072
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+!
+router bgp 100
+ bgp router-id 192.168.14.4
+ rpki server 172.20.33.46
+  transport tcp port 3323
+  refresh-time 120
+ !
+ bgp bestpath med always
+ bgp bestpath aigp ignore
+ bgp bestpath as-path multipath-relax
+ bgp bestpath origin-as use validity
+ bgp bestpath origin-as allow invalid
+ address-family ipv4 unicast
+  table-policy qppb-test
+  additional-paths send
+  bgp attribute-download
+  maximum-paths ebgp 32
+  maximum-paths ibgp 32
+  additional-paths selection route-policy advertise-all
+  bgp origin-as validation signal ibgp
+ !
+ address-family vpnv4 unicast
+ !
+ address-family ipv6 unicast
+  table-policy qppb-test
+  additional-paths receive
+  additional-paths send
+  bgp attribute-download
+  maximum-paths ebgp 32
+  maximum-paths ibgp 32
+  additional-paths selection route-policy advertise-all
+  allocate-label all
+ !
+ address-family vpnv6 unicast
+ !
+ address-family link-state link-state
+ !
+ address-family ipv4 flowspec
+ !
+ address-family ipv6 flowspec
+ !
+ address-family vpnv4 flowspec
+ !
+ af-group v4-af-pfs address-family ipv4 unicast
+  multipath
+  maximum-prefix 10000000 85 warning-only
+  next-hop-self
+  soft-reconfiguration inbound always
+ !
+ af-group v6-af-pfs address-family ipv6 unicast
+  multipath
+  next-hop-self
+  soft-reconfiguration inbound always
+ !
+ af-group v4-af-peer address-family ipv4 unicast
+  multipath
+  maximum-prefix 10000000 85 warning-only
+  soft-reconfiguration inbound always
+ !
+ af-group v6-af-peer address-family ipv6 unicast
+  multipath
+  maximum-prefix 100 80
+  soft-reconfiguration inbound always
+ !
+ af-group v4-flowspec-af-pfl address-family ipv4 flowspec
+  multipath
+  route-reflector-client
+  validation disable
+  next-hop-self
+ !
+ af-group v4-flowspec-af-pfs address-family ipv4 flowspec
+  multipath
+ !
+ af-group v6-flowspec-af-pfl address-family ipv6 flowspec
+  multipath
+  next-hop-self
+  soft-reconfiguration inbound always
+ !
+ af-group v6-flowspec-af-pfs address-family ipv4 flowspec
+  multipath
+ !
+ session-group pfs-session
+  bmp-activate server 1
+  update-source Loopback0
+ !
+ session-group peer-session
+  egress-engineering
+  ttl-security
+  bmp-activate server 1
+  ignore-connected-check
+ !
+ neighbor-group v4-pfs
+  use session-group pfs-session
+  address-family ipv4 unicast
+   use af-group v4-af-pfs
+  !
+ !
+ neighbor-group v6-pfs
+  use session-group pfs-session
+  address-family ipv6 unicast
+   use af-group v6-af-pfs
+  !
+  address-family ipv6 flowspec
+   use af-group v6-flowspec-af-pfl
+  !
+ !
+ neighbor-group v4-peer
+  use session-group peer-session
+  dmz-link-bandwidth
+  address-family ipv4 unicast
+   use af-group v4-af-peer
+  !
+ !
+ neighbor-group v6-peer
+  use session-group peer-session
+  dmz-link-bandwidth
+  address-family ipv6 unicast
+   use af-group v6-af-peer
+  !
+ !
+ neighbor 10.41.7.1
+  remote-as 65400
+  use neighbor-group v4-peer
+  description "ext-PEER1 EBGP"
+  address-family ipv4 unicast
+   route-policy PEER1-IN in
+   route-policy PASS out
+  !
+ !
+ neighbor 10.42.7.1
+  remote-as 65400
+  use neighbor-group v4-peer
+  description "ext-PEER2 EBGP"
+  address-family ipv4 unicast
+   route-policy PEER2-IN in
+   route-policy PASS out
+  !
+ !
+ neighbor 144.100.1.2
+  remote-as 400
+  use neighbor-group v4-peer
+  description 'ext-peer-1'
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family vpnv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 144.101.1.2
+  remote-as 1001
+  use neighbor-group v4-peer
+  description 'ext-peer-bgp-fs'
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family vpnv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 144.102.1.2
+  remote-as 1002
+  use neighbor-group v4-peer
+  description 'ext-peer-bgp-fs'
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv4 flowspec
+   validation disable
+  !
+ !
+ neighbor 144.103.1.2
+  remote-as 1003
+  use neighbor-group v4-peer
+  description 'ext-peer-bgp-fs'
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 144.104.1.2
+  remote-as 1004
+  use neighbor-group v4-peer
+  description 'ext-peer-bgp-fs'
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv4 flowspec
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 flowspec
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 192.168.13.1
+  remote-as 100
+  use neighbor-group v4-pfs
+  description "PFS #1"
+  update-source Loopback0
+  address-family vpnv4 unicast
+  !
+  address-family ipv6 labeled-unicast
+  !
+  address-family vpnv6 unicast
+  !
+  address-family link-state link-state
+   route-policy bgpls_drop_from_ncs in
+  !
+  address-family ipv4 flowspec
+   use af-group v4-flowspec-af-pfl
+   validation disable
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 192.168.13.2
+  remote-as 100
+  use neighbor-group v4-pfs
+  description "PFS #2"
+ !
+ neighbor 2001:44:100:1::2
+  remote-as 11101
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-1'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:44:101:1::2
+  remote-as 11102
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-2'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+neighbor 2001:144:100:1::2
+  remote-as 400
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:144:101:1::2
+  remote-as 1001
+  use neighbor-group v6-peer
+  maximum-peers 4095
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:144:102:1::2
+  remote-as 1002
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:144:103:1::2
+  remote-as 1003
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:144:104:1::2
+  remote-as 1004
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:192:168:13::1
+  remote-as 100
+  use neighbor-group v6-pfs
+  description 'PFS1'
+ !
+ neighbor 2001:192:168:13::2
+  remote-as 100
+  use neighbor-group v6-pfs
+  description 'PFS2'
+ !
+ vrf dns
+  rd 100:145
+  address-family ipv4 unicast
+  !
+  address-family ipv6 unicast
+  !
+ !
+ vrf peer1
+  rd 100:1
+  bgp router-id 192.168.141.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 61.100.1.2
+   remote-as 1000
+   update-source HundredGigE0/0/0/23.100
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer2
+  rd 100:2
+  bgp router-id 192.168.142.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 61.101.1.2
+   remote-as 1001
+   update-source HundredGigE0/0/0/23.101
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf bgpfs-dns
+  rd 100:53
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  address-family ipv6 unicast
+   redistribute connected
+  !
+  address-family ipv4 flowspec
+  !
+ !
+!
+bmp server 1
+ host 44.20.1.2 port 5000
+ description openBMP
+ update-source HundredGigE0/0/0/20
+ initial-delay 60
+ stats-reporting-period 300
+ initial-refresh delay 60 spread 2
+!
+segment-routing
+ traffic-eng
+ !
+!
+telemetry model-driven
+ destination-group DGroup1
+  address-family ipv4 172.20.33.66 port 5432
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group 172.18.133.44
+  address-family ipv4 172.18.133.44 port 44444
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group compass-pef-vm2
+  address-family ipv4 172.20.33.56 port 5555
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group compass-pef-vm10
+  address-family ipv4 172.20.33.65 port 5555
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ sensor-group BGP
+  sensor-path Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/process-info/vrf
+ !
+ sensor-group CPU
+  sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
+ !
+ sensor-group ENV
+  sensor-path Cisco-IOS-XR-asr9k-sc-envmon-oper:environmental-monitoring/racks/rack/slots/slot/modules/module/power/power-bag
+ !
+ sensor-group ISIS
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/neighbor-summaries
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/levels/level/lsp-table-summary/all-fragment-lsp-stats/node-counters/route-lsp-count
+ !
+ sensor-group MEMORY
+  sensor-path Cisco-IOS-XR-nto-misc-oper:memory-summary/nodes/node/summary
+  sensor-path Cisco-IOS-XR-nto-misc-shmem-oper:memory-summary/nodes/node/summary
+  sensor-path Cisco-IOS-XR-procmem-oper:processes-memory/nodes/node/process-ids/process-id
+  sensor-path Cisco-IOS-XR-nto-misc-shprocmem-oper:processes-memory/nodes/node/job-ids/job-id
+ !
+ sensor-group SYSTEM
+  sensor-path Cisco-IOS-XR-shellutil-oper:system-time/uptime
+  sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
+  sensor-path Cisco-IOS-XR-nto-misc-oper:memory-summary/nodes/node/summary
+  sensor-path Cisco-IOS-XR-shellutil-filesystem-oper:file-system/node/file-systems
+  sensor-path Cisco-IOS-XR-procmem-oper:processes-memory/nodes/node/process-ids/process-id
+ !
+ sensor-group health
+  sensor-path Cisco-IOS-XR-shellutil-oper:system-time/uptime
+  sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
+  sensor-path Cisco-IOS-XR-nto-misc-oper:memory-summary/nodes/node/summary
+ !
+ sensor-group optics
+  sensor-path Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port/optics-info
+ !
+ sensor-group MPLS-TE
+  sensor-path Cisco-IOS-XR-mpls-te-oper:mpls-te/tunnels/summary
+ !
+ sensor-group mpls-te
+  sensor-path Cisco-IOS-XR-mpls-te-oper:mpls-te/tunnels/summary
+  sensor-path Cisco-IOS-XR-ip-rsvp-oper:rsvp/interface-briefs/interface-brief
+  sensor-path Cisco-IOS-XR-ip-rsvp-oper:rsvp/counters/interface-messages/interface-message
+ !
+ sensor-group routing
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/statistics-global
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/levels/level/adjacencies/adjacency
+  sensor-path Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/process-info
+  sensor-path Cisco-IOS-XR-ip-rib-ipv4-oper:rib/vrfs/vrf/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/isis/as/information
+ !
+ sensor-group interfaces
+  sensor-path Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-summary
+  sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters
+ !
+ sensor-group retina_prism
+  sensor-path Cisco-IOS-XR-shellutil-oper:system-time/uptime
+  sensor-path Cisco-IOS-XR-mpls-te-oper:mpls-te/tunnels/summary
+  sensor-path Cisco-IOS-XR-infra-xtc-agent-oper:xtc/policy-summary
+  sensor-path Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-summary
+  sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
+  sensor-path Cisco-IOS-XR-nto-misc-oper:memory-summary/nodes/node/summary
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/topologies
+  sensor-path Cisco-IOS-XR-ipv4-acl-oper:ipv4-acl-and-prefix-list/oor/access-list-summary/details
+  sensor-path Cisco-IOS-XR-ipv6-acl-oper:ipv6-acl-and-prefix-list/oor/access-list-summary/details
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/neighbor-summaries/neighbor-summary
+  sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters
+  sensor-path Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/process-info
+  sensor-path Cisco-IOS-XR-fretta-bcm-dpa-npu-stats-oper:dpa/stats/nodes/node/npu-numbers/npu-number/display/trap-ids/trap-id
+  sensor-path Cisco-IOS-XR-ip-rib-ipv4-oper:rib/vrfs/vrf/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/isis
+ !
+ subscription SYSTEM
+  sensor-group-id BGP sample-interval 300000
+  sensor-group-id ISIS sample-interval 300000
+  sensor-group-id SYSTEM sample-interval 300000
+  sensor-group-id MPLS-TE sample-interval 300000
+ !
+ subscription health
+  sensor-group-id health strict-timer
+  sensor-group-id health sample-interval 30000
+  destination-id DGroup1
+ !
+ subscription optics
+  sensor-group-id optics strict-timer
+  sensor-group-id optics sample-interval 30000
+  destination-id DGroup1
+ !
+ subscription mpls-te
+  sensor-group-id mpls-te strict-timer
+  sensor-group-id mpls-te sample-interval 30000
+  destination-id DGroup1
+ !
+ subscription routing
+  sensor-group-id routing strict-timer
+  sensor-group-id routing sample-interval 30000
+  destination-id DGroup1
+ !
+ subscription tcp-out
+  sensor-group-id BGP sample-interval 15000
+  sensor-group-id CPU sample-interval 15000
+  sensor-group-id ENV sample-interval 15000
+  sensor-group-id MEMORY sample-interval 15000
+  destination-id 172.18.133.44
+ !
+ subscription interfaces
+  sensor-group-id interfaces strict-timer
+  sensor-group-id interfaces sample-interval 30000
+  destination-id DGroup1
+ !
+ subscription ReTiNA_NERVE
+  sensor-group-id retina_prism sample-interval 120000
+  destination-id compass-pef-vm2
+  destination-id compass-pef-vm10
+ !
+!
+netconf agent tty
+!
+netconf-yang agent
+ ssh
+!
+flowspec
+ local-install interface-all
+ vrf dns
+  address-family ipv4
+   local-install interface-all
+  !
+ !
+!
+lldp
+!
+mpls ip-ttl-propagate disable
+ssh client vrf default
+ssh server logging
+ssh timeout 120
+ssh server rate-limit 600
+ssh server capability netconf-xml
+ssh server session-limit 100
+ssh server v2
+ssh server vrf default
+ssh server netconf vrf default
+end

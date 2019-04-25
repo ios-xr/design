@@ -1,0 +1,399 @@
+hostname Compass-PEF-P2
+clock timezone PST America/Los_Angeles
+logging console disable
+telnet vrf default ipv4 server max-servers 10
+username admin
+ group root-lr
+ group cisco-support
+!
+cdp
+line console
+ exec-timeout 0 0
+!
+line default
+ exec-timeout 0 0
+!
+vty-pool default 0 99
+snmp-server community public RW
+ntp
+ server 72.163.32.44
+ source MgmtEth0/RP0/CPU0/0
+ update-calendar
+!
+bfd
+ multipath include location 0/0/CPU0
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method http
+ !
+!
+interface Bundle-Ether1
+ ipv4 address 21.8.1.1 255.255.255.252
+ ipv6 address 2001:21:8:1::1/64
+!
+interface Bundle-Ether2
+ ipv4 address 21.6.1.1 255.255.255.252
+ ipv6 address 2001:21:6:1::1/64
+!
+interface Loopback0
+ ipv4 address 192.168.12.2 255.255.255.255
+ ipv6 address 2001:192:168:12::2/128
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 172.20.33.38 255.255.255.0
+!
+interface HundredGigE0/0/0/0
+ shutdown
+!
+interface HundredGigE0/0/0/1
+ shutdown
+!
+interface HundredGigE0/0/0/2
+ shutdown
+!
+interface HundredGigE0/0/0/3
+ shutdown
+!
+interface HundredGigE0/0/0/4
+ shutdown
+!
+interface HundredGigE0/0/0/5
+ shutdown
+!
+interface HundredGigE0/0/0/6
+ bundle id 2 mode active
+ cdp
+!
+interface HundredGigE0/0/0/7
+ bundle id 2 mode active
+ cdp
+!
+interface HundredGigE0/0/0/8
+ bundle id 1 mode active
+ cdp
+!
+interface HundredGigE0/0/0/9
+ bundle id 1 mode active
+ cdp
+!
+interface HundredGigE0/0/0/10
+ cdp
+ ipv4 address 11.10.1.2 255.255.255.252
+ ipv6 address 2001:11:10:1::2/64
+!
+interface HundredGigE0/0/0/11
+ cdp
+ ipv4 address 11.11.1.2 255.255.255.252
+ ipv6 address 2001:11:11:1::2/64
+!
+interface HundredGigE0/0/0/12
+ shutdown
+!
+interface HundredGigE0/0/0/13
+ shutdown
+!
+interface HundredGigE0/0/0/14
+ shutdown
+!
+interface HundredGigE0/0/0/15
+ shutdown
+!
+interface HundredGigE0/0/0/16
+ shutdown
+!
+interface HundredGigE0/0/0/17
+ shutdown
+!
+interface HundredGigE0/0/0/18
+ shutdown
+!
+interface HundredGigE0/0/0/19
+ shutdown
+!
+interface HundredGigE0/0/0/20
+ shutdown
+!
+interface HundredGigE0/0/0/21
+ shutdown
+!
+interface HundredGigE0/0/0/22
+ shutdown
+!
+interface HundredGigE0/0/0/23
+ description "Connected to PE1 port 23"
+ cdp
+ ipv4 address 11.12.1.2 255.255.255.252
+ ipv6 address 2001:11:12:1::2/64
+!
+interface preconfigure HundredGigE0/0/0/0/8
+!
+interface preconfigure HundredGigE0/0/0/0/9
+!
+interface preconfigure HundredGigE0/0/0/0/10
+!
+interface preconfigure HundredGigE0/0/0/0/11
+!
+interface preconfigure HundredGigE0/0/0/0/12
+!
+interface preconfigure HundredGigE0/0/0/0/13
+!
+!
+route-policy bgpls_drop_from_ncs
+  drop
+end-policy
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 MgmtEth0/RP0/CPU0/0 172.20.33.1
+ !
+!
+router isis core
+ set-overload-bit on-startup wait-for-bgp
+ is-type level-2-only
+ net 49.0001.1921.6801.2002.00
+ distribute link-state
+ log adjacency changes
+ log pdu drops
+ lsp-refresh-interval 65000
+ max-lsp-lifetime 65535
+ lsp-password hmac-md5 encrypted 0528352C0E1D1C5A27
+ address-family ipv4 unicast
+  metric-style wide
+  mpls traffic-eng level-2-only
+  mpls traffic-eng router-id Loopback0
+  maximum-paths 32
+  segment-routing mpls
+ !
+ address-family ipv6 unicast
+  metric-style wide
+  maximum-paths 32
+  segment-routing mpls
+ !
+ interface Bundle-Ether1
+  circuit-type level-2-only
+  point-to-point
+  hello-password hmac-md5 encrypted 01303527745A545C1F
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1023
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface Bundle-Ether2
+  circuit-type level-2-only
+  point-to-point
+  hello-password hmac-md5 encrypted 13262431245D567915
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1024
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface Loopback0
+  passive
+  address-family ipv4 unicast
+   metric 10
+   prefix-sid index 221
+  !
+  address-family ipv6 unicast
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/10
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 14342128235578781A
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1013
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/11
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 08027F6D264857442C
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1014
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/23
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 08027F6D264857442C
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1016
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+!
+router ospf core
+ router-id 192.168.12.2
+ segment-routing mpls
+ bfd minimum-interval 500
+ bfd multiplier 5
+ segment-routing forwarding mpls
+ area 0
+  mpls traffic-eng
+  interface Bundle-Ether1
+   bfd fast-detect
+   network point-to-point
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa enable
+  !
+  interface Bundle-Ether2
+   bfd fast-detect
+   network point-to-point
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa enable
+  !
+  interface Loopback0
+   passive enable
+   prefix-sid index 221
+  !
+ !
+ area 2
+  mpls traffic-eng
+  interface HundredGigE0/0/0/10
+   bfd fast-detect
+   network point-to-point
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa enable
+  !
+  interface HundredGigE0/0/0/11
+   bfd fast-detect
+   network point-to-point
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa enable
+  !
+ !
+ mpls traffic-eng router-id Loopback0
+!
+router bgp 100
+ bgp router-id 192.168.12.1
+ address-family vpnv4 unicast
+ !
+ address-family vpnv6 unicast
+ !
+ address-family link-state link-state
+ !
+!
+mpls oam
+!
+rsvp
+ interface Bundle-Ether1
+  bandwidth percentage 50
+ !
+ interface Bundle-Ether2
+  bandwidth percentage 50
+ !
+ interface HundredGigE0/0/0/10
+  bandwidth percentage 50
+ !
+ interface HundredGigE0/0/0/11
+  bandwidth percentage 50
+ !
+!
+mpls traffic-eng
+ interface Bundle-Ether1
+ !
+ interface Bundle-Ether2
+ !
+ interface HundredGigE0/0/0/10
+ !
+ interface HundredGigE0/0/0/11
+ !
+!
+segment-routing
+ global-block 16000 16999
+ local-block 17000 17999
+!
+telemetry model-driven
+ destination-group compass-pef-vm2
+  address-family ipv4 172.20.33.56 port 5555
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group compass-pef-vm10
+  address-family ipv4 172.20.33.65 port 5555
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ sensor-group retina_prism
+  sensor-path Cisco-IOS-XR-shellutil-oper:system-time/uptime
+  sensor-path Cisco-IOS-XR-mpls-te-oper:mpls-te/tunnels/summary
+  sensor-path Cisco-IOS-XR-infra-xtc-agent-oper:xtc/policy-summary
+  sensor-path Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-summary
+  sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
+  sensor-path Cisco-IOS-XR-nto-misc-oper:memory-summary/nodes/node/summary
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/topologies
+  sensor-path Cisco-IOS-XR-ipv4-acl-oper:ipv4-acl-and-prefix-list/oor/access-list-summary/details
+  sensor-path Cisco-IOS-XR-ipv6-acl-oper:ipv6-acl-and-prefix-list/oor/access-list-summary/details
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/neighbor-summaries/neighbor-summary
+  sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters
+  sensor-path Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/process-info
+  sensor-path Cisco-IOS-XR-ip-rib-ipv4-oper:rib/vrfs/vrf/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/isis
+ !
+ subscription ReTiNA_NERVE
+  sensor-group-id retina_prism sample-interval 120000
+  destination-id compass-pef-vm10
+ !
+!
+lldp
+!
+mpls ip-ttl-propagate disable
+ssh server logging
+ssh server v2
+ssh server netconf vrf default
+end
