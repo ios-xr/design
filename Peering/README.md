@@ -1,5 +1,9 @@
 ## Topology and Configuration files for the Cisco SP Validated Peering Fabric
 
+## See individual directories for specific versions 
 
 
-## Design available @ [xrdocs](https://xrdocs.github.io/design/blogs/2018-05-08-peering-fabric-hld/)
+
+## Latest design available @ [xrdocs](https://xrdocs..io/design/)
+
+
