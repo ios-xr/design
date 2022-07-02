@@ -1,0 +1,1311 @@
+hostname Compass-PEF-PFS2
+clock timezone PST America/Los_Angeles
+logging console disable
+logging monitor debugging
+username admin
+ group root-lr
+ group cisco-support
+ secret 5 $1$160X$ia3y7pq09CCJRsHOdW/SM.
+!
+cdp
+grpc
+ port 57999
+!
+telemetry model-driven
+ destination-group DGroup1
+  address-family ipv4 172.20.33.66 port 5432
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ !
+ sensor-group health
+  sensor-path Cisco-IOS-XR-shellutil-oper:system-time/uptime
+  sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
+  sensor-path Cisco-IOS-XR-nto-misc-oper:memory-summary/nodes/node/summary
+ !
+ sensor-group optics
+  sensor-path Cisco-IOS-XR-controller-optics-oper:optics-oper/optics-ports/optics-port/optics-info
+ !
+ sensor-group mpls-te
+  sensor-path Cisco-IOS-XR-mpls-te-oper:mpls-te/tunnels/summary
+  sensor-path Cisco-IOS-XR-ip-rsvp-oper:rsvp/interface-briefs/interface-brief
+  sensor-path Cisco-IOS-XR-ip-rsvp-oper:rsvp/counters/interface-messages/interface-message
+ !
+ sensor-group routing
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/statistics-global
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/levels/level/adjacencies/adjacency
+  sensor-path Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/process-info
+  sensor-path Cisco-IOS-XR-ip-rib-ipv4-oper:rib/vrfs/vrf/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/isis/as/information
+ !
+ sensor-group interfaces
+  sensor-path Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-summary
+  sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters
+ !
+ subscription health
+  sensor-group-id health strict-timer
+  sensor-group-id health sample-interval 30000
+  destination-id DGroup1
+ !
+ subscription optics
+  sensor-group-id optics strict-timer
+  sensor-group-id optics sample-interval 30000
+  destination-id DGroup1
+ !
+ subscription mpls-te
+  sensor-group-id mpls-te strict-timer
+  sensor-group-id mpls-te sample-interval 30000
+  destination-id DGroup1
+ !
+ subscription routing
+  sensor-group-id routing strict-timer
+  sensor-group-id routing sample-interval 30000
+  destination-id DGroup1
+ !
+ subscription interfaces
+  sensor-group-id interfaces strict-timer
+  sensor-group-id interfaces sample-interval 30000
+  destination-id DGroup1
+ !
+!
+explicit-path name PFS2-P1-PE1-1
+ index 1 next-address loose ipv4 unicast 192.168.12.1
+ index 2 next-address loose ipv4 unicast 192.168.11.1
+!
+explicit-path name PFS2-P2-PE1-1
+ index 1 next-address loose ipv4 unicast 192.168.12.2
+ index 2 next-address loose ipv4 unicast 192.168.11.1
+!
+pce
+ address ipv4 192.168.13.2
+ api
+  user admin
+   password encrypted 072C126F61584B5629
+  !
+ !
+ state-sync ipv4 192.168.13.1
+!
+vrf inet
+ address-family ipv4 unicast
+  import from vrf advertise-as-vpn
+  import route-target
+   100:100
+   100:101
+   100:999
+  !
+  export to vrf allow-imported-vpn
+  export route-target
+   100:999
+  !
+ !
+!
+vrf internet
+ address-family ipv4 unicast
+  import from vrf advertise-as-vpn
+  import route-target
+   100:1
+   65000:100
+   65000:101
+   65000:102
+   65000:103
+   65000:104
+   65000:105
+   65000:106
+   65000:107
+   65000:108
+   65000:109
+   65000:110
+   65000:111
+   65000:112
+   65000:113
+   65000:114
+   65000:115
+   65000:116
+   65000:117
+   65000:118
+   65000:119
+   65000:120
+   65000:121
+   65000:122
+   65000:123
+   65000:124
+   65000:125
+   65000:126
+   65000:127
+   65000:128
+   65000:129
+   65000:130
+   65000:131
+   65000:132
+   65000:133
+   65000:134
+   65000:135
+   65000:136
+   65000:137
+   65000:138
+   65000:139
+   65000:140
+   65000:141
+   65000:142
+   65000:143
+   65000:144
+   65000:145
+   65000:146
+   65000:147
+   65000:148
+   65000:149
+   65000:999
+  !
+  export to vrf allow-imported-vpn
+  export route-target
+   100:1
+   65000:100
+   65000:101
+   65000:102
+   65000:103
+   65000:104
+   65000:105
+   65000:106
+   65000:107
+   65000:108
+   65000:109
+   65000:110
+   65000:111
+   65000:112
+   65000:113
+   65000:114
+   65000:115
+   65000:116
+   65000:117
+   65000:118
+   65000:119
+   65000:120
+   65000:121
+   65000:122
+   65000:123
+   65000:124
+   65000:125
+   65000:126
+   65000:127
+   65000:128
+   65000:129
+   65000:130
+   65000:131
+   65000:132
+   65000:133
+   65000:134
+   65000:135
+   65000:136
+   65000:137
+   65000:138
+   65000:139
+   65000:140
+   65000:141
+   65000:142
+   65000:143
+   65000:144
+   65000:145
+   65000:146
+   65000:147
+   65000:148
+   65000:149
+   65000:999
+  !
+ !
+!
+address-family ipv4 unicast
+!
+line console
+ exec-timeout 0 0
+!
+line default
+ exec-timeout 0 0
+!
+vty-pool default 0 99
+snmp-server ifindex persist
+snmp-server community cisco RW
+snmp-server community public RW
+snmp-server community crosswork RO
+fpd auto-upgrade enable
+ntp
+ server 72.163.32.44
+ source MgmtEth0/RP0/CPU0/0
+ update-calendar
+!
+bfd
+ multipath include location 0/0/CPU0
+ dampening disable
+!
+tftp client source-interface MgmtEth0/RP0/CPU0/0
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+netconf-yang agent
+ ssh
+!
+!
+class-map match-any c1
+ match dscp ef 5 
+ match mpls experimental topmost 5 
+ end-class-map
+! 
+policy-map c1
+ class c1
+  police rate 1 mbps 
+  ! 
+ ! 
+ class class-default
+ ! 
+ end-policy-map
+! 
+flow exporter-map nf-export
+ version v9
+  options interface-table timeout 60
+  options sampler-table timeout 60
+  template timeout 30
+ !
+ transport udp 2055
+ source MgmtEth0/RP0/CPU0/0
+ destination 172.20.33.56
+!
+flow monitor-map flow-monitor-ipv4
+ record ipv4
+ option bgpattr
+ exporter nf-export
+ cache entries 50000
+ cache timeout active 60
+ cache timeout inactive 10
+!
+flow monitor-map flow-monitor-ipv6
+ record ipv6
+ option bgpattr
+ exporter nf-export
+ cache timeout active 60
+ cache timeout inactive 10
+!
+flow monitor-map nf-flow-monitor-mpls
+ record mpls ipv4-ipv6-fields
+ option bgpattr
+ exporter nf-export
+ cache timeout active 60
+ cache timeout inactive 10
+!
+flow monitor-map flow-monitor-ipv4-peer
+ record ipv4 peer-as
+ option bgpattr
+ exporter nf-export
+ cache entries 50000
+ cache timeout active 60
+ cache timeout inactive 10
+!
+sampler-map nf-sample-8192
+ random 1 out-of 8192
+!
+interface Bundle-Ether1
+ description core;p2
+ ipv4 address 21.8.1.2 255.255.255.252
+ ipv6 address 2001:21:8:1::2/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ flow mpls monitor nf-flow-monitor-mpls sampler nf-sample-8192 ingress
+!
+interface Bundle-Ether2
+ ipv4 address 21.4.1.2 255.255.255.252
+ ipv6 address 2001:21:4:1::2/64
+!
+interface Loopback0
+ ipv4 address 192.168.13.2 255.255.255.255
+ ipv6 address 2001:192:168:13::2/128
+!
+interface Loopback100
+ ipv4 address 192.168.13.100 255.255.255.255
+ ipv6 address 2001:192:168:13::100/128
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 172.20.33.40 255.255.255.0
+!
+interface HundredGigE0/0/0/0
+ cdp
+!
+interface HundredGigE0/0/0/1
+ cdp
+!
+interface HundredGigE0/0/0/2
+ cdp
+!
+interface HundredGigE0/0/0/3
+ cdp
+!
+interface HundredGigE0/0/0/4
+ bundle id 2 mode active
+ cdp
+!
+interface HundredGigE0/0/0/5
+ bundle id 2 mode active
+ cdp
+!
+interface HundredGigE0/0/0/6
+ cdp
+!
+interface HundredGigE0/0/0/7
+ cdp
+!
+interface HundredGigE0/0/0/8
+ bundle id 1 mode active
+ cdp
+!
+interface HundredGigE0/0/0/9
+ bundle id 1 mode active
+ cdp
+!
+interface HundredGigE0/0/0/10
+ cdp
+!
+interface HundredGigE0/0/0/11
+ cdp
+!
+interface HundredGigE0/0/0/12
+ cdp
+!
+interface HundredGigE0/0/0/13
+ cdp
+!
+interface HundredGigE0/0/0/14
+ cdp
+!
+interface HundredGigE0/0/0/15
+ cdp
+!
+interface HundredGigE0/0/0/16
+ cdp
+!
+interface FortyGigE0/0/0/17
+ ipv4 address 10.100.1.7 255.255.255.0
+!
+interface HundredGigE0/0/0/18
+ cdp
+!
+interface HundredGigE0/0/0/19
+ description core;pfl1
+ cdp
+ ipv4 address 32.19.1.1 255.255.255.252
+ ipv6 address 2001:32:19:1::1/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ flow mpls monitor nf-flow-monitor-mpls sampler nf-sample-8192 ingress
+!
+interface HundredGigE0/0/0/20
+ cdp
+ ipv4 address 32.20.1.1 255.255.255.252
+ ipv6 address 2001:32:20:1::1/64
+!
+interface HundredGigE0/0/0/21
+ cdp
+ ipv4 address 32.21.1.1 255.255.255.252
+ ipv6 address 2001:32:21:1::1/64
+!
+interface HundredGigE0/0/0/22
+ cdp
+ ipv4 address 32.22.1.1 255.255.255.252
+ ipv6 address 2001:32:22:1::1/64
+!
+interface HundredGigE0/0/0/23
+ description core;pfl1
+ cdp
+ ipv4 address 32.23.1.1 255.255.255.252
+ ipv6 address 2001:32:23:1::1/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ flow mpls monitor nf-flow-monitor-mpls sampler nf-sample-8192 ingress
+!
+interface HundredGigE0/0/0/24
+ cdp
+ ipv4 address 32.24.1.1 255.255.255.252
+ ipv6 address 2001:32:24:1::1/64
+!
+interface HundredGigE0/0/0/25
+ description core;pfl1
+ cdp
+ ipv4 address 32.25.1.1 255.255.255.252
+ ipv6 address 2001:32:25:1::1/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ flow mpls monitor nf-flow-monitor-mpls sampler nf-sample-8192 ingress
+!
+interface HundredGigE0/0/0/26
+ cdp
+ ipv4 address 32.26.1.1 255.255.255.252
+ ipv6 address 2001:32:26:1::1/64
+!
+interface HundredGigE0/0/0/27
+ cdp
+ service-policy input c1
+ ipv4 address 32.27.1.1 255.255.255.252
+ ipv6 address 2001:32:27:1::1/64
+ load-interval 30
+!
+interface HundredGigE0/0/0/28
+ cdp
+ ipv4 address 35.26.1.1 255.255.255.252
+ ipv6 address 2001:32:26:1::1/64
+ ipv6 address 2001:32:28:1::1/64
+!
+interface HundredGigE0/0/0/29
+ cdp
+ ipv4 address 35.27.1.1 255.255.255.252
+ ipv6 address 2001:32:29:1::1/64
+ ipv6 address 2001:35:27:1::1/64
+ load-interval 30
+!
+interface HundredGigE0/0/0/30
+ cdp
+ ipv4 address 32.30.1.1 255.255.255.252
+ ipv6 address 2001:32:30:1::1/64
+!
+interface HundredGigE0/0/0/31
+ cdp
+ ipv4 address 32.31.1.1 255.255.255.252
+ ipv6 address 2001:32:31:1::1/64
+!
+interface HundredGigE0/0/0/32
+ cdp
+ ipv4 address 32.32.1.1 255.255.255.252
+ ipv6 address 2001:32:32:1::1/64
+!
+interface HundredGigE0/0/0/33
+ description core;pfl2
+ cdp
+ ipv4 address 32.33.1.1 255.255.255.252
+ ipv6 address 2001:32:33:1::1/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ flow mpls monitor nf-flow-monitor-mpls sampler nf-sample-8192 ingress
+!
+interface HundredGigE0/0/0/34
+ description core;pfl3
+ cdp
+ ipv4 address 32.34.1.1 255.255.255.252
+ ipv6 address 2001:32:34:1::1/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ flow mpls monitor nf-flow-monitor-mpls sampler nf-sample-8192 ingress
+!
+interface HundredGigE0/0/0/35
+ mtu 9212
+!
+interface HundredGigE0/0/0/35.1
+ ipv4 address 36.1.1.1 255.255.255.0
+ ipv6 address 2001:36:1:1::1/64
+ encapsulation dot1q 101
+!
+interface HundredGigE0/0/0/35.2
+ ipv4 address 36.1.2.1 255.255.255.0
+ ipv6 address 2001:36:1:2::1/64
+ encapsulation dot1q 102
+!
+interface HundredGigE0/0/0/35.3
+ ipv4 address 36.1.3.1 255.255.255.0
+ ipv6 address 2001:36:1:3::1/64
+ encapsulation dot1q 103
+!
+interface HundredGigE0/0/0/35.4
+ ipv4 address 36.1.4.1 255.255.255.0
+ ipv6 address 2001:36:1:4::1/64
+ encapsulation dot1q 104
+!
+interface HundredGigE0/0/0/35.5
+ ipv4 address 36.1.5.1 255.255.255.0
+ ipv6 address 2001:36:1:5::1/64
+ encapsulation dot1q 105
+!
+interface HundredGigE0/0/0/35.6
+ ipv4 address 36.1.6.1 255.255.255.0
+ ipv6 address 2001:36:1:6::1/64
+ encapsulation dot1q 106
+!
+interface HundredGigE0/0/0/35.7
+ ipv4 address 36.1.7.1 255.255.255.0
+ ipv6 address 2001:36:1:7::1/64
+ encapsulation dot1q 107
+!
+interface HundredGigE0/0/0/35.8
+ ipv4 address 36.1.8.1 255.255.255.0
+ ipv6 address 2001:36:1:8::1/64
+ encapsulation dot1q 108
+!
+interface HundredGigE0/0/0/35.9
+ ipv4 address 36.1.9.1 255.255.255.0
+ ipv6 address 2001:36:1:9::1/64
+ encapsulation dot1q 109
+!
+interface HundredGigE0/0/0/35.10
+ ipv4 address 36.1.10.1 255.255.255.0
+ ipv6 address 2001:36:1:a::1/64
+ encapsulation dot1q 110
+!
+!
+prefix-set ODN-Prefixes
+  161.1.151.1/32,
+  161.2.151.1/32,
+  161.22.151.1/32,
+  161.23.151.1/32
+end-set
+!
+route-policy PASS
+  pass
+end-policy
+!
+route-policy L2-L1
+  if destination in (192.168.11.1, 192.168.12.1, 192.168.12.2, 192.168.22.1) then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy bgpls_drop_from_ncs
+  drop
+end-policy
+!
+route-policy v4-abstract-ibgp-out
+  if destination in ODN-Prefixes then
+    set next-hop unchanged
+  else
+    set next-hop 192.168.13.100
+  endif
+end-policy
+!
+route-policy v6-abstract-ibgp-out
+  set next-hop 2001:192:168:13::100
+end-policy
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 MgmtEth0/RP0/CPU0/0 172.20.33.1
+ !
+!
+router isis pf-internal-core
+ set-overload-bit on-startup wait-for-bgp
+ net 49.0001.1921.6801.3002.00
+ net 49.0002.1921.6801.3002.00
+ distribute link-state
+ log adjacency changes
+ log pdu drops
+ lsp-refresh-interval 65000
+ max-lsp-lifetime 65535
+ lsp-password hmac-md5 encrypted 072C126F61584B5629
+ flex-algo 128
+  metric-type delay
+  advertise-definition
+ !
+ address-family ipv4 unicast
+  metric-style wide
+  mpls traffic-eng level-1-2
+  mpls traffic-eng router-id Loopback0
+  maximum-paths 32
+  propagate level 2 into level 1 route-policy L2-L1
+  segment-routing mpls
+ !
+ address-family ipv6 unicast
+  metric-style wide
+  maximum-paths 32
+  segment-routing mpls
+ !
+ interface Bundle-Ether1
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  point-to-point
+  hello-password hmac-md5 encrypted 1531382F2B7B797716
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1023
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface Bundle-Ether2
+  circuit-type level-2-only
+  point-to-point
+  hello-password hmac-md5 encrypted 1531382F2B7B797716
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1022
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface Loopback0
+  passive
+  address-family ipv4 unicast
+   metric 10
+   prefix-sid absolute 16398
+   prefix-sid algorithm 128 absolute 16132
+  !
+  address-family ipv6 unicast
+   metric 10
+  !
+ !
+ interface Loopback100
+  passive
+  address-family ipv4 unicast
+   prefix-sid absolute 16311
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface HundredGigE0/0/0/19
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 03276828295E731F70
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1061
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/20
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 072C126F61584B5629
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1062
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/21
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 096F7D2A3654454135
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1063
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/22
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 1531382F2B7B797716
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1064
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/23
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0528352C0E1D1C5A27
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1065
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/24
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 112A2A263843595F3A
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1066
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/25
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0478382520701E1D37
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1067
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/26
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0528352C0E1D1C5A27
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1071
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/27
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 08027F6D264857442C
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1072
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/28
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0478382520701E1D37
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1073
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/29
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 01303527745A545C1F
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/30
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 1531382F2B7B797716
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1075
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/31
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 03276828295E731F70
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1076
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/32
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 14342128235578781A
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1077
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/33
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 002720252B0A595531
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1078
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/34
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 1531382F2B7B797716
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1081
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+!
+router bgp 100
+ bgp router-id 192.168.13.2
+ bgp graceful-restart
+ bgp bestpath med always
+ bgp bestpath aigp ignore
+ ibgp policy out enforce-modifications
+ bgp bestpath as-path multipath-relax
+ address-family ipv4 unicast
+  additional-paths receive
+  additional-paths send
+  maximum-paths ebgp 32
+  maximum-paths ibgp 32
+ !
+ address-family vpnv4 unicast
+ !
+ address-family ipv6 unicast
+  additional-paths receive
+  bgp attribute-download
+  maximum-paths ebgp 32
+  maximum-paths ibgp 32
+  network 2001:192:168:13::2/128
+ !
+ address-family vpnv6 unicast
+ !
+ address-family link-state link-state
+ !
+ address-family ipv4 flowspec
+ !
+ address-family ipv6 flowspec
+ !
+ address-family vpnv4 flowspec
+ !
+ af-group v4-af-pfl address-family ipv4 unicast
+  maximum-prefix 10000000 85 warning-only
+  multipath
+  route-reflector-client
+  soft-reconfiguration inbound always
+ !
+ af-group v6-af-pfl address-family ipv6 unicast
+  multipath
+  route-reflector-client
+  next-hop-self
+  soft-reconfiguration inbound always
+ !
+ af-group vpnv4-af-pfl address-family vpnv4 unicast
+  maximum-prefix 10000000 85 warning-only
+  multipath
+  route-reflector-client
+  next-hop-self
+  soft-reconfiguration inbound always
+ !
+ session-group pfl-session
+  update-source Loopback0
+ !
+ neighbor-group arbor
+  remote-as 100
+  update-source MgmtEth0/RP0/CPU0/0
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-reflector-client
+   route-policy PASS out
+  !
+ !
+ neighbor-group v4-pfl
+  use session-group pfl-session
+  address-family ipv4 unicast
+   use af-group v4-af-pfl
+   route-policy v4-abstract-ibgp-out out
+  !
+  address-family vpnv4 unicast
+   use af-group vpnv4-af-pfl
+  !
+ !
+ neighbor-group v6-pfl
+  use session-group pfl-session
+  address-family ipv6 unicast
+   use af-group v6-af-pfl
+   route-policy v6-abstract-ibgp-out out
+  !
+ !
+ neighbor 192.168.11.1
+  remote-as 100
+  use neighbor-group v4-pfl
+  bfd fast-detect
+  description "PE1"
+  address-family ipv4 unicast
+  !
+  address-family vpnv4 unicast
+   soft-reconfiguration inbound always
+  !
+  address-family ipv6 labeled-unicast
+   route-reflector-client
+  !
+  address-family vpnv6 unicast
+  !
+  address-family link-state link-state
+  !
+ !
+ neighbor 192.168.13.1
+  remote-as 100
+  shutdown
+  update-source Loopback0
+  address-family vpnv4 unicast
+  !
+  address-family link-state link-state
+  !
+ !
+ neighbor 192.168.14.1
+  remote-as 100
+  use neighbor-group v4-pfl
+  description "PFL #1"  
+  address-family vpnv4 unicast
+   soft-reconfiguration inbound always
+  !
+  address-family link-state link-state
+  !
+ !
+ neighbor 192.168.14.2
+  remote-as 100
+  use neighbor-group v4-pfl
+  description "PFL #2"  
+  address-family link-state link-state
+  !
+ !
+ neighbor 192.168.14.3
+  remote-as 100
+  use neighbor-group v4-pfl
+  description "PFL #3"  
+  address-family link-state link-state
+  !
+ !
+ neighbor 192.168.14.4
+  remote-as 100
+  use neighbor-group v4-pfl
+  description "PFL #4"
+  address-family vpnv4 unicast
+  !
+  address-family ipv6 labeled-unicast
+  !
+  address-family vpnv6 unicast
+  !
+  address-family link-state link-state
+  !
+  address-family ipv4 flowspec
+   use af-group v4-flowspec-af-pfl
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 192.168.14.5
+  remote-as 100
+  use neighbor-group v4-pfl
+  description "PFL #4"
+  address-family vpnv4 unicast
+  !
+  address-family ipv6 labeled-unicast
+  !
+  address-family vpnv6 unicast
+  !
+  address-family link-state link-state
+  !
+  address-family ipv4 flowspec
+   use af-group v4-flowspec-af-pfl
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 192.168.22.1
+  remote-as 100
+  use neighbor-group v4-pfl
+  bfd fast-detect
+  description "PE2"
+  address-family ipv4 unicast
+  !
+  address-family vpnv4 unicast
+   soft-reconfiguration inbound always
+  !
+  address-family ipv6 labeled-unicast
+   route-reflector-client
+  !
+  address-family vpnv6 unicast
+  !
+  address-family link-state link-state
+  !
+ !
+ neighbor 2001:21:4:1::1
+  remote-as 60060
+  update-source Bundle-Ether2
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:192:168:11::1
+  remote-as 100
+  use neighbor-group v6-pfl
+  description 'PE1'  
+ !
+ neighbor 2001:192:168:14::1
+  remote-as 100
+  use neighbor-group v6-pfl
+  description 'PFL #1'  
+ !
+ neighbor 2001:192:168:14::2
+  remote-as 100
+  use neighbor-group v6-pfl
+  description 'PFL #2'  
+ !
+ neighbor 2001:192:168:14::3
+  remote-as 100
+  use neighbor-group v6-pfl
+  description 'PFL #3'  
+ !
+ neighbor 2001:192:168:14::4
+  remote-as 100
+  use neighbor-group v6-pfl
+  description 'PFL #4'  
+ !
+ neighbor 2001:192:168:22::1
+  remote-as 100
+  use neighbor-group v6-pfl
+  description 'PE2'
+ !
+ vrf inet
+  rd 100:1000
+  address-family ipv4 unicast
+   redistribute connected
+   redistribute static
+  !
+ !
+ vrf internet
+  rd 65000:999
+  address-family ipv4 unicast
+   label mode per-vrf
+  !
+ !
+!
+mpls oam
+!
+rsvp
+ interface Bundle-Ether1
+  bandwidth percentage 50
+ !
+ interface Bundle-Ether2
+  bandwidth percentage 50
+ !
+!
+mpls traffic-eng
+ interface Bundle-Ether1
+ !
+ interface Bundle-Ether2
+ !
+ interface HundredGigE0/0/0/19
+ !
+ interface HundredGigE0/0/0/20
+ !
+ interface HundredGigE0/0/0/21
+ !
+ interface HundredGigE0/0/0/22
+ !
+ interface HundredGigE0/0/0/23
+ !
+ interface HundredGigE0/0/0/24
+ !
+ interface HundredGigE0/0/0/25
+ !
+ interface HundredGigE0/0/0/26
+ !
+ interface HundredGigE0/0/0/27
+ !
+ interface HundredGigE0/0/0/28
+ !
+ interface HundredGigE0/0/0/29
+ !
+ interface HundredGigE0/0/0/30
+ !
+ interface HundredGigE0/0/0/31
+ !
+ interface HundredGigE0/0/0/32
+ !
+ interface HundredGigE0/0/0/33
+ !
+ interface HundredGigE0/0/0/34
+ !
+!
+segment-routing
+ global-block 16000 16999
+ local-block 17000 17999
+ traffic-eng
+  pcc
+   pce address ipv4 192.168.13.2
+    precedence 10
+   !
+   report-all
+  !
+ !
+!
+lldp
+!
+mpls ip-ttl-propagate disable
+telnet vrf default ipv4 server max-servers 50
+ssh client vrf default
+ssh server logging
+ssh timeout 120
+ssh server rate-limit 600
+ssh server session-limit 100
+ssh server v2
+ssh server vrf default
+ssh server netconf vrf default
+performance-measurement
+ interface Bundle-Ether1
+  delay-measurement
+   advertise-delay 2000
+  !
+ !
+ interface HundredGigE0/0/0/33
+  delay-measurement
+   advertise-delay 2000
+  !
+ !
+!
+end

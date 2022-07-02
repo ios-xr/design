@@ -1,0 +1,546 @@
+hostname Compass-PEF-P1
+clock timezone PST America/Los_Angeles
+logging monitor debugging
+username admin
+ group root-lr
+ group cisco-support
+ secret 5 $1$w97y$6/5qUXc8JpUPghv0oI.FD/
+!
+cdp
+telemetry model-driven
+ destination-group clus
+  address-family ipv4 172.20.33.81 port 5432
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group compass-pef-vm2
+  address-family ipv4 172.20.33.56 port 5555
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group compass-pef-vm10
+  address-family ipv4 172.20.33.65 port 5555
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group CW_d065b90692d50eec8f53f834630d49ecdfcf0442
+  address-family ipv4 172.20.33.83 port 31500
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ sensor-group interfaces
+  sensor-path Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-summary
+  sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/cache/data-rate
+  sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters
+ !
+!
+pce
+ address ipv4 192.168.12.1
+ logging
+  pcep pcerr-received
+  no-path
+ !
+!
+address-family ipv4 unicast
+!
+address-family ipv6 unicast
+!
+line default
+ exec-timeout 0 0
+ session-timeout 0
+!
+vty-pool default 0 99
+snmp-server host 172.28.35.177 traps version 2c public udp-port 7777
+snmp-server user snmpuser mygrp1 v2c
+snmp-server community cisco RW
+snmp-server community public RW
+snmp-server community crosswork RO
+snmp-server group mygrp1 v2c
+snmp-server traps rf
+snmp-server traps bfd
+snmp-server traps ethernet cfm
+snmp-server traps ntp
+snmp-server traps ethernet oam events
+snmp-server traps otn
+snmp-server traps copy-complete
+snmp-server traps snmp linkup
+snmp-server traps snmp linkdown
+snmp-server traps snmp coldstart
+snmp-server traps snmp warmstart
+snmp-server traps snmp authentication
+snmp-server traps flash removal
+snmp-server traps flash insertion
+snmp-server traps config
+snmp-server traps entity
+snmp-server traps selective-vrf-download role-change
+snmp-server traps syslog
+snmp-server traps system
+snmp-server traps diameter peerup
+snmp-server traps diameter peerdown
+snmp-server traps diameter protocolerror
+snmp-server traps diameter permanentfail
+snmp-server traps diameter transientfail
+snmp-server traps frequency synchronization
+snmp-server traps bridgemib
+snmp-server traps optical
+snmp-server traps addrpool low
+snmp-server traps addrpool high
+snmp-server traps cisco-entity-ext
+snmp-server traps entity-state operstatus
+snmp-server traps entity-state switchover
+snmp-server traps entity-redundancy all
+snmp-server traps entity-redundancy status
+snmp-server traps entity-redundancy switchover
+ntp
+ server 72.163.32.44
+ server 171.68.38.66
+ source MgmtEth0/RP0/CPU0/0
+ update-calendar
+!
+bfd
+ multipath include location 0/0/CPU0
+ dampening disable
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+netconf-yang agent
+ ssh
+!
+!
+class-map match-any match-exp1
+ match mpls experimental topmost 1 
+ end-class-map
+! 
+class-map match-any match-exp2
+ match mpls experimental topmost 2 
+ end-class-map
+! 
+class-map match-any match-exp3
+ match mpls experimental topmost 3 
+ end-class-map
+! 
+class-map match-any match-ipp1
+ match precedence 1 
+ end-class-map
+! 
+class-map match-any match-ipp2
+ match precedence 2 
+ end-class-map
+! 
+policy-map core-ingress-classifier
+ class match-exp1
+  set traffic-class 1
+ ! 
+ class match-exp2
+  set traffic-class 2
+ ! 
+ class match-exp3
+  set traffic-class 3
+ ! 
+ class class-default
+  set mpls experimental topmost 0
+ ! 
+ end-policy-map
+! 
+interface Bundle-Ether1
+ ipv4 address 21.2.1.1 255.255.255.252
+ ipv6 address 2001:21:2:1::1/64
+ load-interval 30
+!
+interface Bundle-Ether2
+ ipv4 address 21.4.1.1 255.255.255.252
+ ipv6 address 2001:21:4:1::1/64
+!
+interface Loopback0
+ ipv4 address 192.168.12.1 255.255.255.255
+ ipv6 address 2001:192:168:12::1/128
+!
+interface MgmtEth0/RP0/CPU0/0
+ cdp
+ ipv4 address 172.20.33.37 255.255.255.0
+ ipv6 address 2001:172:30:33::37/64
+!
+interface HundredGigE0/0/0/0
+ cdp
+ ipv4 address 11.0.1.2 255.255.255.252
+ ipv6 address 2001:11:0:1::2/64
+!
+interface HundredGigE0/0/0/1
+ cdp
+ service-policy input core-ingress-classifier
+ ipv4 address 11.1.1.2 255.255.255.252
+ ipv6 address 2001:11:1:1::2/64
+!
+interface HundredGigE0/0/0/2
+ bundle id 1 mode active
+ cdp
+ load-interval 30
+!
+interface HundredGigE0/0/0/3
+ bundle id 1 mode active
+ cdp
+ load-interval 30
+!
+interface HundredGigE0/0/0/4
+ bundle id 2 mode active
+ cdp
+!
+interface HundredGigE0/0/0/5
+ bundle id 2 mode active
+ cdp
+!
+interface HundredGigE0/0/0/6
+ shutdown
+!
+interface HundredGigE0/0/0/7
+ shutdown
+!
+interface HundredGigE0/0/0/8
+ shutdown
+!
+interface HundredGigE0/0/0/9
+ shutdown
+!
+interface HundredGigE0/0/0/10
+ shutdown
+!
+interface HundredGigE0/0/0/11
+ ipv4 address 22.1.1.2 255.255.255.252
+ ipv6 address 2001:22:1:1::2/64
+ load-interval 30
+!
+interface HundredGigE0/0/0/12
+ shutdown
+!
+interface HundredGigE0/0/0/13
+ shutdown
+!
+interface HundredGigE0/0/0/14
+ shutdown
+!
+interface HundredGigE0/0/0/15
+ shutdown
+!
+interface HundredGigE0/0/0/16
+ shutdown
+!
+interface FortyGigE0/0/0/17
+ shutdown
+!
+interface HundredGigE0/0/0/18
+ shutdown
+!
+interface HundredGigE0/0/0/19
+ shutdown
+!
+interface HundredGigE0/0/0/20
+ shutdown
+!
+interface HundredGigE0/0/0/21
+ shutdown
+!
+interface HundredGigE0/0/0/22
+ shutdown
+!
+interface HundredGigE0/0/0/23
+ description "Connected to P2 port 23"  
+ cdp
+ service-policy input core-ingress-classifier
+ ipv4 address 11.12.1.1 255.255.255.252
+ ipv6 address 2001:11:12:1::1/64
+!
+!
+rd-set auto
+end-set
+!
+route-policy PASS
+  pass
+end-policy
+!
+route-policy bgpls_drop_from_ncs
+  drop
+end-policy
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 MgmtEth0/RP0/CPU0/0 172.20.33.1
+  192.168.123.101/32 172.20.33.62
+ !
+!
+router isis core
+ set-overload-bit on-startup wait-for-bgp
+ is-type level-2-only
+ net 49.0001.1921.6801.2001.00
+ distribute link-state
+ log adjacency changes
+ log pdu drops
+ lsp-refresh-interval 65000
+ max-lsp-lifetime 65535
+ lsp-password hmac-md5 encrypted 06253C02631F5B4A3B
+ address-family ipv4 unicast
+  metric-style wide
+  mpls traffic-eng level-2-only
+  mpls traffic-eng router-id Loopback0
+  maximum-paths 32
+  segment-routing mpls
+ !
+ address-family ipv6 unicast
+  metric-style wide
+  maximum-paths 32
+  segment-routing mpls
+ !
+ interface Bundle-Ether1
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 06253C02631F5B4A3B
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1021
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface Bundle-Ether2
+  circuit-type level-2-only
+  point-to-point
+  hello-password hmac-md5 encrypted 08027F6D264857442C
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1022
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface Loopback0
+  passive
+  address-family ipv4 unicast
+   metric 10
+   prefix-sid index 211
+  !
+  address-family ipv6 unicast
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/0
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0225377824575D7272
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1011
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/1
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0528352C0E1D1C5A27
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1012
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/11
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0528352C0E1D1C5A27
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1121
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/23
+  circuit-type level-2-only
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0528352C0E1D1C5A27
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1015
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+!
+snmp-server traps isis all
+snmp-server traps bgp cbgp2
+snmp-server traps bgp
+router bgp 100
+ bgp router-id 192.168.12.1
+ address-family vpnv4 unicast
+ !
+ address-family vpnv6 unicast
+ !
+ address-family link-state link-state
+ !
+!
+snmp-server traps hsrp
+snmp-server traps vrrp events
+snmp-server traps vpls all
+snmp-server traps vpls status
+snmp-server traps vpls full-clear
+snmp-server traps vpls full-raise
+snmp-server traps l2vpn all
+snmp-server traps l2vpn vc-up
+snmp-server traps l2vpn vc-down
+mpls oam
+!
+snmp-server traps mpls traffic-eng up
+snmp-server traps mpls traffic-eng down
+snmp-server traps mpls traffic-eng reroute
+snmp-server traps mpls traffic-eng reoptimize
+snmp-server traps mpls frr all
+snmp-server traps mpls frr protected
+snmp-server traps mpls frr unprotected
+snmp-server traps mpls ldp up
+snmp-server traps mpls ldp down
+snmp-server traps mpls ldp threshold
+snmp-server traps mpls traffic-eng p2mp up
+snmp-server traps mpls traffic-eng p2mp down
+snmp-server traps rsvp all
+snmp-server traps rsvp new-flow
+snmp-server traps rsvp lost-flow
+snmp-server traps mpls l3vpn all
+snmp-server traps mpls l3vpn vrf-up
+snmp-server traps mpls l3vpn vrf-down
+snmp-server traps mpls l3vpn max-threshold-cleared
+snmp-server traps mpls l3vpn max-threshold-exceeded
+snmp-server traps mpls l3vpn mid-threshold-exceeded
+snmp-server traps mpls l3vpn max-threshold-reissue-notif-time 1
+rsvp
+ interface Bundle-Ether1
+  bandwidth percentage 50
+ !
+ interface Bundle-Ether2
+  bandwidth percentage 50
+ !
+ interface HundredGigE0/0/0/0
+  bandwidth percentage 50
+ !
+ interface HundredGigE0/0/0/1
+  bandwidth percentage 50
+ !
+!
+mpls traffic-eng
+ interface Bundle-Ether1
+ !
+ interface Bundle-Ether2
+ !
+ interface HundredGigE0/0/0/0
+ !
+ interface HundredGigE0/0/0/1
+ !
+!
+snmp-server traps pim neighbor-change
+snmp-server traps pim invalid-message-received
+snmp-server traps pim rp-mapping-change
+snmp-server traps pim interface-state-change
+snmp-server traps msdp peer-state-change
+segment-routing
+ global-block 16000 16999
+ local-block 17000 17999
+ traffic-eng
+  interface Bundle-Ether1
+   metric 100
+  !
+  interface Bundle-Ether2
+   metric 100
+  !
+  interface HundredGigE0/0/0/0
+   metric 20
+  !
+  interface HundredGigE0/0/0/1
+   metric 20
+  !
+ !
+!
+xml agent tty
+!
+snmp-server traps sensor
+snmp-server traps fru-ctrl
+lldp
+!
+mpls ip-ttl-propagate disable
+snmp-server traps ipsec tunnel stop
+snmp-server traps ipsec tunnel start
+snmp-server traps isakmp tunnel stop
+snmp-server traps isakmp tunnel start
+ssh client vrf default
+ssh server logging
+ssh timeout 120
+ssh server rate-limit 600
+ssh server session-limit 10
+ssh server v2
+ssh server vrf default
+ssh server netconf vrf default
+snmp-server traps fabric plane
+snmp-server traps fabric bundle link
+snmp-server traps fabric bundle state
+snmp-server traps ipsla
+telnet vrf default ipv4 server max-servers 10
+end

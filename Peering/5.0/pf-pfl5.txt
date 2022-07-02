@@ -1,0 +1,7972 @@
+!! IOS XR Configuration 7.5.2
+!! Last configuration change at Thu Jun  9 13:34:38 2022 by admin
+!
+hostname Compass-PEF-PFL5
+group apply_netflow
+ interface 'HundredGigE0/0/0/23\..*'
+  flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ !
+end-group
+apply-group apply_netflow
+taskgroup alltasks-dossier
+ task read sysmgr
+ task read system
+ task read dossier
+ task read pkg-mgmt
+ task read basic-services
+ task read config-services
+ task execute dossier
+ task execute basic-services
+!
+usergroup dossier-group
+ taskgroup alltasks-dossier
+!
+clock timezone PST America/Los_Angeles
+logging console disable
+username admin
+ group root-lr
+ group cisco-support
+ secret 10 $6$tjuze/fyjOzf4e/.$CkH2l3gKEflg0OiaRuVFZCuGw2e69OTONRLUPhDKItHz1bzJB9Zycor8zYA2IBlG3VyYm8AwWTo3fzKEm7hfO0
+!
+username dossier
+ group dossier-group
+ secret 10 $6$4cSDG1erXox6BG1.$PeOAJnYcnTts7I1Aw6wKYTCPs6jG5TSvfGqIz2zbnyIw2DT5JPIMqvkSDeubNEb7IZrOEYkKm5iVeogMzDPDe/
+!
+grpc
+ port 57999
+ no-tls
+!
+vrf dns
+ address-family ipv4 unicast
+  import route-target
+   1000:145
+  !
+  export route-target
+   1000:145
+  !
+ !
+ address-family ipv4 flowspec
+  import route-target
+   1000:145
+  !
+  export route-target
+   1000:145
+  !
+ !
+ address-family ipv6 unicast
+  import route-target
+   1000:145
+  !
+  export route-target
+   1000:145
+  !
+ !
+ address-family ipv6 flowspec
+  import route-target
+   1000:145
+  !
+  export route-target
+   1000:145
+  !
+ !
+!
+vrf peer1
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:101
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:101
+  !
+ !
+!
+vrf peer2
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:102
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:102
+  !
+ !
+!
+vrf peer3
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:103
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:103
+  !
+ !
+!
+vrf peer4
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:104
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:104
+  !
+ !
+!
+vrf peer5
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:105
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:105
+  !
+ !
+!
+vrf peer6
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:106
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:106
+  !
+ !
+!
+vrf peer7
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:107
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:107
+  !
+ !
+!
+vrf peer8
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:108
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:108
+  !
+ !
+!
+vrf peer9
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:109
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:109
+  !
+ !
+!
+vrf peer10
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:110
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:110
+  !
+ !
+!
+vrf peer11
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:111
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:111
+  !
+ !
+!
+vrf peer12
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:112
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:112
+  !
+ !
+!
+vrf peer13
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:113
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:113
+  !
+ !
+!
+vrf peer14
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:114
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:114
+  !
+ !
+!
+vrf peer15
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:115
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:115
+  !
+ !
+!
+vrf peer16
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:116
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:116
+  !
+ !
+!
+vrf peer17
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:117
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:117
+  !
+ !
+!
+vrf peer18
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:118
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:118
+  !
+ !
+!
+vrf peer19
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:119
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:119
+  !
+ !
+!
+vrf peer20
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:120
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:120
+  !
+ !
+!
+vrf peer21
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:121
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:121
+  !
+ !
+!
+vrf peer22
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:122
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:122
+  !
+ !
+!
+vrf peer23
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:123
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:123
+  !
+ !
+!
+vrf peer24
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:124
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:124
+  !
+ !
+!
+vrf peer25
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:125
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:125
+  !
+ !
+!
+vrf peer26
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:126
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:126
+  !
+ !
+!
+vrf peer27
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:127
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:127
+  !
+ !
+!
+vrf peer28
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:128
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:128
+  !
+ !
+!
+vrf peer29
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:129
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:129
+  !
+ !
+!
+vrf peer30
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:130
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:130
+  !
+ !
+!
+vrf peer31
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:131
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:131
+  !
+ !
+!
+vrf peer32
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:132
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:132
+  !
+ !
+!
+vrf peer33
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:133
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:133
+  !
+ !
+!
+vrf peer34
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:134
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:134
+  !
+ !
+!
+vrf peer35
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:135
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:135
+  !
+ !
+!
+vrf peer36
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:136
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:136
+  !
+ !
+!
+vrf peer37
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:137
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:137
+  !
+ !
+!
+vrf peer38
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:138
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:138
+  !
+ !
+!
+vrf peer39
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:139
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:139
+  !
+ !
+!
+vrf peer40
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:140
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:140
+  !
+ !
+!
+vrf peer41
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:141
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:141
+  !
+ !
+!
+vrf peer42
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:142
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:142
+  !
+ !
+!
+vrf peer43
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:143
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:143
+  !
+ !
+!
+vrf peer44
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:144
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:144
+  !
+ !
+!
+vrf peer45
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:145
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:145
+  !
+ !
+!
+vrf peer46
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:146
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:146
+  !
+ !
+!
+vrf peer47
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:147
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:147
+  !
+ !
+!
+vrf peer48
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:148
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:148
+  !
+ !
+!
+vrf peer49
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:149
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:149
+  !
+ !
+!
+vrf peer50
+ description ... VRF for PEER VRF -> DEFAULT VRF
+ address-family ipv4 unicast
+  import from default-vrf route-policy provider-only
+  import route-target
+   100:150
+  !
+  export to default-vrf route-policy PASS
+  export route-target
+   100:150
+  !
+ !
+!
+vrf peer100
+ description .. VRF Peer100->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:999
+  !
+  export route-target
+   65000:999
+  !
+ !
+ address-family ipv4 flowspec
+  import route-target
+   65000:999
+  !
+  export route-target
+   65000:999
+  !
+ !
+ address-family ipv6 flowspec
+  import route-target
+   65000:999
+  !
+  export route-target
+   65000:999
+  !
+ !
+!
+vrf peer101
+ description .. VRF Peer101->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:101
+  !
+  export route-target
+   65000:101
+  !
+ !
+!
+vrf peer102
+ description .. VRF Peer102->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:102
+  !
+  export route-target
+   65000:102
+  !
+ !
+!
+vrf peer103
+ description .. VRF Peer103->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:103
+  !
+  export route-target
+   65000:103
+  !
+ !
+!
+vrf peer104
+ description .. VRF Peer104->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:104
+  !
+  export route-target
+   65000:104
+  !
+ !
+!
+vrf peer105
+ description .. VRF Peer105->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:105
+  !
+  export route-target
+   65000:105
+  !
+ !
+!
+vrf peer106
+ description .. VRF Peer106->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:106
+  !
+  export route-target
+   65000:106
+  !
+ !
+!
+vrf peer107
+ description .. VRF Peer107->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:107
+  !
+  export route-target
+   65000:107
+  !
+ !
+!
+vrf peer108
+ description .. VRF Peer108->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:108
+  !
+  export route-target
+   65000:108
+  !
+ !
+!
+vrf peer109
+ description .. VRF Peer109->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:109
+  !
+  export route-target
+   65000:109
+  !
+ !
+!
+vrf peer110
+ description .. VRF Peer110->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:110
+  !
+  export route-target
+   65000:110
+  !
+ !
+!
+vrf peer111
+ description .. VRF Peer111->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:111
+  !
+  export route-target
+   65000:111
+  !
+ !
+!
+vrf peer112
+ description .. VRF Peer112->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:112
+  !
+  export route-target
+   65000:112
+  !
+ !
+!
+vrf peer113
+ description .. VRF Peer113->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:113
+  !
+  export route-target
+   65000:113
+  !
+ !
+!
+vrf peer114
+ description .. VRF Peer114->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:114
+  !
+  export route-target
+   65000:114
+  !
+ !
+!
+vrf peer115
+ description .. VRF Peer115->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:115
+  !
+  export route-target
+   65000:115
+  !
+ !
+!
+vrf peer116
+ description .. VRF Peer116->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:116
+  !
+  export route-target
+   65000:116
+  !
+ !
+!
+vrf peer117
+ description .. VRF Peer117->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:117
+  !
+  export route-target
+   65000:117
+  !
+ !
+!
+vrf peer118
+ description .. VRF Peer118->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:118
+  !
+  export route-target
+   65000:118
+  !
+ !
+!
+vrf peer119
+ description .. VRF Peer119->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:119
+  !
+  export route-target
+   65000:119
+  !
+ !
+!
+vrf peer120
+ description .. VRF Peer120->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:120
+  !
+  export route-target
+   65000:120
+  !
+ !
+!
+vrf peer121
+ description .. VRF Peer121->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:121
+  !
+  export route-target
+   65000:121
+  !
+ !
+!
+vrf peer122
+ description .. VRF Peer122->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:122
+  !
+  export route-target
+   65000:122
+  !
+ !
+!
+vrf peer123
+ description .. VRF Peer123->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:123
+  !
+  export route-target
+   65000:123
+  !
+ !
+!
+vrf peer124
+ description .. VRF Peer124->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:124
+  !
+  export route-target
+   65000:124
+  !
+ !
+!
+vrf peer125
+ description .. VRF Peer125->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:125
+  !
+  export route-target
+   65000:125
+  !
+ !
+!
+vrf peer126
+ description .. VRF Peer126->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:126
+  !
+  export route-target
+   65000:126
+  !
+ !
+!
+vrf peer127
+ description .. VRF Peer127->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:127
+  !
+  export route-target
+   65000:127
+  !
+ !
+!
+vrf peer128
+ description .. VRF Peer128->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:128
+  !
+  export route-target
+   65000:128
+  !
+ !
+!
+vrf peer129
+ description .. VRF Peer129->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:129
+  !
+  export route-target
+   65000:129
+  !
+ !
+!
+vrf peer130
+ description .. VRF Peer130->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:130
+  !
+  export route-target
+   65000:130
+  !
+ !
+!
+vrf peer131
+ description .. VRF Peer131->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:131
+  !
+  export route-target
+   65000:131
+  !
+ !
+!
+vrf peer132
+ description .. VRF Peer132->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:132
+  !
+  export route-target
+   65000:132
+  !
+ !
+!
+vrf peer133
+ description .. VRF Peer133->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:133
+  !
+  export route-target
+   65000:133
+  !
+ !
+!
+vrf peer134
+ description .. VRF Peer134->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:134
+  !
+  export route-target
+   65000:134
+  !
+ !
+!
+vrf peer135
+ description .. VRF Peer135->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:135
+  !
+  export route-target
+   65000:135
+  !
+ !
+!
+vrf peer136
+ description .. VRF Peer136->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:136
+  !
+  export route-target
+   65000:136
+  !
+ !
+!
+vrf peer137
+ description .. VRF Peer137->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:137
+  !
+  export route-target
+   65000:137
+  !
+ !
+!
+vrf peer138
+ description .. VRF Peer138->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:138
+  !
+  export route-target
+   65000:138
+  !
+ !
+!
+vrf peer139
+ description .. VRF Peer139->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:139
+  !
+  export route-target
+   65000:139
+  !
+ !
+!
+vrf peer140
+ description .. VRF Peer140->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:140
+  !
+  export route-target
+   65000:140
+  !
+ !
+!
+vrf peer141
+ description .. VRF Peer141->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:141
+  !
+  export route-target
+   65000:141
+  !
+ !
+!
+vrf peer142
+ description .. VRF Peer142->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:142
+  !
+  export route-target
+   65000:142
+  !
+ !
+!
+vrf peer143
+ description .. VRF Peer143->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:143
+  !
+  export route-target
+   65000:143
+  !
+ !
+!
+vrf peer144
+ description .. VRF Peer144->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:144
+  !
+  export route-target
+   65000:144
+  !
+ !
+!
+vrf peer145
+ description .. VRF Peer145->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:145
+  !
+  export route-target
+   65000:145
+  !
+ !
+!
+vrf peer146
+ description .. VRF Peer146->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:146
+  !
+  export route-target
+   65000:146
+  !
+ !
+!
+vrf peer147
+ description .. VRF Peer147->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:147
+  !
+  export route-target
+   65000:147
+  !
+ !
+!
+vrf peer148
+ description .. VRF Peer148->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:148
+  !
+  export route-target
+   65000:148
+  !
+ !
+!
+vrf peer149
+ description .. VRF Peer149->Inet
+ address-family ipv4 unicast
+  import route-target
+   65000:149
+  !
+  export route-target
+   65000:149
+  !
+ !
+!
+vrf internet
+ address-family ipv4 unicast
+  import route-target
+   65000:100
+   65000:101
+   65000:102
+   65000:103
+   65000:104
+   65000:105
+   65000:106
+   65000:107
+   65000:108
+   65000:109
+   65000:110
+   65000:111
+   65000:112
+   65000:113
+   65000:114
+   65000:115
+   65000:116
+   65000:117
+   65000:118
+   65000:119
+   65000:120
+   65000:121
+   65000:122
+   65000:123
+   65000:124
+   65000:125
+   65000:126
+   65000:127
+   65000:128
+   65000:129
+   65000:130
+   65000:131
+   65000:132
+   65000:133
+   65000:134
+   65000:135
+   65000:136
+   65000:137
+   65000:138
+   65000:139
+   65000:140
+   65000:141
+   65000:142
+   65000:143
+   65000:144
+   65000:145
+   65000:146
+   65000:147
+   65000:148
+   65000:149
+   65000:999
+  !
+  export route-target
+   65000:100
+   65000:101
+   65000:102
+   65000:103
+   65000:104
+   65000:105
+   65000:106
+   65000:107
+   65000:108
+   65000:109
+   65000:110
+   65000:111
+   65000:112
+   65000:113
+   65000:114
+   65000:115
+   65000:116
+   65000:117
+   65000:118
+   65000:119
+   65000:120
+   65000:121
+   65000:122
+   65000:123
+   65000:124
+   65000:125
+   65000:126
+   65000:127
+   65000:128
+   65000:129
+   65000:130
+   65000:131
+   65000:132
+   65000:133
+   65000:134
+   65000:135
+   65000:136
+   65000:137
+   65000:138
+   65000:139
+   65000:140
+   65000:141
+   65000:142
+   65000:143
+   65000:144
+   65000:145
+   65000:146
+   65000:147
+   65000:148
+   65000:149
+   65000:999
+  !
+ !
+!
+snmp-server ifindex persist
+snmp-server community cisco RW
+snmp-server community public RW
+snmp-server community private RW
+snmp-server community crosswork RO
+fpd auto-upgrade enable
+ntp
+ server 72.163.32.44
+ source MgmtEth0/RP0/CPU0/0
+ update-calendar
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+netconf-yang agent
+ ssh
+!
+ipv6 access-list ipv6_sources
+ 10 permit ipv6 2001:150::/64 any
+!
+ipv4 access-list bogons
+ 10 permit ipv4 host 2.2.2.2 any
+ 20 permit ipv4 host 3.3.3.3 any
+ 30 deny ipv4 host 4.4.4.4 any
+ 40 deny ipv4 host 4.4.4.4 any
+ 50 permit ipv4 any any
+!
+ipv4 access-list ipv4_sources
+ 10 permit ipv4 171.51.0.0/16 any
+!
+class-map match-any eft-v4
+ match access-group ipv4 eft-v4 
+ end-class-map
+! 
+class-map match-any MatchIPP1
+ match precedence 1 
+ end-class-map
+! 
+class-map match-any MatchIPP2
+ match precedence 2 
+ end-class-map
+! 
+class-map match-any v6-qos-21
+ match qos-group 21 
+ end-class-map
+! 
+class-map match-any qos-group-1
+ match qos-group 1 
+ end-class-map
+! 
+class-map match-any qos-group-2
+ match qos-group 2 
+ end-class-map
+! 
+class-map match-any qos-group-3
+ match qos-group 3 
+ end-class-map
+! 
+class-map match-any qos-group-4
+ match qos-group 4 
+ end-class-map
+! 
+class-map match-any acl-2016-128
+ match access-group ipv6 eftv6 
+ end-class-map
+! 
+class-map match-any MatchIPv4_SRC
+ match access-group ipv4 ipv4_sources 
+ end-class-map
+! 
+class-map match-any MatchIPv6_SRC
+ match access-group ipv4 ipv6_sources 
+ match access-group ipv6 ipv6_sources 
+ end-class-map
+! 
+policy-map v6-im
+ class acl-2016-128
+  set precedence internet
+  set traffic-class 6
+ ! 
+ class eft-v4
+  set precedence network
+ ! 
+ class v6-qos-21
+  set precedence 7
+ ! 
+ class class-default
+ ! 
+ end-policy-map
+! 
+policy-map remark-peer-traffic
+ class qos-group-1
+  police rate 25 mbps 
+  ! 
+  set precedence 5
+  set mpls experimental imposition 5
+ ! 
+ class qos-group-2
+  police rate 25 mbps 
+  ! 
+  set precedence 3
+  set mpls experimental imposition 3
+ ! 
+ class class-default
+ ! 
+ end-policy-map
+! 
+flow exporter-map CWCDG
+ packet-length 1468
+ version v9
+  options sampler-table timeout 15
+  template timeout 15
+  template data timeout 15
+  template options timeout 15
+ !
+ transport udp 2055
+ source MgmtEth0/RP0/CPU0/0
+ destination 172.20.33.86
+!
+flow exporter-map nf-export
+ version v9
+  options interface-table timeout 60
+  options sampler-table timeout 60
+  template timeout 30
+ !
+ transport udp 2055
+ source MgmtEth0/RP0/CPU0/0
+ destination 172.20.33.56
+!
+flow monitor-map flow-monitor-ipv4
+ record ipv4
+ option bgpattr
+ exporter CWCDG
+ exporter nf-export
+ cache entries 50000
+ cache timeout active 60
+ cache timeout inactive 10
+!
+flow monitor-map flow-monitor-ipv6
+ record ipv6
+ option bgpattr
+ exporter nf-export
+ cache timeout active 60
+ cache timeout inactive 10
+!
+flow monitor-map nf-flow-monitor-mpls
+ record mpls ipv4-ipv6-fields
+ option bgpattr
+ exporter nf-export
+ cache timeout active 60
+ cache timeout inactive 10
+!
+flow monitor-map flow-monitor-ipv4-peer
+ record ipv4 peer-as
+ option bgpattr
+ exporter CWCDG
+ exporter nf-export
+ cache entries 50000
+ cache timeout active 60
+ cache timeout inactive 10
+!
+sampler-map nf-sample-8192
+ random 1 out-of 8192
+!
+interface Loopback0
+ ipv4 address 192.168.14.5 255.255.255.255
+ ipv6 address 2001:192:168:14::5/128
+!
+interface Loopback1000
+ description .." For Peering in VRF"
+ vrf peer1
+ ipv4 address 193.168.141.1 255.255.255.255
+!
+interface Loopback1001
+ description ..For Peering in VRF -> Def VRF
+ vrf peer2
+ ipv4 address 193.168.142.1 255.255.255.255
+!
+interface Loopback1002
+ description ..For Peering in VRF -> Def VRF
+ vrf peer3
+ ipv4 address 193.168.143.1 255.255.255.255
+!
+interface Loopback1003
+ description ..For Peering in VRF -> Def VRF
+ vrf peer4
+ ipv4 address 193.168.144.1 255.255.255.255
+!
+interface Loopback1004
+ description ..For Peering in VRF -> Def VRF
+ vrf peer5
+ ipv4 address 193.168.145.1 255.255.255.255
+!
+interface Loopback1005
+ description ..For Peering in VRF -> Def VRF
+ vrf peer6
+ ipv4 address 193.168.146.1 255.255.255.255
+!
+interface Loopback1006
+ description ..For Peering in VRF -> Def VRF
+ vrf peer7
+ ipv4 address 193.168.147.1 255.255.255.255
+!
+interface Loopback1007
+ description ..For Peering in VRF -> Def VRF
+ vrf peer8
+ ipv4 address 193.168.148.1 255.255.255.255
+!
+interface Loopback1008
+ description ..For Peering in VRF -> Def VRF
+ vrf peer9
+ ipv4 address 193.168.149.1 255.255.255.255
+!
+interface Loopback1009
+ description ..For Peering in VRF -> Def VRF
+ vrf peer10
+ ipv4 address 193.168.150.1 255.255.255.255
+!
+interface Loopback1010
+ description ..For Peering in VRF -> Def VRF
+ vrf peer11
+ ipv4 address 193.168.151.1 255.255.255.255
+!
+interface Loopback1011
+ description ..For Peering in VRF -> Def VRF
+ vrf peer12
+ ipv4 address 193.168.152.1 255.255.255.255
+!
+interface Loopback1012
+ description ..For Peering in VRF -> Def VRF
+ vrf peer13
+ ipv4 address 193.168.153.1 255.255.255.255
+!
+interface Loopback1013
+ description ..For Peering in VRF -> Def VRF
+ vrf peer14
+ ipv4 address 193.168.154.1 255.255.255.255
+!
+interface Loopback1014
+ description ..For Peering in VRF -> Def VRF
+ vrf peer15
+ ipv4 address 193.168.155.1 255.255.255.255
+!
+interface Loopback1015
+ description ..For Peering in VRF -> Def VRF
+ vrf peer16
+ ipv4 address 193.168.156.1 255.255.255.255
+!
+interface Loopback1016
+ description ..For Peering in VRF -> Def VRF
+ vrf peer17
+ ipv4 address 193.168.157.1 255.255.255.255
+!
+interface Loopback1017
+ description ..For Peering in VRF -> Def VRF
+ vrf peer18
+ ipv4 address 193.168.158.1 255.255.255.255
+!
+interface Loopback1018
+ description ..For Peering in VRF -> Def VRF
+ vrf peer19
+ ipv4 address 193.168.159.1 255.255.255.255
+!
+interface Loopback1019
+ description ..For Peering in VRF -> Def VRF
+ vrf peer20
+ ipv4 address 193.168.160.1 255.255.255.255
+!
+interface Loopback1020
+ description ..For Peering in VRF -> Def VRF
+ vrf peer21
+ ipv4 address 193.168.161.1 255.255.255.255
+!
+interface Loopback1021
+ description ..For Peering in VRF -> Def VRF
+ vrf peer22
+ ipv4 address 193.168.162.1 255.255.255.255
+!
+interface Loopback1022
+ description ..For Peering in VRF -> Def VRF
+ vrf peer23
+ ipv4 address 193.168.163.1 255.255.255.255
+!
+interface Loopback1023
+ description ..For Peering in VRF -> Def VRF
+ vrf peer24
+ ipv4 address 193.168.164.1 255.255.255.255
+!
+interface Loopback1024
+ description ..For Peering in VRF -> Def VRF
+ vrf peer25
+ ipv4 address 193.168.165.1 255.255.255.255
+!
+interface Loopback1025
+ description ..For Peering in VRF -> Def VRF
+ vrf peer26
+ ipv4 address 193.168.166.1 255.255.255.255
+!
+interface Loopback1026
+ description ..For Peering in VRF -> Def VRF
+ vrf peer27
+ ipv4 address 193.168.167.1 255.255.255.255
+!
+interface Loopback1027
+ description ..For Peering in VRF -> Def VRF
+ vrf peer28
+ ipv4 address 193.168.168.1 255.255.255.255
+!
+interface Loopback1028
+ description ..For Peering in VRF -> Def VRF
+ vrf peer29
+ ipv4 address 193.168.169.1 255.255.255.255
+!
+interface Loopback1029
+ description ..For Peering in VRF -> Def VRF
+ vrf peer30
+ ipv4 address 193.168.170.1 255.255.255.255
+!
+interface Loopback1030
+ description ..For Peering in VRF -> Def VRF
+ vrf peer31
+ ipv4 address 193.168.171.1 255.255.255.255
+!
+interface Loopback1031
+ description ..For Peering in VRF -> Def VRF
+ vrf peer32
+ ipv4 address 193.168.172.1 255.255.255.255
+!
+interface Loopback1032
+ description ..For Peering in VRF -> Def VRF
+ vrf peer33
+ ipv4 address 193.168.173.1 255.255.255.255
+!
+interface Loopback1033
+ description ..For Peering in VRF -> Def VRF
+ vrf peer34
+ ipv4 address 193.168.174.1 255.255.255.255
+!
+interface Loopback1034
+ description ..For Peering in VRF -> Def VRF
+ vrf peer35
+ ipv4 address 193.168.175.1 255.255.255.255
+!
+interface Loopback1035
+ description ..For Peering in VRF -> Def VRF
+ vrf peer36
+ ipv4 address 193.168.176.1 255.255.255.255
+!
+interface Loopback1036
+ description ..For Peering in VRF -> Def VRF
+ vrf peer37
+ ipv4 address 193.168.177.1 255.255.255.255
+!
+interface Loopback1037
+ description ..For Peering in VRF -> Def VRF
+ vrf peer38
+ ipv4 address 193.168.178.1 255.255.255.255
+!
+interface Loopback1038
+ description ..For Peering in VRF -> Def VRF
+ vrf peer39
+ ipv4 address 193.168.179.1 255.255.255.255
+!
+interface Loopback1039
+ description ..For Peering in VRF -> Def VRF
+ vrf peer40
+ ipv4 address 193.168.180.1 255.255.255.255
+!
+interface Loopback1040
+ description ..For Peering in VRF -> Def VRF
+ vrf peer41
+ ipv4 address 193.168.181.1 255.255.255.255
+!
+interface Loopback1041
+ description ..For Peering in VRF -> Def VRF
+ vrf peer42
+ ipv4 address 193.168.182.1 255.255.255.255
+!
+interface Loopback1042
+ description ..For Peering in VRF -> Def VRF
+ vrf peer43
+ ipv4 address 193.168.183.1 255.255.255.255
+!
+interface Loopback1043
+ description ..For Peering in VRF -> Def VRF
+ vrf peer44
+ ipv4 address 193.168.184.1 255.255.255.255
+!
+interface Loopback1044
+ description ..For Peering in VRF -> Def VRF
+ vrf peer45
+ ipv4 address 193.168.185.1 255.255.255.255
+!
+interface Loopback1045
+ description ..For Peering in VRF -> Def VRF
+ vrf peer46
+ ipv4 address 193.168.186.1 255.255.255.255
+!
+interface Loopback1046
+ description ..For Peering in VRF -> Def VRF
+ vrf peer47
+ ipv4 address 193.168.187.1 255.255.255.255
+!
+interface Loopback1047
+ description ..For Peering in VRF -> Def VRF
+ vrf peer48
+ ipv4 address 193.168.188.1 255.255.255.255
+!
+interface Loopback1048
+ description ..For Peering in VRF -> Def VRF
+ vrf peer49
+ ipv4 address 193.168.189.1 255.255.255.255
+!
+interface Loopback1049
+ description ..For Peering in VRF -> Def VRF
+ vrf peer50
+ ipv4 address 193.168.190.1 255.255.255.255
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 172.20.33.45 255.255.255.0
+!
+interface FourHundredGigE0/0/0/0
+ shutdown
+!
+interface FourHundredGigE0/0/0/1
+ shutdown
+!
+interface FourHundredGigE0/0/0/2
+ shutdown
+!
+interface FourHundredGigE0/0/0/3
+ shutdown
+!
+interface FourHundredGigE0/0/0/4
+ shutdown
+!
+interface FourHundredGigE0/0/0/5
+ shutdown
+!
+interface FourHundredGigE0/0/0/6
+ shutdown
+!
+interface FourHundredGigE0/0/0/7
+ shutdown
+!
+interface FourHundredGigE0/0/0/8
+ shutdown
+!
+interface FourHundredGigE0/0/0/9
+ shutdown
+!
+interface FourHundredGigE0/0/0/10
+ shutdown
+!
+interface FourHundredGigE0/0/0/11
+ shutdown
+!
+interface HundredGigE0/0/0/12
+ description "PEF-EXT-PEER 0/0/1/0" 
+ ipv4 address 10.65.0.0 255.255.255.254
+ ipv6 address 2001:10:65::1/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+!
+interface FourHundredGigE0/0/0/13
+ shutdown
+!
+interface FourHundredGigE0/0/0/14
+ shutdown
+!
+interface FourHundredGigE0/0/0/15
+ shutdown
+!
+interface FourHundredGigE0/0/0/16
+ shutdown
+!
+interface FourHundredGigE0/0/0/17
+ shutdown
+!
+interface HundredGigE0/0/0/18
+ ipv4 address 35.33.1.2 255.255.255.252
+ ipv6 address 2001:35:33:1::2/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+!
+interface HundredGigE0/0/0/19
+ ipv4 address 35.34.1.2 255.255.255.252
+ ipv6 address 2001:35:34:1::2/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+!
+interface FourHundredGigE0/0/0/20
+ shutdown
+!
+interface FourHundredGigE0/0/0/21
+ shutdown
+!
+interface FourHundredGigE0/0/0/22
+ shutdown
+!
+interface HundredGigE0/0/0/23
+ description "Ixia Port 3" 
+ load-interval 30
+!
+interface HundredGigE0/0/0/23.0
+ ipv4 address 45.100.1.1 255.255.255.252
+ ipv6 address 2001:45:100:1::1/64
+ encapsulation dot1q 500
+!
+interface HundredGigE0/0/0/23.1
+ ipv4 address 45.101.1.1 255.255.255.252
+ ipv6 address 2001:45:101:1::1/64
+ encapsulation dot1q 501
+!
+interface HundredGigE0/0/0/23.2
+ ipv4 address 45.102.1.1 255.255.255.252
+ ipv6 address 2001:45:102:1::1/64
+ encapsulation dot1q 502
+!
+interface HundredGigE0/0/0/23.3
+ ipv4 address 45.103.1.1 255.255.255.252
+ ipv6 address 2001:45:103:1::1/64
+ encapsulation dot1q 503
+!
+interface HundredGigE0/0/0/23.4
+ ipv4 address 45.104.1.1 255.255.255.252
+ ipv6 address 2001:45:104:1::1/64
+ encapsulation dot1q 504
+!
+interface HundredGigE0/0/0/23.5
+ ipv4 address 45.105.1.1 255.255.255.252
+ ipv6 address 2001:45:105:1::1/64
+ shutdown
+ encapsulation dot1q 505
+!
+interface HundredGigE0/0/0/23.6
+ ipv4 address 45.106.1.1 255.255.255.252
+ ipv6 address 2001:45:106:1::1/64
+ encapsulation dot1q 506
+!
+interface HundredGigE0/0/0/23.7
+ ipv4 address 45.107.1.1 255.255.255.252
+ ipv6 address 2001:45:107:1::1/64
+ encapsulation dot1q 507
+!
+interface HundredGigE0/0/0/23.8
+ ipv4 address 45.108.1.1 255.255.255.252
+ ipv6 address 2001:45:108:1::1/64
+ encapsulation dot1q 508
+!
+interface HundredGigE0/0/0/23.9
+ ipv4 address 45.109.1.1 255.255.255.252
+ ipv6 address 2001:45:109:1::1/64
+ encapsulation dot1q 509
+!
+interface HundredGigE0/0/0/23.10
+ ipv4 address 45.110.1.1 255.255.255.252
+ ipv6 address 2001:45:110:1::1/64
+ encapsulation dot1q 510
+!
+interface HundredGigE0/0/0/23.11
+ ipv4 address 45.111.1.1 255.255.255.252
+ ipv6 address 2001:45:111:1::1/64
+ encapsulation dot1q 511
+!
+interface HundredGigE0/0/0/23.12
+ ipv4 address 45.112.1.1 255.255.255.252
+ ipv6 address 2001:45:112:1::1/64
+ encapsulation dot1q 512
+!
+interface HundredGigE0/0/0/23.13
+ ipv4 address 45.113.1.1 255.255.255.252
+ ipv6 address 2001:45:113:1::1/64
+ encapsulation dot1q 513
+!
+interface HundredGigE0/0/0/23.14
+ ipv4 address 45.114.1.1 255.255.255.252
+ ipv6 address 2001:45:114:1::1/64
+ encapsulation dot1q 514
+!
+interface HundredGigE0/0/0/23.15
+ ipv4 address 45.115.1.1 255.255.255.252
+ ipv6 address 2001:45:115:1::1/64
+ encapsulation dot1q 515
+!
+interface HundredGigE0/0/0/23.16
+ ipv4 address 45.116.1.1 255.255.255.252
+ ipv6 address 2001:45:116:1::1/64
+ encapsulation dot1q 516
+!
+interface HundredGigE0/0/0/23.17
+ ipv4 address 45.117.1.1 255.255.255.252
+ ipv6 address 2001:45:117:1::1/64
+ encapsulation dot1q 517
+!
+interface HundredGigE0/0/0/23.18
+ ipv4 address 45.118.1.1 255.255.255.252
+ ipv6 address 2001:45:118:1::1/64
+ encapsulation dot1q 518
+!
+interface HundredGigE0/0/0/23.19
+ ipv4 address 45.119.1.1 255.255.255.252
+ ipv6 address 2001:45:119:1::1/64
+ encapsulation dot1q 519
+!
+interface HundredGigE0/0/0/23.20
+ ipv4 address 45.120.1.1 255.255.255.252
+ ipv6 address 2001:45:120:1::1/64
+ encapsulation dot1q 520
+!
+interface HundredGigE0/0/0/23.21
+ ipv4 address 45.121.1.1 255.255.255.252
+ ipv6 address 2001:45:121:1::1/64
+ encapsulation dot1q 521
+!
+interface HundredGigE0/0/0/23.22
+ ipv4 address 45.122.1.1 255.255.255.252
+ ipv6 address 2001:45:122:1::1/64
+ encapsulation dot1q 522
+!
+interface HundredGigE0/0/0/23.23
+ ipv4 address 45.123.1.1 255.255.255.252
+ ipv6 address 2001:45:123:1::1/64
+ encapsulation dot1q 523
+!
+interface HundredGigE0/0/0/23.24
+ ipv4 address 45.124.1.1 255.255.255.252
+ ipv6 address 2001:45:124:1::1/64
+ encapsulation dot1q 524
+!
+interface HundredGigE0/0/0/23.25
+ ipv4 address 45.125.1.1 255.255.255.252
+ ipv6 address 2001:45:125:1::1/64
+ encapsulation dot1q 525
+!
+interface HundredGigE0/0/0/23.26
+ ipv4 address 45.126.1.1 255.255.255.252
+ ipv6 address 2001:45:126:1::1/64
+ encapsulation dot1q 526
+!
+interface HundredGigE0/0/0/23.27
+ ipv4 address 45.127.1.1 255.255.255.252
+ ipv6 address 2001:45:127:1::1/64
+ encapsulation dot1q 527
+!
+interface HundredGigE0/0/0/23.28
+ ipv4 address 45.128.1.1 255.255.255.252
+ ipv6 address 2001:45:128:1::1/64
+ encapsulation dot1q 528
+!
+interface HundredGigE0/0/0/23.29
+ ipv4 address 45.129.1.1 255.255.255.252
+ ipv6 address 2001:45:129:1::1/64
+ encapsulation dot1q 529
+!
+interface HundredGigE0/0/0/23.30
+ ipv4 address 45.130.1.1 255.255.255.252
+ ipv6 address 2001:45:130:1::1/64
+ encapsulation dot1q 530
+!
+interface HundredGigE0/0/0/23.31
+ ipv4 address 45.131.1.1 255.255.255.252
+ ipv6 address 2001:45:131:1::1/64
+ encapsulation dot1q 531
+!
+interface HundredGigE0/0/0/23.32
+ ipv4 address 45.132.1.1 255.255.255.252
+ ipv6 address 2001:45:132:1::1/64
+ encapsulation dot1q 532
+!
+interface HundredGigE0/0/0/23.33
+ ipv4 address 45.133.1.1 255.255.255.252
+ ipv6 address 2001:45:133:1::1/64
+ encapsulation dot1q 533
+!
+interface HundredGigE0/0/0/23.34
+ ipv4 address 45.134.1.1 255.255.255.252
+ ipv6 address 2001:45:134:1::1/64
+ encapsulation dot1q 534
+!
+interface HundredGigE0/0/0/23.35
+ ipv4 address 45.135.1.1 255.255.255.252
+ ipv6 address 2001:45:135:1::1/64
+ encapsulation dot1q 535
+!
+interface HundredGigE0/0/0/23.36
+ ipv4 address 45.136.1.1 255.255.255.252
+ ipv6 address 2001:45:136:1::1/64
+ encapsulation dot1q 536
+!
+interface HundredGigE0/0/0/23.37
+ ipv4 address 45.137.1.1 255.255.255.252
+ ipv6 address 2001:45:137:1::1/64
+ encapsulation dot1q 537
+!
+interface HundredGigE0/0/0/23.38
+ ipv4 address 45.138.1.1 255.255.255.252
+ ipv6 address 2001:45:138:1::1/64
+ encapsulation dot1q 538
+!
+interface HundredGigE0/0/0/23.39
+ ipv4 address 45.139.1.1 255.255.255.252
+ ipv6 address 2001:45:139:1::1/64
+ encapsulation dot1q 539
+!
+interface HundredGigE0/0/0/23.40
+ ipv4 address 45.140.1.1 255.255.255.252
+ ipv6 address 2001:45:140:1::1/64
+ encapsulation dot1q 540
+!
+interface HundredGigE0/0/0/23.41
+ ipv4 address 45.141.1.1 255.255.255.252
+ ipv6 address 2001:45:141:1::1/64
+ encapsulation dot1q 541
+!
+interface HundredGigE0/0/0/23.42
+ ipv4 address 45.142.1.1 255.255.255.252
+ ipv6 address 2001:45:142:1::1/64
+ encapsulation dot1q 542
+!
+interface HundredGigE0/0/0/23.43
+ ipv4 address 45.143.1.1 255.255.255.252
+ ipv6 address 2001:45:143:1::1/64
+ encapsulation dot1q 543
+!
+interface HundredGigE0/0/0/23.44
+ ipv4 address 45.144.1.1 255.255.255.252
+ ipv6 address 2001:45:144:1::1/64
+ encapsulation dot1q 544
+!
+interface HundredGigE0/0/0/23.45
+ ipv4 address 45.145.1.1 255.255.255.252
+ ipv6 address 2001:45:145:1::1/64
+ encapsulation dot1q 545
+!
+interface HundredGigE0/0/0/23.46
+ ipv4 address 45.146.1.1 255.255.255.252
+ ipv6 address 2001:45:146:1::1/64
+ encapsulation dot1q 546
+!
+interface HundredGigE0/0/0/23.47
+ ipv4 address 45.147.1.1 255.255.255.252
+ ipv6 address 2001:45:147:1::1/64
+ encapsulation dot1q 547
+!
+interface HundredGigE0/0/0/23.48
+ ipv4 address 45.148.1.1 255.255.255.252
+ ipv6 address 2001:45:148:1::1/64
+ encapsulation dot1q 548
+!
+interface HundredGigE0/0/0/23.49
+ ipv4 address 45.149.1.1 255.255.255.252
+ ipv6 address 2001:45:149:1::1/64
+ encapsulation dot1q 549
+!
+interface HundredGigE0/0/0/23.50
+ ipv4 address 45.150.1.1 255.255.255.252
+ ipv6 address 2001:45:150:1::1/64
+ encapsulation dot1q 550
+!
+interface HundredGigE0/0/0/23.51
+ ipv4 address 45.151.1.1 255.255.255.252
+ ipv6 address 2001:45:151:1::1/64
+ encapsulation dot1q 551
+!
+interface HundredGigE0/0/0/23.52
+ ipv4 address 45.152.1.1 255.255.255.252
+ ipv6 address 2001:45:152:1::1/64
+ encapsulation dot1q 552
+!
+interface HundredGigE0/0/0/23.53
+ ipv4 address 45.153.1.1 255.255.255.252
+ ipv6 address 2001:45:153:1::1/64
+ encapsulation dot1q 553
+!
+interface HundredGigE0/0/0/23.54
+ ipv4 address 45.154.1.1 255.255.255.252
+ ipv6 address 2001:45:154:1::1/64
+ encapsulation dot1q 554
+!
+interface HundredGigE0/0/0/23.55
+ ipv4 address 45.155.1.1 255.255.255.252
+ ipv6 address 2001:45:155:1::1/64
+ encapsulation dot1q 555
+!
+interface HundredGigE0/0/0/23.56
+ ipv4 address 45.156.1.1 255.255.255.252
+ ipv6 address 2001:45:156:1::1/64
+ encapsulation dot1q 556
+!
+interface HundredGigE0/0/0/23.57
+ ipv4 address 45.157.1.1 255.255.255.252
+ ipv6 address 2001:45:157:1::1/64
+ encapsulation dot1q 557
+!
+interface HundredGigE0/0/0/23.58
+ ipv4 address 45.158.1.1 255.255.255.252
+ ipv6 address 2001:45:158:1::1/64
+ encapsulation dot1q 558
+!
+interface HundredGigE0/0/0/23.59
+ ipv4 address 45.159.1.1 255.255.255.252
+ ipv6 address 2001:45:159:1::1/64
+ encapsulation dot1q 559
+!
+interface HundredGigE0/0/0/23.60
+ ipv4 address 45.160.1.1 255.255.255.252
+ ipv6 address 2001:45:160:1::1/64
+ encapsulation dot1q 560
+!
+interface HundredGigE0/0/0/23.61
+ ipv4 address 45.161.1.1 255.255.255.252
+ ipv6 address 2001:45:161:1::1/64
+ encapsulation dot1q 561
+!
+interface HundredGigE0/0/0/23.62
+ ipv4 address 45.162.1.1 255.255.255.252
+ ipv6 address 2001:45:162:1::1/64
+ encapsulation dot1q 562
+!
+interface HundredGigE0/0/0/23.63
+ ipv4 address 45.163.1.1 255.255.255.252
+ ipv6 address 2001:45:163:1::1/64
+ encapsulation dot1q 563
+!
+interface HundredGigE0/0/0/23.64
+ ipv4 address 45.164.1.1 255.255.255.252
+ ipv6 address 2001:45:164:1::1/64
+ encapsulation dot1q 564
+!
+interface HundredGigE0/0/0/23.65
+ ipv4 address 45.165.1.1 255.255.255.252
+ ipv6 address 2001:45:165:1::1/64
+ encapsulation dot1q 565
+!
+interface HundredGigE0/0/0/23.66
+ ipv4 address 45.166.1.1 255.255.255.252
+ ipv6 address 2001:45:166:1::1/64
+ encapsulation dot1q 566
+!
+interface HundredGigE0/0/0/23.67
+ ipv4 address 45.167.1.1 255.255.255.252
+ ipv6 address 2001:45:167:1::1/64
+ encapsulation dot1q 567
+!
+interface HundredGigE0/0/0/23.68
+ ipv4 address 45.168.1.1 255.255.255.252
+ ipv6 address 2001:45:168:1::1/64
+ encapsulation dot1q 568
+!
+interface HundredGigE0/0/0/23.69
+ ipv4 address 45.169.1.1 255.255.255.252
+ ipv6 address 2001:45:169:1::1/64
+ encapsulation dot1q 569
+!
+interface HundredGigE0/0/0/23.70
+ ipv4 address 45.170.1.1 255.255.255.252
+ ipv6 address 2001:45:170:1::1/64
+ encapsulation dot1q 570
+!
+interface HundredGigE0/0/0/23.71
+ ipv4 address 45.171.1.1 255.255.255.252
+ ipv6 address 2001:45:171:1::1/64
+ encapsulation dot1q 571
+!
+interface HundredGigE0/0/0/23.72
+ ipv4 address 45.172.1.1 255.255.255.252
+ ipv6 address 2001:45:172:1::1/64
+ encapsulation dot1q 572
+!
+interface HundredGigE0/0/0/23.73
+ ipv4 address 45.173.1.1 255.255.255.252
+ ipv6 address 2001:45:173:1::1/64
+ encapsulation dot1q 573
+!
+interface HundredGigE0/0/0/23.74
+ ipv4 address 45.174.1.1 255.255.255.252
+ ipv6 address 2001:45:174:1::1/64
+ encapsulation dot1q 574
+!
+interface HundredGigE0/0/0/23.75
+ ipv4 address 45.175.1.1 255.255.255.252
+ ipv6 address 2001:45:175:1::1/64
+ encapsulation dot1q 575
+!
+interface HundredGigE0/0/0/23.76
+ ipv4 address 45.176.1.1 255.255.255.252
+ ipv6 address 2001:45:176:1::1/64
+ encapsulation dot1q 576
+!
+interface HundredGigE0/0/0/23.77
+ ipv4 address 45.177.1.1 255.255.255.252
+ ipv6 address 2001:45:177:1::1/64
+ encapsulation dot1q 577
+!
+interface HundredGigE0/0/0/23.78
+ ipv4 address 45.178.1.1 255.255.255.252
+ ipv6 address 2001:45:178:1::1/64
+ encapsulation dot1q 578
+!
+interface HundredGigE0/0/0/23.79
+ ipv4 address 45.179.1.1 255.255.255.252
+ ipv6 address 2001:45:179:1::1/64
+ encapsulation dot1q 579
+!
+interface HundredGigE0/0/0/23.80
+ ipv4 address 45.180.1.1 255.255.255.252
+ ipv6 address 2001:45:180:1::1/64
+ encapsulation dot1q 580
+!
+interface HundredGigE0/0/0/23.81
+ ipv4 address 45.181.1.1 255.255.255.252
+ ipv6 address 2001:45:181:1::1/64
+ encapsulation dot1q 581
+!
+interface HundredGigE0/0/0/23.82
+ ipv4 address 45.182.1.1 255.255.255.252
+ ipv6 address 2001:45:182:1::1/64
+ encapsulation dot1q 582
+!
+interface HundredGigE0/0/0/23.83
+ ipv4 address 45.183.1.1 255.255.255.252
+ ipv6 address 2001:45:183:1::1/64
+ encapsulation dot1q 583
+!
+interface HundredGigE0/0/0/23.84
+ ipv4 address 45.184.1.1 255.255.255.252
+ ipv6 address 2001:45:184:1::1/64
+ encapsulation dot1q 584
+!
+interface HundredGigE0/0/0/23.85
+ ipv4 address 45.185.1.1 255.255.255.252
+ ipv6 address 2001:45:185:1::1/64
+ encapsulation dot1q 585
+!
+interface HundredGigE0/0/0/23.86
+ ipv4 address 45.186.1.1 255.255.255.252
+ ipv6 address 2001:45:186:1::1/64
+ encapsulation dot1q 586
+!
+interface HundredGigE0/0/0/23.87
+ ipv4 address 45.187.1.1 255.255.255.252
+ ipv6 address 2001:45:187:1::1/64
+ encapsulation dot1q 587
+!
+interface HundredGigE0/0/0/23.88
+ ipv4 address 45.188.1.1 255.255.255.252
+ ipv6 address 2001:45:188:1::1/64
+ encapsulation dot1q 588
+!
+interface HundredGigE0/0/0/23.89
+ ipv4 address 45.189.1.1 255.255.255.252
+ ipv6 address 2001:45:189:1::1/64
+ encapsulation dot1q 589
+!
+interface HundredGigE0/0/0/23.90
+ ipv4 address 45.190.1.1 255.255.255.252
+ ipv6 address 2001:45:190:1::1/64
+ encapsulation dot1q 590
+!
+interface HundredGigE0/0/0/23.91
+ ipv4 address 45.191.1.1 255.255.255.252
+ ipv6 address 2001:45:191:1::1/64
+ encapsulation dot1q 591
+!
+interface HundredGigE0/0/0/23.92
+ ipv4 address 45.192.1.1 255.255.255.252
+ ipv6 address 2001:45:192:1::1/64
+ encapsulation dot1q 592
+!
+interface HundredGigE0/0/0/23.93
+ ipv4 address 45.193.1.1 255.255.255.252
+ ipv6 address 2001:45:193:1::1/64
+ encapsulation dot1q 593
+!
+interface HundredGigE0/0/0/23.94
+ ipv4 address 45.194.1.1 255.255.255.252
+ ipv6 address 2001:45:194:1::1/64
+ encapsulation dot1q 594
+!
+interface HundredGigE0/0/0/23.95
+ ipv4 address 45.195.1.1 255.255.255.252
+ ipv6 address 2001:45:195:1::1/64
+ encapsulation dot1q 595
+!
+interface HundredGigE0/0/0/23.96
+ ipv4 address 45.196.1.1 255.255.255.252
+ ipv6 address 2001:45:196:1::1/64
+ encapsulation dot1q 596
+!
+interface HundredGigE0/0/0/23.97
+ ipv4 address 45.197.1.1 255.255.255.252
+ ipv6 address 2001:45:197:1::1/64
+ encapsulation dot1q 597
+!
+interface HundredGigE0/0/0/23.98
+ ipv4 address 45.198.1.1 255.255.255.252
+ ipv6 address 2001:45:198:1::1/64
+ encapsulation dot1q 598
+!
+interface HundredGigE0/0/0/23.99
+ ipv4 address 45.199.1.1 255.255.255.252
+ ipv6 address 2001:45:199:1::1/64
+ encapsulation dot1q 599
+!
+interface HundredGigE0/0/0/23.100
+ service-policy input remark-peer-traffic
+ ipv4 bgp policy propagation input qos-group destination
+ ipv4 address 145.100.1.1 255.255.255.252
+ ipv6 bgp policy propagation input qos-group destination
+ ipv6 address 2001:145:100:1::1/64
+ encapsulation dot1q 1000
+!
+interface HundredGigE0/0/0/23.102
+ description "BGP-FS Redirect VRF"
+ vrf peer3
+ ipv4 address 145.102.1.1 255.255.255.252
+ ipv6 address 2001:145:102:1::1/64
+ load-interval 30
+ encapsulation dot1q 1002
+!
+interface HundredGigE0/0/0/23.103
+ description "BGP-FS Redirect FS traffic-NH"
+ vrf peer4
+ ipv4 address 145.103.1.1 255.255.255.252
+ ipv6 address 2001:145:103:1::1/64
+ load-interval 30
+ encapsulation dot1q 1003
+!
+interface HundredGigE0/0/0/23.104
+ description " Neighbor for BGP-FS Scale Interface "
+ vrf peer5
+ ipv4 address 145.104.1.1 255.255.255.252
+ ipv6 address 2001:145:104:1::1/64
+ load-interval 30
+ encapsulation dot1q 1004
+!
+interface HundredGigE0/0/0/23.105
+ vrf peer6
+ ipv4 address 165.105.1.1 255.255.255.252
+ ipv6 address 2001:145:104:105::1/64
+ encapsulation dot1q 1005
+!
+interface HundredGigE0/0/0/23.106
+ vrf peer7
+ ipv4 address 165.106.1.1 255.255.255.252
+ encapsulation dot1q 1006
+!
+interface HundredGigE0/0/0/23.107
+ vrf peer8
+ ipv4 address 165.107.1.1 255.255.255.252
+ encapsulation dot1q 1007
+!
+interface HundredGigE0/0/0/23.108
+ vrf peer9
+ ipv4 address 165.108.1.1 255.255.255.252
+ encapsulation dot1q 1008
+!
+interface HundredGigE0/0/0/23.109
+ vrf peer10
+ ipv4 address 165.109.1.1 255.255.255.252
+ encapsulation dot1q 1009
+!
+interface HundredGigE0/0/0/23.110
+ vrf peer11
+ ipv4 address 165.110.1.1 255.255.255.252
+ encapsulation dot1q 1010
+!
+interface HundredGigE0/0/0/23.111
+ vrf peer12
+ ipv4 address 165.111.1.1 255.255.255.252
+ encapsulation dot1q 1011
+!
+interface HundredGigE0/0/0/23.112
+ vrf peer13
+ ipv4 address 165.112.1.1 255.255.255.252
+ encapsulation dot1q 1012
+!
+interface HundredGigE0/0/0/23.113
+ vrf peer14
+ ipv4 address 165.113.1.1 255.255.255.252
+ encapsulation dot1q 1013
+!
+interface HundredGigE0/0/0/23.114
+ vrf peer15
+ ipv4 address 165.114.1.1 255.255.255.252
+ encapsulation dot1q 1014
+!
+interface HundredGigE0/0/0/23.115
+ vrf peer16
+ ipv4 address 165.115.1.1 255.255.255.252
+ encapsulation dot1q 1015
+!
+interface HundredGigE0/0/0/23.116
+ vrf peer17
+ ipv4 address 165.116.1.1 255.255.255.252
+ encapsulation dot1q 1016
+!
+interface HundredGigE0/0/0/23.117
+ vrf peer18
+ ipv4 address 165.117.1.1 255.255.255.252
+ encapsulation dot1q 1017
+!
+interface HundredGigE0/0/0/23.118
+ vrf peer19
+ ipv4 address 165.118.1.1 255.255.255.252
+ encapsulation dot1q 1018
+!
+interface HundredGigE0/0/0/23.119
+ vrf peer20
+ ipv4 address 165.119.1.1 255.255.255.252
+ encapsulation dot1q 1019
+!
+interface HundredGigE0/0/0/23.120
+ vrf peer21
+ ipv4 address 165.120.1.1 255.255.255.252
+ encapsulation dot1q 1020
+!
+interface HundredGigE0/0/0/23.121
+ vrf peer22
+ ipv4 address 165.121.1.1 255.255.255.252
+ encapsulation dot1q 1021
+!
+interface HundredGigE0/0/0/23.122
+ vrf peer23
+ ipv4 address 165.122.1.1 255.255.255.252
+ encapsulation dot1q 1022
+!
+interface HundredGigE0/0/0/23.123
+ vrf peer24
+ ipv4 address 165.123.1.1 255.255.255.252
+ encapsulation dot1q 1023
+!
+interface HundredGigE0/0/0/23.124
+ vrf peer25
+ ipv4 address 165.124.1.1 255.255.255.252
+ encapsulation dot1q 1024
+!
+interface HundredGigE0/0/0/23.125
+ vrf peer26
+ ipv4 address 165.125.1.1 255.255.255.252
+ encapsulation dot1q 1025
+!
+interface HundredGigE0/0/0/23.126
+ vrf peer27
+ ipv4 address 165.126.1.1 255.255.255.252
+ encapsulation dot1q 1026
+!
+interface HundredGigE0/0/0/23.127
+ vrf peer28
+ ipv4 address 165.127.1.1 255.255.255.252
+ encapsulation dot1q 1027
+!
+interface HundredGigE0/0/0/23.128
+ vrf peer29
+ ipv4 address 165.128.1.1 255.255.255.252
+ encapsulation dot1q 1028
+!
+interface HundredGigE0/0/0/23.129
+ vrf peer30
+ ipv4 address 165.129.1.1 255.255.255.252
+ encapsulation dot1q 1029
+!
+interface HundredGigE0/0/0/23.130
+ vrf peer31
+ ipv4 address 165.130.1.1 255.255.255.252
+ encapsulation dot1q 1030
+!
+interface HundredGigE0/0/0/23.131
+ vrf peer32
+ ipv4 address 165.131.1.1 255.255.255.252
+ encapsulation dot1q 1031
+!
+interface HundredGigE0/0/0/23.132
+ vrf peer33
+ ipv4 address 165.132.1.1 255.255.255.252
+ encapsulation dot1q 1032
+!
+interface HundredGigE0/0/0/23.133
+ vrf peer34
+ ipv4 address 165.133.1.1 255.255.255.252
+ encapsulation dot1q 1033
+!
+interface HundredGigE0/0/0/23.134
+ vrf peer35
+ ipv4 address 165.134.1.1 255.255.255.252
+ encapsulation dot1q 1034
+!
+interface HundredGigE0/0/0/23.135
+ vrf peer36
+ ipv4 address 165.135.1.1 255.255.255.252
+ encapsulation dot1q 1035
+!
+interface HundredGigE0/0/0/23.136
+ vrf peer37
+ ipv4 address 165.136.1.1 255.255.255.252
+ encapsulation dot1q 1036
+!
+interface HundredGigE0/0/0/23.137
+ vrf peer38
+ ipv4 address 165.137.1.1 255.255.255.252
+ encapsulation dot1q 1037
+!
+interface HundredGigE0/0/0/23.138
+ vrf peer39
+ ipv4 address 165.138.1.1 255.255.255.252
+ encapsulation dot1q 1038
+!
+interface HundredGigE0/0/0/23.139
+ vrf peer40
+ ipv4 address 165.139.1.1 255.255.255.252
+ encapsulation dot1q 1039
+!
+interface HundredGigE0/0/0/23.140
+ vrf peer41
+ ipv4 address 165.140.1.1 255.255.255.252
+ encapsulation dot1q 1040
+!
+interface HundredGigE0/0/0/23.141
+ vrf peer42
+ ipv4 address 165.141.1.1 255.255.255.252
+ encapsulation dot1q 1041
+!
+interface HundredGigE0/0/0/23.142
+ vrf peer43
+ ipv4 address 165.142.1.1 255.255.255.252
+ encapsulation dot1q 1042
+!
+interface HundredGigE0/0/0/23.143
+ vrf peer44
+ ipv4 address 165.143.1.1 255.255.255.252
+ encapsulation dot1q 1043
+!
+interface HundredGigE0/0/0/23.144
+ vrf peer45
+ ipv4 address 165.144.1.1 255.255.255.252
+ encapsulation dot1q 1044
+!
+interface HundredGigE0/0/0/23.145
+ vrf peer46
+ ipv4 address 165.145.1.1 255.255.255.252
+ encapsulation dot1q 1045
+!
+interface HundredGigE0/0/0/23.146
+ vrf peer47
+ ipv4 address 165.146.1.1 255.255.255.252
+ encapsulation dot1q 1046
+!
+interface HundredGigE0/0/0/23.147
+ vrf peer48
+ ipv4 address 165.147.1.1 255.255.255.252
+ encapsulation dot1q 1047
+!
+interface HundredGigE0/0/0/23.148
+ vrf peer49
+ ipv4 address 165.148.1.1 255.255.255.252
+ encapsulation dot1q 1048
+!
+interface HundredGigE0/0/0/23.149
+ vrf peer50
+ ipv4 address 165.149.1.1 255.255.255.252
+ encapsulation dot1q 1049
+!
+interface HundredGigE0/0/0/23.150
+ vrf peer100
+ ipv4 address 75.100.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1050
+!
+interface HundredGigE0/0/0/23.151
+ vrf peer101
+ ipv4 address 75.101.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1051
+!
+interface HundredGigE0/0/0/23.152
+ vrf peer102
+ ipv4 address 75.102.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1052
+!
+interface HundredGigE0/0/0/23.153
+ vrf peer103
+ ipv4 address 75.103.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1053
+!
+interface HundredGigE0/0/0/23.154
+ vrf peer104
+ ipv4 address 75.104.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1054
+!
+interface HundredGigE0/0/0/23.155
+ vrf peer105
+ ipv4 address 75.105.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1055
+!
+interface HundredGigE0/0/0/23.156
+ vrf peer106
+ ipv4 address 75.106.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1056
+!
+interface HundredGigE0/0/0/23.157
+ vrf peer107
+ ipv4 address 75.107.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1057
+!
+interface HundredGigE0/0/0/23.158
+ vrf peer108
+ ipv4 address 75.108.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1058
+!
+interface HundredGigE0/0/0/23.159
+ vrf peer109
+ ipv4 address 75.109.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1059
+!
+interface HundredGigE0/0/0/23.160
+ vrf peer110
+ ipv4 address 75.110.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1060
+!
+interface HundredGigE0/0/0/23.161
+ vrf peer111
+ ipv4 address 75.111.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1061
+!
+interface HundredGigE0/0/0/23.162
+ vrf peer112
+ ipv4 address 75.112.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1062
+!
+interface HundredGigE0/0/0/23.163
+ vrf peer113
+ ipv4 address 75.113.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1063
+!
+interface HundredGigE0/0/0/23.164
+ vrf peer114
+ ipv4 address 75.114.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1064
+!
+interface HundredGigE0/0/0/23.165
+ vrf peer115
+ ipv4 address 75.115.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1065
+!
+interface HundredGigE0/0/0/23.166
+ vrf peer116
+ ipv4 address 75.116.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1066
+!
+interface HundredGigE0/0/0/23.167
+ vrf peer117
+ ipv4 address 75.117.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1067
+!
+interface HundredGigE0/0/0/23.168
+ vrf peer118
+ ipv4 address 75.118.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1068
+!
+interface HundredGigE0/0/0/23.169
+ vrf peer119
+ ipv4 address 75.119.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1069
+!
+interface HundredGigE0/0/0/23.170
+ vrf peer120
+ ipv4 address 75.120.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1070
+!
+interface HundredGigE0/0/0/23.171
+ vrf peer121
+ ipv4 address 75.121.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1071
+!
+interface HundredGigE0/0/0/23.172
+ vrf peer122
+ ipv4 address 75.122.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1072
+!
+interface HundredGigE0/0/0/23.173
+ vrf peer123
+ ipv4 address 75.123.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1073
+!
+interface HundredGigE0/0/0/23.174
+ vrf peer124
+ ipv4 address 75.124.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1074
+!
+interface HundredGigE0/0/0/23.175
+ vrf peer125
+ ipv4 address 75.125.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1075
+!
+interface HundredGigE0/0/0/23.176
+ vrf peer126
+ ipv4 address 75.126.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1076
+!
+interface HundredGigE0/0/0/23.177
+ vrf peer127
+ ipv4 address 75.127.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1077
+!
+interface HundredGigE0/0/0/23.178
+ vrf peer128
+ ipv4 address 75.128.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1078
+!
+interface HundredGigE0/0/0/23.179
+ vrf peer129
+ ipv4 address 75.129.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1079
+!
+interface HundredGigE0/0/0/23.180
+ vrf peer130
+ ipv4 address 75.130.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1080
+!
+interface HundredGigE0/0/0/23.181
+ vrf peer131
+ ipv4 address 75.131.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1081
+!
+interface HundredGigE0/0/0/23.182
+ vrf peer132
+ ipv4 address 75.132.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1082
+!
+interface HundredGigE0/0/0/23.183
+ vrf peer133
+ ipv4 address 75.133.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1083
+!
+interface HundredGigE0/0/0/23.184
+ vrf peer134
+ ipv4 address 75.134.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1084
+!
+interface HundredGigE0/0/0/23.185
+ vrf peer135
+ ipv4 address 75.135.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1085
+!
+interface HundredGigE0/0/0/23.186
+ vrf peer136
+ ipv4 address 75.136.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1086
+!
+interface HundredGigE0/0/0/23.187
+ vrf peer137
+ ipv4 address 75.137.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1087
+!
+interface HundredGigE0/0/0/23.188
+ vrf peer138
+ ipv4 address 75.138.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1088
+!
+interface HundredGigE0/0/0/23.189
+ vrf peer139
+ ipv4 address 75.139.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1089
+!
+interface HundredGigE0/0/0/23.190
+ vrf peer140
+ ipv4 address 75.140.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1090
+!
+interface HundredGigE0/0/0/23.191
+ vrf peer141
+ ipv4 address 75.141.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1091
+!
+interface HundredGigE0/0/0/23.192
+ vrf peer142
+ ipv4 address 75.142.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1092
+!
+interface HundredGigE0/0/0/23.193
+ vrf peer143
+ ipv4 address 75.143.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1093
+!
+interface HundredGigE0/0/0/23.194
+ vrf peer144
+ ipv4 address 75.144.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1094
+!
+interface HundredGigE0/0/0/23.195
+ vrf peer145
+ ipv4 address 75.145.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1095
+!
+interface HundredGigE0/0/0/23.196
+ vrf peer146
+ ipv4 address 75.146.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1096
+!
+interface HundredGigE0/0/0/23.197
+ vrf peer147
+ ipv4 address 75.147.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1097
+!
+interface HundredGigE0/0/0/23.198
+ vrf peer148
+ ipv4 address 75.148.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1098
+!
+interface HundredGigE0/0/0/23.199
+ vrf peer149
+ ipv4 address 75.149.1.1 255.255.255.252
+ load-interval 30
+ encapsulation dot1q 1099
+!
+interface HundredGigE0/0/0/23.200
+ ipv4 address 46.200.1.1 255.255.255.252
+ ipv6 address 2001:46:200:1::1/64
+ encapsulation dot1q 200
+!
+interface HundredGigE0/0/0/23.300
+ description "Phil for CCNI Testing" 
+ ipv4 address 65.65.0.1 255.255.255.252
+ encapsulation dot1q 300
+!
+interface HundredGigE0/0/0/23.1145
+ description .. " Sub int vrf dns for BGP-FS traffic"
+ vrf dns
+ ipv4 address 216.51.0.2 255.255.255.0
+ ipv6 address 2001:141:131:1::2/64
+ encapsulation dot1q 1145
+!
+interface HundredGigE0/0/0/23.1603
+ description .. SR-ODN
+ ipv4 address 11.41.7.2 255.255.255.252
+ ipv6 address 2001:11:41:7::2/64
+ encapsulation dot1q 1603
+!
+interface HundredGigE0/0/0/23.1604
+ description .. SR-ODN
+ ipv4 address 11.42.7.2 255.255.255.252
+ ipv6 address 2001:11:42:7::2/64
+ encapsulation dot1q 1604
+!
+interface HundredGigE0/0/0/23.1605
+ description .. SR-ODN
+ ipv4 address 11.43.7.2 255.255.255.252
+ ipv6 address 2001:11:43:7::2/64
+ encapsulation dot1q 1605
+!
+interface HundredGigE0/0/0/23.1606
+ description .. SR-ODN
+ ipv4 address 11.44.7.2 255.255.255.252
+ ipv6 address 2001:11:44:7::2/64
+ encapsulation dot1q 1606
+!
+interface HundredGigE0/0/0/23.1607
+ description .. SR-ODN
+ ipv4 address 11.45.7.2 255.255.255.252
+ ipv6 address 2001:11:45:7::2/64
+ encapsulation dot1q 1607
+!
+interface HundredGigE0/0/0/23.3000
+ service-policy input remark-peer-traffic
+ ipv4 bgp policy propagation input qos-group destination
+ ipv4 address 154.100.1.1 255.255.255.252
+ ipv6 bgp policy propagation input qos-group destination
+ ipv6 address 2001:154:100:1::1/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ encapsulation dot1q 3000
+!
+interface HundredGigE0/0/0/23.3001
+ description .. " BGP FS traffic incoming for memcached traffic"
+ ipv4 address 154.101.1.1 255.255.255.252
+ ipv6 address 2001:154:101:1::1/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ encapsulation dot1q 3001
+!
+interface HundredGigE0/0/0/23.3002
+ description "BGP-FS Redirect VRF"
+ ipv4 address 154.102.1.1 255.255.255.252
+ ipv6 address 2001:154:102:1::1/64
+ load-interval 30
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ encapsulation dot1q 3002
+!
+interface HundredGigE0/0/0/23.3003
+ description "BGP-FS Redirect FS traffic-NH"
+ ipv4 address 154.103.1.1 255.255.255.252
+ ipv6 address 2001:154:103:1::1/64
+ load-interval 30
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ encapsulation dot1q 3003
+!
+interface HundredGigE0/0/0/23.3004
+ description " Neighbor for BGP-FS Scale Interface "
+ ipv4 address 154.104.1.1 255.255.255.252
+ ipv6 address 2001:154:104:1::1/64
+ load-interval 30
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ encapsulation dot1q 3004
+!
+interface HundredGigE0/0/0/23.3005
+ description " BGP RPKI neighbor "
+ ipv4 address 154.105.1.1 255.255.255.252
+ load-interval 30
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ encapsulation dot1q 3005
+!
+interface HundredGigE0/0/0/23.3006
+ ipv4 address 218.55.0.1 255.255.255.0
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ encapsulation dot1q 3006
+!
+interface HundredGigE0/0/0/23.3007
+ description "DDOS Legit"
+ ipv4 address 154.110.1.1 255.255.255.252
+ ipv6 address 2001:154:110:1::1/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+ flow ipv6 monitor flow-monitor-ipv6 sampler nf-sample-8192 ingress
+ encapsulation dot1q 3007
+!
+interface HundredGigE0/0/0/23.4000
+ description "EPE2-PeerSet-4
+ ipv4 address 46.105.2.1 255.255.255.252
+ encapsulation dot1q 4000
+!
+interface HundredGigE0/0/0/23.4001
+ description "EPE2-PeerSet-2"
+ ipv4 address 46.105.3.1 255.255.255.252
+ encapsulation dot1q 4001
+!
+interface HundredGigE0/0/0/23.4003
+ description "EPE2-PeerSet-2"
+ ipv4 address 46.105.7.1 255.255.255.252
+ encapsulation dot1q 4003
+!
+interface FourHundredGigE0/0/0/24
+ shutdown
+!
+interface FourHundredGigE0/0/0/25
+ shutdown
+!
+interface FourHundredGigE0/0/0/26
+ shutdown
+!
+interface FourHundredGigE0/0/0/27
+ shutdown
+!
+interface HundredGigE0/0/0/28
+ ipv4 address 35.26.1.2 255.255.255.252
+ ipv4 verify unicast source reachable-via any
+ ipv6 verify unicast source reachable-via any
+ ipv6 address 2001:35:26:1::2/64
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+!
+interface HundredGigE0/0/0/29
+ ipv4 address 35.27.1.2 255.255.255.252
+ ipv6 address 2001:35:27:1::2/64
+ load-interval 30
+ flow ipv4 monitor flow-monitor-ipv4 sampler nf-sample-8192 ingress
+!
+interface FourHundredGigE0/0/0/30
+ shutdown
+!
+interface FourHundredGigE0/0/0/31
+ shutdown
+!
+!
+extcommunity-set opaque BLUE
+  100
+end-set
+!
+extcommunity-set opaque GREEN
+  200
+end-set
+!
+extcommunity-set opaque COLOR15100
+  15100
+end-set
+!
+extcommunity-set opaque COLOR15150
+  15150
+end-set
+!
+extcommunity-set opaque COLOR15400
+  15400
+end-set
+!
+extcommunity-set opaque COLOR15450
+  15450
+end-set
+!
+extcommunity-set opaque COLOR15600
+  15600
+end-set
+!
+extcommunity-set opaque COLOR15650
+  15650
+end-set
+!
+extcommunity-set opaque COLOR15700
+  15700
+end-set
+!
+extcommunity-set opaque COLOR15701
+  15701
+end-set
+!
+extcommunity-set opaque COLOR15750
+  15750
+end-set
+!
+extcommunity-set opaque COLOR15751
+  15751
+end-set
+!
+extcommunity-set opaque COLOR15752
+  15752
+end-set
+!
+prefix-set test
+  100.0.0.0/24 eq 24,
+  10.0.0.0/8 ge 8 le 24
+end-set
+!
+prefix-set COLOR15100
+  178.1.1.1/32,
+  178.1.1.2/32,
+  178.1.1.3/32,
+  178.1.1.4/32
+end-set
+!
+prefix-set COLOR15150
+  178.51.1.1/32,
+  178.51.1.2/32,
+  178.51.1.3/32,
+  178.51.1.4/32
+end-set
+!
+prefix-set COLOR15400
+  174.1.1.1/32,
+  174.1.1.2/32,
+  174.1.1.3/32,
+  174.1.1.3/32
+end-set
+!
+prefix-set COLOR15450
+  178.5.1.1/32,
+  179.5.1.1/32
+end-set
+!
+prefix-set COLOR15600
+  179.1.1.1/32,
+  179.1.1.2/32,
+  179.1.1.3/32,
+  179.1.1.4/32
+end-set
+!
+prefix-set COLOR15650
+  179.51.1.1/32,
+  179.51.1.2/32,
+  179.51.1.3/32,
+  179.51.1.4/32
+end-set
+!
+prefix-set COLOR15700
+  177.1.1.1/32
+end-set
+!
+prefix-set COLOR15701
+  46.205.7.2/32
+end-set
+!
+prefix-set COLOR15750
+  181.1.2.1/32
+end-set
+!
+prefix-set COLOR15751
+  122.1.0.0/24
+end-set
+!
+prefix-set COLOR15752
+  181.51.2.1/32
+end-set
+!
+prefix-set COLOR15760
+  166.0.1.0/24,
+  # 164.205.0.0/22 (removed by NSO Transit),
+  # 164.201.0.0/22 (removed by NSO Transit),
+  # 164.207.0.0/22, (removed by NSO Transit),
+  # 164.200.12.0/22, (removed by NSO Transit),
+  # 164.200.16.0/22, (removed by NSO Transit),
+  # 164.201.0.0/22, (removed by NSO Transit),
+  # 164.209.0.0/22, (removed by NSO Transit),
+  # 164.205.0.0/22, (removed by NSO Transit),
+  # 164.204.0.0/22, (removed by NSO Transit)
+end-set
+!
+prefix-set EPE-ADJ-SID
+  46.205.7.2/32
+end-set
+!
+prefix-set COLOR15100-LABEL
+  44.105.1.0/30
+end-set
+!
+community-set sti-lowcost
+  2222:200
+end-set
+!
+community-set peer-as64555
+  100:64555,
+  100:500
+end-set
+!
+community-set sti-fretta-14
+  1111:14
+end-set
+!
+community-set sti-fretta-15
+  1111:15
+end-set
+!
+community-set qppb-community
+  1000:2
+end-set
+!
+community-set sti-besteffort
+  12356:124
+end-set
+!
+route-policy dns
+  if destination in (91.101.1.2) then
+    pass
+  endif
+end-policy
+!
+route-policy DROP
+  drop
+end-policy
+!
+route-policy PASS
+  pass
+end-policy
+!
+route-policy rpki
+  if validation-state is invalid then
+    set local-preference 50
+  endif
+  if validation-state is not-found then
+    set local-preference 75
+  endif
+  if validation-state is valid then
+    set local-preference 100
+  endif
+  pass
+end-policy
+!
+route-policy DROP-ALL
+  drop
+end-policy
+!
+route-policy PASS-ALL
+  pass
+end-policy
+!
+route-policy PEER1-IN
+  set community (65000:100)
+  set local-preference 100
+  set extcommunity color BLUE
+  pass
+end-policy
+!
+route-policy PEER2-IN
+  set community (65000:200)
+  set local-preference 100
+  set extcommunity color GREEN
+  pass
+end-policy
+!
+route-policy COLOR-EPE
+  if destination in COLOR15150 then
+    set extcommunity color COLOR15150
+    set local-preference 500
+  elseif destination in COLOR15450 then
+    set extcommunity color COLOR15450
+    set local-preference 500
+  elseif destination in COLOR15650 then
+    set extcommunity color COLOR15650
+    set local-preference 500
+  elseif destination in COLOR15751 then
+    set extcommunity color COLOR15751
+    set local-preference 500
+  elseif destination in COLOR15752 then
+    set extcommunity color COLOR15752
+    set local-preference 500
+  elseif destination in COLOR15701 then
+    set extcommunity color COLOR15701
+    set local-preference 500
+  else
+    pass
+  endif
+end-policy
+!
+route-policy qppb-test
+  if community matches-every (1000:1) then
+    set qos-group 1
+  endif
+  if community matches-every (1000:2) then
+    set qos-group 2
+  else
+    pass
+  endif
+end-policy
+!
+route-policy EPE-ADJ-SID
+  if destination in EPE-ADJ-SID then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy qppb-test-1
+  if destination in (211.1.0.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.1.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.2.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.3.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.4.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.5.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.6.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.7.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.8.0/24) then
+    set qos-group 4
+  elseif destination in (211.1.9.0/24) then
+    set qos-group 4
+  else
+    pass
+  endif
+end-policy
+!
+route-policy advertise-all
+  set path-selection all advertise
+end-policy
+!
+route-policy provider-only
+  if community matches-any (100:1) then
+    pass
+  elseif community matches-any (100:2) then
+    pass
+  elseif community matches-any (100:3) then
+    pass
+  elseif community matches-any (100:4) then
+    pass
+  elseif community matches-any (100:5) then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy QPPB-community
+  if community matches-any sti-lowcost then
+    set qos-group 1
+  elseif community matches-any sti-besteffort then
+    set qos-group 2
+  elseif community matches-any sti-fretta-15 then
+    set qos-group 15
+  elseif community matches-any sti-fretta-14 then
+    set qos-group 14
+  elseif destination in (50.1.1.0/24) then
+    set qos-group 2
+  elseif destination in (60.1.3.0/24) then
+    set qos-group 6
+  elseif destination in (2013::/90) then
+    set qos-group 21
+  elseif destination in (2061::/90) then
+    set qos-group 3
+  elseif destination in (2062::/90) then
+    set qos-group 4
+  endif
+end-policy
+!
+route-policy COLOR-EPE-LABEL
+  if destination in COLOR15100-LABEL then
+    pass
+  endif
+end-policy
+!
+route-policy PEER-AS64555-IN
+  set local-preference 200
+  set community peer-as64555
+  set med 100
+end-policy
+!
+route-policy AF-QPPB-community
+  apply QPPB-community
+  apply PASS
+end-policy
+!
+route-policy bgpls_drop_from_ncs
+  drop
+end-policy
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 172.20.33.1
+  46.105.3.2/32 HundredGigE0/0/0/23.4001
+  46.205.7.2/32 46.105.7.2
+ !
+ vrf dns
+  address-family ipv4 unicast
+   35.33.1.0/24 141.131.1.1
+   216.51.0.0/16 141.131.1.1
+  !
+ !
+!
+router isis pf-internal
+ set-overload-bit on-startup wait-for-bgp
+ is-type level-1
+ net 49.0002.1921.6801.4005.00
+ distribute link-state
+ log adjacency changes
+ log pdu drops
+ lsp-refresh-interval 65000
+ max-lsp-lifetime 65535
+ lsp-password hmac-md5 encrypted 106D3A3A2A46405832
+ address-family ipv4 unicast
+  metric-style wide
+  mpls traffic-eng level-1-2
+  mpls traffic-eng router-id Loopback0
+  maximum-paths 32
+  segment-routing mpls
+ !
+ address-family ipv6 unicast
+  metric-style wide
+  maximum-paths 32
+  segment-routing mpls
+ !
+ interface Loopback0
+  passive
+  address-family ipv4 unicast
+   metric 10
+   prefix-sid index 451
+  !
+  address-family ipv6 unicast
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/18
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 002720252B0A595531
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1251
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/19
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 0528352C0E1D1C5A27
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+   adjacency-sid index 1252
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/23.4003
+  circuit-type level-1
+  point-to-point
+  hello-password hmac-md5 encrypted 01303527745A545C1F
+  address-family ipv4 unicast
+  !
+ !
+ interface HundredGigE0/0/0/28
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 072C126F61584B5629
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+ interface HundredGigE0/0/0/29
+  circuit-type level-1
+  bfd minimum-interval 100
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password hmac-md5 encrypted 06253C02631F5B4A3B
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 10
+  !
+ !
+!
+router bgp 100
+ bgp router-id 192.168.14.5
+ rpki server 172.20.33.46
+  transport tcp port 3323
+  refresh-time 120
+ !
+ rpki server 172.20.33.81
+  transport tcp port 3323
+  refresh-time 600
+ !
+ rpki server 172.27.223.244
+  transport tcp port 3323
+  refresh-time 20
+ !
+ bgp bestpath med always
+ bgp bestpath aigp ignore
+ bgp bestpath as-path multipath-relax
+ bgp bestpath origin-as use validity
+ bgp bestpath origin-as allow invalid
+ address-family ipv4 unicast
+  table-policy qppb-test
+  additional-paths send
+  bgp attribute-download
+  maximum-paths ebgp 32
+  maximum-paths ibgp 32
+  additional-paths selection route-policy advertise-all
+  peer-set-id 1
+   peer-set-sid index 151
+  !
+  peer-set-id 2
+   peer-set-sid index 451
+  !
+  peer-set-id 3
+   peer-set-sid index 650
+  !
+  peer-set-id 4
+   peer-set-sid index 450
+  !
+  bgp origin-as validation enable
+  bgp origin-as validation signal ibgp
+  redistribute static route-policy EPE-ADJ-SID
+ !
+ address-family vpnv4 unicast
+ !
+ address-family ipv6 unicast
+  table-policy qppb-test
+  additional-paths receive
+  additional-paths send
+  bgp attribute-download
+  maximum-paths ebgp 32
+  maximum-paths ibgp 32
+  additional-paths selection route-policy advertise-all
+  allocate-label all
+ !
+ address-family vpnv6 unicast
+ !
+ address-family link-state link-state
+ !
+ address-family ipv4 flowspec
+ !
+ address-family ipv6 flowspec
+ !
+ address-family vpnv4 flowspec
+ !
+ adjacencies
+  46.105.7.2
+   adjacency-sid index 701
+   peer-set 2
+  !
+ !
+ af-group v4-af-pfs address-family ipv4 unicast
+  maximum-prefix 10000000 85 warning-only
+  multipath
+  next-hop-self
+  soft-reconfiguration inbound always
+ !
+ af-group v6-af-pfs address-family ipv6 unicast
+  multipath
+  next-hop-self
+  soft-reconfiguration inbound always
+ !
+ af-group v4-af-peer address-family ipv4 unicast
+  maximum-prefix 10000000 85 warning-only
+  multipath
+  soft-reconfiguration inbound always
+ !
+ af-group v6-af-peer address-family ipv6 unicast
+  maximum-prefix 100 80
+  multipath
+  soft-reconfiguration inbound always
+ !
+ af-group v4-flowspec-af-pfl address-family ipv4 flowspec
+  multipath
+  route-reflector-client
+  validation disable
+  next-hop-self
+ !
+ af-group v4-flowspec-af-pfs address-family ipv4 flowspec
+  multipath
+ !
+ af-group v6-flowspec-af-pfl address-family ipv6 flowspec
+  multipath
+  next-hop-self
+  soft-reconfiguration inbound always
+ !
+ af-group v6-flowspec-af-pfs address-family ipv4 flowspec
+  multipath
+ !
+ session-group pfs-session
+  bmp-activate server 1
+  update-source Loopback0
+ !
+ session-group peer-session
+  egress-engineering
+  bmp-activate server 1
+  ignore-connected-check
+ !
+ neighbor-group CWCDG
+  remote-as 65000
+  update-source MgmtEth0/RP0/CPU0/0
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor-group v4-pfs
+  use session-group pfs-session
+  address-family ipv4 unicast
+   use af-group v4-af-pfs
+  !
+  address-family ipv4 flowspec
+   use af-group v4-flowspec-af-pfl
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor-group v6-pfs
+  use session-group pfs-session
+  address-family ipv6 unicast
+   use af-group v6-af-pfs
+  !
+  address-family ipv6 flowspec
+   use af-group v6-flowspec-af-pfl
+  !
+ !
+ neighbor-group v4-peer
+  use session-group peer-session
+  dmz-link-bandwidth
+  address-family ipv4 unicast
+   use af-group v4-af-peer
+  !
+ !
+ neighbor-group v6-peer
+  use session-group peer-session
+  dmz-link-bandwidth
+  address-family ipv6 unicast
+   use af-group v6-af-peer
+  !
+ !
+ neighbor 10.65.0.1
+  remote-as 64555
+  use neighbor-group v4-peer
+  address-family ipv4 unicast
+   route-policy PEER-AS64555-IN in
+   route-policy PASS out
+  !
+ !
+ neighbor 11.41.7.1
+  remote-as 65400
+  use neighbor-group v4-peer
+  description "ext-PEER1 EBGP"
+  address-family ipv4 unicast
+   route-policy PEER1-IN in
+   route-policy PASS out
+  !
+ !
+ neighbor 11.42.7.1
+  remote-as 65400
+  use neighbor-group v4-peer
+  description "ext-PEER2 EBGP"
+  address-family ipv4 unicast
+   route-policy PEER2-IN in
+   route-policy PASS out
+  !
+ !
+ neighbor 11.43.7.1
+  remote-as 65300
+  use neighbor-group v4-peer
+  description "ext-PEER1 EBGP"
+  address-family ipv4 unicast
+   route-policy PEER1-IN in
+   route-policy PASS out
+  !
+ !
+ neighbor 11.44.7.1
+  remote-as 65400
+  use neighbor-group v4-peer
+  description "ext-PEER2 EBGP"
+  address-family ipv4 unicast
+   route-policy PEER2-IN in
+   route-policy PASS out
+  !
+ !
+ neighbor 11.45.7.1
+  remote-as 65500
+  use neighbor-group v4-peer
+  description "ext-PEER1 EBGP"
+  address-family ipv4 unicast
+   route-policy PEER1-IN in
+   route-policy PASS out
+  !
+ !
+ neighbor 10.165.0.1
+  remote-as 64555
+  use neighbor-group v4-peer
+  address-family ipv4 unicast
+   route-policy PEER-AS64555-IN in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.100.1.2
+  remote-as 101
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-1'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.101.1.2
+  remote-as 102
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-2'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 45.102.1.2
+  remote-as 103
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-3'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 45.103.1.2
+  remote-as 104
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-4' 
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 45.104.1.2
+  remote-as 105
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-5'
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 45.105.1.2
+  remote-as 106
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-6'
+  peer-node-sid index 800
+  peer-set 1
+  peer-set 3
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 45.105.3.2
+  remote-as 107
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'EPE'
+  peer-node-sid index 750
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 45.106.1.2
+  remote-as 107
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-7'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 45.107.1.2
+  remote-as 108
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-8'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 45.108.1.2
+  remote-as 109
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-9'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.109.1.2
+  remote-as 110
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-10'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.110.1.2
+  remote-as 111
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-11'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.111.1.2
+  remote-as 112
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-12'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.112.1.2
+  remote-as 113
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-13'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.113.1.2
+  remote-as 114
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-14'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.114.1.2
+  remote-as 115
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-15'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.115.1.2
+  remote-as 116
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-16'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.116.1.2
+  remote-as 117
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-17'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.117.1.2
+  remote-as 118
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-18'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.118.1.2
+  remote-as 119
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-19'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.119.1.2
+  remote-as 120
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-20'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.120.1.2
+  remote-as 121
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-21'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.121.1.2
+  remote-as 122
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-22'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.122.1.2
+  remote-as 123
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-23'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.123.1.2
+  remote-as 124
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-24'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.124.1.2
+  remote-as 125
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-25'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.125.1.2
+  remote-as 126
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-26'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.126.1.2
+  remote-as 127
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-27'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.127.1.2
+  remote-as 128
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-28'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.128.1.2
+  remote-as 129
+  use neighbor-group v4-peer
+  description 'ext-peer-29'
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.129.1.2
+  remote-as 130
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-30'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.130.1.2
+  remote-as 131
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-31'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.131.1.2
+  remote-as 132
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-32'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.132.1.2
+  remote-as 133
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-33'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.133.1.2
+  remote-as 134
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-34'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.134.1.2
+  remote-as 135
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-35'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.135.1.2
+  remote-as 136
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-36'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.136.1.2
+  remote-as 137
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-37'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.137.1.2
+  remote-as 138
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-38'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.138.1.2
+  remote-as 139
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-39'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.139.1.2
+  remote-as 140
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-40'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.140.1.2
+  remote-as 141
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-41'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.141.1.2
+  remote-as 142
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-42'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.142.1.2
+  remote-as 143
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-43'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.143.1.2
+  remote-as 144
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-44'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.144.1.2
+  remote-as 145
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-45'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.145.1.2
+  remote-as 146
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-46'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.146.1.2
+  remote-as 147
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-47'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.147.1.2
+  remote-as 148
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-48'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.148.1.2
+  remote-as 149
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-49'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.149.1.2
+  remote-as 150
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-50'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.150.1.2
+  remote-as 151
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-51'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.151.1.2
+  remote-as 152
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-52'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.152.1.2
+  remote-as 153
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-53'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.153.1.2
+  remote-as 154
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-54'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.154.1.2
+  remote-as 155
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-55'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.155.1.2
+  remote-as 156
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-56'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.156.1.2
+  remote-as 157
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-57'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.157.1.2
+  remote-as 158
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-58'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.158.1.2
+  remote-as 159
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-59'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.159.1.2
+  remote-as 160
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-60'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.160.1.2
+  remote-as 161
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-61'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.161.1.2
+  remote-as 162
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-62'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.162.1.2
+  remote-as 163
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-63'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.163.1.2
+  remote-as 164
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-64'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.164.1.2
+  remote-as 165
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-65'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.165.1.2
+  remote-as 166
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-66'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.166.1.2
+  remote-as 167
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-67'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.167.1.2
+  remote-as 168
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-68'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.168.1.2
+  remote-as 169
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-69'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.169.1.2
+  remote-as 170
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-70'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.170.1.2
+  remote-as 171
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-71'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.171.1.2
+  remote-as 172
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-72'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.172.1.2
+  remote-as 173
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-73'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.173.1.2
+  remote-as 174
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-74'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.174.1.2
+  remote-as 175
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-75'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.175.1.2
+  remote-as 176
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-76'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.176.1.2
+  remote-as 177
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-77'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.177.1.2
+  remote-as 178
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-78'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.178.1.2
+  remote-as 179
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-79'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.179.1.2
+  remote-as 180
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-80'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.180.1.2
+  remote-as 181
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-81'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.181.1.2
+  remote-as 182
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-82'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.182.1.2
+  remote-as 183
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-83'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.183.1.2
+  remote-as 184
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-84'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.184.1.2
+  remote-as 185
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-85'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.185.1.2
+  remote-as 186
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-86'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.186.1.2
+  remote-as 187
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-87'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.187.1.2
+  remote-as 188
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-88'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.188.1.2
+  remote-as 189
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-89'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.189.1.2
+  remote-as 190
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-90'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.190.1.2
+  remote-as 191
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-91'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.191.1.2
+  remote-as 192
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-92'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.192.1.2
+  remote-as 193
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-93'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.193.1.2
+  remote-as 194
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-94'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.194.1.2
+  remote-as 195
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-95'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.195.1.2
+  remote-as 196
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-96'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.196.1.2
+  remote-as 197
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-97'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.197.1.2
+  remote-as 198
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-98'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.198.1.2
+  remote-as 199
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-99'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.199.1.2
+  remote-as 200
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-100'
+  peer-set 2
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 45.200.1.2
+  remote-as 200
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-5'
+  peer-set 1
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 46.105.2.2
+  remote-as 501
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-6'
+  peer-set 4
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 46.105.3.2
+  remote-as 502
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'ext-peer-6'
+  peer-node-sid index 751
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 46.205.7.2
+  remote-as 506
+  use neighbor-group v4-peer
+  egress-engineering
+  description 'EPE'
+  address-family ipv4 unicast
+   route-policy COLOR-EPE in
+   route-policy COLOR-EPE out
+  !
+ !
+ neighbor 154.100.1.2
+  remote-as 400
+  use neighbor-group v4-peer
+  description 'ext-peer-1'
+  update-source HundredGigE0/0/0/23.3000
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family vpnv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 154.101.1.2
+  remote-as 1001
+  use neighbor-group v4-peer
+  description 'ext-peer-bgp-fs'
+  update-source HundredGigE0/0/0/23.3001
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family vpnv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 154.102.1.2
+  remote-as 1002
+  use neighbor-group v4-peer
+  description 'ext-peer-bgp-fs'
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv4 flowspec
+   validation disable
+  !
+ !
+ neighbor 154.103.1.2
+  remote-as 1003
+  use neighbor-group v4-peer
+  description 'ext-peer-bgp-fs'
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 154.104.1.2
+  remote-as 1004
+  use neighbor-group v4-peer
+  description 'ext-peer-bgp-fs'
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv4 flowspec
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 flowspec
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 154.105.1.2
+  remote-as 1005
+  use neighbor-group v4-peer
+  description .. BGP RPKI test
+  address-family ipv4 unicast
+   route-policy rpki in
+   route-policy PASS out
+  !
+ !
+ neighbor 154.110.1.2
+  remote-as 410
+  use neighbor-group v4-peer
+  description 'ext-peer-1'
+  address-family ipv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family vpnv4 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 172.20.33.86
+  use neighbor-group CWCDG
+  address-family ipv4 unicast
+  !
+ !
+ neighbor 192.168.13.1
+  remote-as 100
+  use neighbor-group v4-pfs
+  description "PFS #1"
+  update-source Loopback0
+  address-family ipv4 unicast
+   route-policy COLOR-EPE out
+  !
+  address-family vpnv4 unicast
+  !
+  address-family ipv6 labeled-unicast
+  !
+  address-family vpnv6 unicast
+  !
+  address-family link-state link-state
+  !
+  address-family ipv4 flowspec
+   use af-group v4-flowspec-af-pfl
+   validation disable
+   soft-reconfiguration inbound always
+  !
+  address-family vpnv4 flowspec
+   route-policy PASS-ALL in
+   route-policy DROP-ALL out
+  !
+ !
+ neighbor 192.168.13.2
+  remote-as 100
+  use neighbor-group v4-pfs
+  description "PFS #1"
+  update-source Loopback0
+  address-family ipv4 unicast
+   route-policy COLOR-EPE out
+  !
+  address-family vpnv4 unicast
+  !
+  address-family ipv6 labeled-unicast
+  !
+  address-family vpnv6 unicast
+  !
+  address-family link-state link-state
+  !
+  address-family ipv4 flowspec
+   use af-group v4-flowspec-af-pfl
+   validation disable
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:10:65::2
+  remote-as 64555
+  use neighbor-group v6-peer
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:100:1::2
+  remote-as 11101
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-1'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:101:1::2
+  remote-as 11102
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-2'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:102:1::2
+  remote-as 11103
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-3'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:103:1::2
+  remote-as 11104
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-4'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:104:1::2
+  remote-as 11105
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-5'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:105:1::2
+  remote-as 11106
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-6'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:106:1::2
+  remote-as 11107
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-7'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:107:1::2
+  remote-as 11108
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-8'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:108:1::2
+  remote-as 11109
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-9'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:109:1::2
+  remote-as 11110
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-10'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:110:1::2
+  remote-as 11111
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-11'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:111:1::2
+  remote-as 11112
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-12'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:112:1::2
+  remote-as 11113
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-13'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:113:1::2
+  remote-as 11114
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-14'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:114:1::2
+  remote-as 11115
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-15'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:115:1::2
+  remote-as 11116
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-16'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:116:1::2
+  remote-as 11117
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-17'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:117:1::2
+  remote-as 11118
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-18'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:118:1::2
+  remote-as 11119
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-19'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:119:1::2
+  remote-as 11120
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-20'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:120:1::2
+  remote-as 11121
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-21'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:121:1::2
+  remote-as 11122
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-22'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:122:1::2
+  remote-as 11123
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-23'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:123:1::2
+  remote-as 11124
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-24'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:124:1::2
+  remote-as 11125
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-25'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:125:1::2
+  remote-as 11126
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-26'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:126:1::2
+  remote-as 11127
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-27'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:127:1::2
+  remote-as 11128
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-28'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:128:1::2
+  remote-as 11129
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-29'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:129:1::2
+  remote-as 11130
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-30'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:130:1::2
+  remote-as 11131
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-31'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:131:1::2
+  remote-as 11132
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-32'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:132:1::2
+  remote-as 11133
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-33'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:133:1::2
+  remote-as 11134
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-34'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:134:1::2
+  remote-as 11135
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-35'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:135:1::2
+  remote-as 11136
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-36'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:136:1::2
+  remote-as 11137
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-37'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:137:1::2
+  remote-as 11138
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-38'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:138:1::2
+  remote-as 11139
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-39'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:139:1::2
+  remote-as 11140
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-40'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:140:1::2
+  remote-as 11141
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-41'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:141:1::2
+  remote-as 11142
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-42'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:142:1::2
+  remote-as 11143
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-43'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:143:1::2
+  remote-as 11144
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-44'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:144:1::2
+  remote-as 11145
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-45'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:145:1::2
+  remote-as 11146
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-46'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:146:1::2
+  remote-as 11147
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-47'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:147:1::2
+  remote-as 11148
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-48'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:148:1::2
+  remote-as 11149
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-49'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:149:1::2
+  remote-as 11150
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-50'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:150:1::2
+  remote-as 11151
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-51'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:151:1::2
+  remote-as 11152
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-52'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:152:1::2
+  remote-as 11153
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-53'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:153:1::2
+  remote-as 11154
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-54'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:154:1::2
+  remote-as 11155
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-55'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:155:1::2
+  remote-as 11156
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-56'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:156:1::2
+  remote-as 11157
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-57'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:157:1::2
+  remote-as 11158
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-58'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:158:1::2
+  remote-as 11159
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-59'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:159:1::2
+  remote-as 11160
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-60'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:160:1::2
+  remote-as 11161
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-61'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:161:1::2
+  remote-as 11162
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-62'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:162:1::2
+  remote-as 11163
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-63'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:163:1::2
+  remote-as 11164
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-64'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:164:1::2
+  remote-as 11165
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-65'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:165:1::2
+  remote-as 11166
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-66'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:166:1::2
+  remote-as 11167
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-67'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:167:1::2
+  remote-as 11168
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-68'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:168:1::2
+  remote-as 11169
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-69'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:169:1::2
+  remote-as 11170
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-70'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:170:1::2
+  remote-as 11171
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-71'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:171:1::2
+  remote-as 11172
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-72'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:172:1::2
+  remote-as 11173
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-73'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:173:1::2
+  remote-as 11174
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-74'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:174:1::2
+  remote-as 11175
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-75'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:175:1::2
+  remote-as 11176
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-76'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:176:1::2
+  remote-as 11177
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-77'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:177:1::2
+  remote-as 11178
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-78'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:178:1::2
+  remote-as 11179
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-79'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:179:1::2
+  remote-as 11180
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-80'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:180:1::2
+  remote-as 11181
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-81'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:181:1::2
+  remote-as 11182
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-82'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:182:1::2
+  remote-as 11183
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-83'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:183:1::2
+  remote-as 11184
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-84'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:184:1::2
+  remote-as 11185
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-85'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:185:1::2
+  remote-as 11186
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-86'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:186:1::2
+  remote-as 11187
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-87'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:187:1::2
+  remote-as 11188
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-88'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:188:1::2
+  remote-as 11189
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-89'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:189:1::2
+  remote-as 11190
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-90'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:190:1::2
+  remote-as 11191
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-91'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:191:1::2
+  remote-as 11192
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-92'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:192:1::2
+  remote-as 11193
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-93'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:193:1::2
+  remote-as 11194
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-94'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:194:1::2
+  remote-as 11195
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-95'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:195:1::2
+  remote-as 11196
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-96'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:196:1::2
+  remote-as 11197
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-97'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:197:1::2
+  remote-as 11198
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-98'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:198:1::2
+  remote-as 11199
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-99'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:45:199:1::2
+  remote-as 11200
+  use neighbor-group v6-peer
+  description 'ext-v6-peer-100'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+  !
+ !
+ neighbor 2001:145:100:1::2
+  remote-as 400
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  update-source HundredGigE0/0/0/16.100
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:145:101:1::2
+  remote-as 1001
+  use neighbor-group v6-peer
+  maximum-peers 4095
+  description 'ext-v6-peer'
+  update-source HundredGigE0/0/0/16.101
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:145:102:1::2
+  remote-as 1002
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:145:103:1::2
+  remote-as 1003
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:145:104:1::2
+  remote-as 1004
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:154:100:1::2
+  remote-as 400
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  update-source HundredGigE0/0/0/23.3000
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:154:101:1::2
+  remote-as 1001
+  use neighbor-group v6-peer
+  maximum-peers 4095
+  description 'ext-v6-peer'
+  update-source HundredGigE0/0/0/23.3001
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:154:102:1::2
+  remote-as 1002
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:154:103:1::2
+  remote-as 1003
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:154:104:1::2
+  remote-as 1004
+  use neighbor-group v6-peer
+  description 'ext-v6-peer'
+  address-family ipv6 unicast
+   route-policy PASS in
+   route-policy PASS out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 2001:192:168:13::1
+  remote-as 100
+  use neighbor-group v6-pfs
+  description 'PFS1'
+ !
+ vrf dns
+  rd 100:145
+  address-family ipv4 unicast
+   label mode per-vrf
+   redistribute connected
+  !
+  address-family ipv6 unicast
+  !
+  address-family ipv4 flowspec
+  !
+ !
+ vrf peer1
+  rd 100:1
+  bgp router-id 193.168.141.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 145.100.1.2
+   remote-as 400
+   update-source HundredGigE0/0/0/23.100
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+  neighbor 165.100.1.2
+   remote-as 1000
+   update-source HundredGigE0/0/0/23.100
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer2
+  rd 100:2
+  bgp router-id 193.168.142.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.101.1.2
+   remote-as 1001
+   update-source HundredGigE0/0/0/23.101
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer3
+  rd 100:3
+  bgp router-id 193.168.143.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.102.1.2
+   remote-as 1002
+   update-source HundredGigE0/0/0/23.102
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer4
+  rd 100:4
+  bgp router-id 193.168.144.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.103.1.2
+   remote-as 1003
+   update-source HundredGigE0/0/0/23.103
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer5
+  rd 100:5
+  bgp router-id 193.168.145.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.104.1.2
+   remote-as 1004
+   update-source HundredGigE0/0/0/23.104
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer6
+  rd 100:6
+  bgp router-id 193.168.146.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.105.1.2
+   remote-as 1005
+   update-source HundredGigE0/0/0/23.105
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer7
+  rd 100:7
+  bgp router-id 193.168.147.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.106.1.2
+   remote-as 1006
+   update-source HundredGigE0/0/0/23.106
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer8
+  rd 100:8
+  bgp router-id 193.168.148.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.107.1.2
+   remote-as 1007
+   update-source HundredGigE0/0/0/23.107
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer9
+  rd 100:9
+  bgp router-id 193.168.149.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.108.1.2
+   remote-as 1008
+   update-source HundredGigE0/0/0/23.108
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer10
+  rd 100:10
+  bgp router-id 193.168.150.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.109.1.2
+   remote-as 1009
+   update-source HundredGigE0/0/0/23.109
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer11
+  rd 100:11
+  bgp router-id 193.168.151.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.110.1.2
+   remote-as 1010
+   update-source HundredGigE0/0/0/23.110
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer12
+  rd 100:12
+  bgp router-id 193.168.152.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.111.1.2
+   remote-as 1011
+   update-source HundredGigE0/0/0/23.111
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer13
+  rd 100:13
+  bgp router-id 193.168.153.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.112.1.2
+   remote-as 1012
+   update-source HundredGigE0/0/0/23.112
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer14
+  rd 100:14
+  bgp router-id 193.168.154.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.113.1.2
+   remote-as 1013
+   update-source HundredGigE0/0/0/23.113
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer15
+  rd 100:15
+  bgp router-id 193.168.155.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.114.1.2
+   remote-as 1014
+   update-source HundredGigE0/0/0/23.114
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer16
+  rd 100:16
+  bgp router-id 193.168.156.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.115.1.2
+   remote-as 1015
+   update-source HundredGigE0/0/0/23.115
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer17
+  rd 100:17
+  bgp router-id 193.168.157.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.116.1.2
+   remote-as 1016
+   update-source HundredGigE0/0/0/23.116
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer18
+  rd 100:18
+  bgp router-id 193.168.158.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.117.1.2
+   remote-as 1017
+   update-source HundredGigE0/0/0/23.117
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer19
+  rd 100:19
+  bgp router-id 193.168.159.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.118.1.2
+   remote-as 1018
+   update-source HundredGigE0/0/0/23.118
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer20
+  rd 100:20
+  bgp router-id 193.168.160.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.119.1.2
+   remote-as 1019
+   update-source HundredGigE0/0/0/23.119
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer21
+  rd 100:21
+  bgp router-id 193.168.165.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.120.1.2
+   remote-as 1020
+   update-source HundredGigE0/0/0/23.120
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer22
+  rd 100:22
+  bgp router-id 193.168.162.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.121.1.2
+   remote-as 1021
+   update-source HundredGigE0/0/0/23.121
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer23
+  rd 100:23
+  bgp router-id 193.168.163.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.122.1.2
+   remote-as 1022
+   update-source HundredGigE0/0/0/23.122
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer24
+  rd 100:24
+  bgp router-id 193.168.164.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.123.1.2
+   remote-as 1023
+   update-source HundredGigE0/0/0/23.123
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer25
+  rd 100:25
+  bgp router-id 193.168.165.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.124.1.2
+   remote-as 1024
+   update-source HundredGigE0/0/0/23.124
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer26
+  rd 100:26
+  bgp router-id 193.168.166.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.125.1.2
+   remote-as 1025
+   update-source HundredGigE0/0/0/23.125
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer27
+  rd 100:27
+  bgp router-id 193.168.167.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.126.1.2
+   remote-as 1026
+   update-source HundredGigE0/0/0/23.126
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer28
+  rd 100:28
+  bgp router-id 193.168.168.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.127.1.2
+   remote-as 1027
+   update-source HundredGigE0/0/0/23.127
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer29
+  rd 100:29
+  bgp router-id 193.168.169.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.128.1.2
+   remote-as 1028
+   update-source HundredGigE0/0/0/23.128
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer30
+  rd 100:30
+  bgp router-id 193.168.170.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.129.1.2
+   remote-as 1029
+   update-source HundredGigE0/0/0/23.129
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer31
+  rd 100:31
+  bgp router-id 193.168.175.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.130.1.2
+   remote-as 1030
+   update-source HundredGigE0/0/0/23.130
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer32
+  rd 100:32
+  bgp router-id 193.168.172.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.131.1.2
+   remote-as 1031
+   update-source HundredGigE0/0/0/23.131
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer33
+  rd 100:33
+  bgp router-id 193.168.173.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.132.1.2
+   remote-as 1032
+   update-source HundredGigE0/0/0/23.132
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer34
+  rd 100:34
+  bgp router-id 193.168.174.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.133.1.2
+   remote-as 1033
+   update-source HundredGigE0/0/0/23.133
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer35
+  rd 100:35
+  bgp router-id 193.168.175.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.134.1.2
+   remote-as 1034
+   update-source HundredGigE0/0/0/23.134
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer36
+  rd 100:36
+  bgp router-id 193.168.176.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.135.1.2
+   remote-as 1035
+   update-source HundredGigE0/0/0/23.135
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer37
+  rd 100:37
+  bgp router-id 193.168.177.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.136.1.2
+   remote-as 1036
+   update-source HundredGigE0/0/0/23.136
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer38
+  rd 100:38
+  bgp router-id 193.168.178.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.137.1.2
+   remote-as 1037
+   update-source HundredGigE0/0/0/23.137
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer39
+  rd 100:39
+  bgp router-id 193.168.179.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.138.1.2
+   remote-as 1038
+   update-source HundredGigE0/0/0/23.138
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer40
+  rd 100:40
+  bgp router-id 193.168.180.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.139.1.2
+   remote-as 1039
+   update-source HundredGigE0/0/0/23.139
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer41
+  rd 100:41
+  bgp router-id 193.168.181.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.140.1.2
+   remote-as 1040
+   update-source HundredGigE0/0/0/23.140
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer42
+  rd 100:42
+  bgp router-id 193.168.182.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.141.1.2
+   remote-as 1041
+   update-source HundredGigE0/0/0/23.141
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer43
+  rd 100:43
+  bgp router-id 193.168.183.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.142.1.2
+   remote-as 1042
+   update-source HundredGigE0/0/0/23.142
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer44
+  rd 100:44
+  bgp router-id 193.168.184.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.143.1.2
+   remote-as 1043
+   update-source HundredGigE0/0/0/23.143
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer45
+  rd 100:45
+  bgp router-id 193.168.185.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.144.1.2
+   remote-as 1044
+   update-source HundredGigE0/0/0/23.144
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer46
+  rd 100:46
+  bgp router-id 193.168.186.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.145.1.2
+   remote-as 1045
+   update-source HundredGigE0/0/0/23.145
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer47
+  rd 100:47
+  bgp router-id 193.168.187.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.146.1.2
+   remote-as 1046
+   update-source HundredGigE0/0/0/23.146
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer48
+  rd 100:48
+  bgp router-id 193.168.188.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.147.1.2
+   remote-as 1047
+   update-source HundredGigE0/0/0/23.147
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer49
+  rd 100:49
+  bgp router-id 193.168.189.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.148.1.2
+   remote-as 1048
+   update-source HundredGigE0/0/0/23.148
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer50
+  rd 100:50
+  bgp router-id 193.168.190.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.149.1.2
+   remote-as 1049
+   update-source HundredGigE0/0/0/23.149
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer51
+  rd 100:51
+  bgp router-id 193.168.191.1
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  neighbor 165.150.1.2
+   remote-as 1050
+   update-source HundredGigE0/0/0/23.150
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer100
+  rd 65000:100
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  address-family ipv4 flowspec
+  !
+  neighbor 75.100.1.2
+   remote-as 1050
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer101
+  rd 65000:101
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.101.1.2
+   remote-as 1051
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer102
+  rd 65000:102
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.102.1.2
+   remote-as 1052
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer103
+  rd 65000:103
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.103.1.2
+   remote-as 1053
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer104
+  rd 65000:104
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.104.1.2
+   remote-as 1054
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer105
+  rd 65000:105
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.105.1.2
+   remote-as 1055
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer106
+  rd 65000:106
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.106.1.2
+   remote-as 1056
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer107
+  rd 65000:107
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.107.1.2
+   remote-as 1057
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer108
+  rd 65000:108
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.108.1.2
+   remote-as 1058
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer109
+  rd 65000:109
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.109.1.2
+   remote-as 1059
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer110
+  rd 65000:110
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.110.1.2
+   remote-as 1060
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer111
+  rd 65000:111
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.111.1.2
+   remote-as 1061
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer112
+  rd 65000:112
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.112.1.2
+   remote-as 1062
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer113
+  rd 65000:113
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.113.1.2
+   remote-as 1063
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer114
+  rd 65000:114
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.114.1.2
+   remote-as 1064
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer115
+  rd 65000:115
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.115.1.2
+   remote-as 1065
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer116
+  rd 65000:116
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.116.1.2
+   remote-as 1066
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer117
+  rd 65000:117
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.117.1.2
+   remote-as 1067
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer118
+  rd 65000:118
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.118.1.2
+   remote-as 1068
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer119
+  rd 65000:119
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.119.1.2
+   remote-as 1069
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer120
+  rd 65000:120
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.120.1.2
+   remote-as 1070
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer121
+  rd 65000:121
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.121.1.2
+   remote-as 1071
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer122
+  rd 65000:122
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.122.1.2
+   remote-as 1072
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer123
+  rd 65000:123
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.123.1.2
+   remote-as 1073
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer124
+  rd 65000:124
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.124.1.2
+   remote-as 1074
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer125
+  rd 65000:125
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.125.1.2
+   remote-as 1075
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer126
+  rd 65000:126
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.126.1.2
+   remote-as 1076
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer127
+  rd 65000:127
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.127.1.2
+   remote-as 1077
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer128
+  rd 65000:128
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.128.1.2
+   remote-as 1078
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer129
+  rd 65000:129
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.129.1.2
+   remote-as 1079
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer130
+  rd 65000:130
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.130.1.2
+   remote-as 1080
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer131
+  rd 65000:131
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.131.1.2
+   remote-as 1081
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer132
+  rd 65000:132
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.132.1.2
+   remote-as 1082
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer133
+  rd 65000:133
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.133.1.2
+   remote-as 1083
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer134
+  rd 65000:134
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.134.1.2
+   remote-as 1084
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer135
+  rd 65000:135
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.135.1.2
+   remote-as 1085
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer136
+  rd 65000:136
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.136.1.2
+   remote-as 1086
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer137
+  rd 65000:137
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.137.1.2
+   remote-as 1087
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer138
+  rd 65000:138
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.138.1.2
+   remote-as 1088
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer139
+  rd 65000:139
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.139.1.2
+   remote-as 1089
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer140
+  rd 65000:140
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.140.1.2
+   remote-as 1090
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer141
+  rd 65000:141
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.141.1.2
+   remote-as 1091
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer142
+  rd 65000:142
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.142.1.2
+   remote-as 1092
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer143
+  rd 65000:143
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.143.1.2
+   remote-as 1093
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer144
+  rd 65000:144
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.144.1.2
+   remote-as 1094
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer145
+  rd 65000:145
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.145.1.2
+   remote-as 1095
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer146
+  rd 65000:146
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.146.1.2
+   remote-as 1096
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer147
+  rd 65000:147
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.147.1.2
+   remote-as 1097
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer148
+  rd 65000:148
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.148.1.2
+   remote-as 1098
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf peer149
+  rd 65000:149
+  address-family ipv4 unicast
+   label mode per-ce
+   route-target download
+  !
+  neighbor 75.149.1.2
+   remote-as 1099
+   address-family ipv4 unicast
+    route-policy PASS in
+    route-policy PASS out
+    soft-reconfiguration inbound always
+   !
+  !
+ !
+ vrf internet
+  rd 65000:999
+  address-family ipv4 unicast
+   label mode per-vrf
+  !
+ !
+ vrf bgpfs-dns
+  rd 100:53
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  address-family ipv6 unicast
+   redistribute connected
+  !
+  address-family ipv4 flowspec
+  !
+ !
+!
+bmp server 1
+ host 44.20.1.2 port 5000
+ description openBMP
+ update-source HundredGigE0/0/0/20
+ initial-delay 60
+ stats-reporting-period 300
+ initial-refresh delay 60 spread 2
+!
+mpls ldp
+ interface HundredGigE0/0/0/23
+ !
+ interface HundredGigE0/0/0/23.4000
+ !
+ interface HundredGigE0/0/0/23.4001
+ !
+ interface HundredGigE0/0/0/23.4003
+ !
+!
+segment-routing
+ global-block 16000 16999
+ local-block 15000 15999
+ traffic-eng
+  segment-list PFL5-PE2-FC1
+   index 1 mpls label 16311
+   index 2 mpls label 16522
+  !
+  segment-list PFL5-PE2-FC2
+   index 1 mpls label 16311
+   index 2 mpls label 16522
+  !
+  on-demand color 41
+   dynamic
+    pcep
+    !
+    metric
+     type igp
+    !
+   !
+  !
+  on-demand color 51
+   dynamic
+    pcep
+    !
+    metric
+     type latency
+    !
+   !
+  !
+  on-demand color 151
+   dynamic
+    pcep
+    !
+    metric
+     type igp
+    !
+   !
+  !
+  policy pe2_fc0
+   color 12 end-point ipv4 192.168.22.1
+   candidate-paths
+    preference 150
+     explicit segment-list PFL5-PE2-FC1
+     !
+    !
+   !
+  !
+  policy pe2_fc1
+   color 22 end-point ipv4 192.168.22.1
+   candidate-paths
+    preference 150
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy pe2_fc3
+   color 42 end-point ipv4 192.168.22.1
+   candidate-paths
+    preference 150
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy pe2_color150
+   color 150 end-point ipv4 192.168.22.1
+   candidate-paths
+    preference 150
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  pcc
+   pce address ipv4 192.168.13.1
+    precedence 10
+   !
+   pce address ipv4 192.168.13.2
+    precedence 20
+   !
+   report-all
+  !
+ !
+!
+flowspec
+ local-install interface-all
+ address-family ipv4
+  local-install interface-all
+ !
+ address-family ipv6
+  local-install interface-all
+ !
+ vrf dns
+  address-family ipv4
+   local-install interface-all
+  !
+ !
+ vrf bgpfs-dns
+  address-family ipv4
+   local-install interface-all
+  !
+ !
+!
+lldp
+!
+crypto ca trustpoint system-trustpoint
+ keypair rsa system-enroll-key
+ ip-address 172.20.33.45
+ subject-name CN=cisco.com
+ enrollment url self
+ lifetime certificate 395
+ message-digest sha256
+ lifetime ca-certificate 395
+!
+ssh client vrf default
+ssh server logging
+ssh timeout 120
+ssh server rate-limit 600
+ssh server capability netconf-xml
+ssh server v2
+ssh server vrf default
+ssh server netconf vrf default
+end
