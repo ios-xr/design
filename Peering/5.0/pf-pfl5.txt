@@ -24,7 +24,7 @@ usergroup dossier-group
 clock timezone PST America/Los_Angeles
 logging console disable
 username admin
- group root-lr
+ group root-lrw
  group cisco-support
  secret 10 $6$tjuze/fyjOzf4e/.$CkH2l3gKEflg0OiaRuVFZCuGw2e69OTONRLUPhDKItHz1bzJB9Zycor8zYA2IBlG3VyYm8AwWTo3fzKEm7hfO0
 !

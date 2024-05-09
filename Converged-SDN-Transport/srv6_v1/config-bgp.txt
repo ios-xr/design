@@ -1,0 +1,48 @@
+router bgp 100
+ nsr
+ bgp router-id {{ loopback0-ip }} 
+ bgp graceful-restart
+ bgp bestpath aigp ignore
+ ibgp policy out enforce-modifications
+ address-family vpnv4 unicast
+  additional-paths receive
+  additional-paths send
+!
+address-family ipv6 unicast
+!
+address-family vpnv6 unicast
+!
+address-family ipv4 mvpn
+!
+address-family ipv6 mvpn
+!
+address-family l2vpn evpn
+neighbor-group SvRR
+  remote-as 100
+  update-source Loopback0
+  address-family vpnv4 unicast
+  !
+  address-family ipv4 mvpn
+  !
+  address-family ipv6 mvpn
+  !
+  address-family l2vpn evpn
+  !
+ !
+neighbor-group BGP-LU
+ remote-as 100
+ update-source Loopback0
+ address-family ipv4 labeled-unicast
+ !
+ address-family vpnv4 unicast
+ !
+ address-family vpnv6 unicast
+ !
+!
+neighbor 101.0.1.201
+  use neighbor-group SvRR-EVPN
+  description SvRR1-A 
+ !
+neighbor 101.1.1.201
+  use neighbor-group SvRR-EVPN
+  description SvRR1-B 
