@@ -1,0 +1,4592 @@
+!RANCID-CONTENT-TYPE: ios-exr
+!
+!Chassis type: NCS-5500 - a NCS-5500 router
+!
+!Memory: main 12301M
+!
+!Image:  Node 0/RP0 [RP]
+!Image:     Active Packages: 1  
+!Image:        ncs5500-sysadmin-25.4.1.24I version=25.4.1.24I [Boot image]
+!
+! Smart Licensing Status
+! ======================
+! Smart Licensing is ENABLED
+! License Conversion:
+!   Automatic Conversion Enabled: True
+! Export Authorization Key:
+!   Features Authorized:
+!     <none>
+! Utility:
+! Smart Licensing Using Policy:
+! Account Information:
+!   Smart Account: <none>
+!   Virtual Account: <none>
+! Data Privacy:
+!   Sending Hostname: yes
+!     Callhome hostname privacy: DISABLED
+!     Smart Licensing hostname privacy: DISABLED
+!   Version privacy: DISABLED
+! Transport:
+!   Type: cslu
+!   Cslu address: <empty>
+!   Proxy:
+!     Not Configured
+!   VRF:
+!     Not Supported
+! Miscellaneous:
+!   Custom Id: <empty>
+! Policy:
+!   Policy in use: Merged from multiple sources.
+!   Reporting ACK required: yes (CISCO default)
+!   Unenforced/Non-Export Perpetual Attributes:
+!     First report requirement (days): 365 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 90 (CISCO default)
+!   Unenforced/Non-Export Subscription Attributes:
+!     First report requirement (days): 90 (CISCO default)
+!     Reporting frequency (days): 90 (CISCO default)
+!     Report on change (days): 90 (CISCO default)
+!   Enforced (Perpetual/Subscription) License Attributes:
+!     First report requirement (days): 0 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 0 (CISCO default)
+!   Export (Perpetual/Subscription) License Attributes:
+!     First report requirement (days): 0 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 0 (CISCO default)
+! Usage Reporting:
+!   Last ACK received: <none>
+!   Next ACK deadline: <none>
+!   Reporting push interval: 0 (no reporting)
+!   Next ACK push check: <none>
+!   Next report push: <none>
+!   Last report push: <none>
+!   Last report file write: <none>
+! Trust Code Installed: <none>
+! Secondary Signing Cert: 0
+! License Usage
+! =============
+! No licenses in use
+! Product Information
+! ===================
+! UDI: PID:NCS-55A1-24Q6H-S,SN:FOC2335R0RD
+! Agent Version
+! =============
+! Smart Agent for Licensing: 5.9.33/a550eb079
+! License Authorizations
+! ======================
+! Overall status:
+!   Active: PID:NCS-55A1-24Q6H-S,SN:FOC2335R0RD
+! Purchased Licenses:
+!   No Purchase Information Available
+! Enforcement Status:
+!   No Enforcement Status Information Available
+! Usage Report Summary:
+! =====================
+! Total: 0,  Purged: 0
+! Total Acknowledged Received: 0,  Waiting for Ack: 0
+! Available to Report: 0  Collecting Data: 0  
+! Device Telemetry Report Summary:
+! ================================
+! Data Channel: AVAILABLE
+! Reports on disk: 0
+!
+!
+!
+!
+!Auto-upgrade:Disabled
+!                                                                         FPD Versions
+!                                                                        ==============
+!Location   Card type             HWver FPD device       ATR Status    Running   Programd
+!-----------------------------------------------------------------------------------------
+!0/RP0      NCS-55A1-24Q6H-S      1.0   MB-MIFPGA             CURRENT     0.11      0.11
+!0/RP0      NCS-55A1-24Q6H-S      1.0   Bootloader            NEED UPGD   1.18      1.18
+!0/RP0      NCS-55A1-24Q6H-S      1.0   CPU-IOFPGA            CURRENT     1.26      1.26
+!0/RP0      NCS-55A1-24Q6H-S      1.0   MB-IOFPGA             CURRENT     0.17      0.17
+!0/RP0      NCS-55A1-24Q6H-S      1.0   SATA-M1100            CURRENT    50.00     50.00
+!
+!Power: Power       Supply     ------Input----   ------Output---      Status
+!
+!Redundancy information for node 0/RP0/CPU0:
+!==========================================
+!Node 0/RP0/CPU0 is in ACTIVE role
+!Node 0/RP0/CPU0 has no valid partner
+!Details
+!--------
+!Current active rmf state: 
+!    NSR not ready since Standby is not Present
+!
+!Active node reload "CARD_SHUTDOWN"
+!
+!Image: Label : 25.4.1.24I-PROD_BUILD_25_4_1_24I_SIT_IMAGE
+!Image: Node 0/RP0/CPU0 [RP]
+!Image:   Boot Partition: xr_lv58
+!Image:   Active Packages: 14
+!Image:         ncs5500-xr-25.4.1.24I version=25.4.1.24I [Boot image]
+!Image:         ncs5500-lictrl-1.0.0.0-r254124I
+!Image:         ncs5500-xcare-1.0.0.0-r254124I
+!Image:         ncs5500-mcast-1.0.0.0-r254124I
+!Image:         ncs5500-eigrp-1.0.0.0-r254124I
+!Image:         ncs5500-pon-ctlr-1.0.0.0-r254124I
+!Image:         ncs5500-mpls-te-rsvp-1.0.0.0-r254124I
+!Image:         ncs5500-healthcheck-1.0.0.0-r254124I
+!Image:         ncs5500-isis-1.0.0.0-r254124I
+!Image:         ncs5500-mpls-1.0.0.0-r254124I
+!Image:         ncs5500-li-1.0.0.0-r254124I
+!Image:         ncs5500-mgbl-1.0.0.0-r254124I
+!Image:         ncs5500-k9sec-1.0.0.0-r254124I
+!Image:         ncs5500-ospf-1.0.0.0-r254124I
+!Image: Node 0/0/CPU0 [LC]
+!Image:   Boot Partition: xr_lcp_lv58
+!Image:   Active Packages: 14
+!Image:         ncs5500-xr-25.4.1.24I version=25.4.1.24I [Boot image]
+!Image:         ncs5500-eigrp-1.0.0.0-r254124I
+!Image:         ncs5500-li-1.0.0.0-r254124I
+!Image:         ncs5500-mpls-te-rsvp-1.0.0.0-r254124I
+!Image:         ncs5500-lictrl-1.0.0.0-r254124I
+!Image:         ncs5500-pon-ctlr-1.0.0.0-r254124I
+!Image:         ncs5500-healthcheck-1.0.0.0-r254124I
+!Image:         ncs5500-mcast-1.0.0.0-r254124I
+!Image:         ncs5500-ospf-1.0.0.0-r254124I
+!Image:         ncs5500-mgbl-1.0.0.0-r254124I
+!Image:         ncs5500-mpls-1.0.0.0-r254124I
+!Image:         ncs5500-isis-1.0.0.0-r254124I
+!Image:         ncs5500-xcare-1.0.0.0-r254124I
+!Image:         ncs5500-k9sec-1.0.0.0-r254124I
+!
+!Flash: disk0: Directory of disk0:
+!Flash: disk0: -rw-------. 1                     .bash_history
+!Flash: disk0: drwx------. 3   4096 Mar 12  2025 .config
+!Flash: disk0: drwx------. 2   4096 Sep 11  2024 SPAN
+!Flash: disk0: drwx---r-x. 2   4096 Sep 16  2023 clihistory
+!Flash: disk0: lrwxrwxrwx. 1     12 Sep 16  2023 config -> /misc/config
+!Flash: disk0: drwxr-xr-x. 2   4096 Sep 16  2023 core
+!Flash: disk0: drwxr-xr-x. 2   4096 Sep 11  2024 crypto
+!Flash: disk0: drwxr-xr-x. 2   4096 Jun  4 13:07 dhcp
+!Flash: disk0: -rw-r--r--. 1    859 Sep 30 06:25 envoke_log
+!Flash: disk0: drwx------. 2   4096 Sep 16  2023 lost+found
+!Flash: disk0: drwxr-xr-x. 2   4096 Sep 16  2023 nvgen_traces
+!Flash: disk0: drwxr-xr-x. 3   4096 Sep 16  2023 pam
+!Flash: disk0: -rw-r--r--. 1 158856 Sep 30 06:25 pnet_cfg.log
+!Flash: disk0: drwxr-xr-x. 2   4096 Sep 30 06:19 shutdown
+!Flash: disk0: -rw-r--r--. 1      0 Sep 30 06:25 status_file
+!Flash: disk0: -rw-r--r--. 1      0 Sep 30 06:26 status_file_err
+!Flash: disk0: drwxr-xr-x. 3   4096 Sep 16  2023 syslog-hm
+!Flash: disk0: drwxr-xr-x. 2   4096 Mar 26  2025 test
+!Flash: disk0: drwxr-xr-x. 9   4096 Sep 30 06:47 ztp
+!Flash: disk0: 1 GB total (93% free)
+!
+!Flash: harddisk: Directory of harddisk:
+!Flash: harddisk: drwxr-xr-x. 2                         .sppdc
+!Flash: harddisk: drwxr-xr-x. 2       4096 Jan 24  2024 .sppdc_new
+!Flash: harddisk: -rwxr-xr-x. 1 2337474560 Jan 27  2025 2431.tar
+!Flash: harddisk: -rwx------. 1      68253 Nov 14  2019 LEAF1-B4.cfg
+!Flash: harddisk: -rwx------. 1     111621 Nov 14  2019 LEAF3-After.cfg
+!Flash: harddisk: -rwx------. 1     111663 Nov 14  2019 LEAF3-B4.cfg
+!Flash: harddisk: -rwx------. 1     139862 Nov 15  2019 LEAF4-AFTER.cfg
+!Flash: harddisk: -rwx------. 1     101216 Nov 14  2019 LEAF4-B4.cfg
+!Flash: harddisk: -rwx------. 1     140011 Nov 15  2019 LEAF4-BEFORE.cfg
+!Flash: harddisk: -rwx------. 1      68104 Nov 14  2019 Leaf1-after.cfg
+!Flash: harddisk: -rwxr-xr-x. 1 2390036480 Dec 18  2024 NCS5500-iosxr-k9-24.4.1.tar
+!Flash: harddisk: -rw-r--r--. 1      41887 Sep 11  2024 a-pe7-11-sep.cfg
+!Flash: harddisk: -rw-r--r--. 1     505528 Sep 30 06:27 bcm_console_log_output.txt
+!Flash: harddisk: drwxr-xr-x. 6                         cisco_support
+!Flash: harddisk: drwxr-xr-x. 2       4096 Mar 13  2025 coredumps
+!Flash: harddisk: drwxr-xr-x. 2       4096 Apr  9 14:07 crft-snapshots
+!Flash: harddisk: -rw-r--r--. 1      58525 Jan 27  2025 cst-a-pe7-270125.cfg
+!Flash: harddisk: -rw-r--r--. 1      59990 Jun 10 08:01 cst-a-pe7.cfg-10-june-2025
+!Flash: harddisk: -rw-r--r--. 1      58519 Dec 18  2024 cst-a-pe7.cfg-18-dec-2024
+!Flash: harddisk: -rw-r--r--. 1      60006 Sep 26 10:09 cst-a-pe7.cfg-26-Sep-2025
+!Flash: harddisk: -rw-r--r--. 1      41919 Jan 24  2024 cst-a-pe7_24-jan-2024.cfg
+!Flash: harddisk: -rw-r--r--. 1      58648 Mar  6  2025 cst-a-pe7_runncfg.txt
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep 11  2024 custom_metrics
+!Flash: harddisk: drwxr-xr-x. 2       4096 Aug 31  2019 dumper
+!Flash: harddisk: drwx------. 4       4096 Sep 30 06:26 ima
+!Flash: harddisk: drw-r--r--. 2       4096 Jan 24  2024 images
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep 30 06:09 install_tmp_staging_area
+!Flash: harddisk: drwxr-xr-x. 2       4096 Aug 31  2019 ipodwdm_log
+!Flash: harddisk: drwx------. 2      16384 Aug 31  2019 lost+found
+!Flash: harddisk: drwxr-xr-x. 3       4096 Sep 16  2023 mirror
+!Flash: harddisk: -r-xr-xr-x. 1     643495 Jun 18 04:49 ncs5500-eigrp-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -rw-r--r--. 1 2485821440 Apr 28 07:34 ncs5500-goldenk9-x-25.2.1.31I-PROD_BUILD_25_2_1_31I_SIT_IMAGE.iso
+!Flash: harddisk: -rw-r--r--. 1 2485790720 May 20 07:35 ncs5500-goldenk9-x-25.2.1.35I-PROD_BUILD_25_2_1_35I_SIT_IMAGE.iso
+!Flash: harddisk: -rw-r--r--. 1 2602561536 Sep 30 06:02 ncs5500-goldenk9-x-25.4.1.24I-PROD_BUILD_25_4_1_24I_SIT_IMAGE.iso
+!Flash: harddisk: -r-xr-xr-x. 1  109377915 Jun 18 04:49 ncs5500-healthcheck-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1    4074119 Jun 18 04:49 ncs5500-isis-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -rwxr-xr-x. 1    1563126 Jun 18 04:46 ncs5500-k9sec-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1     349032 Jun 18 04:49 ncs5500-li-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1      11627 Jun 18 04:49 ncs5500-license-util-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1    1812559 Jun 18 04:49 ncs5500-licensing-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1      13876 Jun 18 04:49 ncs5500-lictrl-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1   11390750 Jun 18 04:49 ncs5500-mcast-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1    2237045 Jun 18 04:49 ncs5500-mgbl-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -rw-r--r--. 1 2195263488 Jun 18 04:48 ncs5500-mini-x-25.2.1.iso
+!Flash: harddisk: -r-xr-xr-x. 1    2333794 Jun 18 04:49 ncs5500-mpls-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1    8507260 Jun 18 04:49 ncs5500-mpls-te-rsvp-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1    4126802 Jun 18 04:49 ncs5500-ospf-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1  142353868 Jun 18 04:49 ncs5500-pon-ctlr-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -rw-r--r--. 1   10493274 Oct  3 14:36 nvgen_bkup.log
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep 30 07:21 nvgen_traces
+!Flash: harddisk: drwxr-xr-x. 2       4096 Aug 31  2019 nvram
+!Flash: harddisk: drwxr-xr-x. 3       4096 Sep 16  2023 pam
+!Flash: harddisk: -rw-r--r--. 1    1855071 Oct 28  2024 pkt1.pcap
+!Flash: harddisk: -rw-r--r--. 1    1847395 Oct 28  2024 pkt11.pcap
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep 11  2024 pon-ctlr
+!Flash: harddisk: -rw-r--r--. 1    2647680 Oct 16  2024 ptp_mem_logger_trace_file.log
+!Flash: harddisk: -rw-r--r--. 1    2647008 Oct  9  2024 ptp_rotating_trace_file_a.log
+!Flash: harddisk: -rw-r--r--. 1     620016 Oct  9  2024 ptp_rotating_trace_file_b.log
+!Flash: harddisk: -rw-r--r--. 1    2385984 Oct  9  2024 ptp_rotating_trace_file_c.log
+!Flash: harddisk: -rw-r--r--. 1    4358567 Jul 28 19:58 ptp_trace_file.log
+!Flash: harddisk: drw-rw-r--. 2       4096 Oct 29  2024 rdsfs_log
+!Flash: harddisk: drwxr-xr-x. 4       4096 Sep  3 13:10 showtech
+!Flash: harddisk: drwxr-xr-x. 3       4096 Jan 29  2025 shutdown
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep 30  2024 span_node0_0_CPU0
+!Flash: harddisk: -rw-r--r--. 1     112548 Sep 30  2024 srv6-pe7.pcap
+!Flash: harddisk: -rw-r--r--. 1      50245 Sep 30 06:26 stats_infra_configs
+!Flash: harddisk: -rw-r--r--. 1      50245 Aug 22 06:39 stats_infra_configs_bkup
+!Flash: harddisk: drwxr-xr-x. 2       4096 Aug 31  2019 tftpboot
+!Flash: harddisk: -rw-r--r--. 1         65 Sep 30 06:36 utc_offset.json
+!Flash: harddisk: drwxr-xr-x. 6       4096 Aug 31  2019 xr
+!Flash: harddisk: drwxr-xr-x. 5       4096 Mar 13  2025 xr-lcp
+!Flash: harddisk: -rw-r--r--. 1        340 May 20 07:52 zl30704_trace_file.log
+!Flash: harddisk: drwxr-xr-x. 3       4096 Sep 16  2023 ztp
+!Flash: harddisk: 57 GB total (63% free)
+!
+!TenGigE0/0/0/0-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213592MP
+!    PCA Number               : N/A
+!TenGigE0/0/0/2-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD2135918W
+!    PCA Number               : N/A
+!TenGigE0/0/0/3-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD21359187
+!    PCA Number               : N/A
+!TenGigE0/0/0/4-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : PLRXPL-SC-S43-CS
+!    Top Assy. Revision       : 3
+!    PCB Serial Number        : JUR2109G0F9
+!    PCA Number               : N/A
+!TenGigE0/0/0/5-IDPROM - Cisco SFP+ 10G LR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-LR
+!    Version Identifier       : V02
+!    UDI Description          : Cisco SFP+ 10G LR Pluggable Optics Module
+!    CLEI Code                : COUIA75CAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : TRS5021EN-S101
+!    Top Assy. Revision       : 0000
+!    PCB Serial Number        : ONT1728030Q
+!    PCA Number               : N/A
+!TenGigE0/0/0/6-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213598X3
+!    PCA Number               : N/A
+!TenGigE0/0/0/10-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD21359C4Z
+!    PCA Number               : N/A
+!GigabitEthernet0/0/0/14-IDPROM - Cisco SFP 1G 1000BASE-SX Pluggable Optics Module
+! Info:
+!    PID                      : GLC-SX-MMD
+!    Version Identifier       : V01
+!    UDI Description          : Cisco SFP 1G 1000BASE-SX Pluggable Optics Module
+!    CLEI Code                : WOTRB9VBAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLF8518P4BNL-CS
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS21380HFC
+!    PCA Number               : N/A
+!TenGigE0/0/0/15-IDPROM - Cisco SFP+ 10G LR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-LR
+!    Version Identifier       : V02
+!    UDI Description          : Cisco SFP+ 10G LR Pluggable Optics Module
+!    CLEI Code                : COUIA75CAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : TRS5021EN-S101
+!    Top Assy. Revision       : 0000
+!    PCB Serial Number        : ONT174802NW
+!    PCA Number               : N/A
+!TenGigE0/0/0/16-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLX8571D3BCL-C2
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS15260CWE
+!    PCA Number               : N/A
+!TenGigE0/0/0/17-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLX8571D3BCL-C2
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS18260PZW
+!    PCA Number               : N/A
+!TenGigE0/0/0/19-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLX8571D3BCL-C2
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS200510NZ
+!    PCA Number               : N/A
+!TenGigE0/0/0/20-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD1941AEW6
+!    PCA Number               : N/A
+!TenGigE0/0/0/23-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213598X7
+!    PCA Number               : N/A
+!HundredGigE0/0/1/0-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module
+! Info:
+!    PID                      : QSFP-100G-AOC3M
+!    Version Identifier       : V01
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQACPCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FCBN425QE1C03-C1
+!    Top Assy. Revision       : D
+!    PCB Serial Number        : FIW21040144-A
+!    PCA Number               : N/A
+!HundredGigE0/0/1/1-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module
+! Info:
+!    PID                      : QSFP-100G-AOC3M
+!    Version Identifier       : V01
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQACPCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FCBN425QE1C03-C1
+!    Top Assy. Revision       : D
+!    PCB Serial Number        : FIW210400VF-B
+!    PCA Number               : N/A
+!0/RP0-MB-IDPROM - NC55A1 24Q6H S Route Processor Card
+! Info 
+!    Product ID      : NCS-55A1-24Q6H-S
+!    VID             : V01
+!    Serial Number   : FOC23334Q9A
+!    CLEI Code       : INMCU00ARA
+!    Part Number     : 73-19457-03
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!Rack 0-IDPROM - NCS55A1 24Q6H_S 1RU Chassis
+! Info 
+!    Product ID      : NCS-55A1-24Q6H-S
+!    VID             : V01
+!    Serial Number   : FOC23327SUQ
+!    CLEI Code       : INMCU00ARA
+!    Part Number     : 73-19470-02
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!Top Assembly Block:
+!    Serial Number   : FOC2335R0RD
+!    Part Number     : 68-6844-01
+!    Part Revision   : A0
+!    Mfg Deviation   : 0
+!    H/W Version     : 0.1
+!    Mfg Bits        : 0
+!0/PM0-IDPROM - NCS 5500 AC 1100W Power Supply Port-S Intake/Front-to-back
+! Info 
+!    Product ID      : NCS-1100W-ACFW
+!    VID             : V01
+!    Serial Number   : ART2334F7MC
+!    CLEI Code       : IPUPAP5AAA
+!    Part Number     : 341-100586-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/FT0-IDPROM - NC5501 Fan Tray Forward Flow
+! Info 
+!    Product ID      : NCS-1RU-FAN-FW
+!    VID             : V01
+!    Serial Number   : N/A
+!    CLEI Code       : 0
+!    Part Number     : 0
+!    Part Revision   : 0
+!    H/W Version     : 0.1
+!0/FT1-IDPROM - NC5501 Fan Tray Forward Flow
+! Info 
+!    Product ID      : NCS-1RU-FAN-FW
+!    VID             : V01
+!    Serial Number   : N/A
+!    CLEI Code       : 0
+!    Part Number     : 0
+!    Part Revision   : 0
+!    H/W Version     : 0.1
+!
+!NAME: "Rack 0-RouteProcessor Slot 0", DESCR: "NC5 Route Processor Slot"
+!NAME: "0/RP0",                 DESCR: "NC55A1 24Q6H S Route Processor Card"
+!PID: NCS-55A1-24Q6H-S
+!VID: V01
+!SN: FOC23334Q9A
+!NAME: "0/RP0-CPU",             DESCR: "Temperature Sensor"
+!NAME: "0/RP0-Motherboard",     DESCR: "Motherboard Module Base Board"
+!NAME: "0/RP0-P3V3_SFP_IOUT",   DESCR: "Current Sensor"
+!NAME: "0/RP0-P1V0RT_DVDD_IOUT", DESCR: "Current Sensor"
+!NAME: "0/RP0-P1V0RT_AVDD_IOUT", DESCR: "Current Sensor"
+!NAME: "0/RP0-P1V0_CORE_JER0_IOUT", DESCR: "Current Sensor"
+!NAME: "0/RP0-P1V0_AVDD_JER0_IOUT", DESCR: "Current Sensor"
+!NAME: "0/RP0-PORT-side Sensor", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-Baseboard-Fan-Side-Temp", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-P1V0_AVDD_JER0_TEMP", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-P1V0_CORE_JER0_TEMP", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-P3V3_SFP_VOUT",   DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V0RT_DVDD_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V0RT_AVDD_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V0_RTAVDD_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V0_RTDVDD_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P3V3_JER0_VOUT",  DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V8_JER0_VOUT",  DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V25_AVDD_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V0_DDR_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V35_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V8_VOUT",       DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P5V0_VOUT",       DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V8_ZR_VOUT",    DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P2V5_VOUT",       DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V2_VOUT",       DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P3V3_VOUT",       DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V2_VA_VOUT",    DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P2V5_VA_VOUT",    DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P3V3_VA_VOUT",    DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P12V_VOUT",       DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V0_CORE_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-P1V0_AVDD_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB IOFPGA SPI Flash 0", DESCR: "Storage Module - SPI"
+!NAME: "0/RP0-MB IOFPGA SPI Flash 1", DESCR: "Storage Module - SPI"
+!NAME: "0/RP0-Hot Swap(HS_0)",  DESCR: "Hot Swap"
+!NAME: "0/RP0-Hot_Swap_IIN",    DESCR: "Board Current Sensor"
+!NAME: "0/RP0-Hot_Swap_VIN",    DESCR: "Board Voltage Sensor"
+!NAME: "0/RP0-Processor Controller Hub", DESCR: "Cave Creek Processor Controller Hub Module"
+!NAME: "0/RP0-Slice 0",         DESCR: "ASIC Module"
+!NAME: "0/RP0-Slice 0 JerichoPlus", DESCR: "PSE ASIC Module"
+!NAME: "0/RP0-GDDR5 DIMM 0",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 1",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 2",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 3",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 4",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 5",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 6",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 7",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-Slice 0 Die TMP421 Sensor", DESCR: "Sensor Module"
+!NAME: "0/RP0-Slice 0 Die Temp", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-Slice 0 TMP421 Temp", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #0", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 0",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/0",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213592MP
+!NAME: "TenGigE0/0/0/0-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/0-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/0-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/0-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/0-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/0-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213592MP
+!NAME: "0/RP0-TenGigE0/0/0/0",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #1", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 1",       DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/1",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #2", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 2",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/2",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD2135918W
+!NAME: "TenGigE0/0/0/2-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/2-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/2-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/2-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/2-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/2-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD2135918W
+!NAME: "0/RP0-TenGigE0/0/0/2",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #3", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 3",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/3",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD21359187
+!NAME: "TenGigE0/0/0/3-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/3-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/3-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/3-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/3-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/3-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD21359187
+!NAME: "0/RP0-TenGigE0/0/0/3",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #4", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 4",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/4",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: JUR2109G0F9
+!NAME: "TenGigE0/0/0/4-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/4-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/4-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/4-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/4-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/4-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: JUR2109G0F9
+!NAME: "0/RP0-TenGigE0/0/0/4",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #5", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 5",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/5",        DESCR: "Cisco SFP+ 10G LR Pluggable Optics Module"
+!PID: SFP-10G-LR
+!VID: V02
+!SN: ONT1728030Q
+!NAME: "TenGigE0/0/0/5-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/5-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/5-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/5-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/5-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/5-IDPROM", DESCR: "Cisco SFP+ 10G LR Pluggable Optics Module"
+!PID: SFP-10G-LR
+!VID: V02
+!SN: ONT1728030Q
+!NAME: "0/RP0-TenGigE0/0/0/5",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #6", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 6",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/6",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213598X3
+!NAME: "TenGigE0/0/0/6-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/6-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/6-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/6-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/6-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/6-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213598X3
+!NAME: "0/RP0-TenGigE0/0/0/6",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #7", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 7",       DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/7",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #8", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 8",       DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/8",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #9", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 9",       DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/9",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #10", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 10",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/10",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD21359C4Z
+!NAME: "TenGigE0/0/0/10-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/10-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/10-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/10-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/10-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/10-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD21359C4Z
+!NAME: "0/RP0-TenGigE0/0/0/10", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #11", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 11",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/11", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #12", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 12",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/12", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #13", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 13",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/13", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #14", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 14",      DESCR: "Pluggable Optical Module Container"
+!NAME: "GigabitEthernet0/0/0/14", DESCR: "Cisco SFP 1G 1000BASE-SX Pluggable Optics Module"
+!PID: GLC-SX-MMD
+!VID: V01
+!SN: FNS21380HFC
+!NAME: "GigabitEthernet0/0/0/14-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "GigabitEthernet0/0/0/14-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "GigabitEthernet0/0/0/14-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "GigabitEthernet0/0/0/14-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "GigabitEthernet0/0/0/14-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "GigabitEthernet0/0/0/14-IDPROM", DESCR: "Cisco SFP 1G 1000BASE-SX Pluggable Optics Module"
+!PID: GLC-SX-MMD
+!VID: V01
+!SN: FNS21380HFC
+!NAME: "0/RP0-GigabitEthernet0/0/0/14", DESCR: "1GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #15", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 15",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/15",       DESCR: "Cisco SFP+ 10G LR Pluggable Optics Module"
+!PID: SFP-10G-LR
+!VID: V02
+!SN: ONT174802NW
+!NAME: "TenGigE0/0/0/15-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/15-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/15-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/15-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/15-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/15-IDPROM", DESCR: "Cisco SFP+ 10G LR Pluggable Optics Module"
+!PID: SFP-10G-LR
+!VID: V02
+!SN: ONT174802NW
+!NAME: "0/RP0-TenGigE0/0/0/15", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #16", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 16",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/16",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS15260CWE
+!NAME: "TenGigE0/0/0/16-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/16-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/16-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/16-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/16-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/16-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS15260CWE
+!NAME: "0/RP0-TenGigE0/0/0/16", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #17", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 17",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/17",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS18260PZW
+!NAME: "TenGigE0/0/0/17-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/17-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/17-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/17-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/17-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/17-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS18260PZW
+!NAME: "0/RP0-TenGigE0/0/0/17", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #18", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 18",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/18", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #19", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 19",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/19",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS200510NZ
+!NAME: "TenGigE0/0/0/19-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/19-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/19-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/19-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/19-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/19-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS200510NZ
+!NAME: "0/RP0-TenGigE0/0/0/19", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #20", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 20",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/20",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD1941AEW6
+!NAME: "TenGigE0/0/0/20-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/20-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/20-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/20-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/20-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/20-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD1941AEW6
+!NAME: "0/RP0-TenGigE0/0/0/20", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #21", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 21",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/21", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #22", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 22",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/22", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #23", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 23",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/23",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213598X7
+!NAME: "TenGigE0/0/0/23-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/23-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/23-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/23-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/23-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/23-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213598X7
+!NAME: "0/RP0-TenGigE0/0/0/23", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #24", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 24",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/24", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #25", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 25",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/25", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #26", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 26",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/26", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #27", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 27",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/27", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #28", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 28",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/28", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #29", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 29",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/29", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #30", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 30",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/30", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #31", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 31",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/31", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #32", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 32",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/32", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #33", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 33",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/33", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #34", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 34",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/34", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #35", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 35",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/35", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #36", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 36",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/36", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #37", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 37",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/37", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #38", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 38",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/38", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #39", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 39",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/39", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #40", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 40",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/40", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #41", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 41",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/41", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #42", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 42",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/42", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #43", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 43",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/43", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #44", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 44",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/44", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #45", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 45",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/45", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #46", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 46",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/46", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #47", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 47",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/47", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #48", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-QSFP28 bay 0",    DESCR: "Pluggable Optical Module Container"
+!NAME: "HundredGigE0/0/1/0",    DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW21040144-A
+!NAME: "HundredGigE0/0/1/0-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/1/0-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/1/0-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW21040144-A
+!NAME: "0/RP0-HundredGigE0/0/1/0", DESCR: "100GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #49", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-QSFP28 bay 1",    DESCR: "Pluggable Optical Module Container"
+!NAME: "HundredGigE0/0/1/1",    DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW210400VF-B
+!NAME: "HundredGigE0/0/1/1-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/1/1-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/1/1-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW210400VF-B
+!NAME: "0/RP0-HundredGigE0/0/1/1", DESCR: "100GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #50", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-QSFP28 bay 2",    DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-HundredGigE0/0/1/2", DESCR: "100GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #51", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-QSFP28 bay 3",    DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-HundredGigE0/0/1/3", DESCR: "100GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #52", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-QSFP28 bay 4",    DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-HundredGigE0/0/1/4", DESCR: "100GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #53", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-QSFP28 bay 5",    DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-HundredGigE0/0/1/5", DESCR: "100GE Port"
+!NAME: "0/RP0-MB-IDPROM",       DESCR: "NC55A1 24Q6H S Route Processor Card"
+!PID: NCS-55A1-24Q6H-S
+!VID: V01
+!SN: FOC23334Q9A
+!NAME: "0/RP0-NIC",             DESCR: "I350 Ethernet Controller Module"
+!NAME: "0/RP0-MACsec PHY 0",    DESCR: "BearValley  MACsec PHY Module"
+!NAME: "0/RP0-MV88EC808_PHY0_Temp", DESCR: "Marvell Temperature Sensor"
+!NAME: "0/RP0-MACsec PHY 1",    DESCR: "BearValley  MACsec PHY Module"
+!NAME: "0/RP0-MV88EC808_PHY1_Temp", DESCR: "Marvell Temperature Sensor"
+!NAME: "0/RP0-MACsec PHY 2",    DESCR: "BearValley  MACsec PHY Module"
+!NAME: "0/RP0-MV88EC808_PHY2_Temp", DESCR: "Marvell Temperature Sensor"
+!NAME: "0/RP0-MACsec PHY 3",    DESCR: "BearValley  MACsec PHY Module"
+!NAME: "0/RP0-MV88EC808_PHY3_Temp", DESCR: "Marvell Temperature Sensor"
+!NAME: "0/RP0-MACsec PHY 4",    DESCR: "BearValley  MACsec PHY Module"
+!NAME: "0/RP0-MV88EC808_PHY4_Temp", DESCR: "Marvell Temperature Sensor"
+!NAME: "0/RP0-CON0",            DESCR: "Console Port"
+!NAME: "0/RP0-Daughterboard",   DESCR: "Daughterboard Module CPU Board"
+!NAME: "0/RP0-FAN-side Sensor", DESCR: "LM75 Device Temperature Sensor"
+!NAME: "0/RP0-CPU-Brd_Temp",    DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH1",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH2",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH3",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH4",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH5",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH6",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_LCL_CH7",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-DDR4 DIMM 0",     DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-DDR4 DIMM 1",     DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-DDR4 DIMM 2",     DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-DDR4 DIMM 3",     DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-DB IOFPGA SPI Flash 0", DESCR: "Storage Module - SPI"
+!NAME: "0/RP0-DB IOFPGA SPI Flash 1", DESCR: "Storage Module - SPI"
+!NAME: "0/RP0-NVRAM",           DESCR: "Storage Module - NVRAM"
+!NAME: "0/RP0-Disk0",           DESCR: "Storage Module - SSD"
+!NAME: "0/RP0-eUSB 0",          DESCR: "Boot Flash memory Module - eUSB"
+!NAME: "0/RP0-eUSB 1",          DESCR: "Boot Flash memory Module - eUSB"
+!NAME: "0/RP0-USB 0",           DESCR: "USB Module"
+!NAME: "0/RP0-USB container",   DESCR: "USB Container"
+!NAME: "0/RP0-Intel 8 Core CPU Complex", DESCR: "Processor Module"
+!NAME: "0/RP0-Virtual processor for admin", DESCR: "Virtual Processor Module for Admin VM"
+!NAME: "0/RP0-Virtual processor for RP XR", DESCR: "Virtual Processor Module for RP-XR VM"
+!NAME: "0/RP0-CPU-IOFPGA",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-MB-IOFPGA",       DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-Bootloader",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-MB-MIFPGA",       DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SATA-M1100",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-Alarm",           DESCR: "Alarm Port"
+!NAME: "MgmtEth0/RP0/CPU0/0",   DESCR: "Fixed Mgmt Port"
+!NAME: "Rack 0-LineCard Chassis Backplane", DESCR: "NCS-55A1-24Q6H-S TurinCR Chassis Backplane"
+!NAME: "Rack 0-IDPROM",         DESCR: "NCS55A1 24Q6H_S 1RU Chassis"
+!PID: NCS-55A1-24Q6H-S
+!VID: V01
+!SN: FOC2335R0RD
+!NAME: "Rack 0",                DESCR: "NCS55A1 24Q6H_S 1RU Chassis"
+!PID: NCS-55A1-24Q6H-S
+!VID: V01
+!SN: FOC2335R0RD
+!NAME: "Rack 0-Fan Tray Slot 0", DESCR: "NCS-55A1-24Q6H-S TurinCR Fan Tray Slot"
+!NAME: "0/FT0",                 DESCR: "NC5501 Fan Tray Forward Flow"
+!PID: NCS-1RU-FAN-FW
+!VID: V01
+!NAME: "0/FT0-FAN_0",           DESCR: "Fan Module"
+!NAME: "0/FT0-FAN_0 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT0-FAN_1",           DESCR: "Fan Module"
+!NAME: "0/FT0-FAN_1 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT0-FAN_2",           DESCR: "Fan Module"
+!NAME: "0/FT0-FAN_2 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT0-FAN_3",           DESCR: "Fan Module"
+!NAME: "0/FT0-FAN_3 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT0-IDPROM",          DESCR: "NC5501 Fan Tray Forward Flow"
+!PID: NCS-1RU-FAN-FW
+!VID: V01
+!NAME: "Rack 0-Fan Tray Slot 1", DESCR: "NCS-55A1-24Q6H-S TurinCR Fan Tray Slot"
+!NAME: "0/FT1",                 DESCR: "NC5501 Fan Tray Forward Flow"
+!PID: NCS-1RU-FAN-FW
+!VID: V01
+!NAME: "0/FT1-FAN_0",           DESCR: "Fan Module"
+!NAME: "0/FT1-FAN_0 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT1-FAN_1",           DESCR: "Fan Module"
+!NAME: "0/FT1-FAN_1 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT1-FAN_2",           DESCR: "Fan Module"
+!NAME: "0/FT1-FAN_2 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT1-FAN_3",           DESCR: "Fan Module"
+!NAME: "0/FT1-FAN_3 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT1-IDPROM",          DESCR: "NC5501 Fan Tray Forward Flow"
+!PID: NCS-1RU-FAN-FW
+!VID: V01
+!NAME: "Rack 0-Power Module Slot 0", DESCR: "NC5 Power Module Slot"
+!NAME: "0/PM0",                 DESCR: "NCS 5500 AC 1100W Power Supply Port-S Intake/Front-to-back"
+!PID: NCS-1100W-ACFW
+!VID: V01
+!SN: ART2334F7MC
+!NAME: "0/PM0-FAN_0",           DESCR: "FAN_0 Module"
+!NAME: "0/PM0-FAN_0 Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/PM0-Input Current",   DESCR: "Current Sensor"
+!NAME: "0/PM0-Output Current",  DESCR: "Current Sensor"
+!NAME: "0/PM0-Input Power",     DESCR: "Power Sensor"
+!NAME: "0/PM0-Output Power",    DESCR: "Power Sensor"
+!NAME: "0/PM0-Inlet Temperature", DESCR: "Temperature Sensor"
+!NAME: "0/PM0-Outlet Temperature", DESCR: "Temperature Sensor"
+!NAME: "0/PM0-Heat Sink Temperature", DESCR: "Temperature Sensor"
+!NAME: "0/PM0-Input Voltage",   DESCR: "Voltage Sensor"
+!NAME: "0/PM0-Output Voltage",  DESCR: "Voltage Sensor"
+!NAME: "0/PM0-IDPROM",          DESCR: "NCS 5500 AC 1100W Power Supply Port-S Intake/Front-to-back"
+!PID: NCS-1100W-ACFW
+!VID: V01
+!SN: ART2334F7MC
+!NAME: "Rack 0-Power Module Slot 1", DESCR: "NC5 Power Module Slot"
+!
+!                              Current    Current       Max
+!                               Total      Limit       Limit
+! ------------------------------------------------------------
+! Lines of configuration           247      65536     131072
+! Policies                          29       3500       5000
+! Compiled policies size (kB)       27
+!
+!disk_status_config minor 80
+!disk_status_config severe 90
+!disk_status_config critical 95
+!aaa admin-accounting enable false
+!aaa authentication users user admin
+! uid        9000
+! gid        100
+! password   $6$1ZxbC1NzdnTuAC1.$wv/E250hfRFULf/8gLZi99ymd9tydKMTzZEWAWclChQ.hBXVXnF8VGKv48dXgzUh8h6C9uDrLK4X9uALrv2Am/
+! ssh_keydir /var/confd/homes/admin/.ssh
+! homedir    /var/confd/homes/admin
+!!
+!aaa authentication groups group aaa-r
+! gid   100
+! users %%__system_user__%%
+!!
+!aaa authentication groups group admin-r
+! gid   100
+! users %%__system_user__%%
+!!
+!aaa authentication groups group root-system
+! gid   100
+! users "%%__system_user__%% admin"
+!!
+!aaa authorization cmdrules cmdrule 1
+! context *
+! command *
+! group   root-system
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 2
+! context *
+! command "show running-config aaa"
+! group   aaa-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 3
+! context *
+! command "show tech-support aaa"
+! group   aaa-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 4
+! context *
+! command "show aaa"
+! group   aaa-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 5
+! context *
+! command show
+! group   admin-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 6
+! context *
+! command terminal
+! group   admin-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization datarules datarule 1
+! namespace *
+! context   *
+! keypath   *
+! group     root-system
+! ops       rwx
+! action    accept
+!!
+!aaa authorization datarules datarule 2
+! namespace *
+! context   *
+! keypath   /aaa
+! group     aaa-r
+! ops       r
+! action    accept
+!!
+!aaa authorization datarules datarule 3
+! namespace *
+! context   *
+! keypath   /aaa
+! group     admin-r
+! ops       rwx
+! action    reject
+!!
+!aaa authorization datarules datarule 4
+! namespace *
+! context   *
+! keypath   /
+! group     admin-r
+! ops       r
+! action    accept
+!!
+!confdConfig cli maxLineLength 0
+!confdConfig cli timezone local
+!confdConfig cli utcOffset 0
+!confdConfig cli idleTimeout 10m
+!confdConfig cli timestamp enabled
+!confdConfig cli timestamp clock24 true
+!confdConfig cli timestamp format "\d{l,4}\m{l,5}\D{l,3}\H{r,2,0}:\\t{r,2,0}:\s{r,2,0}.\c{l,3,0} UTC\u{l,1}\o{r,2,0}:\k{r,2,0}"
+!confdConfig cli historySave true
+!confdConfig cli allOrNothingLoad false
+!confdConfig cli enableLoadMergeLeafList false
+!SNMP-COMMUNITY-MIB snmpCommunityTable snmpCommunityEntry public
+! snmpCommunityName            public
+! snmpCommunitySecurityName    public
+! snmpCommunityContextEngineID 80:00:61:81:05:01
+! snmpCommunityContextName     ""
+! snmpCommunityTransportTag    ""
+! snmpCommunityStorageType     permanent
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v1_trap
+! snmpNotifyTag         std_v1_trap
+! snmpNotifyType        trap
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v2_inform
+! snmpNotifyTag         std_v2_inform
+! snmpNotifyType        inform
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v2_trap
+! snmpNotifyTag         std_v2_trap
+! snmpNotifyType        trap
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v3_inform
+! snmpNotifyTag         std_v3_inform
+! snmpNotifyType        inform
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v3_trap
+! snmpNotifyTag         std_v3_trap
+! snmpNotifyType        trap
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v1"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.19.136
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v1_trap std_trap std_v1_inform std_inform"
+! snmpTargetAddrParams      target_v1
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    ""
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v2"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.23.112
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v2_trap std_trap std_v2_inform std_inform"
+! snmpTargetAddrParams      target_v2
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    ""
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v3"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.27.88
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v3_trap std_trap"
+! snmpTargetAddrParams      trap_target_v3
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    ""
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v3.inform"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.27.88
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v3_inform std_inform"
+! snmpTargetAddrParams      inform_target_v3
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    80:00:1f:88:04:74:65:73:74:69:6e:67
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry inform_target_v3
+! snmpTargetParamsMPModel       3
+! snmpTargetParamsSecurityModel 3
+! snmpTargetParamsSecurityName  remote
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry target_v1
+! snmpTargetParamsMPModel       0
+! snmpTargetParamsSecurityModel 1
+! snmpTargetParamsSecurityName  public
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry target_v2
+! snmpTargetParamsMPModel       1
+! snmpTargetParamsSecurityModel 2
+! snmpTargetParamsSecurityName  public
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry trap_target_v3
+! snmpTargetParamsMPModel       3
+! snmpTargetParamsSecurityModel 3
+! snmpTargetParamsSecurityName  public
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-USER-BASED-SM-MIB usmUserTable usmUserEntry 80:00:61:81:05:01 initial
+! usmUserSecurityName initial
+! usmUserAuthProtocol 1.3.6.1.6.3.10.1.1.1
+! usmUserPrivProtocol 1.3.6.1.6.3.10.1.2.1
+! usmUserStorageType  nonVolatile
+!!
+!SNMP-USER-BASED-SM-MIB usmUserTable usmUserEntry 80:00:61:81:05:01 initial_auth
+! usmUserSecurityName initial_auth
+! usmUserAuthProtocol 1.3.6.1.6.3.10.1.1.2
+! usmUserPrivProtocol 1.3.6.1.6.3.10.1.2.1
+! usmUserStorageType  nonVolatile
+! usmUserAuthKey      10:2c:bd:65:e3:eb:e2:16:0d:63:db:23:73:f3:17:b2
+!!
+!SNMP-USER-BASED-SM-MIB usmUserTable usmUserEntry 80:00:61:81:05:01 initial_authPriv
+! usmUserSecurityName initial_authPriv
+! usmUserAuthProtocol 1.3.6.1.6.3.10.1.1.2
+! usmUserPrivProtocol 1.3.6.1.6.3.10.1.2.2
+! usmUserStorageType  nonVolatile
+! usmUserAuthKey      10:2c:bd:65:e3:eb:e2:16:0d:63:db:23:73:f3:17:b2
+! usmUserPrivKey      10:2c:bd:65:e3:eb:e2:16:0d:63:db:23:73:f3:17:b2
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 1 public
+! vacmGroupName                  all-rights
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 2 public
+! vacmGroupName                  all-rights
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 3 initial
+! vacmGroupName                  initial
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 3 initial_auth
+! vacmGroupName                  initial
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 3 initial_authPriv
+! vacmGroupName                  initial
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry initial "" 3 noAuthNoPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry initial "" 3 authNoPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry initial "" 3 authPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry all-rights "" 0 noAuthNoPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmViewTreeFamilyTable vacmViewTreeFamilyEntry internet 1.3.6.1
+! vacmViewTreeFamilyMask        ""
+! vacmViewTreeFamilyType        included
+! vacmViewTreeFamilyStorageType nonVolatile
+!!
+!SNMPv2-MIB system sysContact ""
+!SNMPv2-MIB system sysName ""
+!SNMPv2-MIB system sysLocation ""
+!SNMPv2-MIB snmp snmpEnableAuthenTraps disabled
+!control-ethernet crc threshold sf 8
+!control-ethernet crc threshold sd 10
+!control-ethernet crc switchover enable
+!fpd auto-upgrade disable
+!sdr default-sdr
+! location all
+! !
+!!
+!service cli interactive enabled
+!memory_status_config minor 80
+!memory_status_config severe 90
+!memory_status_config critical 95
+!memory_status_config recovery_enabled false
+!
+!! Building configuration...
+!! IOS XR Configuration 25.4.1.24I
+!! Last configuration change at Mon Sep  1 15:09:39 2025 by admin
+!
+hostname cst-a-pe7
+group apply_cnc_bundle_fix
+ interface 'Bundle-Ether.*'
+  lldp
+   transmit disable
+  !
+ !
+end-group
+group pw-class-default-vxc-vpls
+ l2vpn
+  pw-class '.*'
+   encapsulation mpls
+    protocol ldp
+    control-word
+    transport-mode ethernet
+   !
+  !
+ !
+end-group
+apply-group apply_cnc_bundle_fix
+logging console debugging
+logging monitor disable
+logging 172.21.23.83 vrf default severity info port 9514
+logging 172.21.23.118 vrf default severity info port 9514
+logging 172.27.227.247 vrf default port 9514
+logging suppress duplicates
+service timestamps log datetime msec show-timezone year
+username admin
+ group root-lr
+ group cisco-support
+ secret 10 $6$1ZxbC1NzdnTuAC1.$wv/E250hfRFULf/8gLZi99ymd9tydKMTzZEWAWclChQ.hBXVXnF8VGKv48dXgzUh8h6C9uDrLK4X9uALrv2Am/
+!
+grpc
+ port 57344
+ no-tls
+ address-family ipv4
+!
+ptp
+ clock
+  domain 24
+  profile g.8275.1 clock-type T-BC
+ !
+ profile My-Slave
+  multicast target-address ethernet 01-80-C2-00-00-0E
+  transport ethernet
+  port state slave-only
+  clock operation one-step
+  announce frequency 8
+  delay-request frequency 16
+ !
+ profile My-Master
+  multicast target-address ethernet 01-80-C2-00-00-0E
+  transport ethernet
+  port state master-only
+  sync frequency 16
+  clock operation one-step
+  announce frequency 8
+  delay-request frequency 16
+ !
+ profile g82752_v4
+  transport ipv4
+  port state any
+  sync frequency 32
+  clock operation one-step
+  announce interval 1
+  delay-request frequency 32
+ !
+ profile g82752_v6
+  transport ipv6
+  port state any
+  sync frequency 32
+  clock operation one-step
+  announce interval 1
+  unicast-grant invalid-request deny
+  delay-request frequency 32
+ !
+ profile g82752_slave_v4
+  transport ipv4
+  port state slave-only
+  sync frequency 32
+  clock operation one-step
+  announce interval 1
+  unicast-grant invalid-request deny
+  delay-request frequency 32
+ !
+ profile g82752_slave_v6
+  transport ipv6
+  port state slave-only
+  sync frequency 32
+  clock operation one-step
+  announce interval 1
+  unicast-grant invalid-request deny
+  delay-request frequency 32
+ !
+ profile g82752_master_v4
+  transport ipv4
+  port state master-only
+  sync frequency 32
+  clock operation one-step
+  announce interval 1
+  unicast-grant invalid-request deny
+  delay-request frequency 32
+ !
+ profile g82752_master_v6
+  transport ipv6
+  port state master-only
+  sync frequency 32
+  clock operation one-step
+  announce interval 1
+  unicast-grant invalid-request deny
+  delay-request frequency 32
+ !
+ frequency priority 5
+ time-of-day priority 5
+ log
+  servo events
+  best-master-clock changes
+ !
+!
+vrf VRF-MLDP
+ address-family ipv4 unicast
+  import route-target
+   100:38
+  !
+  export route-policy ODN-MVPN
+  export route-target
+   100:38
+  !
+ !
+ address-family ipv6 unicast
+  import route-target
+   100:38
+  !
+  export route-policy ODN-MVPN
+  export route-target
+   100:38
+  !
+ !
+!
+vrf tree-sid
+ address-family ipv4 unicast
+  import route-target
+   100:87
+  !
+  export route-target
+   100:87
+  !
+ !
+ address-family ipv6 unicast
+  import route-target
+   100:87
+  !
+  export route-target
+   100:87
+  !
+ !
+!
+vrf L3VPN-SRODN-1
+ rd 100:100
+ address-family ipv4 unicast
+  import route-target
+   100:100
+  !
+  export route-policy set-orange
+  export route-target
+   100:100
+  !
+ !
+ address-family ipv6 unicast
+  import route-target
+   100:100
+  !
+  export route-target
+   100:100
+  !
+ !
+!
+vrf sdwan-underlay
+ address-family ipv4 unicast
+  import route-target
+   100:400
+  !
+  export route-policy color-sdwan-l3vpn
+  export route-target
+   100:400
+  !
+ !
+ address-family ipv6 unicast
+ !
+!
+vrf bgp_pic_v4_srv6
+ address-family ipv4 unicast
+  import route-target
+   100:6010
+  !
+  export route-target
+   100:6010
+  !
+ !
+!
+vrf bgp_pic_v6_srv6
+ address-family ipv6 unicast
+  import route-target
+   100:6011
+  !
+  export route-target
+   100:6011
+  !
+ !
+!
+vrf L3ROUTED-SPOKE-1
+ description *** L3ROUTED-SPOKE-1 ***
+ address-family ipv4 unicast
+  import route-target
+   64750:11111
+   64750:11112
+  !
+  export route-target
+   64750:1111
+  !
+ !
+ address-family ipv6 unicast
+  import route-target
+   64750:11111
+   64750:11112
+  !
+  export route-target
+   64750:1111
+  !
+ !
+!
+vrf l3vpn_vrf_algo_128
+ address-family ipv4 unicast
+  import route-target
+   100:6128
+  !
+  export route-target
+   100:6128
+  !
+ !
+!
+vrf l3vpn_all_actv_be_26
+ rd 100:14551
+ address-family ipv4 unicast
+ !
+!
+vrf l3vpn_vrf_algo_128_v6
+ rd 100:61281
+ address-family ipv6 unicast
+  import route-target
+   100:61281
+  !
+  export route-target
+   100:61281
+  !
+ !
+!
+vrf metro_a-pe3_a-pe7_sdwan_800
+ address-family ipv4 unicast
+  import route-target
+   100:800
+  !
+  export route-policy color-sdwan-l3vpn-800
+  export route-target
+   100:800
+  !
+ !
+!
+vrf metro_l3vpn_a-pe3_a-pe7_701
+ address-family ipv4 unicast
+ !
+!
+line default
+ exec-timeout 0 0
+!
+snmp-server ifindex persist
+snmp-server vrf default
+ host 172.21.23.83 traps cisco udp-port 1062
+ host 172.21.23.118 traps cisco udp-port 1062
+!
+snmp-server host 172.27.227.247 traps version 2c cisco udp-port 1062
+snmp-server community cisco RW
+snmp-server community public RW
+snmp-server packetsize 4096
+snmp-server trap-source MgmtEth0/RP0/CPU0/0
+monitor-session test ethernet
+ destination file
+!
+ntp
+ server 171.68.38.66 maxpoll 8 prefer
+ source MgmtEth0/RP0/CPU0/0
+ update-calendar
+!
+bfd
+ multipath include location 0/0/CPU0
+!
+alias bcm show controllers fia diagshell 0 
+alias loc location 0/0/CPU0
+ipv4 unnumbered mpls traffic-eng Loopback0
+ethernet cfm
+ domain cst_domain level 6 id null
+  service pe3-odn-1 xconnect group EVPN-VPWS-ODN-PE3 p2p odn-1 id number 37
+   mip auto-create all
+   continuity-check interval 1s
+   mep crosscheck
+    mep-id 1003
+   !
+   log ais
+   log continuity-check errors
+   log crosscheck errors
+   log continuity-check mep changes
+  !
+ !
+!
+frequency synchronization
+ quality itu-t option 1
+ log selection changes
+!
+key chain ISIS-KEY
+! key  <removed> 
+  accept-lifetime 00:00:00 january 01 2018 infinite
+!  key-string  <removed>
+  send-lifetime 00:00:00 january 01 2018 infinite
+  cryptographic-algorithm HMAC-MD5
+ !
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+hw-module tcam fib ipv4 scaledisable
+netconf-yang agent
+ ssh
+!
+ipv4 access-list ssm
+ permit ipv4 232.0.0.0/8 any
+!
+class-map match-any TC1
+ match traffic-class 1 
+ end-class-map
+! 
+class-map match-any TC2
+ match traffic-class 2 
+ end-class-map
+! 
+class-map match-any TC3
+ match traffic-class 3 
+ end-class-map
+! 
+class-map match-any TC4
+ match traffic-class 4 
+ end-class-map
+! 
+class-map match-any TC5
+ match traffic-class 5 
+ end-class-map
+! 
+class-map match-any TC6
+ match traffic-class 6 
+ end-class-map
+! 
+class-map match-any TC7
+ match traffic-class 7 
+ end-class-map
+! 
+class-map match-any TC2-O
+ match traffic-class 2 
+ end-class-map
+! 
+class-map match-any TC3-O
+ match traffic-class 3 
+ end-class-map
+! 
+class-map match-any TC4-O
+ match traffic-class 4 
+ end-class-map
+! 
+class-map match-any TC6-O
+ match traffic-class 6 
+ end-class-map
+! 
+class-map match-any prec-0
+ match precedence ipv4 0 
+ match precedence ipv6 0 
+ end-class-map
+! 
+class-map match-any prec-1
+ match precedence ipv4 1 
+ match precedence ipv6 1 
+ end-class-map
+! 
+class-map match-any prec-2
+ match precedence ipv4 2 
+ match precedence ipv6 2 
+ end-class-map
+! 
+class-map match-any prec-3
+ match precedence ipv4 3 
+ match precedence ipv6 3 
+ end-class-map
+! 
+class-map match-any prec-4
+ match precedence ipv4 4 
+ match precedence ipv6 4 
+ end-class-map
+! 
+class-map match-any prec-5
+ match precedence ipv4 5 
+ match precedence ipv6 5 
+ end-class-map
+! 
+class-map match-any prec-6
+ match precedence ipv4 6 
+ match precedence ipv6 6 
+ end-class-map
+! 
+class-map match-any prec-7
+ match precedence ipv4 7 
+ match precedence ipv6 7 
+ end-class-map
+! 
+class-map match-all DSCPAF11
+ match dscp af11 
+ end-class-map
+! 
+class-map match-any DSCPAF13
+ match dscp af13 
+ end-class-map
+! 
+class-map match-any DSCPAF23
+ match dscp af23 
+ end-class-map
+! 
+class-map match-any DSCPAF33
+ match dscp af33 
+ end-class-map
+! 
+class-map match-any DSCPAF41
+ match dscp af41 
+ end-class-map
+! 
+class-map match-any DSCPAF42
+ match dscp af42 
+ end-class-map
+! 
+class-map match-all DSCPAF43
+ match dscp af43 
+ end-class-map
+! 
+class-map match-any PREC2-IN
+ match precedence 2 
+ match precedence ipv6 2 
+ end-class-map
+! 
+class-map match-any PREC3-IN
+ match precedence 3 
+ match precedence ipv6 3 
+ end-class-map
+! 
+class-map match-any PREC4-IN
+ match precedence 4 
+ match precedence ipv6 4 
+ end-class-map
+! 
+class-map match-any PREC5-IN
+ match precedence 5 
+ match precedence ipv6 5 
+ end-class-map
+! 
+class-map match-any PREC6-IN
+ match precedence 6 
+ match precedence ipv6 6 
+ end-class-map
+! 
+class-map match-any PREC7-IN
+ match precedence 7 
+ match precedence ipv6 7 
+ end-class-map
+! 
+class-map match-any match-ef-exp5
+ description High priority, EF
+ match dscp 46 
+ match mpls experimental topmost 5 
+ end-class-map
+! 
+class-map match-any match-cs5-exp4
+ description Second highest priority
+ match dscp 40 
+ match mpls experimental topmost 4 
+ end-class-map
+! 
+class-map match-any match-cs6-exp6
+ description Highest priority control-plane traffic
+ match dscp cs6 
+ match mpls experimental topmost 6 
+ end-class-map
+! 
+class-map match-any match-qos-group-1
+ match qos-group 1 
+ end-class-map
+! 
+class-map match-any match-qos-group-2
+ match qos-group 2 
+ end-class-map
+! 
+class-map match-any match-qos-group-3
+ match qos-group 3 
+ end-class-map
+! 
+class-map match-any match-qos-group-6
+ match qos-group 3 
+ end-class-map
+! 
+class-map match-any match-video-cs4-exp2
+ description Video
+ match dscp 32 
+ match mpls experimental topmost 2 
+ end-class-map
+! 
+class-map match-any match-traffic-class-1
+ description "Match highest priority traffic-class 1"
+ match traffic-class 1 
+ end-class-map
+! 
+class-map match-any match-traffic-class-2
+ description "Match high priority traffic-class 2"
+ match traffic-class 2 
+ end-class-map
+! 
+class-map match-any match-traffic-class-3
+ description "Match medium traffic-class 3"
+ match traffic-class 3 
+ end-class-map
+! 
+class-map match-any match-traffic-class-6
+ description "Match video traffic-class 6"
+ match traffic-class 6 
+ end-class-map
+! 
+policy-map NNI-IN
+ class PREC7-IN
+  set traffic-class 7
+ ! 
+ class PREC6-IN
+  set traffic-class 6
+ ! 
+ class PREC5-IN
+  set traffic-class 5
+ ! 
+ class PREC4-IN
+  set traffic-class 4
+ ! 
+ class PREC3-IN
+  set traffic-class 3
+ ! 
+ class PREC2-IN
+  set traffic-class 2
+ ! 
+ class class-default
+ ! 
+ end-policy-map
+! 
+policy-map prec-to-tc
+ class prec-0
+  set traffic-class 0
+ ! 
+ class prec-1
+  set traffic-class 1
+ ! 
+ class prec-2
+  set traffic-class 2
+ ! 
+ class prec-3
+  set traffic-class 3
+ ! 
+ class prec-4
+  set traffic-class 4
+ ! 
+ class prec-5
+  set traffic-class 5
+ ! 
+ class prec-6
+  set traffic-class 6
+ ! 
+ class prec-7
+  set traffic-class 7
+ ! 
+ class class-default
+ ! 
+ end-policy-map
+! 
+policy-map CHILD_INGRESS
+ class DSCPAF23
+  set traffic-class 2
+ ! 
+ class DSCPAF41
+  set traffic-class 5
+ ! 
+ class DSCPAF42
+  set traffic-class 6
+ ! 
+ class DSCPAF11
+  set traffic-class 7
+ ! 
+ class DSCPAF13
+  set traffic-class 1
+ ! 
+ class DSCPAF33
+  set traffic-class 3
+ ! 
+ class DSCPAF43
+  set traffic-class 4
+  set qos-group 5
+  set discard-class 1
+ ! 
+ class class-default
+  set discard-class 2
+ ! 
+ end-policy-map
+! 
+policy-map PARENT_INGRESS
+ class class-default
+  service-policy CHILD_INGRESS
+ ! 
+ end-policy-map
+! 
+policy-map SAMPLE-NNI-OUT
+ class TC6-O
+  priority level 1 
+ ! 
+ class TC4-O
+  priority level 2 
+  queue-limit 100 kbytes 
+ ! 
+ class TC3-O
+  priority level 2 
+  queue-limit 100 kbytes 
+ ! 
+ class TC2-O
+  bandwidth remaining percent 70 
+ ! 
+ class class-default
+  bandwidth remaining percent 30 
+ ! 
+ end-policy-map
+! 
+policy-map core-egress-queuing
+ class match-traffic-class-2
+  priority level 2 
+  queue-limit 100 us 
+ ! 
+ class match-traffic-class-3
+  priority level 3 
+  queue-limit 500 us 
+ ! 
+ class match-traffic-class-6
+  priority level 6 
+  queue-limit 500 us 
+ ! 
+ class match-traffic-class-1
+  priority level 1 
+  queue-limit 500 us 
+ ! 
+ class class-default
+  queue-limit 250 ms 
+ ! 
+ end-policy-map
+! 
+policy-map core-egress-exp-marking
+ class match-qos-group-1
+  set mpls experimental imposition 6
+ ! 
+ class match-qos-group-2
+  set mpls experimental imposition 5
+ ! 
+ class match-qos-group-3
+  set mpls experimental imposition 4
+ ! 
+ class match-qos-group-6
+  set mpls experimental imposition 2
+ ! 
+ class class-default
+  set mpls experimental imposition 0
+ ! 
+ end-policy-map
+! 
+policy-map core-ingress-classifier
+ class match-cs6-exp6
+  set traffic-class 1
+ ! 
+ class match-ef-exp5
+  set traffic-class 2
+ ! 
+ class match-cs5-exp4
+  set traffic-class 3
+ ! 
+ class match-video-cs4-exp2
+  set traffic-class 6
+ ! 
+ class class-default
+  set mpls experimental topmost 0
+  set traffic-class 0
+  set dscp 0
+ ! 
+ end-policy-map
+! 
+lpts punt police location 0/0/CPU0
+!
+interface Bundle-Ether21
+ mtu 9000
+ lacp period short
+ lacp system mac 0000.7822.0011
+ load-interval 30
+ logging events link-status
+!
+interface Bundle-Ether21.1101 l2transport
+ description .. AC for Etree
+ encapsulation dot1q 1101
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether22
+ mtu 9000
+ lacp period short
+ lacp system mac 0000.7822.0012
+ load-interval 30
+ logging events link-status
+!
+interface Bundle-Ether22.2001 l2transport
+ description EVPN-ELAN-MD
+ encapsulation dot1q 2001
+!
+interface Bundle-Ether23
+ mtu 9000
+ lacp period short
+ lacp system mac 0000.7822.0013
+ load-interval 30
+ logging events link-status
+!
+interface Bundle-Ether25
+ lacp system mac 8007.8007.8007
+!
+interface Bundle-Ether25.600 l2transport
+ encapsulation dot1q 600
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether25.4500 l2transport
+ encapsulation dot1q 500
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether26
+ lacp system mac 2600.2600.2600
+ mac-address 2600.2600.2600
+ load-interval 30
+!
+interface Bundle-Ether26.650 l2transport
+ encapsulation dot1q 650
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether26.4550 l2transport
+ encapsulation dot1q 550
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether26.4551
+ vrf l3vpn_all_actv_be_26
+ ipv4 address 6.45.45.2 255.255.255.0
+ encapsulation dot1q 551
+!
+interface Loopback0
+ ipv4 address 101.0.2.52 255.255.255.255
+ ipv6 address fccc:0:215::1/128
+!
+interface Loopback800
+ vrf metro_a-pe3_a-pe7_sdwan_800
+ ipv4 address 100.100.101.1 255.255.255.255
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 172.27.227.190 255.255.255.0
+!
+interface GigabitEthernet0/0/0/14
+ shutdown
+!
+interface TenGigE0/0/0/0
+ load-interval 30
+!
+interface TenGigE0/0/0/1
+ shutdown
+!
+interface TenGigE0/0/0/2
+ description .. Ixia Anycast H-L3VPN 1:7
+!
+interface TenGigE0/0/0/2.1 l2transport
+ encapsulation dot1q 1
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/2.2 l2transport
+ encapsulation dot1q 2
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/2.3 l2transport
+ encapsulation dot1q 3
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/2.4 l2transport
+ encapsulation dot1q 4
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/2.5 l2transport
+ encapsulation dot1q 5
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/2.6 l2transport
+ encapsulation dot1q 6
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/2.7 l2transport
+ encapsulation dot1q 7
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/2.8 l2transport
+ encapsulation dot1q 8
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/2.9 l2transport
+ encapsulation dot1q 9
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/2.10 l2transport
+ encapsulation dot1q 10
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/2.1001 l2transport
+ encapsulation dot1q 1001
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/3
+ description ... Ixia 3:13
+ vrf L3VPN-SRODN-1
+ ipv4 address 100.7.1.1 255.255.255.252
+ ipv6 address 100::73:1:1/126
+ ipv6 address 2000:100:7:1::1/126
+ load-interval 30
+!
+interface TenGigE0/0/0/3.100 l2transport
+ description .. AC for EVPN-ELAN
+ encapsulation dot1q 100
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/3.101
+ ipv4 address 31.1.0.1 255.255.255.0
+ encapsulation dot1q 101
+!
+interface TenGigE0/0/0/3.110
+ vrf L3ROUTED-SPOKE-1
+ ipv6 nd other-config-flag
+ ipv6 nd managed-config-flag
+ ipv6 address 1:3::1/116
+ ipv6 address 3001:ab::1/50
+ ipv6 enable
+ encapsulation dot1q 110
+!
+interface TenGigE0/0/0/3.201
+ ipv4 address 13.13.13.13 255.255.255.0
+ encapsulation dot1q 301
+!
+interface TenGigE0/0/0/3.1000
+ ipv4 address 13.1.0.1 255.255.0.0
+ ipv6 address 2001:13:1::1/64
+ encapsulation dot1q 1000
+!
+interface TenGigE0/0/0/3.1101 l2transport
+ description .. AC for Etree
+ encapsulation dot1q 1101
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/3.2000 l2transport
+ description .. PWHE-P-BNG
+ encapsulation dot1q 2000
+!
+interface TenGigE0/0/0/3.2022 l2transport
+ description EVPN-VPWS-PWHE-HEADEND
+ encapsulation dot1q 2022
+!
+interface TenGigE0/0/0/3.2202 l2transport
+ description EVPN-VPWS-PWHE-HEADEND
+ encapsulation dot1q 2202
+!
+interface TenGigE0/0/0/3.2203 l2transport
+ description EVPN-VPWS-PWHE-HEADEND
+ encapsulation dot1q 2203
+!
+interface TenGigE0/0/0/3.2300 l2transport
+ description EVPN-ELAN-CGW1-PE1/PE2
+ encapsulation dot1q 2300
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/4
+ bundle id 22 mode active
+ cdp
+ lacp period short
+ load-interval 30
+!
+interface TenGigE0/0/0/5
+ description Ixia 2/4---LC3port11 since LC2 is down
+ cdp
+ ptp
+  profile My-Master
+ !
+ ipv4 address 12.1.1.1 255.255.255.0
+ load-interval 30
+ frequency synchronization
+  selection input
+  priority 10
+  wait-to-restore 0
+ !
+!
+interface TenGigE0/0/0/5.1 l2transport
+ encapsulation dot1q 1
+ rewrite ingress tag pop 1 symmetric
+ ethernet cfm
+  mep domain cst_domain service pe3-odn-1 mep-id 1007
+  !
+ !
+!
+interface TenGigE0/0/0/5.2 l2transport
+ encapsulation dot1q 2
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.3 l2transport
+ encapsulation dot1q 3
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.4 l2transport
+ encapsulation dot1q 4
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.5 l2transport
+ encapsulation dot1q 5
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.77 l2transport
+ encapsulation dot1q 77
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.100 l2transport
+ encapsulation dot1q 100
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.101 l2transport
+ encapsulation dot1q 101
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.501 l2transport
+ encapsulation dot1q 501
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.650 l2transport
+ encapsulation dot1q 650
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.700 l2transport
+ description T-SDN Interface
+ encapsulation dot1q 700
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.701
+ description T-SDN Interface
+ vrf metro_l3vpn_a-pe3_a-pe7_701
+ ipv4 address 10.200.0.1 255.255.255.0
+ encapsulation dot1q 701
+!
+interface TenGigE0/0/0/5.1001 l2transport
+ description T-SDN Interface
+ encapsulation dot1q 1001
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.1002 l2transport
+ encapsulation dot1q 1002
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.1003 l2transport
+ encapsulation dot1q 1003
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.1004 l2transport
+ encapsulation dot1q 1004
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.1005 l2transport
+ encapsulation dot1q 1005
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.1006 l2transport
+ encapsulation dot1q 1006
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.1007 l2transport
+ encapsulation dot1q 1007
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.1008 l2transport
+ encapsulation dot1q 1008
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.1009 l2transport
+ encapsulation dot1q 1009
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.1010 l2transport
+ encapsulation dot1q 1010
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.1101 l2transport
+ encapsulation dot1q 1101
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.2000 l2transport
+ encapsulation dot1q 2000
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/5.3000
+ vrf tree-sid
+ ipv4 address 34.7.1.1 255.255.255.0
+ encapsulation dot1q 3000
+!
+interface TenGigE0/0/0/5.4457
+ vrf l3vpn_vrf_algo_128
+ ipv4 address 74.44.57.1 255.255.255.0
+ encapsulation dot1q 457
+!
+interface TenGigE0/0/0/5.4458
+ vrf l3vpn_vrf_algo_128_v6
+ ipv6 address 74:44:57::1/120
+ encapsulation dot1q 458
+!
+interface TenGigE0/0/0/6
+ load-interval 30
+!
+interface TenGigE0/0/0/6.1
+ vrf bgp_pic_v4_srv6
+ ipv4 address 15.1.7.1 255.255.255.0
+ load-interval 30
+ encapsulation dot1q 1
+!
+interface TenGigE0/0/0/6.2
+ vrf bgp_pic_v6_srv6
+ ipv6 address 2001:15:1:7::1/120
+ encapsulation dot1q 2
+!
+interface TenGigE0/0/0/7
+ shutdown
+!
+interface TenGigE0/0/0/8
+ shutdown
+!
+interface TenGigE0/0/0/9
+ shutdown
+!
+interface TenGigE0/0/0/10
+ description "To AG4"
+ ptp
+  profile g82752_slave_v4
+  master ipv4 10.24.252.1
+  !
+ !
+ service-policy output core-egress-queuing
+ service-policy output core-egress-exp-marking
+ ipv4 address 10.24.252.0 255.255.255.254
+ ipv6 address 2000:102:1315::2/126
+ ipv6 address 2405:10:24:252::/127
+ load-interval 30
+!
+interface TenGigE0/0/0/11
+ shutdown
+!
+interface TenGigE0/0/0/12
+ shutdown
+!
+interface TenGigE0/0/0/13
+ shutdown
+!
+interface TenGigE0/0/0/15
+ description Ixia 2/3
+!
+interface TenGigE0/0/0/15.20 l2transport
+!
+interface TenGigE0/0/0/15.501 l2transport
+ encapsulation dot1q 501
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/15.502 l2transport
+ encapsulation dot1q 502
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/16
+ bundle id 26 mode active
+!
+interface TenGigE0/0/0/17
+ shutdown
+!
+interface TenGigE0/0/0/18
+ shutdown
+!
+interface TenGigE0/0/0/19
+ bundle id 21 mode active
+ lacp period short
+ load-interval 30
+!
+interface TenGigE0/0/0/20
+ description To metro-c8500-2 via Accedian SFP
+ load-interval 30
+!
+interface TenGigE0/0/0/20.100
+ description "L3VPN for Catalyst SD-WAN"
+ encapsulation dot1q 100
+!
+interface TenGigE0/0/0/20.400 l2transport
+ description "Accedian probe L2VPN"
+ encapsulation dot1q 400
+ rewrite ingress tag pop 1 symmetric
+!
+interface TenGigE0/0/0/20.500
+ vrf sdwan-underlay
+ ipv4 address 52.52.52.1 255.255.255.0
+ encapsulation dot1q 500
+!
+interface TenGigE0/0/0/20.800
+ description T-SDN Interface
+ vrf metro_a-pe3_a-pe7_sdwan_800
+ ipv4 address 172.16.253.0 255.255.255.254
+ encapsulation dot1q 800
+!
+interface TenGigE0/0/0/20.801
+ description "Accedian probe traffic"
+ vrf metro_a-pe3_a-pe7_sdwan_800
+ ipv4 address 192.168.0.1 255.255.255.0
+ encapsulation dot1q 801
+!
+interface TenGigE0/0/0/21
+ shutdown
+!
+interface TenGigE0/0/0/22
+ shutdown
+!
+interface TenGigE0/0/0/23
+ shutdown
+!
+interface TenGigE0/0/0/23.3000
+!
+interface BVI99
+ vrf VRF-MLDP
+ ipv4 address 4.11.0.2 255.255.255.0
+ ipv6 address 2001:4:111::2/64
+ load-interval 30
+!
+interface TwentyFiveGigE0/0/0/24
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/25
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/26
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/27
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/28
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/29
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/30
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/31
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/32
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/33
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/34
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/35
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/36
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/37
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/38
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/39
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/40
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/41
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/42
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/43
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/44
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/45
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/46
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/47
+ shutdown
+!
+interface HundredGigE0/0/1/0
+ description "To AG3"
+ ptp
+  profile My-Slave
+ !
+ ipv4 address 10.23.252.0 255.255.255.254
+ ipv6 address 2000:102:1215::2/126
+ ipv6 address 2405:10:23:252::/127
+ load-interval 30
+ frequency synchronization
+  selection input
+  priority 10
+  wait-to-restore 0
+ !
+!
+interface HundredGigE0/0/1/1
+ description "To cst-8201-ag4 0/0/0/19"
+ cdp
+ ptp
+  profile g82752_slave_v4
+  master ipv4 10.24.252.1
+  !
+ !
+ service-policy output core-egress-queuing
+ service-policy output core-egress-exp-marking
+ ipv4 address 10.24.252.0 255.255.255.254
+ ipv6 address 2000:102:1315::2/126
+ ipv6 address 2405:10:24:252::/127
+ shutdown
+ load-interval 30
+!
+interface HundredGigE0/0/1/2
+ shutdown
+!
+interface HundredGigE0/0/1/3
+ shutdown
+!
+interface HundredGigE0/0/1/4
+ shutdown
+!
+interface HundredGigE0/0/1/5
+ shutdown
+!
+interface preconfigure GigabitEthernet0/0/0/12
+ bundle id 25 mode active
+ lldp
+ !
+!
+interface preconfigure TenGigE0/0/0/1/1
+ ipv4 address 10.24.242.1 255.255.255.252
+!
+extcommunity-set rt deny_v6_evpn_rt_extcomm
+  100:650,
+  100:4550
+end-set
+!
+extcommunity-set rt deny_v4_vpnv4_rt_to_v6_rr
+  100:38
+end-set
+!
+extcommunity-set opaque RED
+  300
+end-set
+!
+extcommunity-set opaque BLUE
+  100
+end-set
+!
+extcommunity-set opaque MLDP
+  1000
+end-set
+!
+extcommunity-set opaque GREEN
+  200
+end-set
+!
+extcommunity-set opaque c1317
+  1317
+end-set
+!
+extcommunity-set opaque c7001
+  7001
+end-set
+!
+extcommunity-set opaque c7801
+  7801
+end-set
+!
+extcommunity-set opaque ORANGE
+  400
+end-set
+!
+extcommunity-set opaque VPWS-RED
+  1000
+end-set
+!
+extcommunity-set opaque color100
+  10001
+end-set
+!
+extcommunity-set opaque color200
+  10002
+end-set
+!
+extcommunity-set opaque color400
+  400
+end-set
+!
+extcommunity-set opaque color600
+  600
+end-set
+!
+extcommunity-set opaque color650
+  650
+end-set
+!
+extcommunity-set opaque color800
+  800
+end-set
+!
+extcommunity-set opaque color4445
+  4445
+end-set
+!
+extcommunity-set opaque color6128
+  6128
+end-set
+!
+prefix-set SR-ODN1-IPv4
+  100.7.1.0/30
+end-set
+!
+prefix-set SR-ODN1-IPv6
+  2000:100:7:1::/126
+end-set
+!
+prefix-set ODN-TE-Prefixes
+  10.3.2.0/24
+end-set
+!
+prefix-set ODN-IGP-Prefixes
+  10.3.1.0/24
+end-set
+!
+community-set srmpls
+  100:5050
+end-set
+!
+route-policy BLUE
+  set extcommunity color BLUE
+end-policy
+!
+route-policy c1317
+  if evpn-route-type is 1 then
+    set extcommunity color c1317
+  endif
+end-policy
+!
+route-policy c7001
+  if evpn-route-type is 1 or evpn-route-type is 3 then
+    set extcommunity color c7001
+  endif
+end-policy
+!
+route-policy c7801
+  if evpn-route-type is 1 or evpn-route-type is 3 then
+    set extcommunity color c7801
+  endif
+end-policy
+!
+route-policy ODN-MVPN
+  set extcommunity color MLDP additive
+  pass
+end-policy
+!
+route-policy ODN_EVPN
+  if rd in (101.0.2.52:2001) then
+    set extcommunity color c7801
+  else
+    set extcommunity color BLUE
+  endif
+  if extcommunity rt in deny_v6_evpn_rt_extcomm then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy pass-all
+  pass
+end-policy
+!
+route-policy set-orange
+  set extcommunity color ORANGE
+end-policy
+!
+route-policy DENY-V4-SERV
+  if rd in (101.0.1.50:1317, 101.0.2.52:1317) then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy set-sr-index
+  set label-index 252
+  pass
+end-policy
+!
+route-policy evpn-color-100
+  if evpn-route-type is 1 then
+    set extcommunity color color100
+  elseif evpn-route-type is 3 then
+    set extcommunity color color100
+  endif
+  pass
+end-policy
+!
+route-policy evpn-color-200
+  if evpn-route-type is 1 then
+    set extcommunity color color200
+  elseif evpn-route-type is 3 then
+    set extcommunity color color200
+  endif
+  pass
+end-policy
+!
+route-policy isis-to-bgp-lu
+  if destination in (100.0.2.52/32) then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy DENY_V4_SERV_RD
+  if rd in (101.0.2.52:1317) then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy ADD-PATH-INSTALL
+  set path-selection backup 1 install multipath-protect
+end-policy
+!
+route-policy srv6-routes-only
+  if community in srmpls then
+    drop
+  elseif rd in (101.0.2.52:1317, 101.0.2.52:37, 101.0.2.52:5, 101.0.2.52:2001, 100:100, 101.0.2.52:2300, 101.0.2.52:3, 64750:1111) then
+    drop
+  elseif extcommunity rt in deny_v4_vpnv4_rt_to_v6_rr then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy color-sdwan-l3vpn
+  set community srmpls additive
+  set extcommunity color color400
+  pass
+end-policy
+!
+route-policy sr-p2mp-core-tree
+  set core-tree sr-p2mp
+end-policy
+!
+route-policy SET-L3VPN-ODN-IPv4
+  if destination in SR-ODN1-IPv4 then
+    set extcommunity color BLUE
+  else
+    pass
+  endif
+  if rd in (100:6000, 100:6001, 100:6010, 100:6011, 100:6200, 100:6128) then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy SET-L3VPN-ODN-IPv6
+  if destination in SR-ODN1-IPv6 then
+    set extcommunity color BLUE
+  else
+    pass
+  endif
+  if rd in (100:6000, 100:6001, 100:6010, 100:6011) then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy set_color_600_srv6
+  set extcommunity color color600
+end-policy
+!
+route-policy set_color_650_srv6
+  set extcommunity color color650
+end-policy
+!
+route-policy color-sdwan-l3vpn-800
+  set community srmpls additive
+  set extcommunity color color800
+end-policy
+!
+route-policy mldp-partitioned-p2mp
+  set core-tree mldp-partitioned-p2mp
+end-policy
+!
+route-policy deny_srv6_l2vpn_routes
+  if rd in (101.0.2.52:4500) then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy phil-test-additive-med
+  if community matches-any (100:100) then
+    set med +100
+  else
+    pass
+  endif
+end-policy
+!
+route-policy accedian-mgmt-color-400
+  if evpn-route-type is 1 then
+    set community srmpls additive
+    set extcommunity color color400
+  endif
+  if evpn-route-type is 3 then
+    set community srmpls additive
+    set extcommunity color color400
+  endif
+  pass
+end-policy
+!
+route-policy bgp-pic-additional-paths
+  set path-selection backup 1 install
+end-policy
+!
+route-policy policy-discard-smet-routes
+  if evpn-route-type is 6 then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 172.27.227.5
+ !
+!
+router isis ACCESS
+ set-overload-bit on-startup 360
+ is-type level-2-only
+ net 49.0001.0102.0000.0210.00
+ nsr
+ distribute link-state instance-id 102
+ nsf cisco
+ log adjacency changes
+ lsp-refresh-interval 65000
+ max-lsp-lifetime 65535
+ lsp-password keychain ISIS-KEY
+ lsp-password keychain ISIS-KEY level 1
+ affinity-map red bit-position 0
+ address-family ipv4 unicast
+  metric-style wide
+  mpls traffic-eng level-2-only
+  mpls traffic-eng router-id Loopback0
+  spf-interval initial-wait 50 secondary-wait 200 maximum-wait 5000
+  segment-routing mpls
+  spf prefix-priority critical tag 5000
+  spf prefix-priority high tag 1000
+ !
+ address-family ipv6 unicast
+  microloop avoidance segment-routing
+  prefix-unreachable
+   rx-process-enable
+  !
+  router-id Loopback0
+  segment-routing srv6
+   locator LocAlgo0
+    tag 125
+   !
+   locator LocAlgo128
+   !
+   locator LocAlgo129
+   !
+   locator LocAlgo130
+   !
+   locator LocAlgo131
+   !
+  !
+ !
+ flex-algo 128
+  metric-type delay
+  advertise-definition
+ !
+ flex-algo 129
+  advertise-definition
+ !
+ flex-algo 130
+  metric-type delay
+  advertise-definition
+ !
+ flex-algo 131
+  advertise-definition
+  affinity exclude-any red
+ !
+ interface Loopback0
+  address-family ipv4 unicast
+   prefix-sid index 252
+   prefix-sid algorithm 128 absolute 18007
+   prefix-sid algorithm 129 absolute 19007
+   prefix-sid algorithm 130 absolute 20007
+   prefix-sid algorithm 131 absolute 21007
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface TenGigE0/0/0/0
+  bfd minimum-interval 150
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+ interface TenGigE0/0/0/3.101
+  address-family ipv4 unicast
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface TenGigE0/0/0/5.3000
+  point-to-point
+  address-family ipv4 unicast
+  !
+ !
+ interface TenGigE0/0/0/20
+ !
+ interface HundredGigE0/0/1/0
+  bfd minimum-interval 150
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+ interface HundredGigE0/0/1/1
+  bfd minimum-interval 150
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+!
+router bgp 100
+ nsr
+ bfd minimum-interval 50
+ bfd multiplier 3
+ bgp router-id 101.0.2.52
+ bgp graceful-restart
+ nexthop validation color-extcomm sr-policy
+ nexthop validation color-extcomm disable
+ ibgp policy out enforce-modifications
+ address-family ipv4 unicast
+  network 101.0.2.52/32 route-policy set-sr-index
+ !
+ address-family ipv4 multicast
+  redistribute connected
+ !
+ address-family vpnv4 unicast
+  additional-paths receive
+  additional-paths send
+  additional-paths selection route-policy ADD-PATH-INSTALL
+ !
+ address-family ipv6 unicast
+  nexthop trigger-delay critical 0
+ !
+ address-family vpnv6 unicast
+  additional-paths receive
+  additional-paths send
+  nexthop trigger-delay critical 0
+ !
+ address-family ipv4 mvpn
+ !
+ address-family ipv6 mvpn
+ !
+ address-family l2vpn evpn
+  bgp implicit-import
+ !
+ neighbor-group SvRR
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 unicast
+  !
+  address-family vpnv4 unicast
+   route-policy SET-L3VPN-ODN-IPv4 out
+   soft-reconfiguration inbound always
+  !
+  address-family vpnv6 unicast
+   route-policy SET-L3VPN-ODN-IPv6 out
+  !
+  address-family ipv4 mvpn
+  !
+  address-family ipv6 mvpn
+  !
+  address-family l2vpn evpn
+   route-policy policy-discard-smet-routes in
+   route-policy ODN_EVPN out
+  !
+ !
+ neighbor-group BGP-LU
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 multicast
+  !
+  address-family ipv4 labeled-unicast
+  !
+ !
+ neighbor-group v4_unicast
+  remote-as 100
+  log neighbor changes detail
+  update-source Loopback0
+  address-family ipv4 unicast
+   next-hop-self
+  !
+ !
+ neighbor-group SvRR-Client-srv6
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 unicast
+   encapsulation-type srv6
+  !
+  address-family vpnv4 unicast
+   route-policy srv6-routes-only out
+  !
+  address-family ipv6 unicast
+   encapsulation-type srv6
+  !
+  address-family vpnv6 unicast
+   route-policy srv6-routes-only out
+  !
+  address-family l2vpn evpn
+   route-policy DENY-V4-SERV in
+   route-policy srv6-routes-only out
+  !
+ !
+ neighbor 101.0.0.3
+  remote-as 100
+  use neighbor-group v4_unicast
+  update-source Loopback0
+  address-family ipv4 multicast
+  !
+  address-family ipv4 labeled-unicast
+   route-policy phil-test-additive-med in
+  !
+ !
+ neighbor 101.0.0.4
+  use neighbor-group v4_unicast
+ !
+ neighbor 101.0.2.202
+  use neighbor-group SvRR
+  bfd fast-detect
+  bfd multiplier 3
+  bfd minimum-interval 100
+  shutdown
+ !
+ neighbor 101.0.5.101
+  use neighbor-group SvRR
+  address-family vpnv6 unicast
+   route-policy SET-L3VPN-ODN-IPv6 out
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor fccc:0:216::1
+  use neighbor-group SvRR-Client-srv6
+  bfd fast-detect
+  bfd multiplier 3
+  bfd minimum-interval 150
+ !
+ vrf test
+  rd auto
+  address-family ipv4 unicast
+   redistribute connected
+  !
+ !
+ vrf VRF-MLDP
+  rd auto
+  address-family ipv4 unicast
+   label mode per-vrf
+   redistribute connected
+   redistribute static
+  !
+  address-family ipv4 mvpn
+  !
+  address-family ipv6 mvpn
+  !
+ !
+ vrf tree-sid
+  rd 80:81
+  address-family ipv4 unicast
+   label mode per-vrf
+   redistribute connected
+   redistribute static
+  !
+  address-family ipv4 mvpn
+  !
+  address-family ipv6 mvpn
+  !
+ !
+ vrf L3VPN-SRODN-1
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  address-family ipv6 unicast
+   redistribute connected
+  !
+ !
+ vrf sdwan-underlay
+  rd auto
+  address-family ipv4 unicast
+   label mode per-ce
+   redistribute connected
+  !
+  address-family ipv6 unicast
+   redistribute connected
+  !
+ !
+ vrf bgp_pic_v4_srv6
+  rd 100:6010
+  address-family ipv4 unicast
+   segment-routing srv6
+    locator LocAlgo0
+    alloc mode per-vrf
+   !
+   redistribute connected
+  !
+  neighbor 15.1.7.2
+   remote-as 202
+   bfd fast-detect
+   address-family ipv4 unicast
+    route-policy pass-all in
+    route-policy pass-all out
+   !
+  !
+ !
+ vrf bgp_pic_v6_srv6
+  rd 100:6011
+  address-family ipv6 unicast
+   additional-paths receive
+   additional-paths send
+   additional-paths selection route-policy bgp-pic-additional-paths
+   segment-routing srv6
+    locator LocAlgo0
+    alloc mode per-vrf
+   !
+   redistribute connected
+  !
+  neighbor 2001:15:1:7::2
+   remote-as 202
+   bfd fast-detect
+   address-family ipv6 unicast
+    route-policy pass-all in
+    route-policy pass-all out
+   !
+  !
+ !
+ vrf L3ROUTED-SPOKE-1
+  rd 64750:1111
+  address-family ipv6 unicast
+   redistribute connected
+  !
+ !
+ vrf l3vpn_vrf_algo_128
+  rd 100:6128
+  address-family ipv4 unicast
+   segment-routing srv6
+    locator LocAlgo128
+    alloc mode per-vrf
+   !
+   redistribute connected
+  !
+ !
+ vrf l3vpn_all_actv_be_26
+  rd 100:14551
+  address-family ipv4 unicast
+   segment-routing srv6
+    locator LocAlgo0
+    alloc mode per-vrf
+   !
+   redistribute connected
+  !
+ !
+ vrf l3vpn_vrf_algo_128_v6
+  rd 100:61281
+  address-family ipv6 unicast
+   segment-routing srv6
+    locator LocAlgo128
+    alloc mode per-vrf
+   !
+   redistribute connected
+  !
+ !
+ vrf metro_a-pe3_a-pe7_sdwan_800
+  rd auto
+  bgp router-id 101.0.1.52
+  address-family ipv4 unicast
+   redistribute connected
+  !
+  neighbor 172.16.253.1
+   remote-as 200
+   address-family ipv4 unicast
+    route-policy pass-all in
+    route-policy pass-all out
+   !
+  !
+ !
+ vrf metro_l3vpn_a-pe3_a-pe7_701
+  rd auto
+  address-family ipv4 unicast
+   redistribute connected
+  !
+ !
+!
+cef adjacency route override rib
+evpn
+ bgp
+  rd 101.0.2.52:10
+ !
+ evi 100
+  bgp
+   route-policy export evpn-color-100
+  !
+  advertise-mac
+  !
+ !
+ evi 101
+  bgp
+   route-policy export evpn-color-200
+  !
+  advertise-mac
+  !
+ !
+ evi 400
+  bgp
+   route-policy export accedian-mgmt-color-400
+   route-policy import accedian-mgmt-color-400
+  !
+  advertise-mac
+  !
+ !
+ evi 1101
+  bgp
+   route-target export 1101:100
+   route-target import 1101:1000
+  !
+  etree
+   leaf
+  !
+  advertise-mac
+  !
+ !
+ evi 1317
+  bgp
+   route-policy export c1317
+  !
+ !
+ evi 2001
+  bgp
+   route-policy export c7801
+  !
+  advertise-mac
+  !
+ !
+ evi 2300
+  advertise-mac
+  !
+  proxy
+   igmp-snooping
+  !
+ !
+ evi 650 segment-routing srv6
+  bgp
+   route-policy export set_color_650_srv6
+  !
+  locator LocAlgo0
+  !
+ !
+ evi 4500 segment-routing srv6
+  bgp
+   route-target import 100:4500
+   route-target export 100:4500
+  !
+  advertise-mac
+  !
+  locator LocAlgo128
+  !
+ !
+ evi 4550 segment-routing srv6
+  bgp
+   route-target import 100:4550
+   route-target export 100:4550
+  !
+  advertise-mac
+  !
+ !
+ evi 4600 segment-routing srv6
+  bgp
+   route-policy export set_color_600_srv6
+  !
+  locator LocAlgo0
+  !
+ !
+ group 4551
+  core interface HundredGigE0/0/1/0
+  core interface HundredGigE0/0/1/1
+ !
+ interface Bundle-Ether21
+  ethernet-segment
+   identifier type 0 10.10.10.10.10.10.10.10.21
+   convergence
+    nexthop-tracking
+   !
+  !
+ !
+ interface Bundle-Ether22
+  ethernet-segment
+   identifier type 0 10.10.10.10.10.10.10.10.22
+   convergence
+    nexthop-tracking
+   !
+  !
+ !
+ interface Bundle-Ether23
+  ethernet-segment
+   identifier type 0 10.10.10.10.10.10.10.10.23
+   convergence
+    nexthop-tracking
+   !
+  !
+ !
+ interface Bundle-Ether25
+  ethernet-segment
+   identifier type 0 87.87.87.87.87.87.87.87.87
+   load-balancing-mode port-active
+  !
+ !
+ interface Bundle-Ether26
+  ethernet-segment
+   identifier type 0 26.26.26.26.26.26.26.26.26
+  !
+  core-isolation-group 4551
+ !
+ interface TenGigE0/0/0/5
+  ethernet-segment
+   identifier type 0 10.10.10.10.10.10.10.06.06
+  !
+ !
+ interface TenGigE0/0/0/20
+  ethernet-segment
+   identifier type 0 11.11.11.11.11.11.11.11.52
+  !
+ !
+ segment-routing srv6
+  locator LocAlgo0
+  !
+ !
+!
+l2vpn
+ flexible-xconnect-service vlan-unaware EVPN-Headend
+  interface TenGigE0/0/0/3.2022
+  interface TenGigE0/0/0/3.2202
+  interface TenGigE0/0/0/3.2203
+  neighbor evpn evi 2202 target 2202
+ !
+ pw-class PWHE_BNG1
+  encapsulation mpls
+   protocol ldp
+   control-word
+   transport-mode ethernet
+  !
+ !
+ pw-class FA-129-PE3
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_71007_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-class-PE3-1
+  encapsulation mpls
+   preferred-path sr-te policy srte_c_1001_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-class-PE3-2
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_1002_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-class-PE3-3
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_1003_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-class-PE3-4
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_1004_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-class-PE3-5
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_1005_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-class-PE3-6
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_1006_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-class-PE3-7
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_1007_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-class-PE3-8
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_1008_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-class-PE3-9
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_1009_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-class-PE3-10
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_1010_ep_101.0.1.50
+  !
+ !
+ pw-class static-pw-h-l3vpn-class
+  encapsulation mpls
+   control-word
+  !
+ !
+ pw-class static-pw-class-fa-PE3-1
+  encapsulation mpls
+   control-word
+   preferred-path sr-te policy srte_c_77701_ep_101.0.1.50 fallback disable
+  !
+ !
+ pw-class metro_a-pe3_a-pe7_vpws_700
+  encapsulation mpls
+   preferred-path sr-te policy srte_c_700_ep_101.0.1.50
+  !
+ !
+ xconnect group pwhe-bng
+  p2p pwhe-bng1
+   interface TenGigE0/0/0/3.2000
+   neighbor evpn evi 40 target 900 source 900
+   !
+  !
+ !
+ xconnect group FA-129-PE3
+  p2p fa-129-1
+   interface TenGigE0/0/0/5.77
+   neighbor ipv4 101.0.1.50 pw-id 71007
+    mpls static label local 71007 remote 71007
+    pw-class FA-129-PE3
+   !
+  !
+ !
+ xconnect group Static-VPWS-PE3
+  p2p srte-1
+   interface TenGigE0/0/0/5.1001
+   neighbor ipv4 101.0.1.50 pw-id 1001
+    mpls static label local 1001 remote 1001
+    pw-class static-pw-class-PE3-1
+   !
+  !
+  p2p srte-2
+   interface TenGigE0/0/0/5.1002
+   neighbor ipv4 101.0.1.50 pw-id 1002
+    mpls static label local 1002 remote 1002
+    pw-class static-pw-class-PE3-2
+   !
+  !
+  p2p srte-3
+   interface TenGigE0/0/0/5.1003
+   neighbor ipv4 101.0.1.50 pw-id 1003
+    mpls static label local 1003 remote 1003
+    pw-class static-pw-class-PE3-3
+   !
+  !
+  p2p srte-4
+   interface TenGigE0/0/0/5.1004
+   neighbor ipv4 101.0.1.50 pw-id 1004
+    mpls static label local 1004 remote 1004
+    pw-class static-pw-class-PE3-4
+   !
+  !
+  p2p srte-5
+   interface TenGigE0/0/0/5.1005
+   neighbor ipv4 101.0.1.50 pw-id 1005
+    mpls static label local 1005 remote 1005
+    pw-class static-pw-class-PE3-5
+   !
+  !
+  p2p srte-6
+   interface TenGigE0/0/0/5.1006
+   neighbor ipv4 101.0.1.50 pw-id 1006
+    mpls static label local 1006 remote 1006
+    pw-class static-pw-class-PE3-6
+   !
+  !
+  p2p srte-7
+   interface TenGigE0/0/0/5.1007
+   neighbor ipv4 101.0.1.50 pw-id 1007
+    mpls static label local 1007 remote 1007
+    pw-class static-pw-class-PE3-7
+   !
+  !
+  p2p srte-8
+   interface TenGigE0/0/0/5.1008
+   neighbor ipv4 101.0.1.50 pw-id 1008
+    mpls static label local 1008 remote 1008
+    pw-class static-pw-class-PE3-8
+   !
+  !
+  p2p srte-9
+   interface TenGigE0/0/0/5.1009
+   neighbor ipv4 101.0.1.50 pw-id 1009
+    mpls static label local 1009 remote 1009
+    pw-class static-pw-class-PE3-9
+   !
+  !
+  p2p srte-10
+   interface TenGigE0/0/0/5.1010
+   neighbor ipv4 101.0.1.50 pw-id 1010
+    mpls static label local 1010 remote 1010
+    pw-class static-pw-class-PE3-10
+   !
+  !
+ !
+ xconnect group EVPN-VPWS-ODN-PE3
+  p2p odn-1
+   interface TenGigE0/0/0/5.1
+   neighbor evpn evi 1317 target 1 source 1
+   !
+  !
+ !
+ xconnect group EVPN-VPWS-SRv6_MH
+  p2p EVPN-VPWS-SRv6_MH
+   interface Bundle-Ether25.600
+   neighbor evpn evi 4600 service 600 segment-routing srv6
+   !
+  !
+ !
+ xconnect group EVPN-VPWS-SRv6_MH_All_act
+  p2p EVPN-VPWS-SRv6_MH_All_act
+   interface Bundle-Ether26.650
+   neighbor evpn evi 650 service 650 segment-routing srv6
+   !
+  !
+ !
+ xconnect group metro_a-pe3_a-pe7_vpws_700
+  p2p metro_a-pe3_a-pe7_vpws_700
+   interface TenGigE0/0/0/5.700
+   neighbor evpn evi 7000 target 7000 source 7001
+    pw-class metro_a-pe3_a-pe7_vpws_700
+   !
+  !
+ !
+ xconnect group H-L3VPN-EVPN-VPWS-over-PWHE-PE3
+  p2p L3VPN-TE-VRF1
+   interface TenGigE0/0/0/5.501
+   neighbor evpn evi 37 target 501 source 501
+   !
+  !
+  p2p L3VPN-TE-VRF2
+   interface TenGigE0/0/0/15.502
+   neighbor evpn evi 37 target 502 source 502
+   !
+  !
+ !
+ xconnect group Static-VPWS-PE34-H-L3VPN-AnyCast
+  p2p L3VPN-VRF1
+   interface TenGigE0/0/0/2.1
+   neighbor ipv4 100.100.100.34 pw-id 5001
+    mpls static label local 5001 remote 5001
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+  p2p L3VPN-VRF2
+   interface TenGigE0/0/0/2.2
+   neighbor ipv4 100.100.100.34 pw-id 5002
+    mpls static label local 5002 remote 5002
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+  p2p L3VPN-VRF3
+   interface TenGigE0/0/0/2.3
+   neighbor ipv4 100.100.100.34 pw-id 5003
+    mpls static label local 5003 remote 5003
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+  p2p L3VPN-VRF4
+   interface TenGigE0/0/0/2.4
+   neighbor ipv4 100.100.100.34 pw-id 5004
+    mpls static label local 5004 remote 5004
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+  p2p L3VPN-VRF5
+   interface TenGigE0/0/0/2.5
+   neighbor ipv4 100.100.100.34 pw-id 5005
+    mpls static label local 5005 remote 5005
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+  p2p L3VPN-VRF6
+   interface TenGigE0/0/0/2.6
+   neighbor ipv4 100.100.100.34 pw-id 5006
+    mpls static label local 5006 remote 5006
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+  p2p L3VPN-VRF7
+   interface TenGigE0/0/0/2.7
+   neighbor ipv4 100.100.100.34 pw-id 5007
+    mpls static label local 5007 remote 5007
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+  p2p L3VPN-VRF8
+   interface TenGigE0/0/0/2.8
+   neighbor ipv4 100.100.100.34 pw-id 5008
+    mpls static label local 5008 remote 5008
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+  p2p L3VPN-VRF9
+   interface TenGigE0/0/0/2.9
+   neighbor ipv4 100.100.100.34 pw-id 5009
+    mpls static label local 5009 remote 5009
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+  p2p L3VPN-VRF10
+   interface TenGigE0/0/0/2.10
+   neighbor ipv4 100.100.100.34 pw-id 5010
+    mpls static label local 5010 remote 5010
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+ !
+ xconnect group StaticVPWS-PE12-AnyCast-EVPNCore
+  p2p anycast1
+   interface TenGigE0/0/0/2.1001
+   neighbor ipv4 100.100.100.34 pw-id 7001
+    mpls static label local 7001 remote 7001
+    pw-class static-pw-h-l3vpn-class
+   !
+  !
+ !
+ bridge group evpn-mh
+  bridge-domain evi100
+   interface TenGigE0/0/0/5.100
+   !
+   evi 100
+   !
+  !
+  bridge-domain evi101
+   interface TenGigE0/0/0/5.101
+   !
+   evi 101
+   !
+  !
+ !
+ bridge group Accedian
+  bridge-domain accedian-mgmt
+   interface TenGigE0/0/0/20.400
+   !
+   evi 400
+   !
+  !
+ !
+ bridge group MLDP-VRF
+  bridge-domain mldp
+   interface TenGigE0/0/0/5.2000
+   !
+   routed interface BVI99
+   !
+  !
+ !
+ bridge group Etree-PE4
+  bridge-domain evi1101
+   efp-visibility
+   igmp snooping profile igmp-snoop-1
+   interface Bundle-Ether21.1101
+   !
+   interface TenGigE0/0/0/5.1101
+   !
+   evi 1101
+   !
+  !
+ !
+ bridge group srv6_evpn_MH
+  bridge-domain srv6_evpn_MH_1
+   interface Bundle-Ether25.4500
+   !
+   evi 4500 segment-routing srv6
+   !
+  !
+ !
+ bridge group EVPN-ELAN-CGW1
+  bridge-domain ELAN-CGW1
+   multicast-source ipv4
+   igmp snooping profile snoop_profile1
+   interface TenGigE0/0/0/3.2300
+   !
+   evi 2300
+   !
+  !
+ !
+ bridge group srv6_evpn_MH_all_actv
+  bridge-domain srv6_evpn_MH_all_actv_1
+   interface Bundle-Ether26.4550
+   !
+   evi 4550 segment-routing srv6
+   !
+  !
+ !
+ bridge group ELAN-MD-APE7-APE8-APE3
+  bridge-domain EVI2001
+   interface Bundle-Ether22.2001
+   !
+   evi 2001
+   !
+  !
+ !
+!
+mpls oam
+ dpm
+  pps 10
+  interval 60
+ !
+!
+accounting
+ prefixes
+  ipv6
+   mode per-prefix per-nexthop srv6-locators
+  !
+ !
+!
+dhcp ipv6
+ profile SPOKE-1 relay
+  helper-address vrf L3ROUTED-SPOKE-1 2002:4888:11:0:4:4:1:3
+ !
+ interface TenGigE0/0/0/3.110 relay profile SPOKE-1
+!
+mpls ldp
+ capabilities sac mldp-only
+ mldp
+  address-family ipv4
+   make-before-break delay 30
+   forwarding recursive
+   recursive-fec
+  !
+ !
+ router-id 101.0.2.52
+ session protection
+ address-family ipv4
+  discovery targeted-hello accept
+ !
+ interface TenGigE0/0/0/0
+ !
+ interface TenGigE0/0/0/10
+ !
+ interface HundredGigE0/0/1/0
+ !
+ interface HundredGigE0/0/1/1
+ !
+!
+multicast-routing
+ address-family ipv4
+  interface Loopback0
+   enable
+  !
+  mdt source Loopback0
+  interface all enable
+ !
+ address-family ipv6
+  interface all enable
+ !
+ vrf VRF-MLDP
+  address-family ipv4
+   mdt source Loopback0
+   rate-per-route
+   interface all enable
+   accounting per-prefix
+   bgp auto-discovery mldp
+   !
+   mdt partitioned mldp ipv4 p2mp
+   mdt data 100
+  !
+ !
+ vrf tree-sid
+  address-family ipv4
+   mdt source Loopback0
+   interface all enable
+   bgp auto-discovery segment-routing
+   !
+   mdt default segment-routing mpls color 80
+  !
+ !
+!
+router igmp
+ vrf VRF-MLDP
+  interface BVI99
+   join-group 232.0.0.20 104.14.1.2
+   version 3
+  !
+  interface TenGigE0/0/0/5.2000
+   join-group 232.0.0.20 104.14.1.2
+  !
+ !
+ vrf tree-sid
+  interface TenGigE0/0/0/5.3000
+   static-group 232.1.4.1 34.7.8.3
+  !
+  interface TenGigE0/0/0/23.3000
+   static-group 232.1.4.4 34.7.8.3
+  !
+ !
+!
+segment-routing
+ global-block 16000 23999
+ mapping-server
+  prefix-sid-map
+   address-family ipv4
+    101.0.0.0/24 0 range 100
+   !
+  !
+ !
+ traffic-eng
+  interface TenGigE0/0/0/0
+  !
+  interface TenGigE0/0/0/10
+  !
+  srv6
+  !
+  logging
+   policy status
+  !
+  segment-list anycast
+   index 1 mpls label 16004
+   index 2 mpls label 16012
+   index 3 mpls label 16151
+  !
+  segment-list anycast-ip
+  !
+  segment-lists
+   srv6
+    sid-format usid-f3216
+   !
+   segment-list PE4-srv6
+    srv6
+     index 1 sid fccc:0:213::
+     index 2 sid fccc:0:211::
+     topology-check
+    !
+   !
+   segment-list APE3-srv6
+    srv6
+     index 1 sid fccc:0:20f::
+     index 2 sid fccc:0:109::
+     index 3 sid fccc:0:103::
+    !
+   !
+  !
+  on-demand color 100
+   dynamic
+    pcep
+    !
+    metric
+     type igp
+    !
+   !
+  !
+  on-demand color 300
+   dynamic
+    pcep
+    !
+    metric
+     type te
+    !
+   !
+  !
+  on-demand color 400
+   dynamic
+    pcep
+    !
+    metric
+     type igp
+    !
+   !
+  !
+  on-demand color 700
+   dynamic
+    pcep
+    !
+    metric
+     type igp
+    !
+   !
+  !
+  on-demand color 1000
+   dynamic
+    pcep
+    !
+    metric
+     type igp
+    !
+   !
+  !
+  policy toPE3-1
+   color 30003 end-point ipv4 101.0.0.3
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy PE4-srv6
+   srv6
+    locator LocAlgo0 binding-sid dynamic behavior ub6-insert-reduced
+   !
+   source-address ipv6 fccc:0:215::1
+   color 6100 end-point ipv6 fccc:0:20f::1
+   candidate-paths
+    preference 50
+     explicit segment-list PE4-srv6
+     !
+    !
+   !
+  !
+  policy APE3-srv6
+   srv6
+    locator LocAlgo0 binding-sid dynamic behavior ub6-insert-reduced
+   !
+   source-address ipv6 fccc:0:215::1
+   color 600 end-point ipv6 fccc:0:103::1
+   candidate-paths
+    preference 5
+     explicit segment-list APE3-srv6
+     !
+    !
+   !
+  !
+  policy ELAN1-PE3
+   color 2001 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy FA-APE3-1
+   color 77701 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+     constraints
+      segments
+       sid-algorithm 129
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3
+   color 200 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy BLUE-PE8-1
+   color 8001 end-point ipv4 101.0.2.53
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type latency
+      !
+     !
+    !
+   !
+   performance-measurement
+    delay-measurement
+    !
+   !
+  !
+  policy ELAN1-PE3-1
+   color 2002 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3-1
+   color 1001 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3-2
+   color 1002 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+     constraints
+      segments
+       sid-algorithm 129
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3-3
+   color 1003 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3-4
+   color 1004 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3-5
+   color 1005 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3-6
+   color 1006 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3-7
+   color 1007 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3-8
+   color 1008 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3-9
+   color 1009 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy GREEN-PE3-10
+   color 1010 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy FA-129-APE7-APE3
+   color 71007 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 1
+     dynamic
+      pcep
+      !
+      metric
+       type latency
+      !
+     !
+     constraints
+      segments
+       sid-algorithm 129
+      !
+     !
+    !
+   !
+  !
+  policy srte_c_800_ep_101.0.1.5
+   color 800 end-point ipv4 101.0.1.5
+   candidate-paths
+    preference 200
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy srte_c_700_ep_101.0.1.50
+   color 700 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 200
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy srte_c_800_ep_101.0.1.50
+   color 800 end-point ipv4 101.0.1.50
+   candidate-paths
+    preference 200
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy srte_c_20001_ep_fccc:0:103::1
+   srv6
+    locator LocAlgo0 binding-sid dynamic behavior ub6-insert-reduced
+   !
+   source-address ipv6 fccc:0:215::1
+   color 20001 end-point ipv6 fccc:0:103::1
+   candidate-paths
+    preference 200
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  policy srte_c_20002_ep_fccc:0:103::1
+   srv6
+    locator LocAlgo129 binding-sid dynamic behavior ub6-insert-reduced
+   !
+   color 20002 end-point ipv6 fccc:0:103::1
+   candidate-paths
+    preference 200
+     dynamic
+      pcep
+      !
+      metric
+       type igp
+      !
+     !
+    !
+   !
+  !
+  pcc
+   source-address ipv4 101.0.2.52
+   pce address ipv4 101.0.2.102
+    precedence 1
+   !
+   pce address ipv4 101.0.5.200
+    precedence 10
+   !
+   report-all
+   timers delegation-timeout 10
+   timers deadtimer 60
+   timers initiated state 15
+   timers initiated orphan 10
+  !
+ !
+ srv6
+  formats
+   format usid-f3216
+   !
+  !
+  encapsulation
+   source-address fccc:0:215::1
+  !
+  locators
+   locator LocAlgo0
+    micro-segment behavior unode psp-usd
+    prefix fccc:0:215::/48
+   !
+   locator LocAlgo128
+    micro-segment behavior unode psp-usd
+    prefix fccc:1:215::/48
+    algorithm 128
+   !
+   locator LocAlgo129
+    micro-segment behavior unode psp-usd
+    prefix fccc:2:215::/48
+    algorithm 129
+   !
+   locator LocAlgo130
+    micro-segment behavior unode psp-usd
+    prefix fccc:3:215::/48
+    algorithm 130
+   !
+   locator LocAlgo131
+    micro-segment behavior unode psp-usd
+    prefix fccc:4:215::/48
+    algorithm 131
+   !
+  !
+ !
+!
+lldp
+!
+router pim
+ address-family ipv4
+  rp-address 101.0.0.4
+  interface Loopback0
+   enable
+  !
+ !
+ vrf VRF-MLDP
+  address-family ipv4
+   rpf topology route-policy mldp-partitioned-p2mp
+   mdt c-multicast-routing bgp
+   !
+   interface BVI99
+    enable
+   !
+  !
+ !
+ vrf tree-sid
+  address-family ipv4
+   rpf topology route-policy sr-p2mp-core-tree
+   mdt c-multicast-routing bgp
+   !
+   multipath
+   ssm range ssm
+  !
+ !
+!
+hw-module profile segment-routing srv6 mode micro-segment format f3216
+ encapsulation
+  l2-traffic
+   traffic-class propagate
+  !
+  l3-traffic
+   traffic-class propagate
+  !
+ !
+!
+performance-measurement
+ interface TenGigE0/0/0/0
+  delay-measurement
+  !
+ !
+ interface TenGigE0/0/0/10
+  delay-measurement
+  !
+ !
+ interface HundredGigE0/0/1/0
+  delay-measurement
+  !
+ !
+ delay-profile interfaces default
+  advertisement
+   accelerated
+    threshold 25
+   !
+   periodic
+    interval 120
+    threshold 10
+   !
+  !
+  probe
+   measurement-mode two-way
+   protocol twamp-light
+   computation-interval 30
+  !
+ !
+ delay-profile sr-policy default
+  advertisement
+   accelerated
+    threshold 25
+   !
+   periodic
+    interval 120
+    threshold 10
+   !
+   threshold-check
+    average-delay
+   !
+  !
+ !
+ protocol twamp-light
+  measurement delay
+   unauthenticated
+    querier-dst-port 12345
+   !
+  !
+ !
+!
+igmp snooping profile igmp-snoop-1
+ system-ip-address 100.0.2.52
+ immediate-leave
+ minimum-version 2
+ internal-querier
+ internal-querier version 2
+ tcn flood disable
+ report-suppression disable
+!
+igmp snooping profile snoop_profile1
+ system-ip-address 101.0.2.52
+ minimum-version 2
+ internal-querier
+!
+ssh client vrf default
+ssh server logging
+ssh timeout 120
+ssh server rate-limit 600
+ssh server capability netconf-xml
+ssh server session-limit 100
+ssh server v2
+ssh server vrf default
+ssh server netconf vrf default
+end

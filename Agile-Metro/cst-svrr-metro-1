@@ -1,0 +1,1269 @@
+!RANCID-CONTENT-TYPE: ios-exr
+!
+!
+!Memory: main 20480M
+!
+!Image:  Node 0/RP0 [RP]
+!Image:     Active Packages: 1  
+!Image:        xrv9k-sysadmin-25.2.1.24I version=25.2.1.24I [Boot image]
+!
+! Smart Licensing Status
+! ======================
+! Smart Licensing is ENABLED
+! License Conversion:
+!   Automatic Conversion Enabled: True
+! Export Authorization Key:
+!   Features Authorized:
+!     <none>
+! Utility:
+! Smart Licensing Using Policy:
+! Account Information:
+!   Smart Account: <none>
+!   Virtual Account: <none>
+! Data Privacy:
+!   Sending Hostname: yes
+!     Callhome hostname privacy: DISABLED
+!     Smart Licensing hostname privacy: DISABLED
+!   Version privacy: DISABLED
+! Transport:
+!   Type: cslu
+!   Cslu address: <empty>
+!   Proxy:
+!     Not Configured
+!   VRF:
+!     Not Supported
+! Miscellaneous:
+!   Custom Id: <empty>
+! Policy:
+!   Policy in use: Merged from multiple sources.
+!   Reporting ACK required: yes (CISCO default)
+!   Unenforced/Non-Export Perpetual Attributes:
+!     First report requirement (days): 365 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 90 (CISCO default)
+!   Unenforced/Non-Export Subscription Attributes:
+!     First report requirement (days): 90 (CISCO default)
+!     Reporting frequency (days): 90 (CISCO default)
+!     Report on change (days): 90 (CISCO default)
+!   Enforced (Perpetual/Subscription) License Attributes:
+!     First report requirement (days): 0 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 0 (CISCO default)
+!   Export (Perpetual/Subscription) License Attributes:
+!     First report requirement (days): 0 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 0 (CISCO default)
+! Usage Reporting:
+!   Last ACK received: <none>
+!   Next ACK deadline: Aug 14 2025 01:21:35 UTC
+!   Reporting push interval: 30  days
+!   Next ACK push check: <none>
+!   Next report push: Jun 27 2025 07:11:55 UTC
+!   Last report push: <none>
+!   Last report file write: <none>
+! Trust Code Installed: <none>
+! Secondary Signing Cert: 0
+! License Usage
+! =============
+! SUN_LIC_RTU (IOS-XRv-9000-vRouter-VM):
+!   Description: Product: Right to Use
+!   Count: 1
+!   Version: 1.0
+!   Feature Name: SUN_LIC_RTU
+!   Feature Description: Product: Right to Use
+!   Enforcement type: NOT ENFORCED
+!   License type: Perpetual
+! Product Information
+! ===================
+! UDI: PID:R-IOSXRV9000-IMG,SN:F45386B40C3,SUVI:R-IOSXRV9000-IMGF45386B40C3,UUID:4bbf4d56-b308-f4d6-f946-d4b6f88d687b
+! Agent Version
+! =============
+! Smart Agent for Licensing: 5.9.33/a550eb079
+! License Authorizations
+! ======================
+! Overall status:
+!   Active: PID:R-IOSXRV9000-IMG,SN:F45386B40C3,SUVI:R-IOSXRV9000-IMGF45386B40C3,UUID:4bbf4d56-b308-f4d6-f946-d4b6f88d687b
+! Purchased Licenses:
+!   No Purchase Information Available
+! Enforcement Status:
+!   No Enforcement Status Information Available
+! Usage Report Summary:
+! =====================
+! Total: 21,  Purged: 0
+! Total Acknowledged Received: 0,  Waiting for Ack: 0
+! Available to Report: 21  Collecting Data: 1  
+! Device Telemetry Report Summary:
+! ================================
+! Data Channel: AVAILABLE
+! Reports on disk: 0
+!
+!
+!
+!
+!                                          ^
+!
+!Redundancy information for node 0/RP0/CPU0:
+!==========================================
+!Node 0/RP0/CPU0 is in ACTIVE role
+!Node 0/RP0/CPU0 has no valid partner
+!Details
+!--------
+!Current active rmf state: 
+!    NSR not ready since Standby is not Present
+!
+!Active node reload "User initiated graceful reload"
+!
+!Image: Label : 25.2.1.24I
+!Image: Node 0/RP0/CPU0 [RP]
+!Image:   Boot Partition: xr_lv6
+!Image:   Active Packages: 1
+!Image:         xrv9k-xr-25.2.1.24I version=25.2.1.24I [Boot image]
+!Image: Node 0/0/CPU0 [LC]
+!Image:   Boot Partition: xr_lcp_lv7
+!Image:   Active Packages: 1
+!Image:         xrv9k-xr-25.2.1.24I version=25.2.1.24I [Boot image]
+!
+!Flash: disk0: Directory of disk0:
+!Flash: disk0: -rw-------. 1                    .bash_history
+!Flash: disk0: drwx------. 3  4096 Mar 17  2025 .config
+!Flash: disk0: drwx------. 2  4096 Aug 14  2024 SPAN
+!Flash: disk0: drwx---r-x. 2  4096 Aug 14  2024 clihistory
+!Flash: disk0: lrwxrwxrwx. 1    12 Aug 14  2024 config -> /misc/config
+!Flash: disk0: drwxr-xr-x. 2  4096 Aug 14  2024 core
+!Flash: disk0: drwxr-xr-x. 2  4096 Aug 14  2024 crypto
+!Flash: disk0: -rw-rw-rw-. 1   360 Jun 27 07:11 cvac.log
+!Flash: disk0: -rw-r--r--. 1   852 Jun 27 07:09 envoke_log
+!Flash: disk0: drwx------. 2 16384 Aug 14  2024 lost+found
+!Flash: disk0: drwxr-xr-x. 3  4096 Aug 14  2024 pam
+!Flash: disk0: -rw-r--r--. 1 44368 Jun 27 07:09 pnet_cfg.log
+!Flash: disk0: drwxr-xr-x. 2  4096 Jun 27 05:59 shutdown
+!Flash: disk0: -rw-r--r--. 1     0 Jun 27 07:09 status_file
+!Flash: disk0: drwxr-xr-x. 2  4096 Mar 17  2025 vmm-hb-debug
+!Flash: disk0: drwxr-xr-x. 9  4096 Jun 27 07:11 ztp
+!Flash: disk0: 1 GB total (92% free)
+!
+!Flash: harddisk: Directory of harddisk:
+!Flash: harddisk: -rw-r--r--. 1     589824 Aug 14  2024 .csbsc
+!Flash: harddisk: -rw-r--r--. 1 1933479936 Apr  2  2025 8000-golden-x86_64-25.2.1.27I-PROD_BUILD_25_2_1_27I_SIT_IMAGE.iso
+!Flash: harddisk: -rw-r--r--. 1       8429 Sep 26 05:12 SvRR-Metro-1.cfg-26-Sep-2025
+!Flash: harddisk: -rw-r--r--. 1       8089 Mar 16  2025 SvRR-Metro-1_runnconfg.txt
+!Flash: harddisk: drwxr-xr-x. 5                         cisco_support
+!Flash: harddisk: drwxr-xr-x. 2       4096 Mar 21  2025 coredumps
+!Flash: harddisk: drwxr-xr-x. 2       4096 Aug 14  2024 dumper
+!Flash: harddisk: drwx------. 4       4096 Jun 27 07:11 ima
+!Flash: harddisk: drwxr-xr-x. 2       4096 Aug 14  2024 ipodwdm_log
+!Flash: harddisk: drwx------. 2       4096 Aug 14  2024 lost+found
+!Flash: harddisk: drwxr-xr-x. 3       4096 Aug 14  2024 mirror
+!Flash: harddisk: -rw-r--r--. 1   10492849 Oct  3 05:53 nvgen_bkup.log
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep 18 21:10 nvgen_traces
+!Flash: harddisk: drwxr-xr-x. 2       4096 Aug 14  2024 nvram
+!Flash: harddisk: drwxr-xr-x. 3       4096 Aug 14  2024 pam
+!Flash: harddisk: -rw-r--r--. 1         16 Oct  3 05:16 platinfo.data
+!Flash: harddisk: drw-rw-r--. 2       4096 Mar 17  2025 rdsfs_log
+!Flash: harddisk: drwxr-xr-x. 2       4096 Aug 14  2024 showtech
+!Flash: harddisk: drwxr-xr-x. 3       4096 Jun 27 06:01 shutdown
+!Flash: harddisk: drwxr-xr-x. 2       4096 Aug 14  2024 tftpboot
+!Flash: harddisk: drwxr-xr-x. 6       4096 Aug 14  2024 xr
+!Flash: harddisk: -rw-r--r--. 1 1734504448 Mar 16  2025 xrv9k-fullk9-x-25.2.1.24I.iso
+!Flash: harddisk: drwxr-xr-x. 3       4096 Aug 14  2024 ztp
+!Flash: harddisk: 6 GB total (44% free)
+!
+!0/0/0-Virtual-IDPROM - N/A
+! Info:
+!    PID                      : PORT-1G-NIC
+!    Version Identifier       : N/A
+!    UDI Description          : N/A
+!    CLEI Code                : N/A
+!    ECI Number               : 0
+!    Top Assy. Part Number    : N/A
+!    Top Assy. Revision       : N/A
+!    PCB Serial Number        : N/A
+!    PCA Number               : N/A
+!0/0/1-Virtual-IDPROM - N/A
+! Info:
+!    PID                      : PORT-1G-NIC
+!    Version Identifier       : N/A
+!    UDI Description          : N/A
+!    CLEI Code                : N/A
+!    ECI Number               : 0
+!    Top Assy. Part Number    : N/A
+!    Top Assy. Revision       : N/A
+!    PCB Serial Number        : N/A
+!    PCA Number               : N/A
+!0/0/2-Virtual-IDPROM - N/A
+! Info:
+!    PID                      : PORT-1G-NIC
+!    Version Identifier       : N/A
+!    UDI Description          : N/A
+!    CLEI Code                : N/A
+!    ECI Number               : 0
+!    Top Assy. Part Number    : N/A
+!    Top Assy. Revision       : N/A
+!    PCB Serial Number        : N/A
+!    PCA Number               : N/A
+!0/0/3-Virtual-IDPROM - N/A
+! Info:
+!    PID                      : PORT-1G-NIC
+!    Version Identifier       : N/A
+!    UDI Description          : N/A
+!    CLEI Code                : N/A
+!    ECI Number               : 0
+!    Top Assy. Part Number    : N/A
+!    Top Assy. Revision       : N/A
+!    PCB Serial Number        : N/A
+!    PCA Number               : N/A
+!0/0/4-Virtual-IDPROM - N/A
+! Info:
+!    PID                      : PORT-1G-NIC
+!    Version Identifier       : N/A
+!    UDI Description          : N/A
+!    CLEI Code                : N/A
+!    ECI Number               : 0
+!    Top Assy. Part Number    : N/A
+!    Top Assy. Revision       : N/A
+!    PCB Serial Number        : N/A
+!    PCA Number               : N/A
+!0/0-Virtual-IDPROM - Cisco IOS-XRv 9000 Centralized Line Card
+! Info:
+!    PID                      : R-IOSXRV9000-LC-C
+!    Version Identifier       : V01
+!    UDI Description          : Cisco IOS-XRv 9000 Centralized Line Card
+!    CLEI Code                : N/A
+!    ECI Number               : 0
+!    Top Assy. Part Number    : N/A
+!    Top Assy. Revision       : N/A
+!    PCB Serial Number        : 62BE9F3D471
+!    PCA Number               : N/A
+!0/RP0-Virtual-IDPROM - Cisco IOS-XRv 9000 Centralized Route Processor
+! Info:
+!    PID                      : R-IOSXRV9000-RP-C
+!    Version Identifier       : V01
+!    UDI Description          : Cisco IOS-XRv 9000 Centralized Route Processor
+!    CLEI Code                : N/A
+!    ECI Number               : 0
+!    Top Assy. Part Number    : N/A
+!    Top Assy. Revision       : N/A
+!    PCB Serial Number        : F45386B40C3
+!    PCA Number               : N/A
+!Rack 0-Virtual-IDPROM - Cisco IOS-XRv 9000 Centralized Virtual Router
+! Info:
+!    PID                      : R-IOSXRV9000-CC
+!    Version Identifier       : V01
+!    UDI Description          : Cisco IOS-XRv 9000 Centralized Virtual Router
+!    CLEI Code                : N/A
+!    ECI Number               : 0
+!    Top Assy. Part Number    : N/A
+!    Top Assy. Revision       : N/A
+!    PCB Serial Number        : D594F55525B
+!    PCA Number               : N/A
+!
+!NAME: "Rack 0-Line Card Slot 0", DESCR: "Cisco IOS-XRv 9000 Line Card Slot"
+!NAME: "0/0",                   DESCR: "Cisco IOS-XRv 9000 Centralized Line Card"
+!PID: R-IOSXRV9000-LC-C
+!VID: V01
+!SN: 62BE9F3D471
+!NAME: "0/0-Virtual-Motherboard", DESCR: "Cisco IOS-XRv 9000 Virtual LC Motherboard"
+!NAME: "0/0-Ether Port container 0", DESCR: "Port Container for port0"
+!NAME: "0/0/0",                 DESCR: "N/A"
+!PID: PORT-1G-NIC
+!NAME: "0/0/0-Virtual-Board",   DESCR: "Cisco IOS-XRv 9000 Virtual 1G Module"
+!NAME: "0/0/0-Virtual-IDPROM",  DESCR: "N/A"
+!PID: PORT-1G-NIC
+!NAME: "0/0/0-GigabitEthernet0/0/0/0", DESCR: "Ethernet Port One Gig"
+!NAME: "0/0/0-SFP Socket",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/0-Ether Port container 1", DESCR: "Port Container for port1"
+!NAME: "0/0/1",                 DESCR: "N/A"
+!PID: PORT-1G-NIC
+!NAME: "0/0/1-Virtual-Board",   DESCR: "Cisco IOS-XRv 9000 Virtual 1G Module"
+!NAME: "0/0/1-Virtual-IDPROM",  DESCR: "N/A"
+!PID: PORT-1G-NIC
+!NAME: "0/0/1-GigabitEthernet0/0/0/1", DESCR: "Ethernet Port One Gig"
+!NAME: "0/0/1-SFP Socket",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/0-Ether Port container 2", DESCR: "Port Container for port2"
+!NAME: "0/0/2",                 DESCR: "N/A"
+!PID: PORT-1G-NIC
+!NAME: "0/0/2-Virtual-Board",   DESCR: "Cisco IOS-XRv 9000 Virtual 1G Module"
+!NAME: "0/0/2-Virtual-IDPROM",  DESCR: "N/A"
+!PID: PORT-1G-NIC
+!NAME: "0/0/2-GigabitEthernet0/0/0/2", DESCR: "Ethernet Port One Gig"
+!NAME: "0/0/2-SFP Socket",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/0-Ether Port container 3", DESCR: "Port Container for port3"
+!NAME: "0/0/3",                 DESCR: "N/A"
+!PID: PORT-1G-NIC
+!NAME: "0/0/3-Virtual-Board",   DESCR: "Cisco IOS-XRv 9000 Virtual 1G Module"
+!NAME: "0/0/3-Virtual-IDPROM",  DESCR: "N/A"
+!PID: PORT-1G-NIC
+!NAME: "0/0/3-GigabitEthernet0/0/0/3", DESCR: "Ethernet Port One Gig"
+!NAME: "0/0/3-SFP Socket",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/0-Ether Port container 4", DESCR: "Port Container for port4"
+!NAME: "0/0/4",                 DESCR: "N/A"
+!PID: PORT-1G-NIC
+!NAME: "0/0/4-Virtual-Board",   DESCR: "Cisco IOS-XRv 9000 Virtual 1G Module"
+!NAME: "0/0/4-Virtual-IDPROM",  DESCR: "N/A"
+!PID: PORT-1G-NIC
+!NAME: "0/0/4-GigabitEthernet0/0/0/4", DESCR: "Ethernet Port One Gig"
+!NAME: "0/0/4-SFP Socket",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/0-Ether Port container 5", DESCR: "Port Container for port5"
+!NAME: "0/0-Ether Port container 6", DESCR: "Port Container for port6"
+!NAME: "0/0-Ether Port container 7", DESCR: "Port Container for port7"
+!NAME: "0/0-Ether Port container 8", DESCR: "Port Container for port8"
+!NAME: "0/0-Ether Port container 9", DESCR: "Port Container for port9"
+!NAME: "0/0-Ether Port container 10", DESCR: "Port Container for port10"
+!NAME: "0/0-Ether Port container 11", DESCR: "Port Container for port11"
+!NAME: "0/0-Ether Port container 12", DESCR: "Port Container for port12"
+!NAME: "0/0-Ether Port container 13", DESCR: "Port Container for port13"
+!NAME: "0/0-Ether Port container 14", DESCR: "Port Container for port14"
+!NAME: "0/0-Ether Port container 15", DESCR: "Port Container for port15"
+!NAME: "0/0-Ether Port container 16", DESCR: "Port Container for port16"
+!NAME: "0/0-Ether Port container 17", DESCR: "Port Container for port17"
+!NAME: "0/0-Ether Port container 18", DESCR: "Port Container for port18"
+!NAME: "0/0-Ether Port container 19", DESCR: "Port Container for port19"
+!NAME: "0/0-Ether Port container 20", DESCR: "Port Container for port20"
+!NAME: "0/0-Ether Port container 21", DESCR: "Port Container for port21"
+!NAME: "0/0-Ether Port container 22", DESCR: "Port Container for port22"
+!NAME: "0/0-Ether Port container 23", DESCR: "Port Container for port23"
+!NAME: "0/0-Ether Port container 24", DESCR: "Port Container for port24"
+!NAME: "0/0-Ether Port container 25", DESCR: "Port Container for port25"
+!NAME: "0/0-Ether Port container 26", DESCR: "Port Container for port26"
+!NAME: "0/0-Ether Port container 27", DESCR: "Port Container for port27"
+!NAME: "0/0-Ether Port container 28", DESCR: "Port Container for port28"
+!NAME: "0/0-Ether Port container 29", DESCR: "Port Container for port29"
+!NAME: "0/0-Ether Port container 30", DESCR: "Port Container for port30"
+!NAME: "0/0-Ether Port container 31", DESCR: "Port Container for port31"
+!NAME: "0/0-Ether Port container 32", DESCR: "Port Container for port32"
+!NAME: "0/0-Ether Port container 33", DESCR: "Port Container for port33"
+!NAME: "0/0-Ether Port container 34", DESCR: "Port Container for port34"
+!NAME: "0/0-Ether Port container 35", DESCR: "Port Container for port35"
+!NAME: "0/0-Ether Port container 36", DESCR: "Port Container for port36"
+!NAME: "0/0-Ether Port container 37", DESCR: "Port Container for port37"
+!NAME: "0/0-Ether Port container 38", DESCR: "Port Container for port38"
+!NAME: "0/0-Ether Port container 39", DESCR: "Port Container for port39"
+!NAME: "0/0-Ether Port container 40", DESCR: "Port Container for port40"
+!NAME: "0/0-Ether Port container 41", DESCR: "Port Container for port41"
+!NAME: "0/0-Ether Port container 42", DESCR: "Port Container for port42"
+!NAME: "0/0-Ether Port container 43", DESCR: "Port Container for port43"
+!NAME: "0/0-Ether Port container 44", DESCR: "Port Container for port44"
+!NAME: "0/0-Ether Port container 45", DESCR: "Port Container for port45"
+!NAME: "0/0-Ether Port container 46", DESCR: "Port Container for port46"
+!NAME: "0/0-Ether Port container 47", DESCR: "Port Container for port47"
+!NAME: "0/0-Ether Port container 48", DESCR: "Port Container for port48"
+!NAME: "0/0-Ether Port container 49", DESCR: "Port Container for port49"
+!NAME: "0/0-Ether Port container 50", DESCR: "Port Container for port50"
+!NAME: "0/0-Ether Port container 51", DESCR: "Port Container for port51"
+!NAME: "0/0-Ether Port container 52", DESCR: "Port Container for port52"
+!NAME: "0/0-Ether Port container 53", DESCR: "Port Container for port53"
+!NAME: "0/0-Ether Port container 54", DESCR: "Port Container for port54"
+!NAME: "0/0-Ether Port container 55", DESCR: "Port Container for port55"
+!NAME: "0/0-Ether Port container 56", DESCR: "Port Container for port56"
+!NAME: "0/0-Ether Port container 57", DESCR: "Port Container for port57"
+!NAME: "0/0-Ether Port container 58", DESCR: "Port Container for port58"
+!NAME: "0/0-Ether Port container 59", DESCR: "Port Container for port59"
+!NAME: "0/0-Ether Port container 60", DESCR: "Port Container for port60"
+!NAME: "0/0-Ether Port container 61", DESCR: "Port Container for port61"
+!NAME: "0/0-Ether Port container 62", DESCR: "Port Container for port62"
+!NAME: "0/0-Ether Port container 63", DESCR: "Port Container for port63"
+!NAME: "0/0-Ether Port container 64", DESCR: "Port Container for port64"
+!NAME: "0/0-Ether Port container 65", DESCR: "Port Container for port65"
+!NAME: "0/0-Ether Port container 66", DESCR: "Port Container for port66"
+!NAME: "0/0-Ether Port container 67", DESCR: "Port Container for port67"
+!NAME: "0/0-Ether Port container 68", DESCR: "Port Container for port68"
+!NAME: "0/0-Ether Port container 69", DESCR: "Port Container for port69"
+!NAME: "0/0-Ether Port container 70", DESCR: "Port Container for port70"
+!NAME: "0/0-Ether Port container 71", DESCR: "Port Container for port71"
+!NAME: "0/0-Ether Port container 72", DESCR: "Port Container for port72"
+!NAME: "0/0-Ether Port container 73", DESCR: "Port Container for port73"
+!NAME: "0/0-Ether Port container 74", DESCR: "Port Container for port74"
+!NAME: "0/0-Ether Port container 75", DESCR: "Port Container for port75"
+!NAME: "0/0-Ether Port container 76", DESCR: "Port Container for port76"
+!NAME: "0/0-Ether Port container 77", DESCR: "Port Container for port77"
+!NAME: "0/0-Ether Port container 78", DESCR: "Port Container for port78"
+!NAME: "0/0-Ether Port container 79", DESCR: "Port Container for port79"
+!NAME: "0/0-Ether Port container 80", DESCR: "Port Container for port80"
+!NAME: "0/0-Ether Port container 81", DESCR: "Port Container for port81"
+!NAME: "0/0-Ether Port container 82", DESCR: "Port Container for port82"
+!NAME: "0/0-Ether Port container 83", DESCR: "Port Container for port83"
+!NAME: "0/0-Ether Port container 84", DESCR: "Port Container for port84"
+!NAME: "0/0-Ether Port container 85", DESCR: "Port Container for port85"
+!NAME: "0/0-Ether Port container 86", DESCR: "Port Container for port86"
+!NAME: "0/0-Ether Port container 87", DESCR: "Port Container for port87"
+!NAME: "0/0-Ether Port container 88", DESCR: "Port Container for port88"
+!NAME: "0/0-Ether Port container 89", DESCR: "Port Container for port89"
+!NAME: "0/0-Ether Port container 90", DESCR: "Port Container for port90"
+!NAME: "0/0-Ether Port container 91", DESCR: "Port Container for port91"
+!NAME: "0/0-Ether Port container 92", DESCR: "Port Container for port92"
+!NAME: "0/0-Ether Port container 93", DESCR: "Port Container for port93"
+!NAME: "0/0-Ether Port container 94", DESCR: "Port Container for port94"
+!NAME: "0/0-Ether Port container 95", DESCR: "Port Container for port95"
+!NAME: "0/0-Ether Port container 96", DESCR: "Port Container for port96"
+!NAME: "0/0-Ether Port container 97", DESCR: "Port Container for port97"
+!NAME: "0/0-Ether Port container 98", DESCR: "Port Container for port98"
+!NAME: "0/0-Ether Port container 99", DESCR: "Port Container for port99"
+!NAME: "0/0-Ether Port container 100", DESCR: "Port Container for port100"
+!NAME: "0/0-Ether Port container 101", DESCR: "Port Container for port101"
+!NAME: "0/0-Ether Port container 102", DESCR: "Port Container for port102"
+!NAME: "0/0-Ether Port container 103", DESCR: "Port Container for port103"
+!NAME: "0/0-Ether Port container 104", DESCR: "Port Container for port104"
+!NAME: "0/0-Ether Port container 105", DESCR: "Port Container for port105"
+!NAME: "0/0-Ether Port container 106", DESCR: "Port Container for port106"
+!NAME: "0/0-Ether Port container 107", DESCR: "Port Container for port107"
+!NAME: "0/0-Ether Port container 108", DESCR: "Port Container for port108"
+!NAME: "0/0-Ether Port container 109", DESCR: "Port Container for port109"
+!NAME: "0/0-Ether Port container 110", DESCR: "Port Container for port110"
+!NAME: "0/0-Ether Port container 111", DESCR: "Port Container for port111"
+!NAME: "0/0-Ether Port container 112", DESCR: "Port Container for port112"
+!NAME: "0/0-Ether Port container 113", DESCR: "Port Container for port113"
+!NAME: "0/0-Ether Port container 114", DESCR: "Port Container for port114"
+!NAME: "0/0-Ether Port container 115", DESCR: "Port Container for port115"
+!NAME: "0/0-Ether Port container 116", DESCR: "Port Container for port116"
+!NAME: "0/0-Ether Port container 117", DESCR: "Port Container for port117"
+!NAME: "0/0-Ether Port container 118", DESCR: "Port Container for port118"
+!NAME: "0/0-Ether Port container 119", DESCR: "Port Container for port119"
+!NAME: "0/0-Ether Port container 120", DESCR: "Port Container for port120"
+!NAME: "0/0-Ether Port container 121", DESCR: "Port Container for port121"
+!NAME: "0/0-Ether Port container 122", DESCR: "Port Container for port122"
+!NAME: "0/0-Ether Port container 123", DESCR: "Port Container for port123"
+!NAME: "0/0-Ether Port container 124", DESCR: "Port Container for port124"
+!NAME: "0/0-Ether Port container 125", DESCR: "Port Container for port125"
+!NAME: "0/0-Ether Port container 126", DESCR: "Port Container for port126"
+!NAME: "0/0-Ether Port container 127", DESCR: "Port Container for port127"
+!NAME: "0/0-Ether Port container 128", DESCR: "Port Container for port128"
+!NAME: "0/0-Ether Port container 129", DESCR: "Port Container for port129"
+!NAME: "0/0-Ether Port container 130", DESCR: "Port Container for port130"
+!NAME: "0/0-Ether Port container 131", DESCR: "Port Container for port131"
+!NAME: "0/0-Ether Port container 132", DESCR: "Port Container for port132"
+!NAME: "0/0-Ether Port container 133", DESCR: "Port Container for port133"
+!NAME: "0/0-Ether Port container 134", DESCR: "Port Container for port134"
+!NAME: "0/0-Ether Port container 135", DESCR: "Port Container for port135"
+!NAME: "0/0-Ether Port container 136", DESCR: "Port Container for port136"
+!NAME: "0/0-Ether Port container 137", DESCR: "Port Container for port137"
+!NAME: "0/0-Ether Port container 138", DESCR: "Port Container for port138"
+!NAME: "0/0-Ether Port container 139", DESCR: "Port Container for port139"
+!NAME: "0/0-Ether Port container 140", DESCR: "Port Container for port140"
+!NAME: "0/0-Ether Port container 141", DESCR: "Port Container for port141"
+!NAME: "0/0-Ether Port container 142", DESCR: "Port Container for port142"
+!NAME: "0/0-Ether Port container 143", DESCR: "Port Container for port143"
+!NAME: "0/0-Ether Port container 144", DESCR: "Port Container for port144"
+!NAME: "0/0-Ether Port container 145", DESCR: "Port Container for port145"
+!NAME: "0/0-Ether Port container 146", DESCR: "Port Container for port146"
+!NAME: "0/0-Ether Port container 147", DESCR: "Port Container for port147"
+!NAME: "0/0-Ether Port container 148", DESCR: "Port Container for port148"
+!NAME: "0/0-Ether Port container 149", DESCR: "Port Container for port149"
+!NAME: "0/0-Ether Port container 150", DESCR: "Port Container for port150"
+!NAME: "0/0-Ether Port container 151", DESCR: "Port Container for port151"
+!NAME: "0/0-Ether Port container 152", DESCR: "Port Container for port152"
+!NAME: "0/0-Ether Port container 153", DESCR: "Port Container for port153"
+!NAME: "0/0-Ether Port container 154", DESCR: "Port Container for port154"
+!NAME: "0/0-Ether Port container 155", DESCR: "Port Container for port155"
+!NAME: "0/0-Ether Port container 156", DESCR: "Port Container for port156"
+!NAME: "0/0-Ether Port container 157", DESCR: "Port Container for port157"
+!NAME: "0/0-Ether Port container 158", DESCR: "Port Container for port158"
+!NAME: "0/0-Ether Port container 159", DESCR: "Port Container for port159"
+!NAME: "0/0-Ether Port container 160", DESCR: "Port Container for port160"
+!NAME: "0/0-Ether Port container 161", DESCR: "Port Container for port161"
+!NAME: "0/0-Ether Port container 162", DESCR: "Port Container for port162"
+!NAME: "0/0-Ether Port container 163", DESCR: "Port Container for port163"
+!NAME: "0/0-Ether Port container 164", DESCR: "Port Container for port164"
+!NAME: "0/0-Ether Port container 165", DESCR: "Port Container for port165"
+!NAME: "0/0-Ether Port container 166", DESCR: "Port Container for port166"
+!NAME: "0/0-Ether Port container 167", DESCR: "Port Container for port167"
+!NAME: "0/0-Ether Port container 168", DESCR: "Port Container for port168"
+!NAME: "0/0-Ether Port container 169", DESCR: "Port Container for port169"
+!NAME: "0/0-Ether Port container 170", DESCR: "Port Container for port170"
+!NAME: "0/0-Ether Port container 171", DESCR: "Port Container for port171"
+!NAME: "0/0-Ether Port container 172", DESCR: "Port Container for port172"
+!NAME: "0/0-Ether Port container 173", DESCR: "Port Container for port173"
+!NAME: "0/0-Ether Port container 174", DESCR: "Port Container for port174"
+!NAME: "0/0-Ether Port container 175", DESCR: "Port Container for port175"
+!NAME: "0/0-Ether Port container 176", DESCR: "Port Container for port176"
+!NAME: "0/0-Ether Port container 177", DESCR: "Port Container for port177"
+!NAME: "0/0-Ether Port container 178", DESCR: "Port Container for port178"
+!NAME: "0/0-Ether Port container 179", DESCR: "Port Container for port179"
+!NAME: "0/0-Ether Port container 180", DESCR: "Port Container for port180"
+!NAME: "0/0-Ether Port container 181", DESCR: "Port Container for port181"
+!NAME: "0/0-Ether Port container 182", DESCR: "Port Container for port182"
+!NAME: "0/0-Ether Port container 183", DESCR: "Port Container for port183"
+!NAME: "0/0-Ether Port container 184", DESCR: "Port Container for port184"
+!NAME: "0/0-Ether Port container 185", DESCR: "Port Container for port185"
+!NAME: "0/0-Ether Port container 186", DESCR: "Port Container for port186"
+!NAME: "0/0-Ether Port container 187", DESCR: "Port Container for port187"
+!NAME: "0/0-Ether Port container 188", DESCR: "Port Container for port188"
+!NAME: "0/0-Ether Port container 189", DESCR: "Port Container for port189"
+!NAME: "0/0-Ether Port container 190", DESCR: "Port Container for port190"
+!NAME: "0/0-Ether Port container 191", DESCR: "Port Container for port191"
+!NAME: "0/0-Ether Port container 192", DESCR: "Port Container for port192"
+!NAME: "0/0-Ether Port container 193", DESCR: "Port Container for port193"
+!NAME: "0/0-Ether Port container 194", DESCR: "Port Container for port194"
+!NAME: "0/0-Ether Port container 195", DESCR: "Port Container for port195"
+!NAME: "0/0-Ether Port container 196", DESCR: "Port Container for port196"
+!NAME: "0/0-Ether Port container 197", DESCR: "Port Container for port197"
+!NAME: "0/0-Ether Port container 198", DESCR: "Port Container for port198"
+!NAME: "0/0-Ether Port container 199", DESCR: "Port Container for port199"
+!NAME: "0/0-Virtual-IDPROM",    DESCR: "Cisco IOS-XRv 9000 Centralized Line Card"
+!PID: R-IOSXRV9000-LC-C
+!VID: V01
+!SN: 62BE9F3D471
+!NAME: "Rack 0-Route Processor Slot 0", DESCR: "Cisco IOS-XRv 9000 Route Processor Slot"
+!NAME: "0/RP0",                 DESCR: "Cisco IOS-XRv 9000 Centralized Route Processor"
+!PID: R-IOSXRV9000-RP-C
+!VID: V01
+!SN: F45386B40C3
+!NAME: "0/RP0-Virtual-Motherboard", DESCR: "Cisco IOS-XRv 9000 Virtual RP Motherboard"
+!NAME: "0/RP0-Virtual-IDPROM",  DESCR: "Cisco IOS-XRv 9000 Centralized Route Processor"
+!PID: R-IOSXRV9000-RP-C
+!VID: V01
+!SN: F45386B40C3
+!NAME: "0/RP0-MgmtEth0/RP0/CPU0/0", DESCR: "Management Ethernet Port 0"
+!NAME: "0/RP0-CPU Module",      DESCR: "CPU Module"
+!NAME: "0/RP0-Intel 8 Core CPU Complex", DESCR: "Processor Module"
+!NAME: "0/RP0-Virtual processor for sysadmin", DESCR: "Virtual Processor Module for sysadmin"
+!NAME: "0/RP0-Virtual processor for RP IOS-XR", DESCR: "Virtual Processor Module for RP-IOS-XR"
+!NAME: "0/RP0-Virtual processor for LCP XR", DESCR: "Virtual Processor Module for LCP-XR VM"
+!NAME: "Rack 0-VirtualBackplane", DESCR: "Cisco IOS-XRv 9000 Centralized Virtual Backplane"
+!NAME: "Rack 0-Virtual-IDPROM", DESCR: "Cisco IOS-XRv 9000 Centralized Virtual Router"
+!PID: R-IOSXRV9000-CC
+!VID: V01
+!SN: D594F55525B
+!NAME: "Rack 0",                DESCR: "Cisco IOS-XRv 9000 Centralized Virtual Router"
+!PID: R-IOSXRV9000-CC
+!VID: V01
+!SN: D594F55525B
+!
+!                              Current    Current       Max
+!                               Total      Limit       Limit
+! ------------------------------------------------------------
+! Lines of configuration            31      65536     131072
+! Policies                           4       3500       5000
+! Compiled policies size (kB)        3
+!
+!disk_status_config minor 80
+!disk_status_config severe 90
+!disk_status_config critical 95
+!aaa admin-accounting enable false
+!aaa authentication users user admin
+! uid        9000
+! gid        100
+! password   $6$Sp72qR0VBEM1q...$nu0uBd7gXqcKLwSNfXryqrdZd4lYmjEkUP12GTVYrGWuwA8SrSf4Uj5ZdJ9QNnPtaNKvg3jNZOenH4nQn0jP/.
+! ssh_keydir /var/confd/homes/admin/.ssh
+! homedir    /var/confd/homes/admin
+!!
+!aaa authentication groups group aaa-r
+! gid   100
+! users %%__system_user__%%
+!!
+!aaa authentication groups group admin-r
+! gid   100
+! users %%__system_user__%%
+!!
+!aaa authentication groups group root-system
+! gid   100
+! users "%%__system_user__%% admin"
+!!
+!aaa authorization cmdrules cmdrule 1
+! context *
+! command *
+! group   root-system
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 2
+! context *
+! command "show running-config aaa"
+! group   aaa-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 3
+! context *
+! command "show tech-support aaa"
+! group   aaa-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 4
+! context *
+! command "show aaa"
+! group   aaa-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 5
+! context *
+! command show
+! group   admin-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 6
+! context *
+! command terminal
+! group   admin-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization datarules datarule 1
+! namespace *
+! context   *
+! keypath   *
+! group     root-system
+! ops       rwx
+! action    accept
+!!
+!aaa authorization datarules datarule 2
+! namespace *
+! context   *
+! keypath   /aaa
+! group     aaa-r
+! ops       r
+! action    accept
+!!
+!aaa authorization datarules datarule 3
+! namespace *
+! context   *
+! keypath   /aaa
+! group     admin-r
+! ops       rwx
+! action    reject
+!!
+!aaa authorization datarules datarule 4
+! namespace *
+! context   *
+! keypath   /
+! group     admin-r
+! ops       r
+! action    accept
+!!
+!confdConfig cli maxLineLength 0
+!confdConfig cli timezone local
+!confdConfig cli utcOffset 0
+!confdConfig cli idleTimeout 10m
+!confdConfig cli timestamp enabled
+!confdConfig cli timestamp clock24 true
+!confdConfig cli timestamp format "\d{l,4}\m{l,5}\D{l,3}\H{r,2,0}:\\t{r,2,0}:\s{r,2,0}.\c{l,3,0} UTC\u{l,1}\o{r,2,0}:\k{r,2,0}"
+!confdConfig cli historySave true
+!confdConfig cli allOrNothingLoad false
+!confdConfig cli enableLoadMergeLeafList false
+!SNMP-COMMUNITY-MIB snmpCommunityTable snmpCommunityEntry public
+! snmpCommunityName            public
+! snmpCommunitySecurityName    public
+! snmpCommunityContextEngineID 80:00:61:81:05:01
+! snmpCommunityContextName     ""
+! snmpCommunityTransportTag    ""
+! snmpCommunityStorageType     permanent
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v1_trap
+! snmpNotifyTag         std_v1_trap
+! snmpNotifyType        trap
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v2_inform
+! snmpNotifyTag         std_v2_inform
+! snmpNotifyType        inform
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v2_trap
+! snmpNotifyTag         std_v2_trap
+! snmpNotifyType        trap
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v3_inform
+! snmpNotifyTag         std_v3_inform
+! snmpNotifyType        inform
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v3_trap
+! snmpNotifyTag         std_v3_trap
+! snmpNotifyType        trap
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v1"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.19.136
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v1_trap std_trap std_v1_inform std_inform"
+! snmpTargetAddrParams      target_v1
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    ""
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v2"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.23.112
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v2_trap std_trap std_v2_inform std_inform"
+! snmpTargetAddrParams      target_v2
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    ""
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v3"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.27.88
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v3_trap std_trap"
+! snmpTargetAddrParams      trap_target_v3
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    ""
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v3.inform"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.27.88
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v3_inform std_inform"
+! snmpTargetAddrParams      inform_target_v3
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    80:00:1f:88:04:74:65:73:74:69:6e:67
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry inform_target_v3
+! snmpTargetParamsMPModel       3
+! snmpTargetParamsSecurityModel 3
+! snmpTargetParamsSecurityName  remote
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry target_v1
+! snmpTargetParamsMPModel       0
+! snmpTargetParamsSecurityModel 1
+! snmpTargetParamsSecurityName  public
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry target_v2
+! snmpTargetParamsMPModel       1
+! snmpTargetParamsSecurityModel 2
+! snmpTargetParamsSecurityName  public
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry trap_target_v3
+! snmpTargetParamsMPModel       3
+! snmpTargetParamsSecurityModel 3
+! snmpTargetParamsSecurityName  public
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-USER-BASED-SM-MIB usmUserTable usmUserEntry 80:00:61:81:05:01 initial
+! usmUserSecurityName initial
+! usmUserAuthProtocol 1.3.6.1.6.3.10.1.1.1
+! usmUserPrivProtocol 1.3.6.1.6.3.10.1.2.1
+! usmUserStorageType  nonVolatile
+!!
+!SNMP-USER-BASED-SM-MIB usmUserTable usmUserEntry 80:00:61:81:05:01 initial_auth
+! usmUserSecurityName initial_auth
+! usmUserAuthProtocol 1.3.6.1.6.3.10.1.1.2
+! usmUserPrivProtocol 1.3.6.1.6.3.10.1.2.1
+! usmUserStorageType  nonVolatile
+! usmUserAuthKey      10:2c:bd:65:e3:eb:e2:16:0d:63:db:23:73:f3:17:b2
+!!
+!SNMP-USER-BASED-SM-MIB usmUserTable usmUserEntry 80:00:61:81:05:01 initial_authPriv
+! usmUserSecurityName initial_authPriv
+! usmUserAuthProtocol 1.3.6.1.6.3.10.1.1.2
+! usmUserPrivProtocol 1.3.6.1.6.3.10.1.2.2
+! usmUserStorageType  nonVolatile
+! usmUserAuthKey      10:2c:bd:65:e3:eb:e2:16:0d:63:db:23:73:f3:17:b2
+! usmUserPrivKey      10:2c:bd:65:e3:eb:e2:16:0d:63:db:23:73:f3:17:b2
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 1 public
+! vacmGroupName                  all-rights
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 2 public
+! vacmGroupName                  all-rights
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 3 initial
+! vacmGroupName                  initial
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 3 initial_auth
+! vacmGroupName                  initial
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 3 initial_authPriv
+! vacmGroupName                  initial
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry initial "" 3 noAuthNoPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry initial "" 3 authNoPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry initial "" 3 authPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry all-rights "" 0 noAuthNoPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmViewTreeFamilyTable vacmViewTreeFamilyEntry internet 1.3.6.1
+! vacmViewTreeFamilyMask        ""
+! vacmViewTreeFamilyType        included
+! vacmViewTreeFamilyStorageType nonVolatile
+!!
+!SNMPv2-MIB system sysContact ""
+!SNMPv2-MIB system sysName ""
+!SNMPv2-MIB system sysLocation ""
+!SNMPv2-MIB snmp snmpEnableAuthenTraps disabled
+!fpd auto-upgrade disable
+!sdr default-sdr
+! resources card-type RP
+!  vm-memory 2
+!  vm-cpu    1
+! !
+! resources card-type LC
+!  vm-memory 1
+!  vm-cpu    1
+! !
+! location all
+! !
+!!
+!service cli interactive enabled
+!vm memory admin 8
+!vm memory rp 20
+!vm memory lc 34
+!vm cpu assign 0-1/2-3
+!memory_status_config minor 80
+!memory_status_config severe 90
+!memory_status_config critical 95
+!memory_status_config recovery_enabled false
+!
+!! Building configuration...
+!! IOS XR Configuration 25.2.1.24I
+!! Last configuration change at Thu Sep 18 20:42:43 2025 by admin
+!
+hostname SvRR-Metro-1
+logging console debugging
+logging 172.27.227.247 vrf default port 9514
+logging suppress duplicates
+service timestamps log datetime msec show-timezone year
+username admin
+ group root-lr
+ group cisco-support
+ secret 10 $6$NWwCh/6jHPvo4h/.$GhPD6u6CiPr2fx4bQv.w8p0ltbqIKjQ9H7Jl/yOt7w3LGkVn1gGzDhkYExKUnaQLyjR.XlOqquvRUCEG6ESLy1
+!
+username root
+ group root-lr
+ group cisco-support
+ secret 10 $6$GHwdv02Tuibi9v0.$D9U6ZwwCB99.i6sWfPFJZJY5pwUwEsxjbvhgZrq0pq/xWsROmS/X1rstrTbUK.zx5C2AJP5GwvtiJt67T/1NR/
+!
+username lab
+ group root-lr
+ group cisco-support
+ secret 10 $6$k1zL70kzJWTZ670.$ObzaypzN43Nymska4.XBpw7guM2.f7QvbkaBZaeEsN1KL0XjpC3rgDmem/IdCquq1.d3B/NypxPuYyp55FmbC.
+!
+cdp
+grpc
+ no-tls
+ address-family ipv4
+!
+line console
+ exec-timeout 0 0
+!
+line default
+ exec-timeout 0 0
+!
+snmp-server host 172.27.227.247 traps version 2c cisco udp-port 1062
+snmp-server community cisco RW
+snmp-server packetsize 4096
+snmp-server trap-source MgmtEth0/RP0/CPU0/0
+bfd
+ multipath include location 0/0/CPU0
+!
+key chain ISIS-KEY
+! key  <removed> 
+  accept-lifetime 00:00:00 january 01 2018 infinite
+!  key-string  <removed>
+  send-lifetime 00:00:00 january 01 2018 infinite
+  cryptographic-algorithm HMAC-MD5
+ !
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+interface Loopback0
+ ipv4 address 101.0.1.201 255.255.255.255
+ ipv6 address fccc:0:10a::1/128
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 172.27.227.204 255.255.255.0
+!
+interface GigabitEthernet0/0/0/0
+ description "Connected to PA1 Gi0/0/0/12 VLAN 200"
+ cdp
+ ipv4 address 10.11.201.0 255.255.255.254
+ ipv6 address 2001:101:816::2/126
+ ipv6 address 2405:11:201::/127
+!
+interface GigabitEthernet0/0/0/1
+ ipv4 address 10.10.210.1 255.255.255.254
+ shutdown
+!
+interface GigabitEthernet0/0/0/2
+ shutdown
+!
+interface GigabitEthernet0/0/0/3
+ shutdown
+!
+interface GigabitEthernet0/0/0/4
+ shutdown
+!
+interface preconfigure GigabitEthernet0/0/0/5
+ shutdown
+!
+interface preconfigure GigabitEthernet0/0/0/6
+ shutdown
+!
+prefix-set deny-cnbng-bgp-prefix-inipv6
+  72.72.100.1/32,
+  73.73.100.1/32
+end-set
+!
+route-policy DENY_SRV6_RD
+  if rd in (100:6000) then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy deny-sr-mpls
+  if rd in (100:100) then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy DENY_SRv6_ROUTES
+  if rd in (100:6000, 100:6001, 100:6010, 100:6011, 100:14551) then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+route-policy deny-cnbng-bgp-prefix-inipv6
+  if destination in deny-cnbng-bgp-prefix-inipv6 then
+    drop
+  else
+    pass
+  endif
+end-policy
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 172.27.227.5
+  100.0.0.200/32 10.10.210.0
+ !
+ address-family ipv6 unicast
+  ::/1 Null0
+ !
+!
+router isis ACCESS
+ set-overload-bit on-startup 360
+ is-type level-2-only
+ net 49.0001.0101.0201.0201.00
+ lsp-password keychain ISIS-KEY
+ lsp-password keychain ISIS-KEY level 2
+ address-family ipv4 unicast
+  metric-style wide
+  mpls traffic-eng level-2-only
+ !
+ address-family ipv6 unicast
+ !
+ interface Loopback0
+  passive
+  address-family ipv4 unicast
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface GigabitEthernet0/0/0/0
+  circuit-type level-2-only
+  point-to-point
+  address-family ipv4 unicast
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface GigabitEthernet0/0/0/1
+  circuit-type level-2-only
+  bfd minimum-interval 15
+  bfd multiplier 3
+  point-to-point
+  address-family ipv4 unicast
+  !
+ !
+!
+router bgp 100
+ nsr
+ bgp router-id 101.0.1.201
+ bgp graceful-restart
+ ibgp policy out enforce-modifications
+ address-family ipv4 unicast
+ !
+ address-family vpnv4 unicast
+  additional-paths receive
+  additional-paths send
+ !
+ address-family ipv6 unicast
+ !
+ address-family vpnv6 unicast
+  additional-paths receive
+  additional-paths send
+  retain route-target all
+ !
+ address-family ipv4 rt-filter
+ !
+ address-family ipv4 mvpn
+ !
+ address-family ipv6 mvpn
+ !
+ address-family l2vpn evpn
+ !
+ neighbor-group SvRR-Core
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 unicast
+  !
+  address-family vpnv4 unicast
+  !
+  address-family vpnv6 unicast
+  !
+  address-family ipv4 mvpn
+  !
+  address-family ipv6 mvpn
+  !
+  address-family l2vpn evpn
+  !
+ !
+ neighbor-group SvRR-Client
+  remote-as 100
+  update-source Loopback0
+  address-family vpnv4 unicast
+   route-reflector-client
+   soft-reconfiguration inbound always
+  !
+  address-family vpnv6 unicast
+   route-reflector-client
+   soft-reconfiguration inbound always
+  !
+  address-family ipv4 mvpn
+   route-reflector-client
+   soft-reconfiguration inbound always
+  !
+  address-family ipv6 mvpn
+   route-reflector-client
+   soft-reconfiguration inbound always
+  !
+  address-family l2vpn evpn
+   route-reflector-client
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor-group SvRR-Core-v6
+  remote-as 100
+  update-source Loopback0
+  address-family vpnv4 unicast
+  !
+  address-family ipv6 unicast
+  !
+  address-family vpnv6 unicast
+  !
+ !
+ neighbor-group SvRR-Client-XE
+  remote-as 100
+  update-source Loopback0
+  address-family vpnv4 unicast
+   route-reflector-client
+  !
+  address-family l2vpn evpn
+   route-reflector-client
+  !
+ !
+ neighbor-group SvRR-Client-srv6
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 unicast
+   route-reflector-client
+  !
+  address-family vpnv4 unicast
+   route-reflector-client
+   soft-reconfiguration inbound always
+  !
+  address-family ipv6 unicast
+   route-policy deny-cnbng-bgp-prefix-inipv6 in
+   route-reflector-client
+   route-policy deny-cnbng-bgp-prefix-inipv6 out
+  !
+  address-family vpnv6 unicast
+   route-reflector-client
+   route-policy deny-sr-mpls out
+   soft-reconfiguration inbound always
+  !
+  address-family l2vpn evpn
+   route-reflector-client
+  !
+ !
+ neighbor 100.0.1.3
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 unicast
+   route-reflector-client
+  !
+ !
+ neighbor 101.0.0.1
+  use neighbor-group SvRR-Client
+  bfd fast-detect
+  bfd multiplier 3
+  bfd minimum-interval 300
+  description CST-PE1
+ !
+ neighbor 101.0.0.2
+  use neighbor-group SvRR-Client
+  bfd fast-detect
+  bfd multiplier 3
+  bfd minimum-interval 300
+  description CST-PE2
+ !
+ neighbor 101.0.1.1
+  use neighbor-group SvRR-Client
+  description CST-PA1
+ !
+ neighbor 101.0.1.2
+  use neighbor-group SvRR-Client
+  description CST-PA2
+ !
+ neighbor 101.0.1.3
+  remote-as 100
+  use neighbor-group SvRR-Client
+  description CST-AG1
+  update-source Loopback0
+  address-family ipv4 unicast
+   route-reflector-client
+  !
+ !
+ neighbor 101.0.1.4
+  remote-as 100
+  use neighbor-group SvRR-Client
+  description CST-AG2
+  update-source Loopback0
+  address-family ipv4 unicast
+   route-reflector-client
+  !
+ !
+ neighbor 101.0.1.5
+  use neighbor-group SvRR-Client
+  description CST-A-PE1
+ !
+ neighbor 101.0.1.6
+  use neighbor-group SvRR-Client
+  description CST-A-PE2
+ !
+ neighbor 100.2.0.11
+  use neighbor-group SvRR-Client
+  description Ixia-PA1
+ !
+ neighbor 100.2.0.12
+  use neighbor-group SvRR-Client
+  description Ixia-PA2
+ !
+ neighbor 101.0.1.50
+  use neighbor-group SvRR-Client
+  description CST-A-PE3
+ !
+ neighbor 101.0.1.54
+  use neighbor-group SvRR-Client
+  description cst-8011-4g-1
+ !
+ neighbor 101.2.0.11
+  use neighbor-group SvRR-Client
+  description Ixia-PA1
+ !
+ neighbor 101.2.0.12
+  use neighbor-group SvRR-Client
+  description Ixia-PA2
+ !
+ neighbor 101.0.0.200
+  use neighbor-group SvRR-Core
+ !
+ neighbor fccc:0:10::1
+  use neighbor-group SvRR-Client-srv6
+ !
+ neighbor fccc:0:102::1
+  use neighbor-group SvRR-Client-srv6
+ !
+ neighbor fccc:0:103::1
+  use neighbor-group SvRR-Client-srv6
+ !
+ neighbor fccc:0:104::1
+  remote-as 100
+  update-source Loopback0
+  address-family ipv6 unicast
+   route-reflector-client
+  !
+ !
+ neighbor fccc:0:105::1
+  remote-as 100
+  update-source Loopback0
+  address-family ipv6 unicast
+   route-reflector-client
+  !
+ !
+ neighbor fccc:0:109::1
+  use neighbor-group SvRR-Client-srv6
+ !
+ neighbor fccc:0:154::1
+  use neighbor-group SvRR-Client-srv6
+  description cst-8011-4g-1
+ !
+!
+mpls oam
+!
+lldp
+!
+ssh client source-interface MgmtEth0/RP0/CPU0/0
+ssh server logging
+ssh timeout 120
+ssh server rate-limit 600
+ssh server session-limit 100
+ssh server v2
+ssh server vrf default
+ssh server netconf vrf default
+telnet vrf default ipv4 server max-servers 10
+end

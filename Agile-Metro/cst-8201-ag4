@@ -1,0 +1,2544 @@
+!RANCID-CONTENT-TYPE: ios-exr
+!
+!
+!Memory: main 31515M
+!
+!Image: XR Software Hash: f4336a01896ef926f4a4a31e0394d25671c1b95be373b4aad61bded8e2a062ea
+!Image: XR Package                                                               Version
+!Image: ---------------------------------------------------- ---------------------------
+!Image: xr-8000-af-ea                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-aib                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-bfd                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-bsp                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-buffhdr-ea                                            25.4.1.24Iv1.0.0-1
+!Image: xr-8000-bundles                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-card-support                                          25.4.1.24Iv1.0.0-1
+!Image: xr-8000-cdp-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-cem-driver                                            25.4.1.24Iv1.0.0-1
+!Image: xr-8000-cfm                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-common-otn                                            25.4.1.24Iv1.0.0-1
+!Image: xr-8000-core                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-8000-cpa-npu-sdk                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-dot1x                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-dsm                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-dyinggasp-pd                                          25.4.1.24Iv1.0.0-1
+!Image: xr-8000-edpl                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-8000-encap-id                                              25.4.1.24Iv1.0.0-1
+!Image: xr-8000-ether-ea                                              25.4.1.24Iv1.0.0-1
+!Image: xr-8000-fabric                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-feat-mgr                                              25.4.1.24Iv1.0.0-1
+!Image: xr-8000-fib-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-forwarder                                             25.4.1.24Iv1.0.0-1
+!Image: xr-8000-fpd                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-fwd-tools                                             25.4.1.24Iv1.0.0-1
+!Image: xr-8000-fwdlib                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-gil-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-host-core                                             25.4.1.24Iv1.0.0-1
+!Image: xr-8000-hw-resmon                                             25.4.1.24Iv1.0.0-1
+!Image: xr-8000-l2fib                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-l2mcast                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-leabaofa                                              25.4.1.24Iv1.0.0-1
+!Image: xr-8000-libofaasync                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-lpts-ea                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-mcast                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-minimalboot                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-netflow                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-npu                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-nv-satellite                                          25.4.1.24Iv1.0.0-1
+!Image: xr-8000-oam                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-optics                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-os-sg                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-os-sg-extra                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pbr                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pd-port-mode                                          25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pfilter                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pidb                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pktio                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-ple-sdk                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pm                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-8000-port-mapper                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-ppinfo                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pwhe-ea                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-qos-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-ras                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-sat                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-span                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-8000-spio                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-8000-spp-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-timing                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-tunnel-ip                                             25.4.1.24Iv1.0.0-1
+!Image: xr-8000-utapp-blaze                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-vether                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-ztp-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-aaa                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-acl                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-apphosting                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-appmgr                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-bcdl                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-bfd                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-bgp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-bgputil                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-bng-stubs                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-bundles                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-cal-pi                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-cdp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-cds                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-cfgmgr                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-cfm                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-cofo                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-core                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-core-calv                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-ctc                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-debug                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-dhcp                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-diags                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-diskboot                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-drivers-common                                             25.4.1.24Iv1.0.0-1
+!Image: xr-drivers-hw                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-dt-sit                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-edpl                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-eem                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-eigrp                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-elmi-stubs                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-ema                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-enhancedmanageability                                      25.4.1.24Iv1.0.0-1
+!Image: xr-erp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-fib                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-filesysinv                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-foundation-8000                                            25.4.1.24Iv1.0.0-1
+!Image: xr-fpd                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-gil                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-ha-infra                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-healthcheck                                                25.4.1.24Iv1.0.0-1
+!Image: xr-host-core                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-httpclient                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-icpe-eth                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-icpe-opt                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-identifier                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-infra-sla                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-install                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-ip-apps                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-ip-core                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-ip-infra-vrf                                               25.4.1.24Iv1.0.0-1
+!Image: xr-ip-mibs                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-ip-static                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-ipc                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-ipsla                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-is-is                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-k9sec                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-l2snooptransport                                           25.4.1.24Iv1.0.0-1
+!Image: xr-l2vpn                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-ldp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-licensing                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-link-oam                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-linuxnetworking                                            25.4.1.24Iv1.0.0-1
+!Image: xr-linuxsecurity                                              25.4.1.24Iv1.0.0-1
+!Image: xr-lldp                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-lpts                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-manageabilityxml                                           25.4.1.24Iv1.0.0-1
+!Image: xr-mandatory                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-mcast                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-mcastl2snoop                                               25.4.1.24Iv1.0.0-1
+!Image: xr-mda                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-mpls                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-mpls-oam                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-mpls-oam-client                                            25.4.1.24Iv1.0.0-1
+!Image: xr-mpls-static                                                25.4.1.24Iv1.0.0-1
+!Image: xr-netflow                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-netflow-minimal                                            25.4.1.24Iv1.0.0-1
+!Image: xr-nosi                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-ntp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-nv-satellite                                               25.4.1.24Iv1.0.0-1
+!Image: xr-observability                                              25.4.1.24Iv1.0.0-1
+!Image: xr-ofa                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-ops-script-repo                                            25.4.1.24Iv1.0.0-1
+!Image: xr-optics                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-orrspf                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-os-sg-apps                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-os-sg-core                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-os-sg-docker                                               25.4.1.24Iv1.0.0-1
+!Image: xr-os-sg-hardware                                             25.4.1.24Iv1.0.0-1
+!Image: xr-ospf                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-p4rt                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-perf-meas                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-perf-meas-client                                           25.4.1.24Iv1.0.0-1
+!Image: xr-perfmgmt                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-pfi                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-pird-stubs                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-pkt-trace                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-pm-alarm                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-portmode                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-procmgr                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-python                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-qos                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-rid-mgr                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-routing                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-rpl                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-rsvp-te                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-sandbox                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-sanitizer-tools                                            25.4.1.24Iv1.0.0-1
+!Image: xr-security                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-security-tams                                              25.4.1.24Iv1.0.0-1
+!Image: xr-secy-driver                                                25.4.1.24Iv1.0.0-1
+!Image: xr-servicelayer                                               25.4.1.24Iv1.0.0-1
+!Image: xr-servicelayerpolicy                                         25.4.1.24Iv1.0.0-1
+!Image: xr-snmp                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-snmp-hw                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-span                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-spi-core                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-spi-hw                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-spp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-sr                                                         25.4.1.24Iv1.0.0-1
+!Image: xr-stats                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-stp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-stubs                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-sysdb                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-syslog                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-telemetry                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-telnet                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-tftp                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-timing                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-tmpdir-cleanup                                             25.4.1.24Iv1.0.0-1
+!Image: xr-track                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-transports                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-tty                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-tunnel-ip                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-tunnel-nve                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-udld                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-upgradematrix                                              25.4.1.24Iv1.0.0-1
+!Image: xr-utils                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-vether                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-vpnmib                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-xcare                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-xmlinfra                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-xrlibcurl                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-ztp                                                        25.4.1.24Iv1.0.0-1
+!
+! Smart Licensing Status
+! ======================
+! Smart Licensing is ENABLED
+! License Conversion:
+!   Automatic Conversion Enabled: True
+! Export Authorization Key:
+!   Features Authorized:
+!     <none>
+! Utility:
+! Smart Licensing Using Policy:
+! Account Information:
+!   Smart Account: <none>
+!   Virtual Account: <none>
+! Data Privacy:
+!   Sending Hostname: yes
+!     Callhome hostname privacy: DISABLED
+!     Smart Licensing hostname privacy: DISABLED
+!   Version privacy: DISABLED
+! Transport:
+!   Type: cslu
+!   Cslu address: <empty>
+!   Proxy:
+!     Not Configured
+!   VRF:
+!     Not Supported
+! Miscellaneous:
+!   Custom Id: <empty>
+! Policy:
+!   Policy in use: Merged from multiple sources.
+!   Reporting ACK required: yes (CISCO default)
+!   Unenforced/Non-Export Perpetual Attributes:
+!     First report requirement (days): 365 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 90 (CISCO default)
+!   Unenforced/Non-Export Subscription Attributes:
+!     First report requirement (days): 90 (CISCO default)
+!     Reporting frequency (days): 90 (CISCO default)
+!     Report on change (days): 90 (CISCO default)
+!   Enforced (Perpetual/Subscription) License Attributes:
+!     First report requirement (days): 0 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 0 (CISCO default)
+!   Export (Perpetual/Subscription) License Attributes:
+!     First report requirement (days): 0 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 0 (CISCO default)
+! Usage Reporting:
+!   Last ACK received: <none>
+!   Next ACK deadline: Dec 11 2024 08:30:58 UTC
+!   Reporting push interval: 30  days
+!   Next ACK push check: <none>
+!   Next report push: Sep 30 2025 06:29:32 UTC
+!   Last report push: <none>
+!   Last report file write: <none>
+! Trust Code Installed: <none>
+! Secondary Signing Cert: 0
+! License Usage
+! =============
+! ADV_100G_CA_RTU_2 (ADV-CA-100G-RTU-2):
+!   Description: Core and Aggr Advantage SW Right-to-Use per 100G for Cisco 8000 
+!                series
+!   Count: 4
+!   Version: 1.0
+!   Feature Name: ADV_100G_CA_RTU_2
+!   Feature Description: Core and Aggr Advantage SW Right-to-Use per 100G for Cisco 8000 series
+!   Enforcement type: NOT ENFORCED
+!   License type: Perpetual
+! ADV_100G_CA_SIA_3 (ADV-CA-100G-SIA-3):
+!   Description: Core and Aggr Advantage SIA per 100G for Cisco 8000 series
+!   Count: 4
+!   Version: 1.0
+!   Feature Name: ADV_100G_CA_SIA_3
+!   Feature Description: Core and Aggr Advantage SIA per 100G for Cisco 8000 series
+!   Enforcement type: NOT ENFORCED
+!   License type: Subscription
+! ESS_100G_CA_RTU_2 (ESS-CA-100G-RTU-2):
+!   Description: Core and Aggr Essentials SW Right-to-Use per 100G for Cisco 8000
+!                series
+!   Count: 4
+!   Version: 1.0
+!   Feature Name: ESS_100G_CA_RTU_2
+!   Feature Description: Core and Aggr Essentials SW Right-to-Use per 100G for Cisco 8000 series
+!   Enforcement type: NOT ENFORCED
+!   License type: Perpetual
+! ESS_100G_CA_SIA_3 (ESS-CA-100G-SIA-3):
+!   Description: Core and Aggr Essentials SIA per 100G for Cisco 8000 series
+!   Count: 4
+!   Version: 1.0
+!   Feature Name: ESS_100G_CA_SIA_3
+!   Feature Description: Core and Aggr Essentials SIA per 100G for Cisco 8000 series
+!   Enforcement type: NOT ENFORCED
+!   License type: Subscription
+! Product Information
+! ===================
+! UDI: PID:8201-24H8FH,SN:FLM2804058F
+! Agent Version
+! =============
+! Smart Agent for Licensing: 5.9.33/a550eb079
+! License Authorizations
+! ======================
+! Overall status:
+!   Active: PID:8201-24H8FH,SN:FLM2804058F
+! Purchased Licenses:
+!   No Purchase Information Available
+! Enforcement Status:
+!   No Enforcement Status Information Available
+! Usage Report Summary:
+! =====================
+! Total: 60,  Purged: 0
+! Total Acknowledged Received: 0,  Waiting for Ack: 0
+! Available to Report: 60  Collecting Data: 4  
+! Device Telemetry Report Summary:
+! ================================
+! Data Channel: AVAILABLE
+! Reports on disk: 0
+!
+!
+!
+!
+!Auto-upgrade:Enabled,PM excluded
+!Attribute codes: B golden, P protect, S secure, A Anti Theft aware
+!                                                                         FPD Versions
+!                                                                        ==============
+!Location   Card type             HWver FPD device       ATR Status    Running  Programd   Reload Loc
+!-------------------------------------------------------------------------------------------------
+!0/RP0/CPU0 8201-24H8FH           1.0   Bios             S   CURRENT      1.22     1.22     0/RP0/CPU0
+!0/RP0/CPU0 8201-24H8FH           1.0   BiosGolden       S   CURRENT               1.13     0/RP0/CPU0
+!0/RP0/CPU0 8201-24H8FH           1.0   IoFpga               CURRENT      1.13     1.13          0/RP0
+!0/RP0/CPU0 8201-24H8FH           1.0   IoFpgaGolden         CURRENT               1.10          0/RP0
+!0/RP0/CPU0 8201-24H8FH           1.0   PowerCpld            CURRENT      1.17     1.17          0/RP0
+!0/RP0/CPU0 8201-24H8FH           1.0   SsdIntelS4510    S   CURRENT     11.32    11.32          0/RP0
+!0/RP0/CPU0 8201-24H8FH           1.0   x86Fpga          S   RLOAD REQ    1.95     1.98          0/RP0
+!0/RP0/CPU0 8201-24H8FH           1.0   x86FpgaGolden    S   CURRENT               1.89          0/RP0
+!0/RP0/CPU0 8201-24H8FH           1.0   x86TamFw         S   RLOAD REQ    6.19     6.22          0/RP0
+!0/RP0/CPU0 8201-24H8FH           1.0   x86TamFwGolden   S   CURRENT               6.16          0/RP0
+!0/PM1      PSU2KW-ACPI           0.0   PO-PrimMCU           NEED UPGD    1.03     1.03        NOT REQ
+!0/PM1      PSU2KW-ACPI           0.0   PO-SecMCU            NEED UPGD    1.09     1.09        NOT REQ
+!
+!
+!% Incomplete command.
+!
+!Image: XR Software Hash: f4336a01896ef926f4a4a31e0394d25671c1b95be373b4aad61bded8e2a062ea
+!Image: XR Package                                                               Version
+!Image: ---------------------------------------------------- ---------------------------
+!Image: xr-8000-af-ea                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-aib                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-bfd                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-bsp                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-buffhdr-ea                                            25.4.1.24Iv1.0.0-1
+!Image: xr-8000-bundles                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-card-support                                          25.4.1.24Iv1.0.0-1
+!Image: xr-8000-cdp-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-cem-driver                                            25.4.1.24Iv1.0.0-1
+!Image: xr-8000-cfm                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-common-otn                                            25.4.1.24Iv1.0.0-1
+!Image: xr-8000-core                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-8000-cpa-npu-sdk                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-dot1x                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-dsm                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-dyinggasp-pd                                          25.4.1.24Iv1.0.0-1
+!Image: xr-8000-edpl                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-8000-encap-id                                              25.4.1.24Iv1.0.0-1
+!Image: xr-8000-ether-ea                                              25.4.1.24Iv1.0.0-1
+!Image: xr-8000-fabric                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-feat-mgr                                              25.4.1.24Iv1.0.0-1
+!Image: xr-8000-fib-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-forwarder                                             25.4.1.24Iv1.0.0-1
+!Image: xr-8000-fpd                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-fwd-tools                                             25.4.1.24Iv1.0.0-1
+!Image: xr-8000-fwdlib                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-gil-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-host-core                                             25.4.1.24Iv1.0.0-1
+!Image: xr-8000-hw-resmon                                             25.4.1.24Iv1.0.0-1
+!Image: xr-8000-l2fib                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-l2mcast                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-leabaofa                                              25.4.1.24Iv1.0.0-1
+!Image: xr-8000-libofaasync                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-lpts-ea                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-mcast                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-minimalboot                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-netflow                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-npu                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-nv-satellite                                          25.4.1.24Iv1.0.0-1
+!Image: xr-8000-oam                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-optics                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-os-sg                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-os-sg-extra                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pbr                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pd-port-mode                                          25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pfilter                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pidb                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pktio                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-8000-ple-sdk                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pm                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-8000-port-mapper                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-ppinfo                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-pwhe-ea                                               25.4.1.24Iv1.0.0-1
+!Image: xr-8000-qos-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-ras                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-sat                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-8000-span                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-8000-spio                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-8000-spp-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-timing                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-tunnel-ip                                             25.4.1.24Iv1.0.0-1
+!Image: xr-8000-utapp-blaze                                           25.4.1.24Iv1.0.0-1
+!Image: xr-8000-vether                                                25.4.1.24Iv1.0.0-1
+!Image: xr-8000-ztp-ea                                                25.4.1.24Iv1.0.0-1
+!Image: xr-aaa                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-acl                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-apphosting                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-appmgr                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-bcdl                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-bfd                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-bgp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-bgputil                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-bng-stubs                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-bundles                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-cal-pi                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-cdp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-cds                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-cfgmgr                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-cfm                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-cofo                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-core                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-core-calv                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-ctc                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-debug                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-dhcp                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-diags                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-diskboot                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-drivers-common                                             25.4.1.24Iv1.0.0-1
+!Image: xr-drivers-hw                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-dt-sit                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-edpl                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-eem                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-eigrp                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-elmi-stubs                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-ema                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-enhancedmanageability                                      25.4.1.24Iv1.0.0-1
+!Image: xr-erp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-fib                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-filesysinv                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-foundation-8000                                            25.4.1.24Iv1.0.0-1
+!Image: xr-fpd                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-gil                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-ha-infra                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-healthcheck                                                25.4.1.24Iv1.0.0-1
+!Image: xr-host-core                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-httpclient                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-icpe-eth                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-icpe-opt                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-identifier                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-infra-sla                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-install                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-ip-apps                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-ip-core                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-ip-infra-vrf                                               25.4.1.24Iv1.0.0-1
+!Image: xr-ip-mibs                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-ip-static                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-ipc                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-ipsla                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-is-is                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-k9sec                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-l2snooptransport                                           25.4.1.24Iv1.0.0-1
+!Image: xr-l2vpn                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-ldp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-licensing                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-link-oam                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-linuxnetworking                                            25.4.1.24Iv1.0.0-1
+!Image: xr-linuxsecurity                                              25.4.1.24Iv1.0.0-1
+!Image: xr-lldp                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-lpts                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-manageabilityxml                                           25.4.1.24Iv1.0.0-1
+!Image: xr-mandatory                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-mcast                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-mcastl2snoop                                               25.4.1.24Iv1.0.0-1
+!Image: xr-mda                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-mpls                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-mpls-oam                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-mpls-oam-client                                            25.4.1.24Iv1.0.0-1
+!Image: xr-mpls-static                                                25.4.1.24Iv1.0.0-1
+!Image: xr-netflow                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-netflow-minimal                                            25.4.1.24Iv1.0.0-1
+!Image: xr-nosi                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-ntp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-nv-satellite                                               25.4.1.24Iv1.0.0-1
+!Image: xr-observability                                              25.4.1.24Iv1.0.0-1
+!Image: xr-ofa                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-ops-script-repo                                            25.4.1.24Iv1.0.0-1
+!Image: xr-optics                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-orrspf                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-os-sg-apps                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-os-sg-core                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-os-sg-docker                                               25.4.1.24Iv1.0.0-1
+!Image: xr-os-sg-hardware                                             25.4.1.24Iv1.0.0-1
+!Image: xr-ospf                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-p4rt                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-perf-meas                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-perf-meas-client                                           25.4.1.24Iv1.0.0-1
+!Image: xr-perfmgmt                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-pfi                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-pird-stubs                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-pkt-trace                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-pm-alarm                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-portmode                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-procmgr                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-python                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-qos                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-rid-mgr                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-routing                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-rpl                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-rsvp-te                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-sandbox                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-sanitizer-tools                                            25.4.1.24Iv1.0.0-1
+!Image: xr-security                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-security-tams                                              25.4.1.24Iv1.0.0-1
+!Image: xr-secy-driver                                                25.4.1.24Iv1.0.0-1
+!Image: xr-servicelayer                                               25.4.1.24Iv1.0.0-1
+!Image: xr-servicelayerpolicy                                         25.4.1.24Iv1.0.0-1
+!Image: xr-snmp                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-snmp-hw                                                    25.4.1.24Iv1.0.0-1
+!Image: xr-span                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-spi-core                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-spi-hw                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-spp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-sr                                                         25.4.1.24Iv1.0.0-1
+!Image: xr-stats                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-stp                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-stubs                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-sysdb                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-syslog                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-telemetry                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-telnet                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-tftp                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-timing                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-tmpdir-cleanup                                             25.4.1.24Iv1.0.0-1
+!Image: xr-track                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-transports                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-tty                                                        25.4.1.24Iv1.0.0-1
+!Image: xr-tunnel-ip                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-tunnel-nve                                                 25.4.1.24Iv1.0.0-1
+!Image: xr-udld                                                       25.4.1.24Iv1.0.0-1
+!Image: xr-upgradematrix                                              25.4.1.24Iv1.0.0-1
+!Image: xr-utils                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-vether                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-vpnmib                                                     25.4.1.24Iv1.0.0-1
+!Image: xr-xcare                                                      25.4.1.24Iv1.0.0-1
+!Image: xr-xmlinfra                                                   25.4.1.24Iv1.0.0-1
+!Image: xr-xrlibcurl                                                  25.4.1.24Iv1.0.0-1
+!Image: xr-ztp                                                        25.4.1.24Iv1.0.0-1
+!
+!Flash: disk0: Directory of disk0:
+!Flash: disk0: drwx------. 3  4096 Oct  1 06:23 SPAN
+!Flash: disk0: drwxrwxrwx. 3  4096 Sep 30 06:31 asic-err-logs-backup
+!Flash: disk0: drwx---r-x. 2  4096 Sep 30 06:21 clihistory
+!Flash: disk0: lrwxrwxrwx. 1    12 Sep 30 06:15 config -> /misc/config
+!Flash: disk0: drwxr-xr-x. 2  4096 Sep 30 06:15 core
+!Flash: disk0: drwxrwxrwx. 2  4096 Jan 30  2025 crypto
+!Flash: disk0: -rw-r--r--. 1   891 Sep 30 06:21 envoke_log
+!Flash: disk0: drwx------. 2 16384 Sep 30 06:12 lost+found
+!Flash: disk0: drwxrwxrwx. 2  4096 Sep 30 06:21 npu_drvr_cfg
+!Flash: disk0: drwxr-xr-x. 3  4096 Jan 30  2025 pam
+!Flash: disk0: drwxr-xr-x. 2  4096 Sep 30 06:15 shutdown
+!Flash: disk0: -rw-rw-rw-. 1  1293 Sep 30 06:23 snmp_dying_gasp.log
+!Flash: disk0: -rw-rw-rw-. 1     0 Sep 30 06:22 status_file
+!Flash: disk0: -rw-rw-rw-. 1     0 Sep 30 06:23 status_file_err
+!Flash: disk0: drwxr-xr-x. 9  4096 Sep 30 06:24 ztp
+!Flash: disk0: 3 GB total (94% free)
+!
+!Flash: harddisk: Directory of harddisk:
+!Flash: harddisk: drwxrwxrwx. 2                         .sppdc
+!Flash: harddisk: drwxr-xr-x. 2       4096 Mar 17  2025 .sppdc_new
+!Flash: harddisk: -rw-r--r--. 1 1935755264 Apr 28 10:22 8000-golden-x86_64-25.2.1.31I-PROD_BUILD_25_2_1_31I_SIT_IMAGE.iso
+!Flash: harddisk: -rw-r--r--. 1 1929801728 May 20 10:07 8000-golden-x86_64-25.2.1.35I-PROD_BUILD_25_2_1_35I_SIT_IMAGE.iso
+!Flash: harddisk: -rw-r--r--. 1 2094041088 Sep 30 06:00 8000-golden-x86_64-25.4.1.24I-PROD_BUILD_25_4_1_24I_SIT_IMAGE.iso
+!Flash: harddisk: -rwxr-xr-x. 1 1666457600 Jun 20 06:18 8000-x64-25.2.1.iso
+!Flash: harddisk: drwxr-xr-x. 5                         cisco_support
+!Flash: harddisk: drwxrwxrwx. 2       4096 Mar 17  2025 coredumps
+!Flash: harddisk: drwxrwxrwx. 2       4096 Mar 24  2025 crft-snapshots
+!Flash: harddisk: -rw-rw-rw-. 1      24991 Sep 26 10:10 cst-8201-ag4.cfg-26-Sep-2025
+!Flash: harddisk: -rw-rw-rw-. 1      23736 Mar  6  2025 cst-8201-ag4_runncfgR.txt
+!Flash: harddisk: -rw-rw-rw-. 1      23740 Mar 18  2025 cst_18032025
+!Flash: harddisk: drwxrwxrwx. 2       4096 Mar 17  2025 custom_metrics
+!Flash: harddisk: -rw-rw-rw-. 1        758 Sep 30 06:21 debug_shell_client.log
+!Flash: harddisk: drwxrwxrwx. 2       4096 Mar 17  2025 dph_mon
+!Flash: harddisk: -rw-rw-rw-. 1        620 Oct  3 14:29 fcm_data
+!Flash: harddisk: drwxr-xr-x. 2       4096 Mar 17  2025 fpga_reset_history
+!Flash: harddisk: drwx------. 3       4096 Sep 30 06:23 ima
+!Flash: harddisk: drwx------. 2      16384 Mar 17  2025 lost+found
+!Flash: harddisk: drwxr-xr-x. 3       4096 Mar 17  2025 mirror
+!Flash: harddisk: drwxr-xr-x. 2       4096 Mar 17  2025 npu_sdk_logs
+!Flash: harddisk: -rw-rw-rw-. 1   10490745 Oct  3 14:35 nvgen_bkup.log
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep 30 07:18 nvgen_traces
+!Flash: harddisk: drwxr-xr-x. 2       4096 Mar 17  2025 nvram
+!Flash: harddisk: drwxr-xr-x. 3       4096 Mar 17  2025 pam
+!Flash: harddisk: -rw-rw-rw-. 1          0 Jan 30  2025 ptp_mem_logger_trace_file.log
+!Flash: harddisk: -rw-rw-rw-. 1    5681152 Jul 28 21:04 ptp_trace_file.log
+!Flash: harddisk: drwxrwxrwx. 2       4096 Mar 17  2025 showtech
+!Flash: harddisk: drwxr-xr-x. 5       4096 Mar 17  2025 shutdown
+!Flash: harddisk: -rw-rw-rw-. 1         65 Sep 30 06:23 utc_offset.json
+!Flash: harddisk: -rw-r--r--. 1   75348904 Sep 30 06:11 var_log_pre_reimage.tgz
+!Flash: harddisk: -rw-r--r--. 1  457375504 Jun 20 06:22 var_log_pre_reimage.tgz.0
+!Flash: harddisk: -rw-r--r--. 1    2568830 Sep 30 06:11 var_log_pre_reimage_min.tgz
+!Flash: harddisk: -rw-rw-rw-. 1       8722 Sep 30 06:23 xml_tty_bkup.log
+!Flash: harddisk: drwxr-xr-x. 3       4096 Mar 17  2025 ztp
+!Flash: harddisk: 40 GB total (75% free)
+!
+!Rack 0-Chassis IDPROM - Cisco 8200 1RU w/24x100G & 8x400G, XR SW & HBM              
+! Info
+!    Controller Family          : 0045
+!    Controller Type            : 06b1
+!    PID                        : 8201-24H8FH
+!    Version Identifier         : V01
+!    UDI Description            : Cisco 8200 1RU w/24x100G & 8x400G, XR SW & HBM
+!    Chassis Serial Number      : FLM2804058F
+!    Top Assy. Part Number      : 68-7547-01
+!    Top Assy. Revision         : D0
+!    PCB Serial Number          : FLM28030CT2
+!    PCA Revision               : D0
+!    CLEI Code                  : CMM7H00BRA
+!0/RP0/CPU0-Base Board IDPROM - Cisco 8200 1RU w/24x100G & 8x400G, XR SW & HBM              
+! Info
+!    Controller Family          : 0045
+!    Controller Type            : 06b1
+!    PID                        : 8201-24H8FH
+!    Version Identifier         : V01
+!    UDI Description            : Cisco 8200 1RU w/24x100G & 8x400G, XR SW & HBM
+!    Chassis Serial Number      : FLM2804058F
+!    Top Assy. Part Number      : 68-7547-01
+!    Top Assy. Revision         : D0
+!    PCB Serial Number          : FLM28030CT2
+!    PCA Revision               : D0
+!    CLEI Code                  : CMM7H00BRA
+!0/RP0/CPU0-Power Board 0 IDPROM - Power Board                                                 
+! Info
+!    Controller Family          : 0045
+!    Controller Type            : 0686
+!    PCB Serial Number          : FLM280403J3
+!    PCA Revision               : A0
+!0/RP0/CPU0-Power Board 1 IDPROM - Power Board                                                 
+! Info
+!    Controller Family          : 0045
+!    Controller Type            : 0686
+!    PCB Serial Number          : FLM280403N8
+!    PCA Revision               : A0
+!0/RP0/CPU0-CPU Board IDPROM - CPU Board IDPROM                                            
+! Info
+!    Controller Family          : 0045
+!    Controller Type            : 06b2
+!    PCB Serial Number          : FLM280309SS
+!    PCA Revision               : C0
+!0/RP0/CPU0-IO Board IDPROM - IO Board IDPROM                                             
+! Info
+!    Controller Family          : 0045
+!    Controller Type            : 06b3
+!    PCB Serial Number          : FLM280403YF
+!    PCA Revision               : A0
+!FourHundredGigE0/0/0/0-IDPROM - Cisco QSFPDD 400G FR4 Pluggable Optics Module               
+! Info
+!    PID                      : QDD-400G-FR4-S
+!    Version Identifier       : V01 
+!    UDI Description          : Cisco QSFPDD 400G FR4 Pluggable Optics Module
+!    CLEI Code                : CMUIAUNCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : TRD5H10ENF-LF030
+!    Top Assy. Revision       : 01
+!    PCB Serial Number        : CGC27090645
+!    PCA Number               : N/A
+!HundredGigE0/0/0/16-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module               
+! Info
+!    PID                      : QSFP-100G-AOC3M
+!    Version Identifier       : V01
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQACPCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FCBN425QE1C03-C1
+!    Top Assy. Revision       : D
+!    PCB Serial Number        : FIW210400Q5-A
+!    PCA Number               : N/A
+!HundredGigE0/0/0/17-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module               
+! Info
+!    PID                      : QSFP-100G-AOC3M
+!    Version Identifier       : V01
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQACPCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FCBN425QE1C03-C1
+!    Top Assy. Revision       : D
+!    PCB Serial Number        : FIW210400Q8-A
+!    PCA Number               : N/A
+!HundredGigE0/0/0/18-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module               
+! Info
+!    PID                      : QSFP-100G-AOC3M
+!    Version Identifier       : V04
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQAEUCAC
+!    ECI Number               : 0
+!    Top Assy. Part Number    : QAOC100G4F1A03C1
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : DPZ2721A074-A
+!    PCA Number               : N/A
+!HundredGigE0/0/0/19-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module               
+! Info
+!    PID                      : QSFP-100G-AOC3M
+!    Version Identifier       : V01
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQACPCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FCBN425QE1C03-C1
+!    Top Assy. Revision       : D
+!    PCB Serial Number        : FIW210400VF-A
+!    PCA Number               : N/A
+!HundredGigE0/0/0/28-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module               
+! Info
+!    PID                      : QSFP-100G-AOC3M
+!    Version Identifier       : V01
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQACPCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FCBN425QE1C03-C1
+!    Top Assy. Revision       : D
+!    PCB Serial Number        : FIW21040123-B
+!    PCA Number               : N/A
+!0/PM1-PSU2KW_ACPI IDPROM - 2000W AC Power Module with Port-side Air Intake             
+! Info
+!    Controller Family          : 00f6
+!    Controller Type            : 0673
+!    PID                        : PSU2KW-ACPI
+!    Version Identifier         : V01 
+!    UDI Description            : 2000W AC Power Module with Port-side Air Intake
+!    Top Assy. Part Number      : 341-100948-01
+!    Top Assy. Revision         : B0  
+!    PCB Serial Number          : POG2724K07V
+!    CLEI Code                  : CMUPAGWCAA
+!0/FT0-FT IDPROM - Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2   
+! Info
+!    Controller Family          : 0094
+!    Controller Type            : 06aa
+!    PID                        : FAN-1RU-PI-V2
+!    Version Identifier         : V01 
+!    UDI Description            : Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2
+!    Top Assy. Part Number      : 800-49985-01
+!    Top Assy. Revision         : A0
+!    PCB Serial Number          : DCH2710R4XS
+!    CLEI Code                  : CMUCANKBAA
+!0/FT1-FT IDPROM - Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2   
+! Info
+!    Controller Family          : 0094
+!    Controller Type            : 06aa
+!    PID                        : FAN-1RU-PI-V2
+!    Version Identifier         : V01 
+!    UDI Description            : Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2
+!    Top Assy. Part Number      : 800-49985-01
+!    Top Assy. Revision         : A0
+!    PCB Serial Number          : DCH2710R4TB
+!    CLEI Code                  : CMUCANKBAA
+!0/FT2-FT IDPROM - Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2   
+! Info
+!    Controller Family          : 0094
+!    Controller Type            : 06aa
+!    PID                        : FAN-1RU-PI-V2
+!    Version Identifier         : V01 
+!    UDI Description            : Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2
+!    Top Assy. Part Number      : 800-49985-01
+!    Top Assy. Revision         : A0
+!    PCB Serial Number          : DCH2710R56C
+!    CLEI Code                  : CMUCANKBAA
+!0/FT3-FT IDPROM - Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2   
+! Info
+!    Controller Family          : 0094
+!    Controller Type            : 06aa
+!    PID                        : FAN-1RU-PI-V2
+!    Version Identifier         : V01 
+!    UDI Description            : Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2
+!    Top Assy. Part Number      : 800-49985-01
+!    Top Assy. Revision         : A0
+!    PCB Serial Number          : DCH2710R4U3
+!    CLEI Code                  : CMUCANKBAA
+!0/FT4-FT IDPROM - Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2   
+! Info
+!    Controller Family          : 0094
+!    Controller Type            : 06aa
+!    PID                        : FAN-1RU-PI-V2
+!    Version Identifier         : V01 
+!    UDI Description            : Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2
+!    Top Assy. Part Number      : 800-49985-01
+!    Top Assy. Revision         : A0
+!    PCB Serial Number          : DCH2710R4XT
+!    CLEI Code                  : CMUCANKBAA
+!0/FT5-FT IDPROM - Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2   
+! Info
+!    Controller Family          : 0094
+!    Controller Type            : 06aa
+!    PID                        : FAN-1RU-PI-V2
+!    Version Identifier         : V01 
+!    UDI Description            : Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2
+!    Top Assy. Part Number      : 800-49985-01
+!    Top Assy. Revision         : A0
+!    PCB Serial Number          : DCH2710R4XQ
+!    CLEI Code                  : CMUCANKBAA
+!
+!NAME: "Rack 0",                DESCR: "Cisco 8200 1RU w/24x100G & 8x400G, XR SW & HBM"
+!PID: 8201-24H8FH
+!VID: V01
+!SN: FLM2804058F
+!NAME: "Rack 0-Control Card Slot 0", DESCR: "8201-24H8FH Route Processor Slot 0"
+!NAME: "Rack 0-Fan Tray Slot 0", DESCR: "8201-24H8FH Fan Tray Slot 0"
+!NAME: "Rack 0-Fan Tray Slot 1", DESCR: "8201-24H8FH Fan Tray Slot 1"
+!NAME: "Rack 0-Fan Tray Slot 2", DESCR: "8201-24H8FH Fan Tray Slot 2"
+!NAME: "Rack 0-Fan Tray Slot 3", DESCR: "8201-24H8FH Fan Tray Slot 3"
+!NAME: "Rack 0-Fan Tray Slot 4", DESCR: "8201-24H8FH Fan Tray Slot 4"
+!NAME: "Rack 0-Fan Tray Slot 5", DESCR: "8201-24H8FH Fan Tray Slot 5"
+!NAME: "Rack 0-PSU Slot 0",     DESCR: "8201-24H8FH Power Module Slot 0"
+!NAME: "Rack 0-PSU Slot 1",     DESCR: "8201-24H8FH Power Module Slot 1"
+!NAME: "Rack 0-Control_Sensor", DESCR: "Control Sensor"
+!NAME: "Rack 0-Chassis IDPROM", DESCR: "Cisco 8200 1RU w/24x100G & 8x400G, XR SW & HBM"
+!PID: 8201-24H8FH
+!VID: V01
+!SN: FLM2804058F
+!NAME: "0/RP0/CPU0",            DESCR: "Cisco 8200 1RU w/24x100G & 8x400G, XR SW & HBM"
+!PID: 8201-24H8FH
+!VID: V01
+!SN: FLM28030CT2
+!NAME: "0/FT0",                 DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R4XS
+!NAME: "0/FT1",                 DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R4TB
+!NAME: "0/FT2",                 DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R56C
+!NAME: "0/FT3",                 DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R4U3
+!NAME: "0/FT4",                 DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R4XT
+!NAME: "0/FT5",                 DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R4XQ
+!NAME: "0/PM1",                 DESCR: "2000W AC Power Module with Port-side Air Intake"
+!PID: PSU2KW-ACPI
+!VID: V01
+!SN: POG2724K07V
+!NAME: "0/RP0/CPU0-Mother Board", DESCR: "8201-24H8FH Mother Board"
+!NAME: "0/RP0/CPU0-Power Board 0", DESCR: "Power Board"
+!NAME: "0/RP0/CPU0-Power Board 1", DESCR: "Power Board"
+!NAME: "0/RP0/CPU0-CPU Board",  DESCR: "CPU Board"
+!NAME: "0/RP0/CPU0-IO Board",   DESCR: "IO Board"
+!NAME: "0/FT0-Fan 0",           DESCR: "Fan Module"
+!NAME: "0/FT0-Fan 1",           DESCR: "Fan Module"
+!NAME: "0/FT0-Input_Cur",       DESCR: "Board Current Sensor - Input Current"
+!NAME: "0/FT0-Status/Attention", DESCR: "LED Sensor"
+!NAME: "0/FT0-Input_Pow",       DESCR: "Board Power Sensor - Input Power"
+!NAME: "0/FT0-FT IDPROM",       DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R4XS
+!NAME: "0/FT1-Fan 0",           DESCR: "Fan Module"
+!NAME: "0/FT1-Fan 1",           DESCR: "Fan Module"
+!NAME: "0/FT1-Input_Cur",       DESCR: "Board Current Sensor - Input Current"
+!NAME: "0/FT1-Status/Attention", DESCR: "LED Sensor"
+!NAME: "0/FT1-Input_Pow",       DESCR: "Board Power Sensor - Input Power"
+!NAME: "0/FT1-FT IDPROM",       DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R4TB
+!NAME: "0/FT2-Fan 0",           DESCR: "Fan Module"
+!NAME: "0/FT2-Fan 1",           DESCR: "Fan Module"
+!NAME: "0/FT2-Input_Cur",       DESCR: "Board Current Sensor - Input Current"
+!NAME: "0/FT2-Status/Attention", DESCR: "LED Sensor"
+!NAME: "0/FT2-Input_Pow",       DESCR: "Board Power Sensor - Input Power"
+!NAME: "0/FT2-FT IDPROM",       DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R56C
+!NAME: "0/FT3-Fan 0",           DESCR: "Fan Module"
+!NAME: "0/FT3-Fan 1",           DESCR: "Fan Module"
+!NAME: "0/FT3-Input_Cur",       DESCR: "Board Current Sensor - Input Current"
+!NAME: "0/FT3-Status/Attention", DESCR: "LED Sensor"
+!NAME: "0/FT3-Input_Pow",       DESCR: "Board Power Sensor - Input Power"
+!NAME: "0/FT3-FT IDPROM",       DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R4U3
+!NAME: "0/FT4-Fan 0",           DESCR: "Fan Module"
+!NAME: "0/FT4-Fan 1",           DESCR: "Fan Module"
+!NAME: "0/FT4-Input_Cur",       DESCR: "Board Current Sensor - Input Current"
+!NAME: "0/FT4-Status/Attention", DESCR: "LED Sensor"
+!NAME: "0/FT4-Input_Pow",       DESCR: "Board Power Sensor - Input Power"
+!NAME: "0/FT4-FT IDPROM",       DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R4XT
+!NAME: "0/FT5-Fan 0",           DESCR: "Fan Module"
+!NAME: "0/FT5-Fan 1",           DESCR: "Fan Module"
+!NAME: "0/FT5-Input_Cur",       DESCR: "Board Current Sensor - Input Current"
+!NAME: "0/FT5-Status/Attention", DESCR: "LED Sensor"
+!NAME: "0/FT5-Input_Pow",       DESCR: "Board Power Sensor - Input Power"
+!NAME: "0/FT5-FT IDPROM",       DESCR: "Cisco 8000 Series 1RU Fan with Port-side Air Intake Ver 2"
+!PID: FAN-1RU-PI-V2
+!VID: V01
+!SN: DCH2710R4XQ
+!NAME: "0/PM1-Fan 0",           DESCR: "PSU2KW ACPI PSU Fan Module"
+!NAME: "0/PM1-Fan 1",           DESCR: "PSU2KW ACPI PSU Fan Module"
+!NAME: "0/PM1-Input_Curr",      DESCR: "Current Sensor"
+!NAME: "0/PM1-Output_Curr",     DESCR: "Current Sensor"
+!NAME: "0/PM1-Status",          DESCR: "LED Sensor"
+!NAME: "0/PM1-Input_Power",     DESCR: "Power Sensor"
+!NAME: "0/PM1-Output_Power",    DESCR: "Power Sensor"
+!NAME: "0/PM1-Inlet_Temp",      DESCR: "Temperature Sensor"
+!NAME: "0/PM1-HSNK_Temp",       DESCR: "Temperature Sensor"
+!NAME: "0/PM1-Outlet_Temp",     DESCR: "Temperature Sensor"
+!NAME: "0/PM1-Input_Vol",       DESCR: "Voltage Sensor"
+!NAME: "0/PM1-Output_Vol",      DESCR: "Voltage Sensor"
+!NAME: "0/PM1-PO-PrimMCU",      DESCR: "Primary Controller"
+!NAME: "0/PM1-PO-SecMCU",       DESCR: "Secondary Controller"
+!NAME: "0/PM1-PSU2KW_ACPI IDPROM", DESCR: "2000W AC Power Module with Port-side Air Intake"
+!PID: PSU2KW-ACPI
+!VID: V01
+!SN: POG2724K07V
+!NAME: "0/RP0/CPU0-MB_GB_CORE_IIN_L1", DESCR: "Current Sensor - GB_CORE_IIN_L1"
+!NAME: "0/RP0/CPU0-MB_GB_CORE_IOUT_L1", DESCR: "Current Sensor - GB_CORE_IOUT_L1"
+!NAME: "0/RP0/CPU0-MB_GB_VDDS_L1_IIN", DESCR: "Current Sensor - GB_VDDS_L1_IIN"
+!NAME: "0/RP0/CPU0-MB_GB_VDDS_L1_IOUT", DESCR: "Current Sensor - GB_VDDS_L1_IOUT"
+!NAME: "0/RP0/CPU0-MB_GB_VDDA_L2_IIN", DESCR: "Current Sensor - GB_VDDA_L2_IIN"
+!NAME: "0/RP0/CPU0-MB_GB_VDDA_L2_IOUT", DESCR: "Current Sensor - GB_VDDA_L2_IOUT"
+!NAME: "0/RP0/CPU0-MB_GB_VDDCK_L1_IIN", DESCR: "Current Sensor - GB_VDDCK_L1_IIN"
+!NAME: "0/RP0/CPU0-MB_GB_VDDCK_L1_IOUT", DESCR: "Current Sensor - GB_VDDCK_L1_IOUT"
+!NAME: "0/RP0/CPU0-MB_3_3V_L_L1_IIN", DESCR: "Current Sensor - MB_3.3V_L_L1_IIN"
+!NAME: "0/RP0/CPU0-MB_3_3V_L_L1_IOUT", DESCR: "Current Sensor - MB_3.3V_L_L1_IOUT"
+!NAME: "0/RP0/CPU0-MB_3_3V_R_L1_IIN", DESCR: "Current Sensor - MB_3.3V_R_L1_IIN"
+!NAME: "0/RP0/CPU0-MB_3_3V_R_L1_IOUT", DESCR: "Current Sensor - MB_3.3V_R_L1_IOUT"
+!NAME: "0/RP0/CPU0-Attention",  DESCR: "LED Sensor"
+!NAME: "0/RP0/CPU0-Status",     DESCR: "LED Sensor"
+!NAME: "0/RP0/CPU0-Sync",       DESCR: "LED Sensor"
+!NAME: "0/RP0/CPU0-MB_GB_CORE_TEMP_L1", DESCR: "Temperature Sensor - GB_CORE_TEMP_L1"
+!NAME: "0/RP0/CPU0-MB_GB_CORE_TEMP_L2", DESCR: "Temperature Sensor - GB_CORE_TEMP_L2"
+!NAME: "0/RP0/CPU0-MB_TMP421_Local", DESCR: "Temperature Sensor - MB-TMP421 Sensor"
+!NAME: "0/RP0/CPU0-MB_PORT_Sensor", DESCR: "Temperature Sensor - MB-PORT-side Sensor"
+!NAME: "0/RP0/CPU0-FAN_Sensor", DESCR: "Temperature Sensor - FB-FAN-side Sensor"
+!NAME: "0/RP0/CPU0-MB_JM01_L1_TEMP", DESCR: "Temperature Sensor - MB-GB_VDDS_TEMP"
+!NAME: "0/RP0/CPU0-MB_JM01_L2_TEMP", DESCR: "Temperature Sensor - MB-GB_VDDA_TEMP"
+!NAME: "0/RP0/CPU0-MB_JM11_L1_TEMP", DESCR: "Temperature Sensor - MB-GB_VDDCK_TEMP"
+!NAME: "0/RP0/CPU0-MB_JM11_L2_TEMP", DESCR: "Temperature Sensor - MB-GB_ VDDQC_TEMP"
+!NAME: "0/RP0/CPU0-MB_JM21_L1_TEMP", DESCR: "Temperature Sensor - MB-3.3V_L_TEMP2"
+!NAME: "0/RP0/CPU0-MB_JM21_L2_TEMP", DESCR: "Temperature Sensor - MB-3.3V_R_TEMP"
+!NAME: "0/RP0/CPU0-SSD_Temp",   DESCR: "Temperature Sensor - SSD"
+!NAME: "0/RP0/CPU0-DIMM_TEMP1", DESCR: "Temperature Sensor- DIMM1"
+!NAME: "0/RP0/CPU0-DIMM_TEMP2", DESCR: "Temperature Sensor- DIMM2"
+!NAME: "0/RP0/CPU0-NPU_0_T0",   DESCR: "Temperature Sensor - NPU_0_T0"
+!NAME: "0/RP0/CPU0-NPU_0_T1",   DESCR: "Temperature Sensor - NPU_0_T1"
+!NAME: "0/RP0/CPU0-NPU_0_T2",   DESCR: "Temperature Sensor - NPU_0_T2"
+!NAME: "0/RP0/CPU0-NPU_0_T3",   DESCR: "Temperature Sensor - NPU_0_T3"
+!NAME: "0/RP0/CPU0-NPU_0_T4",   DESCR: "Temperature Sensor - NPU_0_T4"
+!NAME: "0/RP0/CPU0-NPU_0_T5",   DESCR: "Temperature Sensor - NPU_0_T5"
+!NAME: "0/RP0/CPU0-NPU_0_T6",   DESCR: "Temperature Sensor - NPU_0_T6"
+!NAME: "0/RP0/CPU0-NPU_0_T7",   DESCR: "Temperature Sensor - NPU_0_T7"
+!NAME: "0/RP0/CPU0-NPU_0_T8",   DESCR: "Temperature Sensor - NPU_0_T8"
+!NAME: "0/RP0/CPU0-NPU_0_T9",   DESCR: "Temperature Sensor - NPU_0_T9"
+!NAME: "0/RP0/CPU0-MB_GB_P1V8_PLLVDD", DESCR: "Voltage Sensor - GB_P1V8_PLLVDD"
+!NAME: "0/RP0/CPU0-MB_GB_P1V8_VDDIO", DESCR: "Voltage Sensor - GB_P1V8_VDDIO"
+!NAME: "0/RP0/CPU0-MB_P3V3_R",  DESCR: "Voltage Sensor - MB_P3V3_R"
+!NAME: "0/RP0/CPU0-MB_A1V",     DESCR: "Voltage Sensor - MB_A1V"
+!NAME: "0/RP0/CPU0-MB_A1_8V",   DESCR: "Voltage Sensor - MB_A1_8V"
+!NAME: "0/RP0/CPU0-MB_P3_3V",   DESCR: "Voltage Sensor - MB_P3_3V"
+!NAME: "0/RP0/CPU0-MB_P5V",     DESCR: "Voltage Sensor - MB_P5V"
+!NAME: "0/RP0/CPU0-MB_A1_2V",   DESCR: "Voltage Sensor - MB_A1_2V"
+!NAME: "0/RP0/CPU0-MB_A3_3V",   DESCR: "Voltage Sensor - MB-A3_3V"
+!NAME: "0/RP0/CPU0-MB_P3V3_L",  DESCR: "Voltage Sensor - MB-P3V3_L"
+!NAME: "0/RP0/CPU0-MB_P1_8V",   DESCR: "Voltage Sensor - MB-P1_8V"
+!NAME: "0/RP0/CPU0-MB_GB_PCIE_VDDACK", DESCR: "Voltage Sensor - GB_PCIE_VDDACK"
+!NAME: "0/RP0/CPU0-MB_GB_PCIE_VDDH", DESCR: "Voltage Sensor - GB_PCIE_VDDH"
+!NAME: "0/RP0/CPU0-MB_GB_VDDS_L1_VIN", DESCR: "Voltage Sensor - GB_VDDS_L1_VIN"
+!NAME: "0/RP0/CPU0-MB_GB_VDDA_L2_VIN", DESCR: "Voltage Sensor - GB_VDDA_L2_VIN"
+!NAME: "0/RP0/CPU0-MB_GB_VDDA_L2_VOUT", DESCR: "Voltage Sensor - GB_VDDA_L2_VOUT"
+!NAME: "0/RP0/CPU0-MB_GB_VDDCK_L1_VIN", DESCR: "Voltage Sensor - GB_VDDCK_L1_VIN"
+!NAME: "0/RP0/CPU0-MB_GB_VDDCK_L1_VOUT", DESCR: "Voltage Sensor - GB_VDDCK_L1_VOUT"
+!NAME: "0/RP0/CPU0-MB_3_3V_L_L1_VIN", DESCR: "Voltage Sensor - MB_3.3V_L_L1_VIN"
+!NAME: "0/RP0/CPU0-MB_3_3V_L_L1_VOUT", DESCR: "Voltage Sensor - MB_3.3V_L_L1_VOUT"
+!NAME: "0/RP0/CPU0-MB_3_3V_R_L1_VIN", DESCR: "Voltage Sensor - MB_3.3V_R_L1_VIN"
+!NAME: "0/RP0/CPU0-MB_3_3V_R_L1_VOUT", DESCR: "Voltage Sensor - MB_3.3V_R_L1_VOUT"
+!NAME: "0/RP0/CPU0-MB_GB_CORE_VIN_L1", DESCR: "Voltage Sensor - MB-GB_CORE_VIN_L1"
+!NAME: "0/RP0/CPU0-MB_GB_CORE_VOUT_L1", DESCR: "Voltage Sensor - MB-GB_CORE_VOUT_L1"
+!NAME: "0/RP0/CPU0-GPS",        DESCR: "LED Sensor"
+!NAME: "0/RP0/CPU0-OBFL flash storage", DESCR: "Onboard Flash"
+!NAME: "0/RP0/CPU0-NPU0",       DESCR: "ASIC Slice Module"
+!NAME: "0/RP0/CPU0-x86TamFwGolden", DESCR: "Aikido x86 FPGA Golden region"
+!NAME: "0/RP0/CPU0-x86FpgaGolden", DESCR: "Aikido x86 FPGA Upgrade region"
+!NAME: "0/RP0/CPU0-x86TamFw",   DESCR: "Aikido x86 TAM Golden region"
+!NAME: "0/RP0/CPU0-x86Fpga",    DESCR: "Aikido x86 TAM Upgrade region"
+!NAME: "0/RP0/CPU0-IoFpgaGolden", DESCR: "IOFPGA Golden region"
+!NAME: "0/RP0/CPU0-IoFpga",     DESCR: "IOFPGA Upgrade region"
+!NAME: "0/RP0/CPU0-BiosGolden", DESCR: "Golden BIOS"
+!NAME: "0/RP0/CPU0-Bios",       DESCR: "Primary BIOS"
+!NAME: "0/RP0/CPU0-SsdIntelS4510", DESCR: "SSD"
+!NAME: "0/RP0/CPU0-PowerCpld",  DESCR: "Power CPLD"
+!NAME: "0/RP0/CPU0-Base Board IDPROM", DESCR: "Cisco 8200 1RU w/24x100G & 8x400G, XR SW & HBM"
+!PID: 8201-24H8FH
+!VID: V01
+!SN: FLM28030CT2
+!NAME: "0/RP0/CPU0-Optics Controller 0", DESCR: "Optics Controller FPGA Module"
+!NAME: "0/RP0/CPU0-Intel Xeon CPU", DESCR: "Processor Module"
+!NAME: "0/RP0/CPU0-Power Board 0 IDPROM", DESCR: "Power Board"
+!NAME: "0/RP0/CPU0-Power Board 1 IDPROM", DESCR: "Power Board"
+!NAME: "0/RP0/CPU0-CPU_U17_PVCCIN_IOUT", DESCR: "Current Sensor - CPU-U17_PVCCIN_IOUT"
+!NAME: "0/RP0/CPU0-CPU_U17_P1P05V_IOUT", DESCR: "Current Sensor - CPU-U17_P1P05V_IOUT"
+!NAME: "0/RP0/CPU0-CPU_U117_P1P2V_IOUT", DESCR: "Current Sensor - CPU-U117_P1P2V_IOUT"
+!NAME: "0/RP0/CPU0-CPU_U117_P1P05V_IOUT", DESCR: "Current Sensor - CPU-U117_P1P05V_IOUT"
+!NAME: "0/RP0/CPU0-CPU_U17_PVCCIN_IIN", DESCR: "Current Sensor - CPU-U17_PVCCIN_IIN"
+!NAME: "0/RP0/CPU0-CPU_U17_P1P05V_IIN", DESCR: "Current Sensor - CPU-U17_P1P05V_IIN"
+!NAME: "0/RP0/CPU0-CPU_U117_P1P2V_IIN", DESCR: "Current Sensor - CPU-U117_P1P2V_IIN"
+!NAME: "0/RP0/CPU0-CPU_U117_P1P05V_IIN", DESCR: "Current Sensor - CPU-U117_P1P05V_IIN"
+!NAME: "0/RP0/CPU0-CPU_U17_PVCCIN_TEMP", DESCR: "Temperature Sensor - CPU_U17_PVCCIN_TEMP"
+!NAME: "0/RP0/CPU0-CPU_U17_P1P05V_TEMP", DESCR: "Temperature Sensor - CPU_U17_P1P05V_TEMP"
+!NAME: "0/RP0/CPU0-CPU_U117_P1P2V_TEMP", DESCR: "Temperature Sensor - CPU_U117_P1P2V_TEMP"
+!NAME: "0/RP0/CPU0-CPU_U117_P1P05V_TEMP", DESCR: "Temperature Sensor - CPU_U117_P1P05V_TEMP"
+!NAME: "0/RP0/CPU0-X86_CORE_0_T", DESCR: "Temperature Sensor - X86_CORE_0_TEMP_SENSOR"
+!NAME: "0/RP0/CPU0-X86_CORE_1_T", DESCR: "Temperature Sensor - X86_CORE_1_TEMP_SENSOR"
+!NAME: "0/RP0/CPU0-X86_CORE_2_T", DESCR: "Temperature Sensor - X86_CORE_2_TEMP_SENSOR"
+!NAME: "0/RP0/CPU0-X86_CORE_3_T", DESCR: "Temperature Sensor - X86_CORE_3_TEMP_SENSOR"
+!NAME: "0/RP0/CPU0-X86_PKG_TEMP", DESCR: "Temperature Sensor - X86_PACKAGE_TEMP_SENSOR"
+!NAME: "0/RP0/CPU0-CPU_12V_STBY", DESCR: "ADC Voltage Sensor - CPU-12V_STBY"
+!NAME: "0/RP0/CPU0-CPU_1V3",    DESCR: "ADC Voltage Sensor - CPU-ADC0_1V3_CH0"
+!NAME: "0/RP0/CPU0-CPU_3V3_PCH", DESCR: "ADC Voltage Sensor - CPU-ADC0_3V3_PCH_CH1"
+!NAME: "0/RP0/CPU0-CPU_3V3",    DESCR: "ADC Voltage Sensor - CPU-ADC0_3V3_CPU_CH2"
+!NAME: "0/RP0/CPU0-CPU_2V5_VPP", DESCR: "ADC Voltage Sensor - CPU-ADC0_2V5_VPP_CH3"
+!NAME: "0/RP0/CPU0-CPU_PVCCFUSES", DESCR: "ADC Voltage Sensor - CPU-ADC0_PVCCFUSESUS_CH4"
+!NAME: "0/RP0/CPU0-CPU_P1V15",  DESCR: "ADC Voltage Sensor - CPU-ADC0_P1V15_CH5"
+!NAME: "0/RP0/CPU0-CPU_A3V3",   DESCR: "ADC Voltage Sensor - CPU-ADC0_A3V3_CH6"
+!NAME: "0/RP0/CPU0-CPU_A2V5",   DESCR: "ADC Voltage Sensor - CPU-ADC0_A2V5_CH7"
+!NAME: "0/RP0/CPU0-CPU_A1V2",   DESCR: "ADC Voltage Sensor - CPU-ADC0_A1V2_CH8"
+!NAME: "0/RP0/CPU0-CPU_12V",    DESCR: "ADC Voltage Sensor - CPU-ADC0_P12V_CH9"
+!NAME: "0/RP0/CPU0-CPU_P1V5",   DESCR: "ADC Voltage Sensor - CPU-ADC0_P1V5_CH10"
+!NAME: "0/RP0/CPU0-CPU_0V6_VTT", DESCR: "ADC Voltage Sensor - CPU-0V6_VTT"
+!NAME: "0/RP0/CPU0-CPU_5V",     DESCR: "ADC Voltage Sensor - CPU-ADC_P5V_CH12"
+!NAME: "0/RP0/CPU0-CPU_0V6_DDR4_VTT", DESCR: "ADC Voltage Sensor - CPU-0V6_DDR4_VTT"
+!NAME: "0/RP0/CPU0-CPU_U17_PVCCIN_VOUT", DESCR: "Voltage Sensor - CPU-U17_PVCCIN_VOUT"
+!NAME: "0/RP0/CPU0-CPU_U17_P1P05V_VOUT", DESCR: "Voltage Sensor - CPU-U17_P1P05V_VOUT"
+!NAME: "0/RP0/CPU0-CPU_U117_P1P2V_VOUT", DESCR: "Voltage Sensor - CPU-U117_P1P2V_VOUT"
+!NAME: "0/RP0/CPU0-CPU_U117_P1P05V_VOUT", DESCR: "Voltage Sensor - CPU-U117_P1P05V_VOUT"
+!NAME: "0/RP0/CPU0-CPU_U17_PVCCIN_VIN", DESCR: "Voltage Sensor - CPU-U17_PVCCIN_VIN"
+!NAME: "0/RP0/CPU0-CPU_U17_P1P05V_VIN", DESCR: "Voltage Sensor - CPU-U17_P1P05V_VIN"
+!NAME: "0/RP0/CPU0-CPU_U117_P1P2V_VIN", DESCR: "Voltage Sensor - CPU-U117_P1P2V_VIN"
+!NAME: "0/RP0/CPU0-CPU_U117_P1P05V_VIN", DESCR: "Voltage Sensor - CPU-U117_P1P05V_VIN"
+!NAME: "0/RP0/CPU0-CPU Board IDPROM", DESCR: "CPU Board IDPROM"
+!NAME: "0/RP0/CPU0-IO_SENSE_QSFP_L", DESCR: "Current Sensor - IO-SENSE_QSFP_L"
+!NAME: "0/RP0/CPU0-IO_SENSE_GB", DESCR: "Current Sensor - IO-SENSE_GB"
+!NAME: "0/RP0/CPU0-IO_SENSE_CPU", DESCR: "Current Sensor - IO-SENSE_CPU"
+!NAME: "0/RP0/CPU0-IO_SENSE_GEN", DESCR: "Current Sensor - IO-SENSE_GEN"
+!NAME: "0/RP0/CPU0-IO_SENSE_QSFP_R", DESCR: "Current Sensor - IO-SENSE_QSFP_R"
+!NAME: "0/RP0/CPU0-IO_5V",      DESCR: "ADC Voltage Sensor - IO-+5V"
+!NAME: "0/RP0/CPU0-IO_3V3",     DESCR: "ADC Voltage Sensor - IO-+3.3V"
+!NAME: "0/RP0/CPU0-IO_AVDD2P5", DESCR: "ADC Voltage Sensor - IO-PWR_PHY_AVDD2P5"
+!NAME: "0/RP0/CPU0-IO_AVDD2P0", DESCR: "ADC Voltage Sensor - IO-PWR_PHY_AVDD2P0"
+!NAME: "0/RP0/CPU0-IO_AVDD1P5", DESCR: "ADC Voltage Sensor - IO-PWR_PHY_AVDD1P5"
+!NAME: "0/RP0/CPU0-IO_0V8_VDD", DESCR: "ADC Voltage Sensor - IO-PWR_PHY_0V8_VDD"
+!NAME: "0/RP0/CPU0-IO_3_3VA",   DESCR: "ADC Voltage Sensor - IO-3.3VA"
+!NAME: "0/RP0/CPU0-IO Board IDPROM", DESCR: "IO Board IDPROM"
+!NAME: "0/FT0-FAN_0_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT0-FAN_1_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT1-FAN_0_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT1-FAN_1_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT2-FAN_0_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT2-FAN_1_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT3-FAN_0_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT3-FAN_1_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT4-FAN_0_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT4-FAN_1_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT5-FAN_0_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT5-FAN_1_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/PM1-Fan_0_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/PM1-Fan_1_Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/RP0/CPU0-QSFP_DD Optics Port 0", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 1", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP_DD Optics Port 2", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28  Optics Port 3", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP_DD Optics Port 4", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 5", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP_DD Optics Port 6", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28  Optics Port 7", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP_DD Optics Port 8", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 9", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP_DD Optics Port 10", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 11", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP_DD Optics Port 12", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 13", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP_DD Optics Port 14", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 15", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 16", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 17", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 18", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 19", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 20", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 21", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 22", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 23", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 24", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 25", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 26", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 27", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 28", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 29", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 30", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP28 Optics Port 31", DESCR: "Optics Port Module"
+!NAME: "0/RP0/CPU0-QSFP bay 0", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 0", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-FourHundredGigE0/0/0/0", DESCR: "400GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 1", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 1", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/1", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 2", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 2", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-FourHundredGigE0/0/0/2", DESCR: "400GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 3", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 3", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/3", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 4", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 4", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-FourHundredGigE0/0/0/4", DESCR: "400GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 5", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 5", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/5", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 6", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 6", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-FourHundredGigE0/0/0/6", DESCR: "400GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 7", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 7", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/7", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 8", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 8", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-FourHundredGigE0/0/0/8", DESCR: "400GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 9", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 9", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/9", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 10", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 10", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-FourHundredGigE0/0/0/10", DESCR: "400GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 11", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 11", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/11", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 12", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 12", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-FourHundredGigE0/0/0/12", DESCR: "400GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 13", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 13", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/13", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 14", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 14", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-FourHundredGigE0/0/0/14", DESCR: "400GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 15", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 15", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/15", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 16", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 16", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/16", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 17", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 17", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/17", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 18", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 18", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/18", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 19", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 19", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/19", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 20", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 20", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/20", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 21", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 21", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/21", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 22", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 22", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/22", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 23", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 23", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/23", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 24", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 24", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/24", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 25", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 25", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/25", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 26", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 26", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/26", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 27", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 27", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/27", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 28", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 28", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/28", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 29", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 29", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/29", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 30", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 30", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/30", DESCR: "100GE Port"
+!NAME: "0/RP0/CPU0-QSFP bay 31", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0/CPU0-LED Sensor Port 31", DESCR: "Port LED Sensor"
+!NAME: "0/RP0/CPU0-HundredGigE0/0/0/31", DESCR: "100GE Port"
+!NAME: "FourHundredGigE0/0/0/0", DESCR: "Cisco QSFPDD 400G FR4 Pluggable Optics Module"
+!PID: QDD-400G-FR4-S
+!VID: V01
+!SN: CGC27090645
+!NAME: "HundredGigE0/0/0/16",   DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW210400Q5-A
+!NAME: "HundredGigE0/0/0/17",   DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW210400Q8-A
+!NAME: "HundredGigE0/0/0/18",   DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V04
+!SN: DPZ2721A074-A
+!NAME: "HundredGigE0/0/0/19",   DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW210400VF-A
+!NAME: "HundredGigE0/0/0/28",   DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW21040123-B
+!NAME: "FourHundredGigE0/0/0/0-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Temperature Sensor", DESCR: "Temperature Sensor"
+!NAME: "FourHundredGigE0/0/0/0-Voltage Sensor", DESCR: "Voltage Sensor"
+!NAME: "FourHundredGigE0/0/0/0-IDPROM", DESCR: "Cisco QSFPDD 400G FR4 Pluggable Optics Module"
+!PID: QDD-400G-FR4-S
+!VID: V01
+!SN: CGC27090645
+!NAME: "HundredGigE0/0/0/16-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/16-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/16-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/16-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/16-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/16-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/16-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/16-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/16-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/16-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/16-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/16-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/16-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/0/16-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/0/16-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW210400Q5-A
+!NAME: "HundredGigE0/0/0/17-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/17-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/17-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/17-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/17-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/17-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/17-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/17-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/17-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/17-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/17-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/17-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/17-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/0/17-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/0/17-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW210400Q8-A
+!NAME: "HundredGigE0/0/0/18-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/18-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/18-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/18-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/18-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/18-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/18-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/18-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/18-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/18-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/18-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/18-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/18-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/0/18-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/0/18-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V04
+!SN: DPZ2721A074-A
+!NAME: "HundredGigE0/0/0/19-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/19-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/19-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/19-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/19-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/19-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/19-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/19-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/19-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/19-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/19-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/19-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/19-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/0/19-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/0/19-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW210400VF-A
+!NAME: "HundredGigE0/0/0/28-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/28-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/28-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/28-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/0/28-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/28-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/28-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/28-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/28-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/28-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/28-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/28-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/0/28-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/0/28-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/0/28-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW21040123-B
+!
+!                              Current    Current       Max
+!                               Total      Limit       Limit
+! ------------------------------------------------------------
+! Lines of configuration             0      65536     131072
+! Policies                           0       3500       5000
+! Compiled policies size (kB)        0
+!
+!WARNING: Admin mode has been deprecated. Please consult the Command Line Interface Guide.
+!
+!! Building configuration...
+!! IOS XR Configuration 25.4.1.24I
+!! Last configuration change at Tue Sep  9 07:29:49 2025 by admin
+!
+hostname cst-8201-ag4
+group apply_cnc_bundle_fix
+ interface 'Bundle-Ether.*'
+  lldp
+   transmit disable
+  !
+ !
+end-group
+apply-group apply_cnc_bundle_fix
+logging 172.21.23.83 vrf default severity info port 9514
+logging 172.21.23.118 vrf default severity info port 9514
+username admin
+ group root-lr
+ group cisco-support
+ secret 10 $6$iDfz7nuT0yb7....$pvPTNLWTIiODKI6fh5NzK/x9lXQQVkYwODUr1sCF8Prm2EtRR4ir2TZYaR5Hk6jIos.HPPsxiU/hjqUG1KHuc0
+!
+username Compass-Console>
+ group root-lr
+ group cisco-support
+ secret 10 $6$dte2W/i8VMG64W/.$wGuWpUxTpwmJ8ETjGUEC/HJOBv9lhuGx/7mRqg6ekgtBp6EGU339TvaKU/6dqrXuXzRAEZ.km7pLXs3MHUkjL0
+!
+grpc
+ no-tls
+ address-family ipv4
+!
+telemetry model-driven
+ destination-group scte
+  address-family ipv4 10.0.2.5 port 5432
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group ReTiNA-NERVE
+  address-family ipv4 1.87.57.3 port 5555
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group CW_43dc8a5ea99529715899b4f5218408a785e40fce
+  address-family ipv4 201.0.0.100 port 9010
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group CW_4b3c69a200668b0a8dc155caff295645c684a8f8
+  address-family ipv4 201.0.0.100 port 9010
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group CW_6da4e808ed4724911f2288dbaeee605bb62f9617
+  address-family ipv4 1.86.24.117 port 31500
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ sensor-group timing
+  sensor-path Cisco-IOS-XR-ptp-oper:ptp/interface-foreign-masters
+ !
+ sensor-group interfaces
+  sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters
+ !
+ sensor-group retina_prism
+  sensor-path Cisco-IOS-XR-shellutil-oper:system-time/uptime
+  sensor-path Cisco-IOS-XR-mpls-te-oper:mpls-te/tunnels/summary
+  sensor-path Cisco-IOS-XR-infra-xtc-agent-oper:xtc/policy-summary
+  sensor-path Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-summary
+  sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
+  sensor-path Cisco-IOS-XR-nto-misc-oper:memory-summary/nodes/node/summary
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/topologies
+  sensor-path Cisco-IOS-XR-ipv4-acl-oper:ipv4-acl-and-prefix-list/oor/access-list-summary/details
+  sensor-path Cisco-IOS-XR-ipv6-acl-oper:ipv6-acl-and-prefix-list/oor/access-list-summary/details
+  sensor-path Cisco-IOS-XR-clns-isis-oper:isis/instances/instance/neighbor-summaries/neighbor-summary
+  sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters
+  sensor-path Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/process-info
+  sensor-path Cisco-IOS-XR-ip-rib-ipv4-oper:rib/vrfs/vrf/afs/af/safs/saf/ip-rib-route-table-names/ip-rib-route-table-name/protocol/isis
+ !
+ sensor-group interfaces-rate
+  sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/cache/data-rate
+ !
+ sensor-group CW_43dc8a5ea99529715899b4f5218408a785e40fce
+  sensor-path Cisco-IOS-XR-infra-tc-oper:traffic-collector/afs/af/counters/tunnels/tunnel
+ !
+ sensor-group CW_4b3c69a200668b0a8dc155caff295645c684a8f8
+  sensor-path Cisco-IOS-XR-infra-tc-oper:traffic-collector/vrf-table/default-vrf/afs/af/counters/prefixes/prefix
+ !
+ sensor-group CW_6da4e808ed4724911f2288dbaeee605bb62f9617
+  sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/data-rate
+ !
+ subscription ReTiNA
+  sensor-group-id retina_prism sample-interval 120000
+  destination-id ReTiNA-NERVE
+ !
+ subscription CW_43dc8a5ea99529715899b4f5218408a785e40fce
+  sensor-group-id CW_43dc8a5ea99529715899b4f5218408a785e40fce sample-interval 300000
+  destination-id CW_43dc8a5ea99529715899b4f5218408a785e40fce
+ !
+ subscription CW_4b3c69a200668b0a8dc155caff295645c684a8f8
+  sensor-group-id CW_4b3c69a200668b0a8dc155caff295645c684a8f8 sample-interval 300000
+  destination-id CW_4b3c69a200668b0a8dc155caff295645c684a8f8
+ !
+ subscription CW_6da4e808ed4724911f2288dbaeee605bb62f9617
+  sensor-group-id CW_6da4e808ed4724911f2288dbaeee605bb62f9617 sample-interval 60000
+  destination-id CW_6da4e808ed4724911f2288dbaeee605bb62f9617
+ !
+!
+ptp
+ clock
+  domain 60
+  profile g.8275.2 clock-type T-BC
+ !
+ profile g82752_slave_v4
+  transport ipv4
+  port state slave-only
+  sync frequency 32
+  clock operation one-step
+  announce interval 1
+  unicast-grant invalid-request deny
+  delay-request frequency 32
+ !
+ profile g82752_slave_v6
+  transport ipv6
+  port state slave-only
+  sync frequency 32
+  clock operation one-step
+  announce interval 1
+  unicast-grant invalid-request deny
+  delay-request frequency 32
+ !
+ profile g82752_master_v4
+  transport ipv4
+  port state master-only
+  sync frequency 32
+  clock operation one-step
+  announce interval 1
+  unicast-grant invalid-request deny
+  delay-request frequency 32
+ !
+ profile g82752_master_v6
+  transport ipv6
+  port state master-only
+  sync frequency 32
+  clock operation one-step
+  announce interval 1
+  unicast-grant invalid-request deny
+  delay-request frequency 32
+ !
+ frequency priority 5
+ time-of-day priority 5
+ log
+  servo events
+  best-master-clock changes
+ !
+!
+vrf rphy-vrf
+ address-family ipv4 unicast
+  import route-target
+   100:5000
+  !
+  export route-target
+   100:5000
+  !
+ !
+ address-family ipv6 unicast
+  import route-target
+   100:5000
+  !
+  export route-target
+   100:5000
+  !
+ !
+!
+address-family ipv4 unicast
+!
+address-family ipv6 unicast
+!
+line console
+ exec-timeout 0 0
+!
+line default
+ exec-timeout 0 0
+!
+snmp-server ifindex persist
+snmp-server vrf default
+ host 172.21.23.83 traps cisco udp-port 1062
+ host 172.21.23.118 traps cisco udp-port 1062
+!
+snmp-server host 172.27.227.247 traps version 2c cisco udp-port 1062
+snmp-server community cisco RW
+snmp-server community public RW
+snmp-server packetsize 4096
+snmp-server trap-source MgmtEth0/RP0/CPU0/0
+monitor-session testfile ethernet
+ destination file size 50000
+!
+fpd auto-upgrade enable
+ntp
+ server 171.68.38.66 maxpoll 8 prefer
+ source MgmtEth0/RP0/CPU0/0
+ update-calendar
+!
+ipv4 unnumbered mpls traffic-eng Loopback0
+frequency synchronization
+ quality itu-t option 1
+ log selection changes
+!
+key chain ISIS-KEY
+! key  <removed> 
+  accept-lifetime 00:00:00 january 01 2018 infinite
+!  key-string  <removed>
+  send-lifetime 00:00:00 january 01 2018 infinite
+  cryptographic-algorithm HMAC-MD5
+ !
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+netconf-yang agent
+ ssh
+!
+class-map match-any cin-ef
+ description Match EF: PTP, high priority messaging
+ match dscp 46 
+ end-class-map
+! 
+class-map match-any cin-cs5
+ description Match DSCP 40: mdd, voice
+ match dscp 40 
+ end-class-map
+! 
+class-map match-all DSCPAF11
+ match dscp af11 
+ end-class-map
+! 
+class-map match-any DSCPAF13
+ match dscp af13 
+ end-class-map
+! 
+class-map match-any DSCPAF23
+ match dscp af23 
+ end-class-map
+! 
+class-map match-any DSCPAF33
+ match dscp af33 
+ end-class-map
+! 
+class-map match-any DSCPAF41
+ match dscp af41 
+ end-class-map
+! 
+class-map match-any DSCPAF42
+ match dscp af42 
+ end-class-map
+! 
+class-map match-all DSCPAF43
+ match dscp af43 
+ end-class-map
+! 
+class-map match-any tc-2-out
+ match traffic-class 2 
+ end-class-map
+! 
+class-map match-any tc-3-out
+ match traffic-class 3 
+ end-class-map
+! 
+class-map match-any qos-2-out
+ description High priority, EF
+ match qos-group 5 
+ end-class-map
+! 
+class-map match-any qos-3-out
+ description Second highest priority
+ match qos-group 3 
+ end-class-map
+! 
+class-map match-any cin-video-cs4
+ description Match DSCP 32: Video
+ match dscp 32 
+ end-class-map
+! 
+class-map match-any match-ef-exp5
+ description High priority, EF
+ match dscp 46 
+ match mpls experimental topmost 5 
+ end-class-map
+! 
+class-map match-any match-cs5-exp4
+ description Second highest priority
+ match dscp 40 
+ match mpls experimental topmost 4 
+ end-class-map
+! 
+class-map match-any match-cs6-exp6
+ description Highest priority control-plane traffic
+ match dscp cs6 
+ match mpls experimental topmost 6 
+ end-class-map
+! 
+class-map match-any video-tc-6-out
+ match traffic-class 6 
+ end-class-map
+! 
+class-map match-any video-qos-6-out
+ description Video
+ match qos-group 6 
+ end-class-map
+! 
+class-map match-any match-qos-group-1
+ match qos-group 1 
+ end-class-map
+! 
+class-map match-any match-qos-group-2
+ match qos-group 2 
+ end-class-map
+! 
+class-map match-any match-qos-group-3
+ match qos-group 3 
+ end-class-map
+! 
+class-map match-any match-qos-group-6
+ match qos-group 3 
+ end-class-map
+! 
+class-map match-any core-priority-2-in
+ description High priority, EF
+ match dscp 46 
+ match mpls experimental topmost 5 
+ end-class-map
+! 
+class-map match-any core-priority-3-in
+ description Second highest priority
+ match dscp 40 
+ match mpls experimental topmost 4 
+ end-class-map
+! 
+class-map match-any cin-traffic-class-2
+ match traffic-class 2 
+ end-class-map
+! 
+class-map match-any cin-traffic-class-3
+ match traffic-class 3 
+ end-class-map
+! 
+class-map match-any cin-traffic-class-6
+ match traffic-class 6 
+ end-class-map
+! 
+class-map match-any match-video-cs4-exp2
+ description Video
+ match dscp 32 
+ match mpls experimental topmost 2 
+ end-class-map
+! 
+class-map match-any match-traffic-class-1
+ description "Match highest priority traffic-class 1"
+ match traffic-class 1 
+ end-class-map
+! 
+class-map match-any match-traffic-class-2
+ description "Match high priority traffic-class 2"
+ match traffic-class 2 
+ end-class-map
+! 
+class-map match-any match-traffic-class-3
+ description "Match medium traffic-class 3"
+ match traffic-class 3 
+ end-class-map
+! 
+class-map match-any match-traffic-class-6
+ description "Match video traffic-class 6"
+ match traffic-class 6 
+ end-class-map
+! 
+class-map match-any core-video-priority-6-in
+ description Video
+ match dscp 32 
+ match mpls experimental topmost 5 2 
+ end-class-map
+! 
+policy-map CHILD_INGRESS
+ class DSCPAF23
+  set traffic-class 2
+ ! 
+ class DSCPAF41
+  set traffic-class 5
+ ! 
+ class DSCPAF42
+  set traffic-class 6
+ ! 
+ class DSCPAF11
+  set traffic-class 7
+ ! 
+ class DSCPAF13
+  set traffic-class 1
+ ! 
+ class DSCPAF33
+  set traffic-class 3
+ ! 
+ class DSCPAF43
+  set traffic-class 4
+  set discard-class 1
+ ! 
+ class class-default
+ ! 
+ end-policy-map
+! 
+policy-map core-egress-queuing
+ class match-traffic-class-2
+  priority level 2 
+  queue-limit 100 us 
+ ! 
+ class match-traffic-class-3
+  priority level 3 
+  queue-limit 500 us 
+ ! 
+ class match-traffic-class-6
+  priority level 6 
+  queue-limit 500 us 
+ ! 
+ class match-traffic-class-1
+  priority level 1 
+  queue-limit 500 us 
+ ! 
+ class class-default
+  queue-limit 250 ms 
+ ! 
+ end-policy-map
+! 
+policy-map core-egress-base-parent
+ class class-default
+  service-policy core-egress-base-scheduler
+  shape average 1 gbps 
+ ! 
+ end-policy-map
+! 
+policy-map core-egress-exp-marking
+ class match-qos-group-1
+  set mpls experimental imposition 6
+ ! 
+ class match-qos-group-2
+  set mpls experimental imposition 5
+ ! 
+ class match-qos-group-3
+  set mpls experimental imposition 4
+ ! 
+ class match-qos-group-6
+  set mpls experimental imposition 2
+ ! 
+ class class-default
+  set mpls experimental imposition 0
+ ! 
+ end-policy-map
+! 
+policy-map core-ingress-classifier
+ class match-cs6-exp6
+  set traffic-class 1
+ ! 
+ class match-ef-exp5
+  set traffic-class 2
+ ! 
+ class match-cs5-exp4
+  set traffic-class 3
+ ! 
+ class match-video-cs4-exp2
+  set traffic-class 6
+ ! 
+ class class-default
+  set mpls experimental topmost 0
+  set traffic-class 0
+  set dscp 0
+ ! 
+ end-policy-map
+! 
+policy-map rpd-dpic-egress-queuing
+ class match-traffic-class-1
+  priority level 1 
+  queue-limit 500 us 
+ ! 
+ class match-traffic-class-2
+  priority level 2 
+  queue-limit 100 us 
+ ! 
+ class match-traffic-class-3
+  priority level 3 
+  queue-limit 500 us 
+ ! 
+ class match-traffic-class-6
+  priority level 6 
+  queue-limit 500 us 
+ ! 
+ class class-default
+  queue-limit 250 ms 
+ ! 
+ end-policy-map
+! 
+policy-map core-egress-base-scheduler
+ class match-traffic-class-1
+  priority level 1 
+ ! 
+ class class-default
+ ! 
+ end-policy-map
+! 
+policy-map rpd-dpic-ingress-classifier
+ class match-cs6-exp6
+  set traffic-class 1
+  set qos-group 1
+ ! 
+ class match-ef-exp5
+  set traffic-class 2
+  set qos-group 2
+ ! 
+ class match-cs5-exp4
+  set traffic-class 3
+  set qos-group 3
+ ! 
+ class match-video-cs4-exp2
+  set traffic-class 6
+  set qos-group 6
+ ! 
+ class class-default
+  set traffic-class 0
+  set qos-group 0
+ ! 
+ end-policy-map
+! 
+interface Bundle-Ether124
+ shutdown
+!
+interface Bundle-Ether2124
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.21.24.0
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.21.24.1 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2405:10:21:24::1/127
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether2224
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.22.24.0
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.22.24.1 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2405:10:22:24::1/127
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether2324
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.23.24.0
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.23.24.1 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2405:10:23:24::1/127
+ shutdown
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Loopback0
+ ipv4 address 101.0.2.4 255.255.255.255
+ ipv6 address fccc:0:213::1/128
+!
+interface MgmtEth0/RP0/CPU0/0
+ ipv4 address 172.27.227.182 255.255.255.0
+!
+interface FourHundredGigE0/0/0/0
+ description "To cst-8201-ag3 0/0/0/0"
+ bundle id 2324 mode active
+!
+interface HundredGigE0/0/0/1
+ shutdown
+!
+interface FourHundredGigE0/0/0/2
+ shutdown
+!
+interface HundredGigE0/0/0/3
+ shutdown
+!
+interface FourHundredGigE0/0/0/4
+ shutdown
+!
+interface HundredGigE0/0/0/5
+ shutdown
+!
+interface FourHundredGigE0/0/0/6
+ shutdown
+!
+interface HundredGigE0/0/0/7
+ shutdown
+!
+interface FourHundredGigE0/0/0/8
+ shutdown
+!
+interface HundredGigE0/0/0/9
+ shutdown
+!
+interface FourHundredGigE0/0/0/10
+ shutdown
+!
+interface HundredGigE0/0/0/11
+ shutdown
+!
+interface FourHundredGigE0/0/0/12
+ shutdown
+!
+interface HundredGigE0/0/0/13
+ shutdown
+!
+interface FourHundredGigE0/0/0/14
+ shutdown
+!
+interface HundredGigE0/0/0/15
+ shutdown
+!
+interface HundredGigE0/0/0/16
+ description "To cst-pa3 0/0/0/27"
+ mtu 9216
+ ptp
+  profile g82752_master_v4
+ !
+ ipv4 address 10.21.24.1 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2000:102:1013::2/126
+ ipv6 address 2405:10:21:24::1/127
+ carrier-delay up 0 down 0
+ load-interval 30
+ dampening
+!
+interface HundredGigE0/0/0/17
+ description "To cst-ncs57c1-pa4"
+ mtu 9216
+ ptp
+  profile g82752_slave_v4
+  master ipv4 10.22.24.0
+  !
+  master ipv6 2405:10:22:24::
+  !
+ !
+ ipv4 address 10.22.24.1 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2000:102:1113::2/126
+ ipv6 address 2405:10:22:24::1/127
+ load-interval 30
+ dampening
+!
+interface HundredGigE0/0/0/18
+ ipv4 address 10.24.253.0 255.255.255.254
+ ipv6 address 2000:102:1413::1/126
+ ipv6 address 2405:10:24:253::/127
+ load-interval 30
+!
+interface HundredGigE0/0/0/19
+ description "To cst-a-pe7 0/0/1/1"
+ ptp
+  profile g82752_master_v4
+ !
+ ipv4 address 10.24.252.1 255.255.255.254
+ ipv6 address 2000:102:1315::1/126
+ load-interval 30
+!
+interface HundredGigE0/0/0/20
+ shutdown
+!
+interface HundredGigE0/0/0/21
+ shutdown
+!
+interface HundredGigE0/0/0/22
+ shutdown
+!
+interface HundredGigE0/0/0/23
+ shutdown
+!
+interface HundredGigE0/0/0/24
+ shutdown
+!
+interface HundredGigE0/0/0/25
+ shutdown
+!
+interface HundredGigE0/0/0/26
+ shutdown
+!
+interface HundredGigE0/0/0/27
+ shutdown
+!
+interface HundredGigE0/0/0/28
+ description "To cst-8011-4g-2 0/0/0/1"
+ ipv4 address 28.1.0.1 255.255.255.0
+ ipv6 address 28:1::1/124
+!
+interface HundredGigE0/0/0/29
+ shutdown
+!
+interface HundredGigE0/0/0/30
+ shutdown
+!
+interface HundredGigE0/0/0/31
+ shutdown
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 172.27.227.5
+  223.0.0.0/8 172.27.227.5
+  223.0.0.0/16 172.27.227.5
+ !
+!
+router isis ACCESS
+ set-overload-bit on-startup 360
+ is-type level-2-only
+ net 49.0001.0102.0000.0024.00
+ nsr
+ distribute link-state instance-id 102
+ nsf cisco
+ log adjacency changes
+ lsp-gen-interval initial-wait 50 secondary-wait 200 maximum-wait 5000
+ lsp-refresh-interval 65000
+ max-lsp-lifetime 65535
+ lsp-password keychain ISIS-KEY
+ lsp-password keychain ISIS-KEY level 1
+ affinity-map red bit-position 0
+ address-family ipv4 unicast
+  metric-style wide
+  mpls traffic-eng level-2-only
+  mpls traffic-eng router-id Loopback0
+  spf-interval initial-wait 50 secondary-wait 200 maximum-wait 5000
+  segment-routing mpls
+  spf prefix-priority critical tag 5000
+  spf prefix-priority high tag 1000
+ !
+ address-family ipv6 unicast
+  metric-style wide
+  microloop avoidance segment-routing
+  router-id Loopback0
+  segment-routing srv6
+   locator LocAlgo0
+   !
+   locator LocAlgo128
+   !
+   locator LocAlgo129
+   !
+   locator LocAlgo130
+   !
+   locator LocAlgo131
+   !
+  !
+ !
+ flex-algo 128
+  metric-type delay
+  advertise-definition
+ !
+ flex-algo 129
+  advertise-definition
+ !
+ flex-algo 130
+  metric-type delay
+  advertise-definition
+ !
+ flex-algo 131
+  advertise-definition
+  affinity exclude-any red
+  address-family ipv4 unicast
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface Bundle-Ether2124
+  bfd minimum-interval 50
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface Bundle-Ether2224
+  bfd minimum-interval 50
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+ interface Bundle-Ether2324
+  bfd minimum-interval 50
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+ interface Loopback0
+  address-family ipv4 unicast
+   prefix-sid index 24
+   prefix-sid algorithm 129 absolute 19019
+   prefix-sid algorithm 130 absolute 20019
+   prefix-sid algorithm 131 absolute 21019
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface MgmtEth0/RP0/CPU0/0
+  passive
+  address-family ipv4 unicast
+  !
+ !
+ interface HundredGigE0/0/0/16
+  bfd minimum-interval 50
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+ interface HundredGigE0/0/0/17
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+ interface HundredGigE0/0/0/18
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+ interface HundredGigE0/0/0/19
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+ interface HundredGigE0/0/0/20
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+ interface HundredGigE0/0/0/28
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+   metric 100
+  !
+ !
+!
+router bgp 100
+ nsr
+ bgp router-id 101.0.2.4
+ bgp graceful-restart
+ ibgp policy out enforce-modifications
+ address-family vpnv4 unicast
+ !
+ address-family vpnv6 unicast
+ !
+ address-family l2vpn vpls-vpws
+ !
+ address-family ipv4 mvpn
+ !
+ address-family ipv6 mvpn
+ !
+ address-family l2vpn evpn
+ !
+ neighbor-group SvRR
+  remote-as 100
+  update-source Loopback0
+  address-family vpnv4 unicast
+   soft-reconfiguration inbound always
+  !
+  address-family vpnv6 unicast
+   soft-reconfiguration inbound always
+  !
+  address-family l2vpn vpls-vpws
+   soft-reconfiguration inbound always
+  !
+  address-family ipv4 mvpn
+   soft-reconfiguration inbound always
+  !
+  address-family ipv6 mvpn
+   soft-reconfiguration inbound always
+  !
+  address-family l2vpn evpn
+   soft-reconfiguration inbound always
+  !
+ !
+ neighbor 101.0.2.202
+  use neighbor-group SvRR
+ !
+ vrf rphy-vrf
+  rd auto
+  address-family ipv4 unicast
+   label mode per-vrf
+   redistribute connected
+   redistribute static
+  !
+  address-family ipv4 mvpn
+  !
+  address-family ipv6 mvpn
+  !
+ !
+!
+mpls oam
+!
+mpls traffic-eng
+ interface TenGigE0/0/0/38
+ !
+ interface Bundle-Ether2124
+ !
+ interface Bundle-Ether2224
+ !
+ interface Bundle-Ether2324
+ !
+ interface HundredGigE0/0/0/19
+ !
+ interface HundredGigE0/0/0/20
+ !
+!
+mpls ldp
+ capabilities sac mldp-only
+ mldp
+  address-family ipv4
+   make-before-break delay 30
+   forwarding recursive
+   recursive-fec
+  !
+ !
+ router-id 101.0.2.4
+ session protection
+ address-family ipv4
+ !
+ interface TenGigE0/0/0/20
+ !
+ interface TenGigE0/0/0/38
+ !
+ interface HundredGigE0/0/0/16
+ !
+ interface HundredGigE0/0/0/19
+ !
+ interface HundredGigE0/0/0/20
+ !
+!
+multicast-routing
+ address-family ipv4
+  interface all enable
+ !
+ address-family ipv6
+  interface all enable
+ !
+!
+segment-routing
+ traffic-eng
+  srv6
+  !
+  pcc
+   source-address ipv4 101.0.2.4
+   pce address ipv4 101.0.1.101
+    precedence 200
+   !
+   pce address ipv4 101.0.2.101
+    precedence 100
+   !
+   pce address ipv4 101.0.2.102
+    precedence 1
+   !
+   report-all
+   timers delegation-timeout 10
+   timers deadtimer 60
+   timers initiated state 15
+   timers initiated orphan 10
+  !
+ !
+ srv6
+  locators
+   locator LocAlgo0
+    micro-segment behavior unode psp-usd
+    prefix fccc:0:213::/48
+   !
+   locator LocAlgo128
+    micro-segment behavior unode psp-usd
+    prefix fccc:1:213::/48
+    algorithm 128
+   !
+   locator LocAlgo129
+    micro-segment behavior unode psp-usd
+    prefix fccc:2:213::/48
+    algorithm 129
+   !
+   locator LocAlgo130
+    micro-segment behavior unode psp-usd
+    prefix fccc:3:213::/48
+    algorithm 130
+   !
+   locator LocAlgo131
+    micro-segment behavior unode psp-usd
+    prefix fccc:4:213::/48
+    algorithm 131
+   !
+  !
+ !
+!
+netconf agent tty
+!
+lldp
+!
+router pim
+ address-family ipv4
+  interface Loopback0
+   enable
+  !
+  interface TenGigE0/0/0/20
+   enable
+  !
+  interface TenGigE0/0/0/38
+   enable
+  !
+  interface HundredGigE0/0/0/16
+   enable
+  !
+  interface HundredGigE0/0/0/19
+   enable
+  !
+  interface HundredGigE0/0/0/20
+   enable
+  !
+ !
+!
+ssh server rate-limit 600
+ssh server capability netconf-xml
+ssh server v2
+ssh server netconf vrf default
+performance-measurement
+ interface HundredGigE0/0/0/16
+  delay-measurement
+  !
+ !
+ interface HundredGigE0/0/0/17
+  delay-measurement
+  !
+ !
+ interface HundredGigE0/0/0/18
+  delay-measurement
+  !
+ !
+ interface HundredGigE0/0/0/19
+  delay-measurement
+  !
+ !
+ interface HundredGigE0/0/0/20
+  delay-measurement
+  !
+ !
+ delay-profile interfaces default
+  advertisement
+   accelerated
+    threshold 25
+   !
+   periodic
+    interval 120
+    threshold 10
+   !
+  !
+  probe
+   measurement-mode two-way
+   protocol twamp-light
+   computation-interval 60
+  !
+ !
+!
+end

@@ -1,0 +1,3906 @@
+!RANCID-CONTENT-TYPE: ios-exr
+!
+!Chassis type: NCS-5500 - a NCS-5500 router
+!
+!Memory: main 18432M
+!
+!Image:  Node 0/RP0 [RP]
+!Image:     Active Packages: 1  
+!Image:        ncs5500-sysadmin-25.4.1.24I version=25.4.1.24I [Boot image]
+!
+! Smart Licensing Status
+! ======================
+! Smart Licensing is ENABLED
+! License Conversion:
+!   Automatic Conversion Enabled: True
+! Export Authorization Key:
+!   Features Authorized:
+!     <none>
+! Utility:
+! Smart Licensing Using Policy:
+! Account Information:
+!   Smart Account: <none>
+!   Virtual Account: <none>
+! Data Privacy:
+!   Sending Hostname: yes
+!     Callhome hostname privacy: DISABLED
+!     Smart Licensing hostname privacy: DISABLED
+!   Version privacy: DISABLED
+! Transport:
+!   Type: cslu
+!   Cslu address: <empty>
+!   Proxy:
+!     Not Configured
+!   VRF:
+!     Not Supported
+! Miscellaneous:
+!   Custom Id: <empty>
+! Policy:
+!   Policy in use: Merged from multiple sources.
+!   Reporting ACK required: yes (CISCO default)
+!   Unenforced/Non-Export Perpetual Attributes:
+!     First report requirement (days): 365 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 90 (CISCO default)
+!   Unenforced/Non-Export Subscription Attributes:
+!     First report requirement (days): 90 (CISCO default)
+!     Reporting frequency (days): 90 (CISCO default)
+!     Report on change (days): 90 (CISCO default)
+!   Enforced (Perpetual/Subscription) License Attributes:
+!     First report requirement (days): 0 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 0 (CISCO default)
+!   Export (Perpetual/Subscription) License Attributes:
+!     First report requirement (days): 0 (CISCO default)
+!     Reporting frequency (days): 0 (CISCO default)
+!     Report on change (days): 0 (CISCO default)
+! Usage Reporting:
+!   Last ACK received: <none>
+!   Next ACK deadline: <none>
+!   Reporting push interval: 0 (no reporting)
+!   Next ACK push check: <none>
+!   Next report push: <none>
+!   Last report push: <none>
+!   Last report file write: <none>
+! Trust Code Installed: <none>
+! Secondary Signing Cert: 0
+! License Usage
+! =============
+! No licenses in use
+! Product Information
+! ===================
+! UDI: PID:NCS-55A2-MOD-S,SN:FOC2223R15G
+! Agent Version
+! =============
+! Smart Agent for Licensing: 5.9.33/a550eb079
+! License Authorizations
+! ======================
+! Overall status:
+!   Active: PID:NCS-55A2-MOD-S,SN:FOC2223R15G
+! Purchased Licenses:
+!   No Purchase Information Available
+! Enforcement Status:
+!   No Enforcement Status Information Available
+! Usage Report Summary:
+! =====================
+! Total: 0,  Purged: 0
+! Total Acknowledged Received: 0,  Waiting for Ack: 0
+! Available to Report: 0  Collecting Data: 0  
+! Device Telemetry Report Summary:
+! ================================
+! Data Channel: AVAILABLE
+! Reports on disk: 0
+!
+!
+!
+!
+!Auto-upgrade:Disabled
+!                                                                         FPD Versions
+!                                                                        ==============
+!Location   Card type             HWver FPD device       ATR Status    Running   Programd
+!-----------------------------------------------------------------------------------------
+!0/0/1      NC55-MPA-4H-S         1.0   MPAFPGA               CURRENT     0.54      0.54
+!0/0/2      NC55-MPA-2TH-HX-S     65.32 CFP2-DE-DCO_0         NEED UPGD  38.518    38.518
+!0/0/2      NC55-MPA-2TH-HX-S     1.0   MPAFPGA               CURRENT     0.54      0.54
+!0/RP0      NCS-55A2-MOD-S        1.0   MB-MIFPGA             CURRENT     0.21      0.21
+!0/RP0      NCS-55A2-MOD-S        1.0   Bootloader            NEED UPGD   1.18      1.18
+!0/RP0      NCS-55A2-MOD-S        1.0   CPU-IOFPGA            CURRENT     1.27      1.27
+!0/RP0      NCS-55A2-MOD-S        1.0   MB-IOFPGA             NEED UPGD   0.21      0.21
+!0/RP0      NCS-55A2-MOD-S        1.0   SATA-M1100            CURRENT    50.00     50.00
+!0/PM0      NC55-1200W-ACFW             LIT-PriMCU-ACFW       NOT READY
+!0/PM1      NC55-1200W-ACFW       1.0   LIT-PriMCU-ACFW       CURRENT     2.09      2.09
+!
+!Power: Power       Supply     ------Input----   ------Output---      Status
+!Power: Power       Supply     ------Input----   ------Output---      Status
+!
+!Redundancy information for node 0/RP0/CPU0:
+!==========================================
+!Node 0/RP0/CPU0 is in ACTIVE role
+!Node 0/RP0/CPU0 has no valid partner
+!Details
+!--------
+!Current active rmf state: 
+!    NSR not ready since Standby is not Present
+!
+!Active node reload "CARD_SHUTDOWN"
+!
+!Image: Label : 25.4.1.24I-PROD_BUILD_25_4_1_24I_SIT_IMAGE
+!Image: Node 0/RP0/CPU0 [RP]
+!Image:   Boot Partition: xr_lv264
+!Image:   Active Packages: 14
+!Image:         ncs5500-xr-25.4.1.24I version=25.4.1.24I [Boot image]
+!Image:         ncs5500-isis-1.0.0.0-r254124I
+!Image:         ncs5500-pon-ctlr-1.0.0.0-r254124I
+!Image:         ncs5500-mpls-1.0.0.0-r254124I
+!Image:         ncs5500-mgbl-1.0.0.0-r254124I
+!Image:         ncs5500-ospf-1.0.0.0-r254124I
+!Image:         ncs5500-mpls-te-rsvp-1.0.0.0-r254124I
+!Image:         ncs5500-xcare-1.0.0.0-r254124I
+!Image:         ncs5500-healthcheck-1.0.0.0-r254124I
+!Image:         ncs5500-lictrl-1.0.0.0-r254124I
+!Image:         ncs5500-eigrp-1.0.0.0-r254124I
+!Image:         ncs5500-k9sec-1.0.0.0-r254124I
+!Image:         ncs5500-mcast-1.0.0.0-r254124I
+!Image:         ncs5500-li-1.0.0.0-r254124I
+!Image: Node 0/0/CPU0 [LC]
+!Image:   Boot Partition: xr_lcp_lv264
+!Image:   Active Packages: 14
+!Image:         ncs5500-xr-25.4.1.24I version=25.4.1.24I [Boot image]
+!Image:         ncs5500-isis-1.0.0.0-r254124I
+!Image:         ncs5500-mpls-1.0.0.0-r254124I
+!Image:         ncs5500-mgbl-1.0.0.0-r254124I
+!Image:         ncs5500-ospf-1.0.0.0-r254124I
+!Image:         ncs5500-k9sec-1.0.0.0-r254124I
+!Image:         ncs5500-eigrp-1.0.0.0-r254124I
+!Image:         ncs5500-xcare-1.0.0.0-r254124I
+!Image:         ncs5500-li-1.0.0.0-r254124I
+!Image:         ncs5500-lictrl-1.0.0.0-r254124I
+!Image:         ncs5500-healthcheck-1.0.0.0-r254124I
+!Image:         ncs5500-pon-ctlr-1.0.0.0-r254124I
+!Image:         ncs5500-mpls-te-rsvp-1.0.0.0-r254124I
+!Image:         ncs5500-mcast-1.0.0.0-r254124I
+!
+!Flash: disk0: Directory of disk0:
+!Flash: disk0: -rw-------.  1                      .bash_history
+!Flash: disk0: -rw-------.  1                      .python-history
+!Flash: disk0: -rw-------.  1    1508 Dec 10  2019 .viminfo
+!Flash: disk0: -rwxr--r--.  1   16118 Dec  8  2018 PA2-conf-Dec7
+!Flash: disk0: drwx------.  2    4096 Sep 11  2024 SPAN
+!Flash: disk0: drwx---r-x.  2    4096 Oct 22  2018 clihistory
+!Flash: disk0: lrwxrwxrwx.  1      12 Oct 22  2018 config -> /misc/config
+!Flash: disk0: drwxr-xr-x. 12 1536000 Sep 11  2024 core
+!Flash: disk0: drwxr-xr-x.  2    4096 Aug  9  2024 crypto
+!Flash: disk0: -rw-r--r--.  1     859 Sep 29 11:11 envoke_log
+!Flash: disk0: drwxr-xr-x.  2    4096 Nov 19  2019 kim
+!Flash: disk0: drwx------.  2    4096 Jul  5  2019 lost+found
+!Flash: disk0: drwxr-xr-x.  2    4096 Oct 22  2018 nvgen_traces
+!Flash: disk0: -rw-r--r--.  1     113 May 19  2020 oor_aware_process
+!Flash: disk0: drwxr-xr-x.  3    4096 Jun  9  2020 pam
+!Flash: disk0: -rw-r--r--.  1  678234 Sep 29 11:11 pnet_cfg.log
+!Flash: disk0: -rw-r--r--.  1      14 Oct 11  2019 run_cfg_hostname
+!Flash: disk0: drwxr-xr-x.  2    4096 Jun 20 06:01 shutdown
+!Flash: disk0: -rw-r--r--.  1       0 Sep 29 11:11 status_file
+!Flash: disk0: -rw-r--r--.  1       0 Sep 29 11:12 status_file_err
+!Flash: disk0: drwxr-xr-x.  4    4096 Oct  3  2019 syslog
+!Flash: disk0: drwxr-xr-x.  3    4096 Jul  5  2019 syslog-hm
+!Flash: disk0: drwxr-xr-x. 10    4096 Sep 29 11:33 ztp
+!Flash: disk0: 1 GB total (91% free)
+!
+!Flash: harddisk: Directory of harddisk:
+!Flash: harddisk: -rw-r--r--. 1       6728 Nov  8  2019 .PA2-base.config.un~
+!Flash: harddisk: drwxr-xr-x. 2                         .sppdc
+!Flash: harddisk: drwxr-xr-x. 2       4096 Jan 19  2024 .sppdc_new
+!Flash: harddisk: -rw-r--r--. 1 2252738560 Jan 14  2024 NCS5500-iosxr-k9-7.11.1.tar
+!Flash: harddisk: -rwx------. 1      26517 Apr 28  2022 PA2-752-cco.cfg
+!Flash: harddisk: -rwx------. 1      29699 Sep 23  2022 PA2-781-092322.cfg
+!Flash: harddisk: -rwx------. 1      22475 Nov  8  2019 PA2-after-sync.config
+!Flash: harddisk: -rw-r--r--. 1        722 Nov  8  2019 PA2-base.config
+!Flash: harddisk: -rw-r--r--. 1        449 Nov  8  2019 PA2-base.config~
+!Flash: harddisk: -rwx------. 1      23570 Nov  8  2019 PA2-before-sync.config
+!Flash: harddisk: -rwx------. 1      23168 Jul  3  2019 PA2_Backup_070319.cfg
+!Flash: harddisk: -rw-r--r--. 1    1854173 Sep 29 11:33 bcm_console_log_output.txt
+!Flash: harddisk: drwxr-xr-x. 6                         cisco_support
+!Flash: harddisk: drwxr-xr-x. 2       4096 Mar 13  2025 coredumps
+!Flash: harddisk: -rw-r--r--. 1      31557 Sep 26 10:06 cst-55a2-ag5.cfg-26-Sep-2025
+!Flash: harddisk: -rw-r--r--. 1      33432 Mar  6  2025 cst-55a2-ag5.txt
+!Flash: harddisk: -rw-r--r--. 1      31552 Dec  2  2022 cst-pa2
+!Flash: harddisk: -rwx------. 1      29199 Sep 12  2022 cst-pa2-bkp-bef-change
+!Flash: harddisk: -rwx------. 1      29993 Sep 13  2022 cst-pa2-inline-rr-srv6
+!Flash: harddisk: -rw-r--r--. 1      31219 Jan 19  2024 cst-pa2_19_jan-2024.cfg
+!Flash: harddisk: -rw-r--r--. 1      30096 Oct 14  2022 cst-pa2_2022_10_14_13_02_55_471290.cfg
+!Flash: harddisk: -rw-r--r--. 1          0 Nov  1  2022 cst-pa2_2022_10_31_18_04_55_562175.cfg
+!Flash: harddisk: -rw-r--r--. 1      31645 Nov 14  2022 cst-pa2_2022_11_14_10_19_57_977927.cfg
+!Flash: harddisk: -rw-r--r--. 1      31645 Nov 28  2022 cst-pa2_2022_11_28_10_23_57_251273.cfg
+!Flash: harddisk: drwxr-xr-x. 2       4096 Jan 19  2024 custom_metrics
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep  7  2018 dumper
+!Flash: harddisk: drwx------. 4       4096 Sep 29 11:12 ima
+!Flash: harddisk: drw-r--r--. 2       4096 Jan 19  2024 images
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep 29 10:55 install_tmp_staging_area
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep  7  2018 ipodwdm_log
+!Flash: harddisk: drwx------. 2      16384 Sep  7  2018 lost+found
+!Flash: harddisk: drwxr-xr-x. 4       4096 Jan 28  2022 mirror
+!Flash: harddisk: -r-xr-xr-x. 1     643495 Jun 18 05:22 ncs5500-eigrp-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -rw-r--r--. 1 2485790720 May 20 07:45 ncs5500-goldenk9-x-25.2.1.35I-PROD_BUILD_25_2_1_35I_SIT_IMAGE.iso
+!Flash: harddisk: -rw-r--r--. 1 2602561536 Sep 29 10:33 ncs5500-goldenk9-x-25.4.1.24I-PROD_BUILD_25_4_1_24I_SIT_IMAGE.iso
+!Flash: harddisk: -r-xr-xr-x. 1  109377915 Jun 18 05:22 ncs5500-healthcheck-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1    4074119 Jun 18 05:22 ncs5500-isis-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -rwxr-xr-x. 1    1563126 Jun 20 05:09 ncs5500-k9sec-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1     349032 Jun 18 05:22 ncs5500-li-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1      11627 Jun 18 05:22 ncs5500-license-util-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1    1812559 Jun 18 05:22 ncs5500-licensing-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1      13876 Jun 18 05:22 ncs5500-lictrl-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1   11390750 Jun 18 05:22 ncs5500-mcast-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1    2237045 Jun 18 05:22 ncs5500-mgbl-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -rw-r--r--. 1 2195263488 Jun 18 05:24 ncs5500-mini-x-25.2.1.iso
+!Flash: harddisk: -r-xr-xr-x. 1    2333794 Jun 18 05:22 ncs5500-mpls-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1    8507260 Jun 18 05:22 ncs5500-mpls-te-rsvp-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1    4126802 Jun 18 05:22 ncs5500-ospf-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -r-xr-xr-x. 1  142353868 Jun 18 05:22 ncs5500-pon-ctlr-1.0.0.0-r2521.x86_64.rpm
+!Flash: harddisk: -rw-r--r--. 1   10493819 Oct  3 14:35 nvgen_bkup.log
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep 29 12:07 nvgen_traces
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep  7  2018 nvram
+!Flash: harddisk: -rw-r--r--. 1      31680 Oct 21  2022 pa2_21_oct.cfg
+!Flash: harddisk: -rw-r--r--. 1    1973056 Oct 20  2022 pa2_srv6_ti_lfa.pcap
+!Flash: harddisk: drwxr-xr-x. 3       4096 Jun  9  2020 pam
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep 11  2024 pon-ctlr
+!Flash: harddisk: -rw-r--r--. 1    2648256 Feb  3  2024 ptp_mem_logger_trace_file.log
+!Flash: harddisk: -rw-r--r--. 1     337152 May 18  2022 ptp_rotating_trace_file_a.log
+!Flash: harddisk: -rw-r--r--. 1     950976 Feb  3  2024 ptp_rotating_trace_file_b.log
+!Flash: harddisk: -rw-r--r--. 1     360576 Feb  3  2024 ptp_rotating_trace_file_c.log
+!Flash: harddisk: -rw-r--r--. 1     352692 Feb  5  2024 ptp_trace_file.log
+!Flash: harddisk: -rw-r--r--. 1        325 Sep 29 11:12 qos_cem_driver_trace.log
+!Flash: harddisk: drw-rw-r--. 2       4096 Nov 12  2020 rdsfs_log
+!Flash: harddisk: -rwxr--r--. 1      24896 Dec 16  2021 run-pa2-beforeloopbackchange
+!Flash: harddisk: -rwxr--r--. 1       8032 Dec  7  2018 sh_run_PA2
+!Flash: harddisk: -rwxr--r--. 1       2164 Nov 18  2020 show_output.out
+!Flash: harddisk: drwxr-xr-x. 2       4096 Nov  2  2022 showtech
+!Flash: harddisk: -rwx------. 1      20865 Oct 10  2019 shrun-663.23I
+!Flash: harddisk: -rwx------. 1      23711 Jul  6  2020 shrun-beforeipv4unnumbered
+!Flash: harddisk: -rwx------. 1      20031 Oct  3  2019 shrun-cfp2dco-100G
+!Flash: harddisk: -rwx------. 1      23550 Nov  8  2019 shrun-pa2
+!Flash: harddisk: drwxrwxrwx. 3       4096 Feb  5  2024 shutdown
+!Flash: harddisk: -rw-r--r--. 1      50245 Sep 29 11:12 stats_infra_configs
+!Flash: harddisk: -rw-r--r--. 1      50245 Jun 20 06:08 stats_infra_configs_bkup
+!Flash: harddisk: drwxr-xr-x. 2       4096 Sep  7  2018 tftpboot
+!Flash: harddisk: -rw-r--r--. 1       8203 Feb  5  2024 trimble_raw_dump.txt
+!Flash: harddisk: -rw-r--r--. 1         65 Sep 29 11:33 utc_offset.json
+!Flash: harddisk: drwxr-xr-x. 3       4096 Oct  3  2019 var
+!Flash: harddisk: -rw-r--r--. 1      30886 Sep 29 11:32 xml_tty_bkup.log
+!Flash: harddisk: drwxr-xr-x. 6       4096 Sep  7  2018 xr
+!Flash: harddisk: drwxr-xr-x. 5       4096 Mar 13  2025 xr-lcp
+!Flash: harddisk: -rw-r--r--. 1        340 May 20 08:39 zl30704_trace_file.log
+!Flash: harddisk: drwxr-xr-x. 3       4096 Jan 28  2022 ztp
+!Flash: harddisk: 22 GB total (36% free)
+!
+!0/0/1-IDPROM - NCS5500 4 QSFP28 with 100G MacSeC MPA
+! Info 
+!    Product ID      : NC55-MPA-4H-S
+!    VID             : V01
+!    Serial Number   : FOC22314TGR
+!    CLEI Code       : CMUIATHCTA
+!    Part Number     : 73-101485-03
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!HundredGigE0/0/1/0-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module
+! Info:
+!    PID                      : QSFP-100G-AOC3M
+!    Version Identifier       : V02
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQAEUCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FCBN425QE1C03-C2
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FIW220401FG-B
+!    PCA Number               : N/A
+!HundredGigE0/0/1/1-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module
+! Info:
+!    PID                      : QSFP-100G-AOC5M
+!    Version Identifier       : V03
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQAE2CAB
+!    ECI Number               : 0
+!    Top Assy. Part Number    : TF-FC005-NC2
+!    Top Assy. Revision       : 1B
+!    PCB Serial Number        : INL24474057-B
+!    PCA Number               : N/A
+!HundredGigE0/0/1/2-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module
+! Info:
+!    PID                      : QSFP-100G-AOC3M
+!    Version Identifier       : V01
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQACPCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FCBN425QE1C03-C1
+!    Top Assy. Revision       : D
+!    PCB Serial Number        : FIW21040116-B
+!    PCA Number               : N/A
+!HundredGigE0/0/1/3-IDPROM - Cisco QSFP28 100G AOC Pluggable Optics Module
+! Info:
+!    PID                      : QSFP-100G-AOC3M
+!    Version Identifier       : V01
+!    UDI Description          : Cisco QSFP28 100G AOC Pluggable Optics Module
+!    CLEI Code                : CMPQACPCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FCBN425QE1C03-C1
+!    Top Assy. Revision       : D
+!    PCB Serial Number        : FIW2104015M-B
+!    PCA Number               : N/A
+!0/0/2-IDPROM - NCS5500 2 CFP2_DCO with 100G MACsec I-TEMP MPA
+! Info 
+!    Product ID      : NC55-MPA-2TH-HX-S
+!    VID             : V01
+!    Serial Number   : FOC22480ZBW
+!    CLEI Code       : CMUIAUKCTA
+!    Part Number     : 73-101785-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/0/2/-PORT-0-IDPROM - Cisco CFP2 DCO Pluggable Optics Module
+! Info:
+!    PID                      : ONS-C2-WDM-DE-1HL
+!    Version Identifier       : V01 
+!    UDI Description          : Cisco CFP2 DCO Pluggable Optics Module
+!    CLEI Code                : WOTREJ7BAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : AC200-D23-190   
+!    Top Assy. Revision       : N/A
+!    PCB Serial Number        : ACA22480068
+!    PCA Number               : N/A
+!0/0-IDPROM - NC55A2 MOD Base Virtual Line Card
+! Info 
+!    Product ID      : NCS-55A2-MOD-S
+!    VID             : V01
+!    Serial Number   : FOC22212JM7
+!    CLEI Code       : INM5100ARA
+!    Part Number     : 73-101482-06
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!TenGigE0/0/0/0-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213598YK
+!    PCA Number               : N/A
+!TenGigE0/0/0/1-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD2135919J
+!    PCA Number               : N/A
+!TenGigE0/0/0/2-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD21519TE1
+!    PCA Number               : N/A
+!TenGigE0/0/0/4-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213598XP
+!    PCA Number               : N/A
+!GigabitEthernet0/0/0/5-IDPROM - Cisco SFP 1G 1000BASE-SX Pluggable Optics Module
+! Info:
+!    PID                      : GLC-SX-MMD
+!    Version Identifier       : V01
+!    UDI Description          : Cisco SFP 1G 1000BASE-SX Pluggable Optics Module
+!    CLEI Code                : WOTRB9VBAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLF8519P3BNL-CS
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS17490RTP
+!    PCA Number               : N/A
+!TenGigE0/0/0/6-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLX8574D3BCL-CS
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS232700X0
+!    PCA Number               : N/A
+!TenGigE0/0/0/7-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLX8574D3BCL-CS
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS23300EN2
+!    PCA Number               : N/A
+!TenGigE0/0/0/8-IDPROM - Cisco SFP+ 10G LR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-LR
+!    Version Identifier       : V02
+!    UDI Description          : Cisco SFP+ 10G LR Pluggable Optics Module
+!    CLEI Code                : COUIA75CAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SPP5200LR-C5
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : ECL161402GC
+!    PCA Number               : N/A
+!TenGigE0/0/0/9-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR-S
+!    Version Identifier       : V01
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : CMUIAK6CAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : RTXM228-551-C88
+!    Top Assy. Revision       : 1.0
+!    PCB Serial Number        : ACW2232004J
+!    PCA Number               : N/A
+!TenGigE0/0/0/10-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213597YC
+!    PCA Number               : N/A
+!TenGigE0/0/0/11-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213597F2
+!    PCA Number               : N/A
+!TenGigE0/0/0/12-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD2135919R
+!    PCA Number               : N/A
+!TenGigE0/0/0/13-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD2135918E
+!    PCA Number               : N/A
+!TenGigE0/0/0/14-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLX8574D3BCL-CS
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS23300E3Y
+!    PCA Number               : N/A
+!TenGigE0/0/0/15-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLX8574D3BCL-CS
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS23300DMB
+!    PCA Number               : N/A
+!TenGigE0/0/0/16-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLX8571D3BCL-C2
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS161027CY
+!    PCA Number               : N/A
+!TenGigE0/0/0/17-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : PLRXPL-SC-S43-CS
+!    Top Assy. Revision       : 3
+!    PCB Serial Number        : JUR2110GE24
+!    PCA Number               : N/A
+!TenGigE0/0/0/18-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLX8571D3BCL-C2
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS17310GGG
+!    PCA Number               : N/A
+!TenGigE0/0/0/19-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVJ2413A2BJ
+!    PCA Number               : N/A
+!TenGigE0/0/0/20-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213597XH
+!    PCA Number               : N/A
+!TenGigE0/0/0/21-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213597WE
+!    PCA Number               : N/A
+!TenGigE0/0/0/22-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD2012A6UD
+!    PCA Number               : N/A
+!TenGigE0/0/0/24-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD21199GJ7
+!    PCA Number               : N/A
+!TenGigE0/0/0/25-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR-S
+!    Version Identifier       : V01
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : CMUIAK6CAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : FTLX8571D3BCL-C3
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : FNS21150SZA
+!    PCA Number               : N/A
+!TenGigE0/0/0/26-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR-X
+!    Version Identifier       : V02
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : IPU3AWGCAB
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709ASMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD201170HX
+!    PCA Number               : N/A
+!TenGigE0/0/0/27-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD234390SC
+!    PCA Number               : N/A
+!TenGigE0/0/0/30-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD21359BD7
+!    PCA Number               : N/A
+!TwentyFiveGigE0/0/0/35-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213597XD
+!    PCA Number               : N/A
+!TwentyFiveGigE0/0/0/38-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SFBR-709SMZ-CS1
+!    Top Assy. Revision       : G4.1
+!    PCB Serial Number        : AVD213597VY
+!    PCA Number               : N/A
+!TwentyFiveGigE0/0/0/39-IDPROM - Cisco SFP+ 10G SR Pluggable Optics Module
+! Info:
+!    PID                      : SFP-10G-SR
+!    Version Identifier       : V03
+!    UDI Description          : Cisco SFP+ 10G SR Pluggable Optics Module
+!    CLEI Code                : COUIA8NCAA
+!    ECI Number               : 0
+!    Top Assy. Part Number    : SPP5100SR-C5
+!    Top Assy. Revision       : A
+!    PCB Serial Number        : SPC160908K4
+!    PCA Number               : N/A
+!0/RP0-MB-IDPROM - NC55A2 MOD Base Route Processor Card
+! Info 
+!    Product ID      : NCS-55A2-MOD-S
+!    VID             : V01
+!    Serial Number   : FOC22212JM7
+!    CLEI Code       : INM5100ARA
+!    Part Number     : 73-101482-06
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!Rack 0-IDPROM - NCS55A2 Fixed Base Chassis
+! Info 
+!    Product ID      : NCS-55A2-MOD-S
+!    VID             : V01
+!    Serial Number   : FOC22212JM7
+!    CLEI Code       : INM5100ARA
+!    Part Number     : 73-101482-06
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!Top Assembly Block:
+!    Serial Number   : FOC2223R15G
+!    Part Number     : 68-6534-01
+!    Part Revision   : A0
+!    Mfg Deviation   : 0
+!    H/W Version     : 1.0
+!    Mfg Bits        : 0
+!0/PM0-IDPROM - NCS 55A2 AC 1200W Power Supply Port-S Intake/Front-to-back
+! Info 
+!    Product ID      : NC55-1200W-ACFW
+!    VID             : V01
+!    Serial Number   : LIT22372UUD
+!    CLEI Code       : CMUPAFYCAA
+!    Part Number     : 341-100885-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/PM1-IDPROM - NCS 55A2 AC 1200W Power Supply Port-S Intake/Front-to-back
+! Info 
+!    Product ID      : NC55-1200W-ACFW
+!    VID             : V01
+!    Serial Number   : LIT22372UWV
+!    CLEI Code       : CMUPAFYCAA
+!    Part Number     : 341-100885-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/FT0-IDPROM - NCS 55A2 FW Fan Tray
+! Info 
+!    Product ID      : NC55-A2-FAN-FW
+!    VID             : V01
+!    Serial Number   : I7HBQMSFA
+!    CLEI Code       : CMUCALCBAA
+!    Part Number     : 800-48131-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/FT1-IDPROM - NCS 55A2 FW Fan Tray
+! Info 
+!    Product ID      : NC55-A2-FAN-FW
+!    VID             : V01
+!    Serial Number   : I7HB1DSFA
+!    CLEI Code       : CMUCALCBAA
+!    Part Number     : 800-48131-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/FT2-IDPROM - NCS 55A2 FW Fan Tray
+! Info 
+!    Product ID      : NC55-A2-FAN-FW
+!    VID             : V01
+!    Serial Number   : I7HBSASFA
+!    CLEI Code       : CMUCALCBAA
+!    Part Number     : 800-48131-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/FT3-IDPROM - NCS 55A2 FW Fan Tray
+! Info 
+!    Product ID      : NC55-A2-FAN-FW
+!    VID             : V01
+!    Serial Number   : I7HACOSFA
+!    CLEI Code       : CMUCALCBAA
+!    Part Number     : 800-48131-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/FT4-IDPROM - NCS 55A2 FW Fan Tray
+! Info 
+!    Product ID      : NC55-A2-FAN-FW
+!    VID             : V01
+!    Serial Number   : I7HB16SFA
+!    CLEI Code       : CMUCALCBAA
+!    Part Number     : 800-48131-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/FT5-IDPROM - NCS 55A2 FW Fan Tray
+! Info 
+!    Product ID      : NC55-A2-FAN-FW
+!    VID             : V01
+!    Serial Number   : I7HB51SFA
+!    CLEI Code       : CMUCALCBAA
+!    Part Number     : 800-48131-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/FT6-IDPROM - NCS 55A2 FW Fan Tray
+! Info 
+!    Product ID      : NC55-A2-FAN-FW
+!    VID             : V01
+!    Serial Number   : I7HBS5SFA
+!    CLEI Code       : CMUCALCBAA
+!    Part Number     : 800-48131-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!0/FT7-IDPROM - NCS 55A2 FW Fan Tray
+! Info 
+!    Product ID      : NC55-A2-FAN-FW
+!    VID             : V01
+!    Serial Number   : I7HBSCSFA
+!    CLEI Code       : CMUCALCBAA
+!    Part Number     : 800-48131-01
+!    Part Revision   : A0
+!    H/W Version     : 1.0
+!
+!NAME: "Rack 0-Line Card Slot 0", DESCR: "NC5 Line Card Slot"
+!NAME: "0/0",                   DESCR: "NC55A2 MOD Base Virtual Line Card"
+!PID: NCS-55A2-MOD-S
+!VID: V01
+!SN: FOC22212JM7
+!NAME: "0/0-MPA bay 1",         DESCR: "MPA Container"
+!NAME: "0/0/1",                 DESCR: "NCS5500 4 QSFP28 with 100G MacSeC MPA"
+!PID: NC55-MPA-4H-S
+!VID: V01
+!SN: FOC22314TGR
+!NAME: "0/0/1-Motherboard",     DESCR: "Motherboard Module"
+!NAME: "0/0/1-MPA-P3V3_CFP_IOUT", DESCR: "Current Sensor"
+!NAME: "0/0/1-MPA-Port-Side-Temp", DESCR: "Temperature Sensor"
+!NAME: "0/0/1-MV88EC808_PHY0_Temp", DESCR: "100G Marvell Temperature Sensor"
+!NAME: "0/0/1-MV88EC808_PHY1_Temp", DESCR: "100G Marvell Temperature Sensor"
+!NAME: "0/0/1-MPA-P12V_VOUT",   DESCR: "Voltage Sensor"
+!NAME: "0/0/1-MPA-P3V3_STBY_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/1-MPA-P3V3_VA_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/1-MPA-P2V5_VA_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/1-MPA-P1V2_VA_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/1-MPA-P1V8_VOUT",   DESCR: "Voltage Sensor"
+!NAME: "0/0/1-MPA-P1V0_BV_AVDD_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/1-MPA-P1V0_BV_VDD_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/1-MPA-P2V5_BV_VDDO_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/1-MPA-P3V3_QSFP_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/1-MPA Hot Swap(HS_0)", DESCR: "MPA Hot Swap"
+!NAME: "0/0/1-MPA-Hot_Swap_IIN", DESCR: "Board MPA Current Sensor"
+!NAME: "0/0/1-MPA-Hot_Swap_VIN", DESCR: "Board MPA Voltage Sensor"
+!NAME: "0/0/1-MPAFPGA",         DESCR: "MPA FPGA"
+!VID: 1.00
+!NAME: "0/0/1-IDPROM",          DESCR: "NCS5500 4 QSFP28 with 100G MacSeC MPA"
+!PID: NC55-MPA-4H-S
+!VID: V01
+!SN: FOC22314TGR
+!NAME: "0/0/1-Traffic port module #0", DESCR: "PSE ASIC Port Module"
+!NAME: "0/0/1-Module port container #0", DESCR: "Pluggable Optical Module Container"
+!NAME: "HundredGigE0/0/1/0",    DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V02
+!SN: FIW220401FG-B
+!NAME: "HundredGigE0/0/1/0-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/0-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/1/0-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/1/0-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V02
+!SN: FIW220401FG-B
+!NAME: "0/0/1-HundredGigE0/0/1/0", DESCR: "Traffic port"
+!NAME: "0/0/1-Traffic port module #1", DESCR: "PSE ASIC Port Module"
+!NAME: "0/0/1-Module port container #1", DESCR: "Pluggable Optical Module Container"
+!NAME: "HundredGigE0/0/1/1",    DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC5M
+!VID: V03
+!SN: INL24474057-B
+!NAME: "HundredGigE0/0/1/1-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/1-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/1/1-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/1/1-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC5M
+!VID: V03
+!SN: INL24474057-B
+!NAME: "0/0/1-HundredGigE0/0/1/1", DESCR: "Traffic port"
+!NAME: "0/0/1-Traffic port module #2", DESCR: "PSE ASIC Port Module"
+!NAME: "0/0/1-Module port container #2", DESCR: "Pluggable Optical Module Container"
+!NAME: "HundredGigE0/0/1/2",    DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW21040116-B
+!NAME: "HundredGigE0/0/1/2-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/2-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/2-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/2-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/2-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/2-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/2-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/2-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/2-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/2-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/2-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/2-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/2-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/1/2-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/1/2-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW21040116-B
+!NAME: "0/0/1-HundredGigE0/0/1/2", DESCR: "Traffic port"
+!NAME: "0/0/1-Traffic port module #3", DESCR: "PSE ASIC Port Module"
+!NAME: "0/0/1-Module port container #3", DESCR: "Pluggable Optical Module Container"
+!NAME: "HundredGigE0/0/1/3",    DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW2104015M-B
+!NAME: "HundredGigE0/0/1/3-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/3-Tx Lane 1 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/3-Tx Lane 2 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/3-Tx Lane 3 Current", DESCR: "Current Sensor"
+!NAME: "HundredGigE0/0/1/3-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/3-Tx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/3-Tx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/3-Tx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/3-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/3-Rx Lane 1 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/3-Rx Lane 2 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/3-Rx Lane 3 Power", DESCR: "Power Sensor"
+!NAME: "HundredGigE0/0/1/3-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "HundredGigE0/0/1/3-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "HundredGigE0/0/1/3-IDPROM", DESCR: "Cisco QSFP28 100G AOC Pluggable Optics Module"
+!PID: QSFP-100G-AOC3M
+!VID: V01
+!SN: FIW2104015M-B
+!NAME: "0/0/1-HundredGigE0/0/1/3", DESCR: "Traffic port"
+!NAME: "0/0-MPA bay 2",         DESCR: "MPA Container"
+!NAME: "0/0/2",                 DESCR: "NCS5500 2 CFP2_DCO with 100G MACsec I-TEMP MPA"
+!PID: NC55-MPA-2TH-HX-S
+!VID: V01
+!SN: FOC22480ZBW
+!NAME: "0/0/2-Motherboard",     DESCR: "Motherboard Module"
+!NAME: "0/0/2-MPA-P3V3_CFP_IOUT", DESCR: "Current Sensor"
+!NAME: "0/0/2-MPA-Port-Side-Temp", DESCR: "Temperature Sensor"
+!NAME: "0/0/2-MPA-DCO-0_Temp",  DESCR: "Temperature Sensor"
+!NAME: "0/0/2-MPA-DCO-1_Temp",  DESCR: "Temperature Sensor"
+!NAME: "0/0/2-MV88EC808_PHY0_Temp", DESCR: "100G Marvell Temperature Sensor"
+!NAME: "0/0/2-MV88EC808_PHY1_Temp", DESCR: "100G Marvell Temperature Sensor"
+!NAME: "0/0/2-MPA-P12V_VOUT",   DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-P3V3_STBY_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-P3V3_VA_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-P2V5_VA_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-P1V2_VA_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-P1V8_VOUT",   DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-P1V0_BV_AVDD_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-P1V0_BV_VDD_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-P2V5_BV_VDDO_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-P3V3_CFP_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-DCO-0_VOLTAGE_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA-DCO-1_VOLTAGE_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/0/2-MPA Hot Swap(HS_0)", DESCR: "MPA Hot Swap"
+!NAME: "0/0/2-MPA-Hot_Swap_IIN", DESCR: "Board MPA Current Sensor"
+!NAME: "0/0/2-MPA-Hot_Swap_VIN", DESCR: "Board MPA Voltage Sensor"
+!NAME: "0/0/2-MPAFPGA",         DESCR: "MPA FPGA"
+!VID: 1.00
+!NAME: "0/0/2-CFP2-DE-DCO_0",   DESCR: "FPD Module"
+!VID: 65.32
+!NAME: "0/0/2-CFP2-DE-DCO_1",   DESCR: "FPD Module"
+!VID: 0.00
+!NAME: "0/0/2-CFP2-D-DCO_0",    DESCR: "FPD Module"
+!VID: 65.32
+!NAME: "0/0/2-CFP2-D-DCO_1",    DESCR: "FPD Module"
+!VID: 0.00
+!NAME: "0/0/2-CFP2-DS100-DCO_0", DESCR: "FPD Module"
+!VID: 65.32
+!NAME: "0/0/2-CFP2-DS100-DCO_1", DESCR: "FPD Module"
+!VID: 0.00
+!NAME: "0/0/2-CFP2-DETS-DCO_0", DESCR: "FPD Module"
+!VID: 65.32
+!NAME: "0/0/2-CFP2-DETS-DCO_1", DESCR: "FPD Module"
+!VID: 0.00
+!NAME: "0/0/2-CFP2-DS-DCO_0",   DESCR: "FPD Module"
+!VID: 65.32
+!NAME: "0/0/2-CFP2-DS-DCO_1",   DESCR: "FPD Module"
+!VID: 0.00
+!NAME: "0/0/2-CFP2-D10-DCO_0",  DESCR: "FPD Module"
+!VID: 65.32
+!NAME: "0/0/2-CFP2-D10-DCO_1",  DESCR: "FPD Module"
+!VID: 0.00
+!NAME: "0/0/2-CFP2-D15-DCO_0",  DESCR: "FPD Module"
+!VID: 65.32
+!NAME: "0/0/2-CFP2-D15-DCO_1",  DESCR: "FPD Module"
+!VID: 0.00
+!NAME: "0/0/2-CFP2-M25-K9-DCO_0", DESCR: "FPD Module"
+!VID: 65.32
+!NAME: "0/0/2-CFP2-M25-K9-DCO_1", DESCR: "FPD Module"
+!VID: 0.00
+!NAME: "0/0/2-IDPROM",          DESCR: "NCS5500 2 CFP2_DCO with 100G MACsec I-TEMP MPA"
+!PID: NC55-MPA-2TH-HX-S
+!VID: V01
+!SN: FOC22480ZBW
+!NAME: "0/0/2-Traffic port module #0", DESCR: "PSE ASIC Port Module"
+!NAME: "0/0/2-CFP2 0 Container", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/0/2/-PORT-0",         DESCR: "Cisco CFP2 DCO Pluggable Optics Module"
+!PID: ONS-C2-WDM-DE-1HL
+!VID: V01
+!SN: ACA22480068
+!NAME: "0/0/2/-PORT-0-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "0/0/2/-PORT-0-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "0/0/2/-PORT-0-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "0/0/2/-PORT-0-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "0/0/2/-PORT-0-Tx Lane Temp", DESCR: "Temperature Sensor"
+!NAME: "0/0/2/-PORT-0-3.3 V",   DESCR: "Voltage Sensor"
+!NAME: "0/0/2/-PORT-0-IDPROM",  DESCR: "Cisco CFP2 DCO Pluggable Optics Module"
+!PID: ONS-C2-WDM-DE-1HL
+!VID: V01
+!SN: ACA22480068
+!NAME: "0/0/2-HundredGigE0/0/2/0/0", DESCR: "100GE Port"
+!NAME: "0/0/2-HundredGigE0/0/2/0/1", DESCR: "100GE Port"
+!NAME: "0/0/2-Traffic port module #1", DESCR: "PSE ASIC Port Module"
+!NAME: "0/0/2-CFP2 1 Container", DESCR: "Pluggable Optical Module Container"
+!NAME: "0/0/2-HundredGigE0/0/2/1/0", DESCR: "100GE Port"
+!NAME: "0/0-Motherboard",       DESCR: "Motherboard Module"
+!NAME: "0/0-IDPROM",            DESCR: "NC55A2 MOD Base Virtual Line Card"
+!PID: NCS-55A2-MOD-S
+!VID: V01
+!SN: FOC22212JM7
+!NAME: "Rack 0-RouteProcessor Slot 0", DESCR: "NC5 Route Processor Slot"
+!NAME: "0/RP0",                 DESCR: "NC55A2 MOD Base Route Processor Card"
+!PID: NCS-55A2-MOD-S
+!VID: V01
+!SN: FOC22212JM7
+!NAME: "0/RP0-MPA bay 1",       DESCR: "MPA Container"
+!NAME: "0/RP0-MPA bay 2",       DESCR: "MPA Container"
+!NAME: "0/RP0-Motherboard",     DESCR: "Motherboard Module Base Board"
+!NAME: "0/RP0-MB-P3V3_SFP_IOUT", DESCR: "Current Sensor"
+!NAME: "0/RP0-Control Sensor",  DESCR: "Temperature Sensor"
+!NAME: "0/RP0-FAN-side Sensor", DESCR: "TMP421 Device Temperature Sensor"
+!NAME: "0/RP0-MB-P1V0_SEC_S_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P1V0_PHY_S_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P5V0_S_VOUT",  DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P2V5_S_VOUT",  DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P1V2_S_VOUT",  DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P3V3_S_VOUT",  DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P1V2_VA_S_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P2V5_VA_S_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P3V3_VA_S_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P12V_S_VOUT",  DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P3V3_SFP_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-Slice 0",         DESCR: "ASIC Module"
+!NAME: "0/RP0-Slice 0 JerichoPlus", DESCR: "PSE ASIC Module"
+!NAME: "0/RP0-MB-P1V0_CORE_JER0_IOUT", DESCR: "Current Sensor"
+!NAME: "0/RP0-MB-P1V0_AVDD_JER0_IOUT", DESCR: "Current Sensor"
+!NAME: "0/RP0-MB-P1V0_CORE_JER0_TEMP", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MB-P1V0_AVDD_JER0_TEMP", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MB-P1V0_CORE_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P1V0_AVDD_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P3V3_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P1V8_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P1V25_AVDD_JER0_VOUT", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-MB-P1V0_DDR_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-MB-P1V35_JER0_VOUT", DESCR: "Voltage Sensor Base Board"
+!NAME: "0/RP0-GDDR5 DIMM 0",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 1",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 2",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 3",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 4",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 5",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 6",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-GDDR5 DIMM 7",    DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-Slice 0 Die TMP421 Sensor", DESCR: "Sensor Module"
+!NAME: "0/RP0-Slice 0 Die Temp", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-Slice 0 TMP421 Temp", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #0", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 0",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/0",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213598YK
+!NAME: "TenGigE0/0/0/0-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/0-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/0-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/0-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/0-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/0-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213598YK
+!NAME: "0/RP0-TenGigE0/0/0/0",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #1", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 1",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/1",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD2135919J
+!NAME: "TenGigE0/0/0/1-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/1-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/1-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/1-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/1-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/1-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD2135919J
+!NAME: "0/RP0-TenGigE0/0/0/1",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #2", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 2",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/2",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD21519TE1
+!NAME: "TenGigE0/0/0/2-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/2-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/2-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/2-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/2-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/2-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD21519TE1
+!NAME: "0/RP0-TenGigE0/0/0/2",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #3", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 3",       DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/3",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #4", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 4",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/4",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213598XP
+!NAME: "TenGigE0/0/0/4-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/4-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/4-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/4-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/4-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/4-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213598XP
+!NAME: "0/RP0-TenGigE0/0/0/4",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #5", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 5",       DESCR: "Pluggable Optical Module Container"
+!NAME: "GigabitEthernet0/0/0/5", DESCR: "Cisco SFP 1G 1000BASE-SX Pluggable Optics Module"
+!PID: GLC-SX-MMD
+!VID: V01
+!SN: FNS17490RTP
+!NAME: "GigabitEthernet0/0/0/5-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "GigabitEthernet0/0/0/5-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "GigabitEthernet0/0/0/5-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "GigabitEthernet0/0/0/5-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "GigabitEthernet0/0/0/5-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "GigabitEthernet0/0/0/5-IDPROM", DESCR: "Cisco SFP 1G 1000BASE-SX Pluggable Optics Module"
+!PID: GLC-SX-MMD
+!VID: V01
+!SN: FNS17490RTP
+!NAME: "0/RP0-GigabitEthernet0/0/0/5", DESCR: "1GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #6", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 6",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/6",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS232700X0
+!NAME: "TenGigE0/0/0/6-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/6-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/6-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/6-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/6-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/6-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS232700X0
+!NAME: "0/RP0-TenGigE0/0/0/6",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #7", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 7",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/7",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS23300EN2
+!NAME: "TenGigE0/0/0/7-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/7-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/7-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/7-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/7-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/7-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS23300EN2
+!NAME: "0/RP0-TenGigE0/0/0/7",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #8", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 8",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/8",        DESCR: "Cisco SFP+ 10G LR Pluggable Optics Module"
+!PID: SFP-10G-LR
+!VID: V02
+!SN: ECL161402GC
+!NAME: "TenGigE0/0/0/8-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/8-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/8-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/8-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/8-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/8-IDPROM", DESCR: "Cisco SFP+ 10G LR Pluggable Optics Module"
+!PID: SFP-10G-LR
+!VID: V02
+!SN: ECL161402GC
+!NAME: "0/RP0-TenGigE0/0/0/8",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #9", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 9",       DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/9",        DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR-S
+!VID: V01
+!SN: ACW2232004J
+!NAME: "TenGigE0/0/0/9-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/9-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/9-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/9-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/9-3.3 V",  DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/9-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR-S
+!VID: V01
+!SN: ACW2232004J
+!NAME: "0/RP0-TenGigE0/0/0/9",  DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #10", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 10",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/10",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597YC
+!NAME: "TenGigE0/0/0/10-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/10-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/10-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/10-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/10-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/10-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597YC
+!NAME: "0/RP0-TenGigE0/0/0/10", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #11", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 11",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/11",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597F2
+!NAME: "TenGigE0/0/0/11-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/11-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/11-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/11-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/11-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/11-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597F2
+!NAME: "0/RP0-TenGigE0/0/0/11", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #12", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 12",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/12",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD2135919R
+!NAME: "TenGigE0/0/0/12-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/12-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/12-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/12-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/12-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/12-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD2135919R
+!NAME: "0/RP0-TenGigE0/0/0/12", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #13", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 13",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/13",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD2135918E
+!NAME: "TenGigE0/0/0/13-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/13-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/13-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/13-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/13-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/13-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD2135918E
+!NAME: "0/RP0-TenGigE0/0/0/13", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #14", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 14",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/14",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS23300E3Y
+!NAME: "TenGigE0/0/0/14-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/14-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/14-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/14-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/14-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/14-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS23300E3Y
+!NAME: "0/RP0-TenGigE0/0/0/14", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #15", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 15",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/15",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS23300DMB
+!NAME: "TenGigE0/0/0/15-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/15-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/15-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/15-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/15-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/15-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS23300DMB
+!NAME: "0/RP0-TenGigE0/0/0/15", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #16", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 16",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/16",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS161027CY
+!NAME: "TenGigE0/0/0/16-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/16-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/16-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/16-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/16-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/16-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS161027CY
+!NAME: "0/RP0-TenGigE0/0/0/16", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #17", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 17",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/17",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: JUR2110GE24
+!NAME: "TenGigE0/0/0/17-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/17-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/17-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/17-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/17-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/17-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: JUR2110GE24
+!NAME: "0/RP0-TenGigE0/0/0/17", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #18", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 18",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/18",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS17310GGG
+!NAME: "TenGigE0/0/0/18-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/18-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/18-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/18-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/18-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/18-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: FNS17310GGG
+!NAME: "0/RP0-TenGigE0/0/0/18", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #19", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 19",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/19",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVJ2413A2BJ
+!NAME: "TenGigE0/0/0/19-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/19-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/19-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/19-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/19-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/19-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVJ2413A2BJ
+!NAME: "0/RP0-TenGigE0/0/0/19", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #20", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 20",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/20",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597XH
+!NAME: "TenGigE0/0/0/20-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/20-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/20-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/20-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/20-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/20-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597XH
+!NAME: "0/RP0-TenGigE0/0/0/20", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #21", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 21",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/21",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597WE
+!NAME: "TenGigE0/0/0/21-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/21-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/21-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/21-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/21-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/21-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597WE
+!NAME: "0/RP0-TenGigE0/0/0/21", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #22", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 22",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/22",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD2012A6UD
+!NAME: "TenGigE0/0/0/22-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/22-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/22-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/22-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/22-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/22-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD2012A6UD
+!NAME: "0/RP0-TenGigE0/0/0/22", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #23", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 23",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/23", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #24", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 24",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/24",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD21199GJ7
+!NAME: "TenGigE0/0/0/24-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/24-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/24-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/24-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/24-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/24-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD21199GJ7
+!NAME: "0/RP0-TenGigE0/0/0/24", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #25", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 25",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/25",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR-S
+!VID: V01
+!SN: FNS21150SZA
+!NAME: "TenGigE0/0/0/25-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/25-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/25-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/25-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/25-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/25-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR-S
+!VID: V01
+!SN: FNS21150SZA
+!NAME: "0/RP0-TenGigE0/0/0/25", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #26", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 26",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/26",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR-X
+!VID: V02
+!SN: AVD201170HX
+!NAME: "TenGigE0/0/0/26-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/26-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/26-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/26-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/26-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/26-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR-X
+!VID: V02
+!SN: AVD201170HX
+!NAME: "0/RP0-TenGigE0/0/0/26", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #27", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 27",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/27",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD234390SC
+!NAME: "TenGigE0/0/0/27-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/27-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/27-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/27-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/27-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/27-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD234390SC
+!NAME: "0/RP0-TenGigE0/0/0/27", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #28", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 28",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/28", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #29", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 29",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/29", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #30", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 30",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TenGigE0/0/0/30",       DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD21359BD7
+!NAME: "TenGigE0/0/0/30-Tx Lane Current", DESCR: "Current Sensor"
+!NAME: "TenGigE0/0/0/30-Tx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/30-Rx Lane Power", DESCR: "Power Sensor"
+!NAME: "TenGigE0/0/0/30-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TenGigE0/0/0/30-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TenGigE0/0/0/30-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD21359BD7
+!NAME: "0/RP0-TenGigE0/0/0/30", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #31", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 31",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TenGigE0/0/0/31", DESCR: "10GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #32", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 32",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/32", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #33", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 33",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/33", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #34", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 34",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/34", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #35", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 35",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TwentyFiveGigE0/0/0/35", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597XD
+!NAME: "TwentyFiveGigE0/0/0/35-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "TwentyFiveGigE0/0/0/35-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "TwentyFiveGigE0/0/0/35-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "TwentyFiveGigE0/0/0/35-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TwentyFiveGigE0/0/0/35-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TwentyFiveGigE0/0/0/35-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597XD
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/35", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #36", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 36",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/36", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #37", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 37",      DESCR: "Pluggable Optical Module Container"
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/37", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #38", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 38",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TwentyFiveGigE0/0/0/38", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597VY
+!NAME: "TwentyFiveGigE0/0/0/38-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "TwentyFiveGigE0/0/0/38-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "TwentyFiveGigE0/0/0/38-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "TwentyFiveGigE0/0/0/38-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TwentyFiveGigE0/0/0/38-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TwentyFiveGigE0/0/0/38-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: AVD213597VY
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/38", DESCR: "25GE Port"
+!NAME: "0/RP0-Slice 0 Jericho+ Port Module #39", DESCR: "PSE ASIC Port Module"
+!NAME: "0/RP0-SFP bay 39",      DESCR: "Pluggable Optical Module Container"
+!NAME: "TwentyFiveGigE0/0/0/39", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: SPC160908K4
+!NAME: "TwentyFiveGigE0/0/0/39-Tx Lane 0 Current", DESCR: "Current Sensor"
+!NAME: "TwentyFiveGigE0/0/0/39-Tx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "TwentyFiveGigE0/0/0/39-Rx Lane 0 Power", DESCR: "Power Sensor"
+!NAME: "TwentyFiveGigE0/0/0/39-Module Temp", DESCR: "Temperature Sensor"
+!NAME: "TwentyFiveGigE0/0/0/39-3.3 V", DESCR: "Voltage Sensor"
+!NAME: "TwentyFiveGigE0/0/0/39-IDPROM", DESCR: "Cisco SFP+ 10G SR Pluggable Optics Module"
+!PID: SFP-10G-SR
+!VID: V03
+!SN: SPC160908K4
+!NAME: "0/RP0-TwentyFiveGigE0/0/0/39", DESCR: "25GE Port"
+!NAME: "0/RP0-MB-IOFPGA",       DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-Bootloader",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-MB-MIFPGA",       DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_0",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_1",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_2",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_3",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_4",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_5",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_6",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_7",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_8",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_9",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_10",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_11",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_12",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_13",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_14",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_15",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_16",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_17",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_18",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_19",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_20",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_21",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_22",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_23",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_24",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_25",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_26",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_27",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_28",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_29",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_30",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_31",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_32",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_33",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_34",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_35",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_36",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_37",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_38",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_39",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_40",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_41",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_42",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_43",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_44",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_45",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_46",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_E1F_47",     DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_0", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_1", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_2", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_3", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_4", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_5", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_6", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_7", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_8", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_9", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_10", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_11", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_12", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_13", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_14", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_15", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_16", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_17", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_18", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_19", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_20", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_21", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_22", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_23", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_24", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_25", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_26", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_27", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_28", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_29", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_30", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_31", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_32", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_33", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_34", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_35", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_36", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_37", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_38", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_39", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_40", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_41", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_42", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_43", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_44", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_45", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_46", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_OC3_STM1_47", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_0", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_1", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_2", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_3", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_4", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_5", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_6", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_7", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_8", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_9", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_10", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_11", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_12", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_13", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_14", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_15", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_16", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_17", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_18", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_19", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_20", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_21", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_22", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_23", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_24", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_25", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_26", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_27", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_28", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_29", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_30", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_31", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_32", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_33", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_34", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_35", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_36", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_37", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_38", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_39", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_40", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_41", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_42", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_43", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_44", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_45", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_46", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SSFP_STM1_TSOP_47", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-MB-IDPROM",       DESCR: "NC55A2 MOD Base Route Processor Card"
+!PID: NCS-55A2-MOD-S
+!VID: V01
+!SN: FOC22212JM7
+!NAME: "0/RP0-NIC",             DESCR: "I350 Ethernet Controller Module"
+!NAME: "0/RP0-MACsec PHY 0",    DESCR: "BearValley  MACsec PHY Module"
+!NAME: "0/RP0-MV88EC808_PHY0_Temp", DESCR: "25G Marvell Temperature Sensor"
+!NAME: "0/RP0-MACsec PHY 1",    DESCR: "BearValley  MACsec PHY Module"
+!NAME: "0/RP0-MV88EC808_PHY1_Temp", DESCR: "25G Marvell Temperature Sensor"
+!NAME: "0/RP0-SyncE Synchronizer", DESCR: "IEEE1588 "
+!NAME: "0/RP0-CON0",            DESCR: "Console Port"
+!NAME: "0/RP0-TOD",             DESCR: "Console Port"
+!NAME: "0/RP0-Daughterboard",   DESCR: "Daughterboard Module CPU Board"
+!NAME: "0/RP0-CPU-CPUVCC-IOUT-P3", DESCR: "Current Sensor"
+!NAME: "0/RP0-CPU-CPUVCC-IIN-P3", DESCR: "Current Sensor"
+!NAME: "0/RP0-CPU-VDDQ-1V2-IOUT-P3", DESCR: "Current Sensor"
+!NAME: "0/RP0-CPU-VDDQ-1V2-IIN-P3", DESCR: "Current Sensor"
+!NAME: "0/RP0-CPU-PVCC-1V05-IOUT-P3", DESCR: "Current Sensor"
+!NAME: "0/RP0-CPU-PVCC-1V05-IIN-P3", DESCR: "Current Sensor"
+!NAME: "0/RP0-CPU",             DESCR: "Temperature Sensor"
+!NAME: "0/RP0-PORT-side Sensor", DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH1",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH2",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH3",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH4",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH5",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_RMT_CH6",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-MAXIM_LCL_CH7",   DESCR: "Temperature Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH0", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH1", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH2", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH3", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH4", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH5", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH6", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH7", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH8", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH9", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH10", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-ADM1166_VOUT_CH11", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-CPUVCC-VOUT-P3", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-CPUVCC-VIN-P3", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-VDDQ-1V2-VOUT-P3", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-VDDQ-1V2-VIN-P3", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-PVCC-1V05-VOUT-P3", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-CPU-PVCC-1V05-VIN-P3", DESCR: "Voltage Sensor"
+!NAME: "0/RP0-DDR4 DIMM 0",     DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-DDR4 DIMM 1",     DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-DDR4 DIMM 2",     DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-DDR4 DIMM 3",     DESCR: "Dual Inline Memory Module - DIMM"
+!NAME: "0/RP0-DB IOFPGA SPI Flash 0", DESCR: "Storage Module - SPI"
+!NAME: "0/RP0-DB IOFPGA SPI Flash 1", DESCR: "Storage Module - SPI"
+!NAME: "0/RP0-NVRAM",           DESCR: "Storage Module - NVRAM"
+!NAME: "0/RP0-OBFL Flash",      DESCR: "OBFL Memory Module - Flash"
+!NAME: "0/RP0-Disk0",           DESCR: "Storage Module - SSD"
+!NAME: "0/RP0-CPU-IOFPGA",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-SATA-M1100",      DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/RP0-USB 0",           DESCR: "USB Module"
+!NAME: "0/RP0-USB container",   DESCR: "USB Container"
+!NAME: "0/RP0-Intel 8 Core CPU Complex", DESCR: "Processor Module"
+!NAME: "0/RP0-Virtual processor for admin", DESCR: "Virtual Processor Module for Admin VM"
+!NAME: "0/RP0-Virtual processor for RP XR", DESCR: "Virtual Processor Module for RP-XR VM"
+!NAME: "0/RP0-Alarm",           DESCR: "Alarm Port"
+!NAME: "MgmtEth0/RP0/CPU0/0",   DESCR: "Fixed Mgmt Port"
+!NAME: "Rack 0-LineCard Chassis Backplane", DESCR: "NCS55A2 no TCAM Chassis Backplane"
+!NAME: "Rack 0-IDPROM",         DESCR: "NCS55A2 Fixed Base Chassis"
+!PID: NCS-55A2-MOD-S
+!VID: V01
+!SN: FOC2223R15G
+!NAME: "Rack 0",                DESCR: "NCS55A2 Fixed Base Chassis"
+!PID: NCS-55A2-MOD-S
+!VID: V01
+!SN: FOC2223R15G
+!NAME: "Rack 0-MPA Fan Tray Slot 0", DESCR: "NCS55A2 Fan Tray Slot"
+!NAME: "0/FT0",                 DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HBQMSFA
+!NAME: "0/FT0-FAN_0",           DESCR: "Fan Module"
+!NAME: "0/FT0-FAN_0 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT0-IDPROM",          DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HBQMSFA
+!NAME: "Rack 0-MPA Fan Tray Slot 1", DESCR: "NCS55A2 Fan Tray Slot"
+!NAME: "0/FT1",                 DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HB1DSFA
+!NAME: "0/FT1-FAN_0",           DESCR: "Fan Module"
+!NAME: "0/FT1-FAN_0 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT1-IDPROM",          DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HB1DSFA
+!NAME: "Rack 0-MPA Fan Tray Slot 2", DESCR: "NCS55A2 Fan Tray Slot"
+!NAME: "0/FT2",                 DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HBSASFA
+!NAME: "0/FT2-FAN_0",           DESCR: "Fan Module"
+!NAME: "0/FT2-FAN_0 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT2-IDPROM",          DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HBSASFA
+!NAME: "Rack 0-MPA Fan Tray Slot 3", DESCR: "NCS55A2 Fan Tray Slot"
+!NAME: "0/FT3",                 DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HACOSFA
+!NAME: "0/FT3-FAN_0",           DESCR: "Fan Module"
+!NAME: "0/FT3-FAN_0 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT3-IDPROM",          DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HACOSFA
+!NAME: "Rack 0-Fan Tray Slot 0", DESCR: "NCS55A2 Fan Tray Slot"
+!NAME: "0/FT4",                 DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HB16SFA
+!NAME: "0/FT4-FAN_0",           DESCR: "Fan Module"
+!NAME: "0/FT4-FAN_0 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT4-IDPROM",          DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HB16SFA
+!NAME: "Rack 0-Fan Tray Slot 1", DESCR: "NCS55A2 Fan Tray Slot"
+!NAME: "0/FT5",                 DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HB51SFA
+!NAME: "0/FT5-FAN_0",           DESCR: "Fan Module"
+!NAME: "0/FT5-FAN_0 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT5-IDPROM",          DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HB51SFA
+!NAME: "Rack 0-Fan Tray Slot 2", DESCR: "NCS55A2 Fan Tray Slot"
+!NAME: "0/FT6",                 DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HBS5SFA
+!NAME: "0/FT6-FAN_0",           DESCR: "Fan Module"
+!NAME: "0/FT6-FAN_0 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT6-IDPROM",          DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HBS5SFA
+!NAME: "Rack 0-Fan Tray Slot 3", DESCR: "NCS55A2 Fan Tray Slot"
+!NAME: "0/FT7",                 DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HBSCSFA
+!NAME: "0/FT7-FAN_0",           DESCR: "Fan Module"
+!NAME: "0/FT7-FAN_0 speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/FT7-IDPROM",          DESCR: "NCS 55A2 FW Fan Tray"
+!PID: NC55-A2-FAN-FW
+!VID: V01
+!SN: I7HBSCSFA
+!NAME: "Rack 0-Power Module Slot 0", DESCR: "NC5 Power Module Slot"
+!NAME: "0/PM0",                 DESCR: "NCS 55A2 AC 1200W Power Supply Port-S Intake/Front-to-back"
+!PID: NC55-1200W-ACFW
+!VID: V01
+!SN: LIT22372UUD
+!NAME: "0/PM0-FAN_0",           DESCR: "FAN_0 Module"
+!NAME: "0/PM0-FAN_0 Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/PM0-Input Current",   DESCR: "Current Sensor"
+!NAME: "0/PM0-Output Current",  DESCR: "Current Sensor"
+!NAME: "0/PM0-Input Power",     DESCR: "Power Sensor"
+!NAME: "0/PM0-Output Power",    DESCR: "Power Sensor"
+!NAME: "0/PM0-Inlet Temperature", DESCR: "Temperature Sensor"
+!NAME: "0/PM0-Input Voltage",   DESCR: "Voltage Sensor"
+!NAME: "0/PM0-Output Voltage",  DESCR: "Voltage Sensor"
+!NAME: "0/PM0-LIT-PriMCU-ACFW", DESCR: "FPD Module"
+!NAME: "0/PM0-IDPROM",          DESCR: "NCS 55A2 AC 1200W Power Supply Port-S Intake/Front-to-back"
+!PID: NC55-1200W-ACFW
+!VID: V01
+!SN: LIT22372UUD
+!NAME: "Rack 0-Power Module Slot 1", DESCR: "NC5 Power Module Slot"
+!NAME: "0/PM1",                 DESCR: "NCS 55A2 AC 1200W Power Supply Port-S Intake/Front-to-back"
+!PID: NC55-1200W-ACFW
+!VID: V01
+!SN: LIT22372UWV
+!NAME: "0/PM1-FAN_0",           DESCR: "FAN_0 Module"
+!NAME: "0/PM1-FAN_0 Speed",     DESCR: "Fan Speed Sensor"
+!NAME: "0/PM1-Input Current",   DESCR: "Current Sensor"
+!NAME: "0/PM1-Output Current",  DESCR: "Current Sensor"
+!NAME: "0/PM1-Input Power",     DESCR: "Power Sensor"
+!NAME: "0/PM1-Output Power",    DESCR: "Power Sensor"
+!NAME: "0/PM1-Inlet Temperature", DESCR: "Temperature Sensor"
+!NAME: "0/PM1-Input Voltage",   DESCR: "Voltage Sensor"
+!NAME: "0/PM1-Output Voltage",  DESCR: "Voltage Sensor"
+!NAME: "0/PM1-LIT-PriMCU-ACFW", DESCR: "FPD Module"
+!VID: 1.00
+!NAME: "0/PM1-IDPROM",          DESCR: "NCS 55A2 AC 1200W Power Supply Port-S Intake/Front-to-back"
+!PID: NC55-1200W-ACFW
+!VID: V01
+!SN: LIT22372UWV
+!
+!                              Current    Current       Max
+!                               Total      Limit       Limit
+! ------------------------------------------------------------
+! Lines of configuration            76      65536     131072
+! Policies                           7       3500       5000
+! Compiled policies size (kB)        8
+!
+!disk_status_config minor 80
+!disk_status_config severe 90
+!disk_status_config critical 95
+!aaa admin-accounting enable false
+!aaa authentication users user root
+! uid        9000
+! gid        100
+! password   $1$XcEH$6xA1860W2HUtoqgs1fahi1
+! ssh_keydir /var/confd/homes/root/.ssh
+! homedir    /var/confd/homes/root
+!!
+!aaa authentication groups group aaa-r
+! gid   100
+! users %%__system_user__%%
+!!
+!aaa authentication groups group admin-r
+! gid   100
+! users %%__system_user__%%
+!!
+!aaa authentication groups group root-system
+! gid   100
+! users "%%__system_user__%% root"
+!!
+!aaa authorization cmdrules cmdrule 1
+! context *
+! command *
+! group   root-system
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 2
+! context *
+! command "show running-config aaa"
+! group   aaa-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 3
+! context *
+! command "show tech-support aaa"
+! group   aaa-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 4
+! context *
+! command "show aaa"
+! group   aaa-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization cmdrules cmdrule 5
+! context *
+! command show
+! group   admin-r
+! ops     rx
+! action  accept
+!!
+!aaa authorization datarules datarule 1
+! namespace *
+! context   *
+! keypath   *
+! group     root-system
+! ops       rwx
+! action    accept
+!!
+!aaa authorization datarules datarule 2
+! namespace *
+! context   *
+! keypath   /aaa
+! group     aaa-r
+! ops       r
+! action    accept
+!!
+!aaa authorization datarules datarule 3
+! namespace *
+! context   *
+! keypath   /aaa
+! group     admin-r
+! ops       rwx
+! action    reject
+!!
+!aaa authorization datarules datarule 4
+! namespace *
+! context   *
+! keypath   /
+! group     admin-r
+! ops       r
+! action    accept
+!!
+!confdConfig cli maxLineLength 0
+!confdConfig cli timezone local
+!confdConfig cli utcOffset 0
+!confdConfig cli idleTimeout 10m
+!confdConfig cli timestamp enabled
+!confdConfig cli timestamp clock24 true
+!confdConfig cli timestamp format "\d{l,4}\m{l,5}\D{l,3}\H{r,2,0}:\\t{r,2,0}:\s{r,2,0}.\c{l,3,0} UTC\u{l,1}\o{r,2,0}:\k{r,2,0}"
+!confdConfig cli historySave true
+!confdConfig cli allOrNothingLoad false
+!confdConfig cli enableLoadMergeLeafList false
+!SNMP-COMMUNITY-MIB snmpCommunityTable snmpCommunityEntry public
+! snmpCommunityName            public
+! snmpCommunitySecurityName    public
+! snmpCommunityContextEngineID 80:00:61:81:05:01
+! snmpCommunityContextName     ""
+! snmpCommunityTransportTag    ""
+! snmpCommunityStorageType     permanent
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v1_trap
+! snmpNotifyTag         std_v1_trap
+! snmpNotifyType        trap
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v2_inform
+! snmpNotifyTag         std_v2_inform
+! snmpNotifyType        inform
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v2_trap
+! snmpNotifyTag         std_v2_trap
+! snmpNotifyType        trap
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v3_inform
+! snmpNotifyTag         std_v3_inform
+! snmpNotifyType        inform
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-NOTIFICATION-MIB snmpNotifyTable snmpNotifyEntry std_v3_trap
+! snmpNotifyTag         std_v3_trap
+! snmpNotifyType        trap
+! snmpNotifyStorageType nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v1"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.19.136
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v1_trap std_trap std_v1_inform std_inform"
+! snmpTargetAddrParams      target_v1
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    ""
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v2"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.23.112
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v2_trap std_trap std_v2_inform std_inform"
+! snmpTargetAddrParams      target_v2
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    ""
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v3"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.27.88
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v3_trap std_trap"
+! snmpTargetAddrParams      trap_target_v3
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    ""
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetAddrTable snmpTargetAddrEntry "127.0.0.1 v3.inform"
+! snmpTargetAddrTDomain     1.3.6.1.6.1.1
+! snmpTargetAddrTAddress    127.0.0.1.27.88
+! snmpTargetAddrTimeout     1500
+! snmpTargetAddrRetryCount  3
+! snmpTargetAddrTagList     "std_v3_inform std_inform"
+! snmpTargetAddrParams      inform_target_v3
+! snmpTargetAddrStorageType nonVolatile
+! snmpTargetAddrEngineID    80:00:1f:88:04:74:65:73:74:69:6e:67
+! snmpTargetAddrTMask       ""
+! snmpTargetAddrMMS         2048
+! enabled
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry inform_target_v3
+! snmpTargetParamsMPModel       3
+! snmpTargetParamsSecurityModel 3
+! snmpTargetParamsSecurityName  remote
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry target_v1
+! snmpTargetParamsMPModel       0
+! snmpTargetParamsSecurityModel 1
+! snmpTargetParamsSecurityName  public
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry target_v2
+! snmpTargetParamsMPModel       1
+! snmpTargetParamsSecurityModel 2
+! snmpTargetParamsSecurityName  public
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-TARGET-MIB snmpTargetParamsTable snmpTargetParamsEntry trap_target_v3
+! snmpTargetParamsMPModel       3
+! snmpTargetParamsSecurityModel 3
+! snmpTargetParamsSecurityName  public
+! snmpTargetParamsSecurityLevel noAuthNoPriv
+! snmpTargetParamsStorageType   nonVolatile
+!!
+!SNMP-USER-BASED-SM-MIB usmUserTable usmUserEntry 80:00:61:81:05:01 initial
+! usmUserSecurityName initial
+! usmUserAuthProtocol 1.3.6.1.6.3.10.1.1.1
+! usmUserPrivProtocol 1.3.6.1.6.3.10.1.2.1
+! usmUserStorageType  nonVolatile
+!!
+!SNMP-USER-BASED-SM-MIB usmUserTable usmUserEntry 80:00:61:81:05:01 initial_auth
+! usmUserSecurityName initial_auth
+! usmUserAuthProtocol 1.3.6.1.6.3.10.1.1.2
+! usmUserPrivProtocol 1.3.6.1.6.3.10.1.2.1
+! usmUserStorageType  nonVolatile
+! usmUserAuthKey      10:2c:bd:65:e3:eb:e2:16:0d:63:db:23:73:f3:17:b2
+!!
+!SNMP-USER-BASED-SM-MIB usmUserTable usmUserEntry 80:00:61:81:05:01 initial_authPriv
+! usmUserSecurityName initial_authPriv
+! usmUserAuthProtocol 1.3.6.1.6.3.10.1.1.2
+! usmUserPrivProtocol 1.3.6.1.6.3.10.1.2.2
+! usmUserStorageType  nonVolatile
+! usmUserAuthKey      10:2c:bd:65:e3:eb:e2:16:0d:63:db:23:73:f3:17:b2
+! usmUserPrivKey      10:2c:bd:65:e3:eb:e2:16:0d:63:db:23:73:f3:17:b2
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 1 public
+! vacmGroupName                  all-rights
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 2 public
+! vacmGroupName                  all-rights
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 3 initial
+! vacmGroupName                  initial
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 3 initial_auth
+! vacmGroupName                  initial
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmSecurityToGroupTable vacmSecurityToGroupEntry 3 initial_authPriv
+! vacmGroupName                  initial
+! vacmSecurityToGroupStorageType nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry initial "" 3 noAuthNoPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry initial "" 3 authNoPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry initial "" 3 authPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmAccessTable vacmAccessEntry all-rights "" 0 noAuthNoPriv
+! vacmAccessContextMatch   exact
+! vacmAccessReadViewName   internet
+! vacmAccessWriteViewName  internet
+! vacmAccessNotifyViewName internet
+! vacmAccessStorageType    nonVolatile
+!!
+!SNMP-VIEW-BASED-ACM-MIB vacmViewTreeFamilyTable vacmViewTreeFamilyEntry internet 1.3.6.1
+! vacmViewTreeFamilyMask        ""
+! vacmViewTreeFamilyType        included
+! vacmViewTreeFamilyStorageType nonVolatile
+!!
+!SNMPv2-MIB system sysContact ""
+!SNMPv2-MIB system sysName ""
+!SNMPv2-MIB system sysLocation ""
+!SNMPv2-MIB snmp snmpEnableAuthenTraps disabled
+!control-ethernet crc threshold sf 8
+!control-ethernet crc threshold sd 10
+!control-ethernet crc switchover enable
+!fpd auto-upgrade disable
+!sdr default-sdr
+! resources card-type RP
+!  vm-memory 18
+!  vm-cpu    3
+! !
+! resources card-type LC
+!  vm-memory 8
+!  vm-cpu    5
+! !
+! location all
+! !
+!!
+!service cli interactive enabled
+!memory_status_config minor 80
+!memory_status_config severe 90
+!memory_status_config critical 95
+!memory_status_config recovery_enabled false
+!
+!! Building configuration...
+!! IOS XR Configuration 25.4.1.24I
+!! Last configuration change at Thu Sep 25 17:42:52 2025 by admin
+!
+hostname cst-55a2-ag5
+group apply_cnc_bundle_fix
+ interface 'Bundle-Ether.*'
+  lldp
+   transmit disable
+  !
+ !
+end-group
+apply-group apply_cnc_bundle_fix
+logging archive
+ device harddisk
+ file-size 1
+!
+logging console disable
+logging monitor debugging
+logging buffered 100000000
+logging buffered debugging
+logging 172.21.23.83 vrf default severity info port 9514
+logging 172.21.23.118 vrf default severity info port 9514
+logging 172.27.227.247 vrf default port 9514
+logging suppress rule MGBL
+ alarm MGBL exec LOGIN_AUTHEN
+!
+logging suppress rule login
+ alarm SECURITY LOGIN AUTHEN
+ alarm SECURITY LOGIN AUTHEN_FAILED
+!
+logging suppress apply rule login
+ all-of-router
+!
+logging suppress rule SINGLE_RP
+ alarm PKT_INFRA FM FAULT_CRITICAL
+!
+logging suppress apply rule SINGLE_RP
+ all-of-router
+!
+logging suppress duplicates
+service timestamps log datetime msec show-timezone year
+username root
+ group root-lr
+ group cisco-support
+ secret 5 $1$IIFZ$xo91RCKZNGAtyQQJwio5o0
+!
+username lab
+ group root-lr
+ group cisco-support
+ secret 5 $1$CcGF$EzBAkyycnbZFt4QRF16I20
+!
+username admin
+ group root-lr
+ group cisco-support
+ secret 10 $6$KPUpW/4MhMK94W/.$YYiQzXyTQ5/tE2oiD39aMfy23gklvP990lTIYKUU3mTPf3XwKPpqrD1sl8xikNU3ekz0zeaplsxHFo1M3vaBs1
+!
+cdp
+grpc
+ port 57344
+ no-tls
+ address-family ipv4
+!
+telemetry model-driven
+ destination-group CW_43dc8a5ea99529715899b4f5218408a785e40fce
+  address-family ipv4 201.0.0.101 port 9010
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ destination-group CW_4b3c69a200668b0a8dc155caff295645c684a8f8
+  address-family ipv4 201.0.0.101 port 9010
+   encoding self-describing-gpb
+   protocol tcp
+  !
+ !
+ sensor-group CW_43dc8a5ea99529715899b4f5218408a785e40fce
+  sensor-path Cisco-IOS-XR-infra-tc-oper:traffic-collector/afs/af/counters/tunnels/tunnel
+ !
+ sensor-group CW_4b3c69a200668b0a8dc155caff295645c684a8f8
+  sensor-path Cisco-IOS-XR-infra-tc-oper:traffic-collector/vrf-table/default-vrf/afs/af/counters/prefixes/prefix
+ !
+ subscription CW_43dc8a5ea99529715899b4f5218408a785e40fce
+  sensor-group-id CW_43dc8a5ea99529715899b4f5218408a785e40fce sample-interval 300000
+  destination-id CW_43dc8a5ea99529715899b4f5218408a785e40fce
+ !
+ subscription CW_4b3c69a200668b0a8dc155caff295645c684a8f8
+  sensor-group-id CW_4b3c69a200668b0a8dc155caff295645c684a8f8 sample-interval 300000
+  destination-id CW_4b3c69a200668b0a8dc155caff295645c684a8f8
+ !
+!
+ptp
+ clock
+  domain 24
+  profile g.8275.1 clock-type T-GM
+  priority2 128
+ !
+ profile My-Slave
+  multicast target-address ethernet 01-80-C2-00-00-0E
+  transport ethernet
+  announce timeout 5
+  announce frequency 8
+  delay-request frequency 16
+ !
+ profile My-Master
+  multicast target-address ethernet 01-80-C2-00-00-0E
+  transport ethernet
+  port state master-only
+  sync frequency 16
+  clock operation one-step
+  announce frequency 8
+  delay-request frequency 16
+ !
+ log
+  servo events
+  best-master-clock changes
+ !
+!
+line template vty
+ timestamp disable
+!
+line console
+ exec-timeout 0 0
+!
+line default
+ timestamp disable
+ exec-timeout 0 0
+!
+snmp-server ifindex persist
+snmp-server vrf default
+ host 172.21.23.83 traps cisco udp-port 1062
+ host 172.21.23.118 traps cisco udp-port 1062
+!
+snmp-server host 172.27.227.247 traps version 2c cisco udp-port 1062
+snmp-server community CROSSWORK RW
+snmp-server community cisco RW
+snmp-server community public RW
+snmp-server packetsize 4096
+snmp-server trap-source MgmtEth0/RP0/CPU0/0
+monitor-session test ethernet
+ destination file
+!
+ntp
+ server 72.163.32.44
+ server 171.68.38.66 maxpoll 8 prefer
+ source MgmtEth0/RP0/CPU0/0
+ update-calendar
+!
+bfd
+ multipath include location 0/0/CPU0
+!
+ipv4 unnumbered mpls traffic-eng Loopback0
+frequency synchronization
+ quality itu-t option 1
+ clock-interface timing-mode system
+ log selection changes
+!
+key chain KC-128
+! key  <removed> 
+!  key-string  <removed>
+  send-lifetime 10:23:00 october 10 2019 duration 100
+  cryptographic-algorithm AES-128-CMAC-96
+ !
+ macsec
+  key 11
+!   key-string  <removed>
+   lifetime 12:00:00 october 09 2019 infinite
+  !
+ !
+!
+key chain ISIS-KEY
+! key  <removed> 
+  accept-lifetime 00:00:00 january 01 2018 infinite
+!  key-string  <removed>
+  send-lifetime 00:00:00 january 01 2018 infinite
+  cryptographic-algorithm HMAC-MD5
+ !
+!
+key chain mac-chain
+! key  <removed> 
+!  key-string  <removed>
+  send-lifetime 05:00:00 october 08 2015 duration 1800
+  cryptographic-algorithm AES-128-CMAC-96
+ !
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+netconf-yang agent
+ ssh
+!
+class-map match-any match-ef-exp5
+ description High priority, EF
+ match dscp 46 
+ match mpls experimental topmost 5 
+ end-class-map
+! 
+class-map match-any match-cs5-exp4
+ description Second highest priority
+ match dscp 40 
+ match mpls experimental topmost 4 
+ end-class-map
+! 
+class-map match-any match-cs6-exp6
+ description Highest priority control-plane traffic
+ match dscp cs6 
+ match mpls experimental topmost 6 
+ end-class-map
+! 
+class-map match-any match-qos-group-1
+ match qos-group 1 
+ end-class-map
+! 
+class-map match-any match-qos-group-2
+ match qos-group 2 
+ end-class-map
+! 
+class-map match-any match-qos-group-3
+ match qos-group 3 
+ end-class-map
+! 
+class-map match-any match-qos-group-6
+ match qos-group 3 
+ end-class-map
+! 
+class-map match-any match-video-cs4-exp2
+ description Video
+ match dscp 32 
+ match mpls experimental topmost 2 
+ end-class-map
+! 
+class-map match-any match-traffic-class-1
+ description "Match highest priority traffic-class 1"
+ match traffic-class 1 
+ end-class-map
+! 
+class-map match-any match-traffic-class-2
+ description "Match high priority traffic-class 2"
+ match traffic-class 2 
+ end-class-map
+! 
+class-map match-any match-traffic-class-3
+ description "Match medium traffic-class 3"
+ match traffic-class 3 
+ end-class-map
+! 
+class-map match-any match-traffic-class-6
+ description "Match video traffic-class 6"
+ match traffic-class 6 
+ end-class-map
+! 
+policy-map core-egress-queuing
+ class match-traffic-class-2
+  priority level 2 
+  queue-limit 100 us 
+ ! 
+ class match-traffic-class-3
+  priority level 3 
+  queue-limit 500 us 
+ ! 
+ class match-traffic-class-6
+  priority level 6 
+  queue-limit 500 us 
+ ! 
+ class match-traffic-class-1
+  priority level 1 
+  queue-limit 500 us 
+ ! 
+ class class-default
+  queue-limit 250 ms 
+ ! 
+ end-policy-map
+! 
+policy-map core-egress-exp-marking
+ class match-qos-group-1
+  set mpls experimental imposition 6
+ ! 
+ class match-qos-group-2
+  set mpls experimental imposition 5
+ ! 
+ class match-qos-group-3
+  set mpls experimental imposition 4
+ ! 
+ class match-qos-group-6
+  set mpls experimental imposition 2
+ ! 
+ class class-default
+  set mpls experimental imposition 0
+ ! 
+ end-policy-map
+! 
+policy-map core-ingress-classifier
+ class match-cs6-exp6
+  set traffic-class 1
+ ! 
+ class match-ef-exp5
+  set traffic-class 2
+ ! 
+ class match-cs5-exp4
+  set traffic-class 3
+ ! 
+ class match-video-cs4-exp2
+  set traffic-class 6
+ ! 
+ class class-default
+  set mpls experimental topmost 0
+  set traffic-class 0
+  set dscp 0
+ ! 
+ end-policy-map
+! 
+hw-module quad 0 location 0/0/CPU0 instance 0
+ mode 10g
+!
+hw-module quad 1 location 0/0/CPU0 instance 0
+ mode 10g
+!
+gnss-receiver 0 location 0/RP0/CPU0
+ constellation gps
+ pdop threshold 10
+ frequency synchronization
+  selection input
+  priority 2
+  wait-to-restore 0
+ !
+!
+interface Bundle-Ether12
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.1.2.0
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.1.2.1 255.255.255.254
+ ipv4 unreachables disable
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether21
+ description Access side PE-PE link
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.2.1.0
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.2.1.1 255.255.255.254
+ ipv4 unreachables disable
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether25
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.2.5.1
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.2.5.0 255.255.255.254
+ ipv4 unreachables disable
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether26
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.2.6.1
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.2.6.0 255.255.255.254
+ ipv4 unreachables disable
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether27
+ description "Bundle to cst-8201-p4"
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.2.7.1
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.2.7.0 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2000:100:90b::1/126
+ lldp
+  transmit disable
+ !
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether28
+ description "Bundle to cst-8201-p3"
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.2.8.1
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.2.8.0 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2000:100:90a::1/126
+ bundle minimum-active links 1
+ load-interval 30
+!
+interface Bundle-Ether112
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.1.12.0
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 point-to-point
+ ipv4 address 10.1.12.1 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2000:101:609::2/126
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether125
+ bfd mode ietf
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.25.5.1
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.25.5.0 255.255.255.254
+ ipv6 address 2000::10:25:5:0/124
+ load-interval 30
+!
+interface Bundle-Ether212
+ mtu 9216
+ ipv4 point-to-point
+ ipv4 address 10.2.12.1 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2000:101:709::2/126
+ lldp
+  transmit disable
+ !
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether712
+ description --> Connected to P4 for non inline PE design
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.7.12.1
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.7.12.0 255.255.255.254
+ ipv4 unreachables disable
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether812
+ description --> connected to P3 for non inline PE design
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.8.12.1
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.8.12.0 255.255.255.254
+ ipv4 unreachables disable
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether1112
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.11.12.0
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.11.12.1 255.255.255.254
+ ipv4 unreachables disable
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether1211
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.12.11.0
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.12.11.1 255.255.255.254
+ ipv4 unreachables disable
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether1213
+ description "Bundle to cst-ag1"
+ bfd mode ietf
+ bfd address-family ipv4 timers start 180
+ bfd address-family ipv4 multiplier 3
+ bfd address-family ipv4 destination 10.12.13.1
+ bfd address-family ipv4 fast-detect
+ bfd address-family ipv4 minimum-interval 50
+ bfd address-family ipv6 multiplier 3
+ bfd address-family ipv6 destination 2000:101:409::1
+ bfd address-family ipv6 fast-detect
+ bfd address-family ipv6 minimum-interval 50
+ mtu 9216
+ ipv4 address 10.12.13.0 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2000:101:409::2/126
+ lldp
+ !
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether1214
+ description "To cst-ag2"
+ bfd address-family ipv6 multiplier 3
+ bfd address-family ipv6 destination 2000:101:509::1
+ bfd address-family ipv6 fast-detect
+ bfd address-family ipv6 minimum-interval 50
+ mtu 9216
+ ipv4 point-to-point
+ ipv4 address 10.12.14.1 255.255.255.254
+ ipv4 unreachables disable
+ ipv6 address 2000:101:509::2/126
+ bundle minimum-active links 1
+ load-interval 30
+ dampening
+!
+interface Bundle-Ether8000
+!
+interface Bundle-Ether8000.1 l2transport
+ encapsulation dot1q 1
+!
+interface Bundle-Ether8000.8500 l2transport
+ encapsulation dot1q 500
+!
+interface Bundle-Ether8000.8600 l2transport
+ encapsulation dot1q 600
+!
+interface Bundle-Ether8100
+!
+interface Bundle-Ether8100.200 l2transport
+ encapsulation dot1q 200
+!
+interface Loopback0
+ ipv4 address 101.0.1.55 255.255.255.255
+ ipv6 address fccc:0:155::1/128
+!
+interface tunnel-ip500
+ ipv4 address 100.100.100.1 255.255.255.254
+ tunnel source Loopback500
+ tunnel destination 100.50.0.1
+!
+interface tunnel-ip501
+ ipv4 address 100.100.100.3 255.255.255.254
+ tunnel source Loopback501
+ tunnel destination 100.51.0.1
+!
+interface MgmtEth0/RP0/CPU0/0
+ cdp
+ ipv4 address 172.27.227.184 255.255.255.0
+!
+interface GigabitEthernet0/0/0/5
+ ipv4 address 192.168.1.10 255.255.255.0
+ negotiation auto
+ shutdown
+!
+interface TenGigE0/0/0/0
+ description --> intentional shut
+ bundle id 25 mode active
+ cdp
+ lacp period short
+ carrier-delay up 10000 down 0
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface TenGigE0/0/0/1
+ description --> intentional shut
+ bundle id 26 mode active
+ cdp
+ lacp period short
+ carrier-delay up 10000 down 0
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface TenGigE0/0/0/2
+ description "Connected to ESX server 172.27.227.215"
+ cdp
+!
+interface TenGigE0/0/0/3
+ shutdown
+!
+interface TenGigE0/0/0/4
+ description SvRR-ACCESS1
+ cdp
+ ipv4 address 10.11.201.1 255.255.255.254
+ lldp
+ !
+!
+interface TenGigE0/0/0/6
+ cdp
+!
+interface TenGigE0/0/0/7
+ cdp
+ ipv4 address 10.89.0.2 255.255.255.252
+ ipv6 address 2001:100:809::2/126
+!
+interface TenGigE0/0/0/8
+ description --> BE12
+ bundle id 12 mode active
+ cdp
+ lacp period short
+ carrier-delay up 150000 down 0
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface TenGigE0/0/0/9
+ description Connection to the Calnex Master Port
+ frequency synchronization
+  wait-to-restore 0
+ !
+!
+interface TenGigE0/0/0/10
+ bundle id 1213 mode active
+ cdp
+ ptp
+  profile My-Master
+ !
+ lacp period short
+ carrier-delay up 150000 down 0
+ load-interval 30
+ frequency synchronization
+  priority 5
+  wait-to-restore 1
+ !
+!
+interface TenGigE0/0/0/11
+ bundle id 1214 mode active
+ cdp
+ ptp
+  profile My-Master
+ !
+ lacp period short
+ carrier-delay up 150000 down 0
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface TenGigE0/0/0/12
+ description --> intentional shut
+ bundle id 25 mode active
+ cdp
+ lacp period short
+ carrier-delay up 10000 down 0
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface TenGigE0/0/0/13
+ description --> intentional shut
+ bundle id 26 mode active
+ cdp
+ lacp period short
+ carrier-delay up 10000 down 0
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface TenGigE0/0/0/14
+ shutdown
+!
+interface TenGigE0/0/0/15
+ shutdown
+!
+interface TenGigE0/0/0/16
+ description *** AP4 - Ten 0/0/0/4 ***
+ bundle id 8000 mode active
+ shutdown
+ load-interval 30
+!
+interface TenGigE0/0/0/17
+ description --> BE21
+ bundle id 21 mode active
+ cdp
+ lacp period short
+ carrier-delay up 10000 down 0
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface TenGigE0/0/0/18
+ shutdown
+!
+interface TenGigE0/0/0/19
+ shutdown
+!
+interface TenGigE0/0/0/20
+ bundle id 212 mode active
+ cdp
+ lacp period short
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface TenGigE0/0/0/21
+ bundle id 112 mode active
+ cdp
+ lacp period short
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface TenGigE0/0/0/22
+ load-interval 30
+!
+interface TenGigE0/0/0/22.1 l2transport
+ encapsulation dot1q 1
+!
+interface TenGigE0/0/0/22.200 l2transport
+ encapsulation dot1q 200
+!
+interface TenGigE0/0/0/22.8500 l2transport
+ encapsulation dot1q 500
+!
+interface TenGigE0/0/0/22.8600 l2transport
+ encapsulation dot1q 600
+!
+interface TenGigE0/0/0/23
+ shutdown
+!
+interface TenGigE0/0/0/24
+ shutdown
+!
+interface TenGigE0/0/0/25
+ bundle id 8000 mode active
+!
+interface TenGigE0/0/0/26
+ shutdown
+!
+interface TenGigE0/0/0/27
+ shutdown
+!
+interface TenGigE0/0/0/28
+ shutdown
+!
+interface TenGigE0/0/0/29
+ shutdown
+!
+interface TenGigE0/0/0/30
+ ipv4 address 10.101.2.30 255.255.255.254
+!
+interface TenGigE0/0/0/31
+ shutdown
+!
+controller Optics0/0/2/0
+ port-mode speed 200G mod 8qam fec 15sdfec diff disable
+!
+interface TwentyFiveGigE0/0/0/32
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/33
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/34
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/35
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/36
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/37
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/38
+ shutdown
+!
+interface TwentyFiveGigE0/0/0/39
+ shutdown
+!
+interface HundredGigE0/0/1/0
+ description "To cst-8712-pa2"
+ bundle id 125 mode active
+ cdp
+ ptp
+  profile My-Master
+ !
+ lacp period short
+ carrier-delay up 150000 down 0
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface HundredGigE0/0/1/1
+ description "To cst-pa1"
+ bundle id 8000 mode active
+ cdp
+ ptp
+  profile My-Master
+ !
+ lacp period short
+ load-interval 30
+ frequency synchronization
+  priority 20
+  wait-to-restore 1
+ !
+!
+interface HundredGigE0/0/1/2
+ bundle id 8100 mode active
+ ptp
+  profile My-Master
+ !
+ lacp period short
+ load-interval 30
+ frequency synchronization
+  priority 20
+  wait-to-restore 1
+ !
+!
+interface HundredGigE0/0/1/3
+ bundle id 1214 mode active
+ cdp
+ ptp
+  profile My-Master
+ !
+ lacp period short
+ carrier-delay up 150000 down 0
+ load-interval 30
+ frequency synchronization
+  priority 20
+  wait-to-restore 1
+ !
+!
+interface HundredGigE0/0/2/0/0
+ cdp
+ ipv4 address 10.11.202.1 255.255.255.252
+ ipv6 address 2405:10:11:202::1/64
+ load-interval 30
+ frequency synchronization
+ !
+!
+interface HundredGigE0/0/2/0/1
+ cdp
+ ipv4 address 10.11.203.1 255.255.255.252
+!
+interface HundredGigE0/0/2/1/0
+ shutdown
+!
+interface preconfigure GigabitEthernet0/0/0/16
+ shutdown
+!
+interface preconfigure TenGigE0/0/0/0/9
+ ptp
+  profile My-Slave
+  port state slave-only
+ !
+!
+interface preconfigure TenGigE0/0/0/5
+!
+interface preconfigure TenGigE0/0/0/32
+ shutdown
+!
+interface preconfigure TenGigE0/0/0/33
+ shutdown
+!
+interface preconfigure TenGigE0/0/0/34
+ shutdown
+!
+interface preconfigure TenGigE0/0/0/35
+ description Ixia
+ ipv4 address 9.0.12.1 255.255.255.252
+!
+interface preconfigure TenGigE0/0/0/36
+ shutdown
+!
+interface preconfigure TenGigE0/0/0/37
+ shutdown
+!
+interface preconfigure TenGigE0/0/0/38
+ bundle id 1213 mode active
+ cdp
+ lacp period short
+ carrier-delay up 150000 down 0
+ load-interval 30
+!
+interface preconfigure TenGigE0/0/0/39
+ bundle id 1214 mode active
+ cdp
+ lacp period short
+ carrier-delay up 150000 down 0
+ load-interval 30
+!
+interface preconfigure TwentyFiveGigE0/0/0/24
+ shutdown
+!
+interface preconfigure HundredGigE0/0/0/25
+!
+interface preconfigure TwentyFiveGigE0/0/0/25
+ shutdown
+!
+interface preconfigure TwentyFiveGigE0/0/0/26
+ shutdown
+!
+interface preconfigure TwentyFiveGigE0/0/0/27
+ shutdown
+!
+interface preconfigure TwentyFiveGigE0/0/0/28
+ shutdown
+!
+interface preconfigure TwentyFiveGigE0/0/0/29
+ shutdown
+!
+interface preconfigure TwentyFiveGigE0/0/0/30
+ shutdown
+!
+interface preconfigure TwentyFiveGigE0/0/0/31
+ shutdown
+!
+interface preconfigure HundredGigE0/0/2/1/1
+ shutdown
+!
+prefix-set RR-LOOPBACKS
+  101.0.0.10/32
+end-set
+!
+prefix-set REDIST-STATIC
+  10.0.2.0/24
+end-set
+!
+prefix-set ACCESS1-PE-uSID
+  fccc:0:103::/48,
+  fccc:1:103::/48,
+  fccc:0:10a::1/128
+end-set
+!
+prefix-set ACCESS2-PE-uSID
+  fccc:0:200::/40,
+  fccc:1:200::/40,
+  fccc:0:10::1/128
+end-set
+!
+prefix-set ACCESS-XTC_SvRR-LOOPBACKS
+  101.0.1.201/32,
+  101.0.1.101/32
+end-set
+!
+prefix-set ACCESS_TO_CORE_REDISTRIBUTION
+  101.0.1.101/32,
+  100.0.0.1/32,
+  100.0.0.2/32,
+  101.0.1.4/32
+end-set
+!
+prefix-set CORE_TO_ACCESS_REDISTRIBUTION
+  101.0.0.200/32,
+  101.1.0.200/32,
+  101.0.0.10/32,
+  10.0.2.0/23,
+  101.0.2.202/32
+end-set
+!
+route-policy ACCESS1-TO-CORE
+  if destination in ACCESS-XTC_SvRR-LOOPBACKS then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy CORE-TO-ACCESS1
+  if destination in RR-LOOPBACKS then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy ACCESS1-TO-CORE-ISIS
+  if destination in ACCESS_TO_CORE_REDISTRIBUTION then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy ACCESS1-TO-CORE-SRv6
+  if destination in ACCESS1-PE-uSID then
+    set tag 222
+    pass
+  elseif tag is 111 then
+    drop
+  else
+    drop
+  endif
+end-policy
+!
+route-policy CORE-TO-ACCESS1-ISIS
+  if destination in CORE_TO_ACCESS_REDISTRIBUTION then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+route-policy CORE-TO-ACCESS1-SRv6
+  if destination in ACCESS2-PE-uSID then
+    set tag 2002
+    pass
+  elseif tag is 1001 then
+    drop
+  else
+    drop
+  endif
+end-policy
+!
+route-policy REDIST-STATIC-ROUTES
+  if destination in REDIST-STATIC then
+    pass
+  else
+    drop
+  endif
+end-policy
+!
+router static
+ address-family ipv4 unicast
+  0.0.0.0/0 172.27.227.5
+ !
+!
+router isis ACCESS
+ set-overload-bit on-startup 480
+ is-type level-2-only
+ net 49.0001.0101.0000.0012.00
+ nsr
+ distribute link-state instance-id 101
+ nsf cisco
+ log adjacency changes
+ lsp-refresh-interval 65000
+ max-lsp-lifetime 65535
+ lsp-password keychain ISIS-KEY
+ lsp-password keychain ISIS-KEY level 1
+ affinity-map red bit-position 0
+ address-family ipv4 unicast
+  metric-style wide
+  mpls traffic-eng level-2-only
+  mpls traffic-eng router-id Loopback0
+  spf-interval initial-wait 50 secondary-wait 200 maximum-wait 5000
+  redistribute isis CORE route-policy CORE-TO-ACCESS1-ISIS
+  segment-routing mpls
+  spf prefix-priority critical tag 5000
+  spf prefix-priority high tag 1000
+ !
+ address-family ipv6 unicast
+  metric-style wide
+  microloop avoidance segment-routing
+  prefix-unreachable
+   adv-metric 4261412866
+   adv-lifetime 1000
+   rx-process-enable
+  !
+  summary-prefix fccc::/40 level 2 adv-unreachable
+  distance 254 ::/0 ACCESS2-PE-uSID
+  router-id Loopback0
+  redistribute isis CORE level-2 route-policy CORE-TO-ACCESS1-SRv6
+  segment-routing srv6
+   locator LocAlgo0
+   !
+   locator LocAlgo129
+   !
+   locator LocAlgo130
+   !
+   locator LocAlgo131
+   !
+  !
+ !
+ flex-algo 129
+  advertise-definition
+ !
+ flex-algo 130
+  metric-type delay
+  advertise-definition
+ !
+ flex-algo 131
+  advertise-definition
+  affinity exclude-any red
+ !
+ interface Bundle-Ether112
+  bfd minimum-interval 50
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+  !
+ !
+ interface Bundle-Ether125
+  bfd minimum-interval 50
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+  !
+ !
+ interface Bundle-Ether212
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+  !
+ !
+ interface Bundle-Ether1213
+  bfd minimum-interval 50
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+  !
+ !
+ interface Bundle-Ether1214
+  bfd minimum-interval 50
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+  !
+  address-family ipv6 unicast
+   fast-reroute per-prefix
+   fast-reroute per-prefix ti-lfa
+  !
+ !
+ interface Loopback0
+  address-family ipv4 unicast
+   prefix-sid index 55
+   prefix-sid algorithm 129 absolute 19055
+   prefix-sid algorithm 130 absolute 20055
+   prefix-sid algorithm 131 absolute 21055
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface Loopback1
+  address-family ipv4 unicast
+   prefix-sid index 112
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface Loopback501
+  address-family ipv4 unicast
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface tunnel-ip500
+  address-family ipv4 unicast
+   metric 1000
+  !
+ !
+ interface TenGigE0/0/0/4
+  circuit-type level-2-only
+  point-to-point
+  address-family ipv4 unicast
+  !
+  address-family ipv6 unicast
+  !
+ !
+ interface TenGigE0/0/0/30
+  bfd minimum-interval 50
+  bfd multiplier 3
+  bfd fast-detect ipv4
+  bfd fast-detect ipv6
+  point-to-point
+  hello-password keychain ISIS-KEY
+  address-family ipv4 unicast
+  !
+  address-family ipv6 unicast
+  !
+ !
+!
+router bgp 100
+ bgp router-id 101.0.1.55
+ segment-routing srv6
+  locator LocAlgo0
+ !
+ ibgp policy out enforce-modifications
+ address-family ipv4 unicast
+  allocate-label all
+ !
+ address-family ipv4 multicast
+ !
+ address-family link-state link-state
+ !
+ neighbor-group TvRR
+  remote-as 100
+  update-source Loopback0
+  address-family link-state link-state
+  !
+ !
+ neighbor-group BGP-LU
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 multicast
+   next-hop-self
+   route-reflector-client
+  !
+  address-family ipv4 labeled-unicast
+   next-hop-self
+   route-reflector-client
+  !
+ !
+ neighbor-group ipv6-peer-group
+  remote-as 100
+  update-source Loopback0
+  address-family ipv6 unicast
+   encapsulation-type srv6
+  !
+ !
+ neighbor 101.0.0.1
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 multicast
+   next-hop-self
+   route-reflector-client
+  !
+ !
+ neighbor 101.0.0.3
+  use neighbor-group BGP-LU
+ !
+ neighbor 101.0.0.4
+  use neighbor-group BGP-LU
+ !
+ neighbor 101.0.1.3
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 unicast
+   next-hop-self
+   route-reflector-client
+  !
+ !
+ neighbor 101.0.1.4
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 unicast
+   next-hop-self
+   route-reflector-client
+  !
+ !
+ neighbor 101.0.0.10
+  use neighbor-group TvRR
+ !
+ neighbor 101.0.1.50
+  use neighbor-group BGP-LU
+  address-family ipv4 unicast
+   next-hop-self
+   route-reflector-client
+  !
+ !
+ neighbor 101.0.0.100
+  remote-as 100
+  update-source Loopback0
+  address-family ipv4 unicast
+   next-hop-self
+   route-reflector-client
+  !
+ !
+!
+l2vpn
+ xconnect group evpn-mh-be-8000-bvi
+  p2p evpn-mh-be-8000-bvi-8000
+   interface TenGigE0/0/0/22.1
+   interface Bundle-Ether8000.1
+  !
+ !
+ bridge group vpls-bvi-8100
+  bridge-domain vpls-bvi-8100-1
+   interface TenGigE0/0/0/22.200
+   !
+   interface Bundle-Ether8100.200
+   !
+  !
+ !
+ bridge group evpn-mh-be-8000-bvi
+  bridge-domain evpn-mh-be-8000-bvi-8500
+   interface TenGigE0/0/0/22.8500
+   !
+   interface Bundle-Ether8000.8500
+   !
+  !
+  bridge-domain evpn-mh-be-8000-bvi-8600
+   interface TenGigE0/0/0/22.8600
+   !
+   interface Bundle-Ether8000.8600
+   !
+  !
+ !
+!
+mpls ldp
+ capabilities sac mldp-only
+ mldp
+  address-family ipv4
+   make-before-break delay 30
+   forwarding recursive
+   recursive-fec
+  !
+ !
+ router-id 101.0.1.55
+ session protection
+ interface Bundle-Ether27
+ !
+ interface Bundle-Ether28
+ !
+ interface Bundle-Ether112
+ !
+ interface Bundle-Ether212
+ !
+ interface Bundle-Ether1213
+ !
+ interface Bundle-Ether1214
+ !
+!
+segment-routing
+ global-block 16000 23999
+ traffic-eng
+  pcc
+   source-address ipv4 101.0.1.55
+   pce address ipv4 101.0.1.101
+   !
+   report-all
+   timers delegation-timeout 10
+   timers deadtimer 60
+   timers initiated state 15
+   timers initiated orphan 10
+  !
+ !
+ srv6
+  locators
+   locator LocAlgo0
+    micro-segment behavior unode psp-usd
+    prefix fccc:0:155::/48
+   !
+   locator LocAlgo129
+    micro-segment behavior unode psp-usd
+    prefix fccc:2:155::/48
+    algorithm 129
+   !
+   locator LocAlgo130
+    micro-segment behavior unode psp-usd
+    prefix fccc:3:155::/48
+    algorithm 130
+   !
+   locator LocAlgo131
+    micro-segment behavior unode psp-usd
+    prefix fccc:4:155::/48
+    algorithm 131
+   !
+   locator CoreLocAlgo0
+    micro-segment behavior unode psp-usd
+    prefix fccc:0:55::/48
+   !
+   locator CoreLocAlgo129
+    micro-segment behavior unode psp-usd
+    prefix fccc:2:55::/48
+    algorithm 129
+   !
+   locator CoreLocAlgo130
+    micro-segment behavior unode psp-usd
+    prefix fccc:3:55::/48
+    algorithm 130
+   !
+   locator CoreLocAlgo131
+    micro-segment behavior unode psp-usd
+    prefix fccc:4:55::/48
+    algorithm 131
+   !
+  !
+ !
+!
+netconf agent tty
+!
+lldp
+!
+macsec-policy 1
+ conf-offset CONF-OFFSET-30
+ cipher-suite GCM-AES-XPN-128
+ key-server-priority 2
+!
+hw-module profile segment-routing srv6 mode micro-segment format f3216
+!
+ssh client vrf default
+ssh server logging
+ssh timeout 120
+ssh server username admin
+ keystring ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAsinIUcxYN3xESi0cQfXeCQ8BxfEcm3QYirGKWwzN4FPwOXSvebCgMPENhzbL20EpywgzSs3sFjNmcA0EFAXkoc4w5sO0HrxyJteFuEpHU2bUgmcgUr/Go/q7XA4AKkJ18C8mg/73INJQrU2rZZWuqIfgc01KoeZA8Db/WZawoJNBi1dwVYnrrk3RXxjtMxJbobRsJViExt1As6kl0Oy7pLf7qgMGlgmyAzUA0VgEQqT09RnCHhgM/7FDWdBScEodZMa5C3kG5oWJSfeKF+j0aj+a5cxtRV8UZ/gl7HY29zcvClpeREZ8XPRFEKPrUvpAbp28cD/mhDjD8eK6NnhGIQ== rsa-key-20170113
+!
+ssh server rate-limit 600
+ssh server session-limit 100
+ssh server v2
+ssh server vrf default
+ssh server netconf vrf default
+telnet vrf default ipv4 server max-servers 10
+performance-measurement
+ interface Bundle-Ether27
+  delay-measurement
+  !
+ !
+ interface Bundle-Ether28
+  delay-measurement
+  !
+ !
+ interface Bundle-Ether112
+  delay-measurement
+  !
+ !
+ interface Bundle-Ether125
+  delay-measurement
+  !
+ !
+ interface Bundle-Ether1214
+  delay-measurement
+  !
+ !
+ delay-profile interfaces default
+  advertisement
+   accelerated
+    threshold 25
+   !
+   periodic
+    interval 120
+    threshold 10
+   !
+  !
+  probe
+   measurement-mode two-way
+   protocol twamp-light
+   computation-interval 60
+  !
+ !
+ protocol twamp-light
+  measurement delay
+   unauthenticated
+    querier-dst-port 12345
+   !
+  !
+ !
+!
+end
